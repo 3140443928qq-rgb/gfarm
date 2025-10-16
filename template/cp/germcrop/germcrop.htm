@@ -1,0 +1,38 @@
+{template gfarm:cp/nav}
+<script type="text/javascript">
+	function showmsg1(msg) {
+		window.showDialog(msg, 'right', '', function() {
+			window.location.href = 'plugin.php?id=gfarm:cp&mod=germcrop&page=$currpage&orderfield=$orderfield1&ordertype=$ordertype1'
+		}, 0);
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 10px" >
+	<tr>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=germcrop&orderfield=id&ordertype=$ordertype">{lang gfarm:c007}</A></th>
+	 	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=germcrop&orderfield=germname&ordertype=$ordertype">{lang gfarm:c031}</A></th>  
+	 	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=germcrop&orderfield=cropname&ordertype=$ordertype">{lang gfarm:c032}</A></th>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=germcrop&orderfield=produce_big&ordertype=$ordertype">{lang gfarm:c019}</A></th>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=germcrop&orderfield=produce_small&ordertype=$ordertype">{lang gfarm:c020}</A></th>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=germcrop&orderfield=produce_odds&ordertype=$ordertype">{lang gfarm:c011}</A></th>    	
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c013}</th>
+	</tr>
+	<!--{loop $gcInfos $key $val}-->
+	<tr <!--{if $key%2==1}-->class="alt"<!--{/if}-->>
+    	<td>{$val['id']}</td>
+	    <td>{$val['germname']}</td> 
+    	<td>{$val['cropname']}</td>
+    	<td>{$val['produce_big']}</td> 
+    	<td>{$val['produce_small']}</td> 
+    	<td>{$val['produce_odds']}</td>
+    	<td><a href='plugin.php?id=gfarm:cp&mod=germcrop&act=update&gcid={$val[id]}&page={$currpage}&orderfield=$orderfield1&ordertype=$ordertype1' onclick="showWindow('gfarm',this.href)">{lang gfarm:c014}</a>
+    	</td>
+	</tr>
+	<!--{/loop}-->
+	<tr  height="30"style="border-top:2px solid #D3D3D3"><td colspan="3" align="left">{lang gfarm:c015}{$num}{lang gfarm:c016}{$currpage}{lang gfarm:c017}</td><td colspan="9">{$paging}</td></tr>
+</table>
+
+{template gfarm:cp/footer}

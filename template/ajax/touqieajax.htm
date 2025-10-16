@@ -1,0 +1,31 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	jq('#tip_'+{$currentland['land_id']}).html('{$mess}').show();
+	setTimeout( function(){jq('#tip_'+{$currentland['land_id']}).fadeOut();}, ( 1 * 1000 ) ); 
+	{else}	
+	jq('#userpower').html($power);
+	{if empty($rand)}
+	jq('#tip_'+{$currentland['land_id']}).html('{lang gfarm:f108}').show();
+	setTimeout( function(){jq('#tip_'+{$currentland['land_id']}).fadeOut();}, ( 1 * 1000 ) ); 
+	{else}
+	jq('#userexp').html({$userarr['experience']}+'/'+{$nextlevel['experience']});
+	{if !empty($levelflag)}
+	{if $countland<$mylevel1['land_number']}
+	jq('.jiesuoimg').each(function(){
+	jq(this).show();
+	});
+	{/if}
+	jq('#userlevel').html({$mylevel1['level']});	
+	jq('#userleveltip').show();
+	setTimeout( function(){jq('#userleveltip').fadeOut();}, ( 3 * 1000 ) ); 
+	{/if}
+	jq('#title_'+{$currentland['land_id']}).html('{lang gfarm:f048}{$crop[name]}<br/>{lang gfarm:f049}{eval echo $currentland[gain_number]-$rand}{lang gfarm:f012}');
+	jq('#tip_'+{$currentland['land_id']}).html('{$crop[name]}+{$rand}').show();
+	setTimeout( function(){jq('#tip_'+{$currentland['land_id']}).fadeOut();}, ( 1 * 1000 ) ); 
+	{/if}	
+	{/if}		
+})();
+</script>
+{template common/footer}

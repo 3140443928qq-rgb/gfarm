@@ -1,0 +1,119 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/foodbg.png) no-repeat;}
+</style>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class='shopclass' style="width: 580px;height: 440px" onmousedown="dragMenu($('fwin_gfarm'),event,1)">
+<div class='shopclose' onclick="hideWindow('gfarm1');hideWindow('gfarm');"></div>
+<div style="margin-top: 77px;margin-left: 20px;width: 550px;height: 300px;">
+<div id='outs' style="width: 540px;height: 300px">
+<div id='ins' style="height: 300px;width: 510px;">
+	<ul class='foodline'>
+	<!--{loop $foodInfos $key=>$val}-->
+	<li>
+		<div>
+			<div class='foodfdiv'>
+			<img src="{$val['img']}"/><br/>
+			x {$val['number']}
+			</div>
+			<div class='foodsdiv'><span>{$val['name']}</span><br/>
+			{lang gfarm:f060}{lang gfarm:c062}+{$foods[$key]['addstren']}<br/>
+			{lang gfarm:c211}{lang gfarm:c062}+{$foods[$key]['addexp']}<br/>
+			{lang gfarm:f061}{lang gfarm:c062}+{$foods[$key]['addbene']}<br/>
+			<div><img src='source/plugin/gfarm/img/ui/eat.png' onclick="ajaxget('plugin.php?id=gfarm:front&mod=food&act=eat&foodid=$val[id]&formhash={FORMHASH}','outs');"/></div>
+			</div>			
+		</div>
+	</li>
+	<!--{/loop}-->
+	</ul>
+	</div>
+	<div id='fscrollBars'>
+	<div id='fhandles'></div>
+	</div>	
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<script reload=1>
+var ximen = {
+	$:function(o){ return document.getElementById(o); },
+	getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+	getOffset:function(o) {
+		var t = o.offsetTop,h = o.offsetHeight;
+		while(o = o.offsetParent) { t += o.offsetTop; }
+		return { top:t, height:h };
+	},
+	bind:function(o,eType,fn) {
+		if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+		else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	unbind:function(o,eType,fn) {
+		if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+		else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	stopPropagate:function(e) {
+		if(e && e.stopPropagation) { e.stopPropagation(); } 
+		else { window.event.cancelBubble = true; }
+		return false;
+	},
+	stopDefault:function(e) {
+		e = e || window.event;
+		e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+	}
+};
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relY,
+		out = ximen.$("outs"),
+		content = ximen.$("ins"),
+		scrollBar = ximen.$("fscrollBars"),
+		scrollBarHandle = ximen.$("fhandles"),
+		contentScrollHeight = content.scrollHeight,//灏哻ontent.scrollHeight璧嬩竴娆″�,瑙ｅ喅IE6涓媠crollHeight闇�皟鐢ㄤ袱娆＄殑bug
+		scrollBarHandleHeight = parseInt(content.offsetHeight/content.scrollHeight * scrollBar.offsetHeight),
+		setScrollBarHandle = function() {//褰撳唴瀹硅秴澶氭椂璁剧疆鎷栨嫿鏉″瓙鐨勬渶灏忛珮搴�
+		if(scrollBarHandleHeight==scrollBar.offsetHeight){scrollBar.style.display='none';}
+		else { scrollBarHandleHeight = 20; scrollBarHandle.style.height = "20px";}
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollTop = (e.clientY - relY)/(scrollBar.offsetHeight - scrollBarHandleHeight)*(content.scrollHeight - content.offsetHeight);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target鐏嫄srcElementIE		
+			relY = event.clientY - et.offsetTop;
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//璁剧疆婊氳疆浜嬩欢,e.wheelDelta涓巈.detail鍒嗗埆鍏煎IE銆乄3C锛屾牴鎹繑鍥炲�鐨勬璐熸潵鍒ゆ柇婊氬姩鏂瑰悜
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollTop -= 80; }	//姝ラ暱璁�0鍍忕礌a姣旇緝鎺ヨ繎window婊氬姩鏉＄殑婊氬姩閫熷害
+			else { content.scrollTop += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.top = content.scrollTop/(content.scrollHeight - content.offsetHeight) * (scrollBar.offsetHeight - scrollBarHandleHeight)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+</script>
+{template common/footer_ajax}

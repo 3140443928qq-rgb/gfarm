@@ -1,0 +1,60 @@
+{template common/header}
+<table>
+	<tr>
+	<td><img src='source/plugin/gfarm/img/ui/money1.png'/></td>
+	<td style="min-width: 100px">{lang gfarm:f028}{$config['moneyname']}{lang gfarm:c062}</td>
+	<td style="color: #db9c29;">{$user['money']}</td>
+	</tr>
+	<tr>
+	<td><img src='source/plugin/gfarm/img/ui/change.png'/></td>
+	<td>{lang gfarm:c239}{$config['bullionsname']}{lang gfarm:c062}</td>
+	<td style="color: #db9c29;" valign="middle"><input type="text" name='dnum' id='dnum' size='7' onkeyup="this.value=this.value.replace(/[\u4e00-\u9fa5]/g,'');" onpaste="this.value=this.value.replace(/\D/g,'')"
+	 style="text-align: center;ime-mode:disabled;height: 16px;border-style: inset;border-color: #d4f658;background: #f3e2bc;color:#db9c29;font-size: 15px; "/></td>
+	</tr>
+	<tr>
+	<td colspan="3" align="right">({lang gfarm:f127}{$config['outbase']}{lang gfarm:c062}1)</td>
+	</tr>
+	<tr>
+	<td><img src='source/plugin/gfarm/img/ui/gold.png'/></td>
+	<td>{lang gfarm:c117}{$config['moneyname']}{lang gfarm:c062}</td>
+	<td style="color: #db9c29"><span id='dprice'>0</span></td>
+	</tr>
+	</table>
+	<script type="text/javascript" reload=1>
+	(function(){
+		var dnum={eval echo floor($user['money']/$config['outbase'])};
+		var dprice={$config['outbase']};
+		jq('#dnum').keydown(function(event){	
+			var dsize=dnum.toString().length;
+			jq('#dnum').attr('maxlength',dsize+1);
+			var keycode;
+		    if(window.event) // IE 娴忚鍣�
+		    {
+		        keycode = event.keyCode;
+		    }
+		    else if(event.which) // Netscape/Firefox/Opera娴忚鍣�
+		    {
+		        keycode = event.which;
+		    }
+			if(!((keycode <= 57 && keycode >= 48)||(keycode <= 105 && keycode >= 96)||keycode==8||keycode==46)) {
+				return false;
+			}
+		});
+		jq('#dnum').keyup(function(){	
+			if(parseInt(jq('#dnum').val())>parseInt(dnum)){
+				jq('#dnum').val(dnum);
+				jq('#dprice').html(dprice*dnum);
+				return false;
+			}
+			if(parseInt(jq('#dnum').val())<1){
+				jq('#dnum').val(1);
+				jq('#dprice').html(dprice);
+				return false;
+			}
+			jq('#dprice').html(dprice*jq('#dnum').val());
+		});
+	})();
+
+
+</script>
+{template common/footer}

@@ -1,0 +1,164 @@
+{template common/header}
+<div id='ins'>
+	<ul class='line' id='ul2'>
+	<!--{loop $shopInfos $key=>$val}-->
+	<li>
+		<div class="shopbottom listti">
+			<span class='shopname'>{$val['name']}</span>
+			{if !empty($equipordecos[$key])}<span class='buybotton'>{lang gfarm:f081}</span>
+			{elseif $tshop[$key]}<span id='{$val[id]}' class='buybotton' onclick="openWS(this)">{lang gfarm:f134}</span>{/if}
+		</div>
+			<div style="padding-top: 10px">
+			<div style="float: left;width: 75px;text-align: center;position: relative;">
+			<img class='showimg' src="{$val['img']}"/>			
+			<span>LV.{$val['use_level']}</span>
+			</div>
+			<div style="float: left;text-align: left;">{lang gfarm:f074}{lang gfarm:c062}{if $val['money_typeb']==1}<img title="{$config['bullionsname']}" src="source/plugin/gfarm/img/ui/gold-1.png">{else}<img title="{$config['moneyname']}" src="source/plugin/gfarm/img/ui/money-1.png">{/if}{$val['buy_price']}<br/>
+			{lang gfarm:f075}{lang gfarm:c062}<span id='still_{$val[id]}'>{if !empty($val['add_date'])}{$goodupdates[$key]['still_num']}{else}{lang gfarm:c144}{/if}</span><br/>
+			{if empty($do)||$do=='9'}{lang gfarm:f076}{lang gfarm:c062}{$datas[$key]['mature_time']}{lang gfarm:f077}{/if}
+			</div>			
+			</div>
+			<div class='shopattr'>
+				<div>
+				<img style="float:left;" src="{$val['img']}" width="40px"/>
+				<div style="float: left;width: 85px;line-height: 15px;margin-left:5px">
+				<span style="text-align: center;">{$val['name']}</span><br/>
+				{lang gfarm:f078}{lang gfarm:c062}{$separates[$key]['separate_name']}<br/>
+				{lang gfarm:c102}{lang gfarm:c062}{$val['use_level']}{lang gfarm:f016}<br/>
+				</div>
+				</div>
+				<div style="clear: both">
+				{lang gfarm:c073}{lang gfarm:c062}{$val['use_benevolence']}<br/>
+				{if $do==1}				
+				{lang gfarm:c222}{lang gfarm:c062}{$datas[$key]['add_steal_odds']}%<br/>
+				{lang gfarm:c305}{lang gfarm:c062}{$datas[$key]['add_steal_number']}%<br/>
+				{lang gfarm:c040}{lang gfarm:c062}{if $datas[$key]['valid_time']}{$datas[$key]['valid_time']}{lang gfarm:c318}{else}{lang gfarm:c144}{/if}<br/>
+				{elseif $do==4}
+				{lang gfarm:c038}{lang gfarm:c062}{$datas[$key]['add_steal_odds']}%<br/>
+				{lang gfarm:c039}{lang gfarm:c062}{$datas[$key]['add_steal_number']}%<br/>
+				{lang gfarm:c036}{lang gfarm:c062}{if $datas[$key]['add_gain_number']>=0}+{/if}{$datas[$key]['add_gain_number']}%<br/>
+				{lang gfarm:c037}{lang gfarm:c062}{if $datas[$key]['add_gain_time']>=0}+{/if}{$datas[$key]['add_gain_time']}%<br/>
+				{lang gfarm:c040}{lang gfarm:c062}{if $datas[$key]['valid_time']}{$datas[$key]['valid_time']}{lang gfarm:c318}{else}{lang gfarm:c144}{/if}<br/>
+				{elseif $do==9}
+				{lang gfarm:c049}{lang gfarm:c062}{$datas[$key]['mature_time']}{lang gfarm:f077}<br/>
+				{lang gfarm:c051}{lang gfarm:c062}{$datas[$key]['experience']}<br/>		
+				{elseif $do==19}
+				{lang gfarm:c036}{lang gfarm:c062}{if $datas[$key]['add_gain_number']>=0}+{/if}{$datas[$key]['add_gain_number']}%<br/>
+				{lang gfarm:c037}{lang gfarm:c062}{if $datas[$key]['add_gain_time']>=0}+{/if}{$datas[$key]['add_gain_time']}%<br/>
+				{lang gfarm:c068}{lang gfarm:c062}{if $datas[$key]['add_benevolence']>=0}+{/if}{$datas[$key]['add_benevolence']}<br/>
+				{/if}
+				{$val['description']}
+				</div>
+			</div>
+	</li>
+	<!--{/loop}-->
+	</ul>
+	</div>
+	<div id=shopscrollbartop></div>
+	<div id='shopscrollBars'>
+	<div id='shophandles'></div>
+	</div>
+	<div id='shopscrollbarbottom'></div>	
+	<script type="text/javascript" reload=1>
+	(function(){
+		jq('#ulmenu li').each(function(){
+			jq(this).click(function(){
+				jq(this).css('background','url(source/plugin/gfarm/img/ui/select.png) no-repeat').children('a').css('color','white').addClass('acolor');
+				jq(this).siblings().css('background','url(source/plugin/gfarm/img/ui/noselect.png) no-repeat').children('a').css('color','#934f13').removeClass('acolor');
+			});		
+		});
+		var left=jq('#fwin_gfarm').offset().left;
+		var top=jq('#fwin_gfarm').offset().top;	
+		jq('#ul2 li').each(function(){
+			var lileft=this.offsetLeft,litop=this.offsetTop;
+			jq(this).find('.showimg').hover(function(){
+				var st=litop-jq('#ins').scrollTop();
+				jq(this).parents('li').find('.shopattr').css({'left':left+lileft+70+'px','top':top+st+140+'px'}).show();		
+			},function(){
+				jq(this).parents('li').find('.shopattr').hide();
+			});
+		});
+		jq('#shopbottom').html({eval echo count($shopInfos)}+"{lang gfarm:f119}{$separat[separate_name]}");
+	})();
+</script>
+<script reload=1>
+var ximen = {
+	$:function(o){ return document.getElementById(o); },
+	getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+	getOffset:function(o) {
+		var t = o.offsetTop,h = o.offsetHeight;
+		while(o = o.offsetParent) { t += o.offsetTop; }
+		return { top:t, height:h };
+	},
+	bind:function(o,eType,fn) {
+		if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+		else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	unbind:function(o,eType,fn) {
+		if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+		else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	stopPropagate:function(e) {
+		if(e && e.stopPropagation) { e.stopPropagation(); } 
+		else { window.event.cancelBubble = true; }
+		return false;
+	},
+	stopDefault:function(e) {
+		e = e || window.event;
+		e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+	}
+};
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relY,
+		out = ximen.$("outs"),
+		content = ximen.$("ins"),
+		scrollBar = ximen.$("shopscrollBars"),
+		scrollBarHandle = ximen.$("shophandles"),
+		contentScrollHeight = content.scrollHeight,//灏哻ontent.scrollHeight璧嬩竴娆″�,瑙ｅ喅IE6涓媠crollHeight闇�皟鐢ㄤ袱娆＄殑bug
+		scrollBarHandleHeight = parseInt(content.offsetHeight/content.scrollHeight * scrollBar.offsetHeight),
+		setScrollBarHandle = function() {//褰撳唴瀹硅秴澶氭椂璁剧疆鎷栨嫿鏉″瓙鐨勬渶灏忛珮搴�
+		if(scrollBarHandleHeight==scrollBar.offsetHeight){scrollBar.style.display='none';jq('#shopscrollbartop').hide();jq('#shopscrollbarbottom').hide();}
+		else { scrollBarHandleHeight = 20; scrollBarHandle.style.height = "20px"; jq('#shopscrollbartop').show();jq('#shopscrollbarbottom').show();}
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollTop = (e.clientY - relY)/(scrollBar.offsetHeight - scrollBarHandleHeight)*(content.scrollHeight - content.offsetHeight);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target鐏嫄srcElementIE		
+			relY = event.clientY - et.offsetTop;
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//璁剧疆婊氳疆浜嬩欢,e.wheelDelta涓巈.detail鍒嗗埆鍏煎IE銆乄3C锛屾牴鎹繑鍥炲�鐨勬璐熸潵鍒ゆ柇婊氬姩鏂瑰悜
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollTop -= 80; }	//姝ラ暱璁�0鍍忕礌a姣旇緝鎺ヨ繎window婊氬姩鏉＄殑婊氬姩閫熷害
+			else { content.scrollTop += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.top = content.scrollTop/(content.scrollHeight - content.offsetHeight) * (scrollBar.offsetHeight - scrollBarHandleHeight)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+	jq('#shopscrollbarbottom').click(function(){
+		content.scrollTop += contentScrollHeight;
+	});
+	jq('#shopscrollbartop').click(function(){
+		content.scrollTop -= contentScrollHeight;
+	});
+})();
+</script>
+{template common/footer}

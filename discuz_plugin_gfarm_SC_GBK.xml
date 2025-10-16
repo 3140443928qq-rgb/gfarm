@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-10-24 09:53]]></item>
+	<item id="From"><![CDATA[Ä§È¤°É£¨www.moqu8.com£©]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[Ä§È¤°É_GPlayÐéÄâÅ©³¡]]></item>
+			<item id="identifier"><![CDATA[gfarm]]></item>
+			<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[gfarm/]]></item>
+			<item id="copyright"><![CDATA[Ä§È¤°É£¨www.moqu8.com£©]]></item>
+			<item id="version"><![CDATA[1.0.5]]></item>
+			<item id="__modules">
+				<item id="21">
+					<item id="name"><![CDATA[myyapmagoo]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>Ä§È¤°É</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[com_download]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[×é¼þÏÂÔØ]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[front]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[GPLAYÐéÄâÅ©³¡]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[component]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[×é¼þ¹ÜÀí]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[admin_cp]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[ºóÌ¨¹ÜÀí]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[<font color='red'>ÍÆ¼ö²å¼þ</font>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[¹ÜÀíÔ±UID]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ¹ÜÀíÔ±UID£¬ÓÃ¡±/¡±¸ô¿ª]]></item>
+				<item id="variable"><![CDATA[adminuids]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1/2/8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[±êÌâ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ÍøÒ³±êÌâ]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[GPlayÐéÄâÅ©³¡]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[¹Ø¼ü×Ö]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ÍøÒ³¹Ø¼ü×Ö]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[GPlayÐéÄâÅ©³¡]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[ÃèÊö]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ÍøÒ³ÃèÊö]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[GPlayÐéÄâÅ©³¡]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[¿ÉÊ¹ÓÃÓÃ»§×é]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ¿ÉÒÔÕý³£½øÈëÓÎÏ·µÄÓÃ»§×é]]></item>
+				<item id="variable"><![CDATA[usergroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+					<item id="1"><![CDATA[9]]></item>
+					<item id="2"><![CDATA[10]]></item>
+					<item id="3"><![CDATA[11]]></item>
+					<item id="4"><![CDATA[12]]></item>
+					<item id="5"><![CDATA[13]]></item>
+					<item id="6"><![CDATA[14]]></item>
+					<item id="7"><![CDATA[15]]></item>
+					<item id="8"><![CDATA[20]]></item>
+					<item id="9"><![CDATA[16]]></item>
+					<item id="10"><![CDATA[17]]></item>
+					<item id="11"><![CDATA[18]]></item>
+					<item id="12"><![CDATA[19]]></item>
+					<item id="13"><![CDATA[1]]></item>
+					<item id="14"><![CDATA[2]]></item>
+					<item id="15"><![CDATA[3]]></item>
+					<item id="16"><![CDATA[4]]></item>
+					<item id="17"><![CDATA[5]]></item>
+					<item id="18"><![CDATA[6]]></item>
+					<item id="19"><![CDATA[7]]></item>
+					<item id="20"><![CDATA[8]]></item>
+				</item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[Ôª±¦°ó¶¨»ý·Ö]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ÓÎÏ·Ôª±¦°ó¶¨µÄÂÛÌ³»ý·ÖÀàÐÍ]]></item>
+				<item id="variable"><![CDATA[bullionstype]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[Ôª±¦Ãû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   Ôª±¦ÔÚÓÎÏ·ÖÐÏÔÊ¾µÄÃû³Æ]]></item>
+				<item id="variable"><![CDATA[bullionsname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[Ôª±¦1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[½ðÇ®Ãû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ½ðÇ®ÔÚÓÎÏ·ÖÐÏÔÊ¾µÄÃû³Æ]]></item>
+				<item id="variable"><![CDATA[moneyname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[½ðÇ®1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[×î´ó½ðÇ®ÉÏÏÞ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   ÓÎÏ·ÖÐ×î¶àÄÜ´æ¶àÉÙ½ðÇ®]]></item>
+				<item id="variable"><![CDATA[maxmoney]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[9999999]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[Ä¬ÈÏ½ðÇ®]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   Íæ¼Ò×¢²áÕËºÅµÄ³õÊ¼½ðÇ®]]></item>
+				<item id="variable"><![CDATA[firstmoney]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[Ôª±¦½ðÇ®¶Ò»»±ÈÀý]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.moqu8.com    |   Ôª±¦»ùÊýÎª1£¬ÊäÈëÊý×ÖÔò±ÈÀýÎª1£ºÊý×Ö]]></item>
+				<item id="variable"><![CDATA[exchangebase]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[101]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">ÍÆ¼öÒ»¸ödzÉÌ</span><span style="color:#4C33E5;">Òµ²å¼þÄ£°æÏÂÔØµÄ</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">ÍøÕ¾¸ø´ó¼Ò</span><a href="http://www.moqu8.com" target="_blank"><span style="color:#4C33E5;">Ä§È¤°É</span></a><span style="color:#4C33E5;">£¨www.moqu8.com£©</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">Õâ</span><span style="color:#E53333;">ÊÇÒ»¸ö</span><span style="color:#E53333;">dzÉÌÒµ</span><a href="http://www.moqu8.com/dzchajian/" target="_blank"><span style="color:#337FE5;">²å</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">¼þ</span></a><a href="http://www.moqu8.com/discuz/" target="_blank"><u><span style="color:#337FE5;">Ä£</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">°æ</span></u></a><span style="color:#E53333;">×ÊÔ´ÆÆ½â·ÖÏíµÄÍøÕ¾£¬¶øÇÒ»¹ÓÐºÜ¶à¾«Æ·µÄÍøÕ¾Ô´ÂëÏÂÔØ</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">ËûÃÇ×ÊÔ´Ã¿Ìì¸üÐÂ£¬²¢ÇÒºÜ¶à¶¼ÊÇËûÃÇ×Ô¼º³öÇ®ÔÚÓ¦ÓÃÖÐÐÄ¹ºÂòºóÆÆ½â·ÖÏí³öÀ´µÄ</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">²»¹ý»¹ÊÇÌæËûÃÇËµÒ»ÏÂ</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;ËûÃÇÕ¾ÏÂÔØµÄ×ÊÔ´Ö»ÏÞÓÚ×Ô¼ºÑ§Ï°ÑÐ¾¿ÄÚº¬µÄÉè¼ÆË¼ÏëºÍÔ­Àí ÇëÎðÓÐÈÎºÎÉÌÒµÓ¯ÀûÐÐÎª</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">½éÉÜÒ²½éÉÜÍêÁË£¬¸ø´ó¼Ò×ö¸öÐ¡µ¼º½°É</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.moqu8.com/dzchajian/" target="_blank">dzÉÌÒµÆÆ½â²å¼þÏÂÔØ</a> &nbsp; <a href="http://www.moqu8.com/discuz/" target="_blank">dzÉÌÒµ·ç¸ñÄ£°æÏÂÔØ</a> &nbsp; &nbsp;<a href="http://www.moqu8.com/yuanma/" target="_blank">¾«Æ·ÍøÕ¾Ô´ÂëÏÂÔØ</a> &nbsp; &nbsp;<a href="http://www.moqu8.com/forum.php?gid=59" target="_blank">¹¤¾ßËØ²ÄÏÂÔØ</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.moqu8.com/webschool/" target="_blank">¾«Ñ¡½Ì³ÌÇø</a></span> 
+</h3> ]]></item>
+				<item id="001"><![CDATA[ÇëµÇÂ¼]]></item>
+				<item id="002"><![CDATA[Ãû³Æ²»ÄÜÎª¿Õ]]></item>
+				<item id="003"><![CDATA[Ãû³ÆÒÑ´æÔÚ]]></item>
+				<item id="004"><![CDATA[ÈÎÎñÃû³Æ×ÖÊý²»ÄÜ³¬¹ý25×Ö]]></item>
+				<item id="005"><![CDATA[Íê³ÉÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="006"><![CDATA[ÖÁÉÙÑ¡ÔñÒ»ÖÖ½±Àø]]></item>
+				<item id="007"><![CDATA[½±Àø]]></item>
+				<item id="008"><![CDATA[µÀ¾ßÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="009"><![CDATA[½±Àø°®ÐÄÖµÌîÐ´´íÎó]]></item>
+				<item id="010"><![CDATA[½±Àø¾­ÑéÌîÐ´´íÎó]]></item>
+				<item id="011"><![CDATA[ÈÎÎñÃèÊö²»ÄÜÎª¿Õ]]></item>
+				<item id="012"><![CDATA[²Ù×÷³É¹¦]]></item>
+				<item id="013"><![CDATA[ÈÎÎñ´ÎÊýÌîÐ´´íÎó]]></item>
+				<item id="014"><![CDATA[Íæ¼Ò´ÎÊýÉÏÏÞÌîÐ´´íÎó]]></item>
+				<item id="015"><![CDATA[µ¥´ÎÕ÷ÊÕÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="016"><![CDATA[¿ªÊ¼Ê±¼ä²»ÄÜÎª¿Õ]]></item>
+				<item id="017"><![CDATA[½áÊøÊ±¼ä²»ÄÜÎª¿Õ]]></item>
+				<item id="018"><![CDATA[¿ªÊ¼Ê±¼ä²»ÄÜ´óÓÚ½áÊøÊ±¼ä]]></item>
+				<item id="019"><![CDATA[¸ÃÊ±¼ä¶ÎÒÑÓÐÈÎÎñ´æÔÚ]]></item>
+				<item id="020"><![CDATA[¶Ò³ö¹¦ÄÜÒÑ¹Ø±Õ]]></item>
+				<item id="021"><![CDATA[×îµÍ¼¶±ðÌîÐ´´íÎó]]></item>
+				<item id="022"><![CDATA[×î¸ß¼¶±ðÌîÐ´´íÎó]]></item>
+				<item id="023"><![CDATA[ÎïÆ·ÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="024"><![CDATA[Å©×÷ÎïidÌîÐ´´íÎó]]></item>
+				<item id="025"><![CDATA[ÊÕ»ñÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="026"><![CDATA[×÷Îïid²»´æÔÚ]]></item>
+				<item id="027"><![CDATA[¸Ã¹ØÁªÒÑ´æÔÚ]]></item>
+				<item id="028"><![CDATA[ÇëÑ¡ÔñÉÏ´«Í¼Æ¬]]></item>
+				<item id="029"><![CDATA[·Ç·¨Í¼Æ¬¸ñÊ½]]></item>
+				<item id="030"><![CDATA[¹ºÂò¼Û¸ñÌîÐ´´íÎó]]></item>
+				<item id="031"><![CDATA[³öÊÛ¼Û¸ñÌîÐ´´íÎó]]></item>
+				<item id="032"><![CDATA[Ê¹ÓÃµÈ¼¶ÌîÐ´´íÎó]]></item>
+				<item id="033"><![CDATA[Ê¹ÓÃ°®ÐÄÖµÌîÐ´´íÎó]]></item>
+				<item id="034"><![CDATA[ÉÏ¼ÜÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="035"><![CDATA[²¹»õÖÜÆÚÌîÐ´´íÎó]]></item>
+				<item id="036"><![CDATA[¶ÑµþÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="037"><![CDATA[ÇëÑ¡ÔñÄÛÃçÍ¼Æ¬]]></item>
+				<item id="038"><![CDATA[ÇëÑ¡Ôñ³ÉÊìÍ¼Æ¬]]></item>
+				<item id="039"><![CDATA[³ÉÊìÊ±¼äÌîÐ´´íÎó]]></item>
+				<item id="040"><![CDATA[ÊÕ»ñ¾­ÑéÌîÐ´´íÎó]]></item>
+				<item id="041"><![CDATA[Ó°ÏìÍµÇÔ³É¹¦ÂÊÌîÐ´´íÎó]]></item>
+				<item id="042"><![CDATA[Ó°ÏìÍµÇÔ¸ßÊýÁ¿¼¸ÂÊÌîÐ´´íÎó]]></item>
+				<item id="043"><![CDATA[ÓÐÐ§Ê¹ÓÃÌìÊýÌîÐ´´íÎó]]></item>
+				<item id="044"><![CDATA[Ó°Ïì²ú³öÊýÁ¿°Ù·Ö±ÈÌîÐ´´íÎó]]></item>
+				<item id="045"><![CDATA[Ó°Ïì²ú³öÊ±¼ä°Ù·Ö±ÈÌîÐ´´íÎó]]></item>
+				<item id="046"><![CDATA[Ó°Ïì°®ÐÄÖµÌîÐ´´íÎó]]></item>
+				<item id="047"><![CDATA[ÇëÊäÈëÀñ°üÎïÆ·]]></item>
+				<item id="048"><![CDATA[µÚ]]></item>
+				<item id="049"><![CDATA[¸öÎïÆ·idÌîÐ´´íÎó]]></item>
+				<item id="050"><![CDATA[ÇëÊäÈë¶ÔÓ¦ÎïÆ·ÊýÁ¿]]></item>
+				<item id="051"><![CDATA[ÎïÆ·ÊýÁ¿²»Æ¥Åä]]></item>
+				<item id="052"><![CDATA[¸öÎïÆ·ÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="053"><![CDATA[Ëæ»úÎïÆ·ÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="054"><![CDATA[¸ÃÎïÆ·id×éÒÑ´æÔÚ]]></item>
+				<item id="055"><![CDATA[ÇëÊäÈë4¸öÎïÆ·id]]></item>
+				<item id="056"><![CDATA[¸öÎïÆ·id²»´æÔÚ]]></item>
+				<item id="057"><![CDATA[²ú³öÎïÆ·idÌîÐ´´íÎó]]></item>
+				<item id="058"><![CDATA[²ú³öÎïÆ·id²»´æÔÚ]]></item>
+				<item id="059"><![CDATA[²ú³öÎïÆ·id²»ÄÜÎªÎïÆ·×éid]]></item>
+				<item id="060"><![CDATA[¸Ã²ú³öÎïÆ·ÒÑ´æÔÚ]]></item>
+				<item id="061"><![CDATA[³É¹¦²ú³ö¼¸ÂÊÌîÐ´´íÎó]]></item>
+				<item id="062"><![CDATA[Ê§°Ü²ú³ö¼¸ÂÊÌîÐ´´íÎó]]></item>
+				<item id="063"><![CDATA[¸ÃÅä·½ÒÑ´æÔÚ]]></item>
+				<item id="064"><![CDATA[×î´ó²ú³öÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="065"><![CDATA[×îÐ¡²ú³öÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="066"><![CDATA[×î´ó²ú³öÊýÁ¿²»ÄÜÐ¡ÓÚ×îÐ¡²ú³öÊýÁ¿]]></item>
+				<item id="067"><![CDATA[²ú³öÊýÁ¿¼Ó³ÉÌîÐ´´íÎó]]></item>
+				<item id="068"><![CDATA[Ö»ÄÜÉ¾³ý×î´óµÈ¼¶]]></item>
+				<item id="069"><![CDATA[É¾³ý³É¹¦]]></item>
+				<item id="070"><![CDATA[¾­ÑéÖµÌîÐ´´íÎó]]></item>
+				<item id="071"><![CDATA[ÌåÁ¦ÌîÐ´´íÎó]]></item>
+				<item id="072"><![CDATA[½âËøÅ©ÌïÊýÌîÐ´´íÎó]]></item>
+				<item id="073"><![CDATA[¸ÃµÈ¼¶¾­ÑéÖµ±ØÐë´óÓÚÉÏÒ»¼¶¾­ÑéÖµ]]></item>
+				<item id="074"><![CDATA[ÌìÊýÌîÐ´´íÎó]]></item>
+				<item id="075"><![CDATA[ÔÂÀÛ¼ÆÇ©µ½ÌìÊý²»ÄÜ³¬¹ý31Ìì]]></item>
+				<item id="076"><![CDATA[¸ÃÇ©µ½ÌìÊýÒÑ´æÔÚ]]></item>
+				<item id="077"><![CDATA[Ôö¼Ó]]></item>
+				<item id="078"><![CDATA[½âËø´ÎÊýÌîÐ´´íÎó]]></item>
+				<item id="079"><![CDATA[¾­Ñé]]></item>
+				<item id="080"><![CDATA[°®ÐÄ]]></item>
+				<item id="081"><![CDATA[Ôö¼Ó¾­ÑéÌîÐ´´íÎó]]></item>
+				<item id="082"><![CDATA[ÌîÐ´´íÎó]]></item>
+				<item id="083"><![CDATA[Ôö¼ÓÌåÁ¦ÌîÐ´´íÎó]]></item>
+				<item id="084"><![CDATA[Ôö¼Ó°®ÐÄÖµÌîÐ´´íÎó]]></item>
+				<item id="085"><![CDATA[¸ÃÓÃ»§×éÒÑ±»Õ¼ÓÃ]]></item>
+				<item id="086"><![CDATA[Ôö¼ÓÍµÇÔ³É¹¦ÂÊÌîÐ´´íÎó]]></item>
+				<item id="087"><![CDATA[ÈÎÎñÎ´Íê³É]]></item>
+				<item id="088"><![CDATA[½±ÀøÒÑÁìÈ¡]]></item>
+				<item id="089"><![CDATA[¸ÃÈÎÎñÒÑ½áÊø]]></item>
+				<item id="090"><![CDATA[ÊýÁ¿²»×ã]]></item>
+				<item id="091"><![CDATA[¸öÈËÈÎÎñ´ÎÊýÒÑ´ïÉÏÏÞ]]></item>
+				<item id="092"><![CDATA[Ä¿±êuidÌîÐ´´íÎó]]></item>
+				<item id="093"><![CDATA[Ä¿±êuid²»´æÔÚ]]></item>
+				<item id="094"><![CDATA[ÈÎÎñµÀ¾ßÎ´Ñ¡Ôñ]]></item>
+				<item id="095"><![CDATA[Ê£Óà½ð¶î²»×ã]]></item>
+				<item id="096"><![CDATA[µÀ¾ßÊýÁ¿²»×ã]]></item>
+				<item id="097"><![CDATA[ÏÞÖÆÊ±¼äÌîÐ´´íÎó]]></item>
+				<item id="098"><![CDATA[³É¹¦ÊÛ³ö»ñµÃ]]></item>
+				<item id="099"><![CDATA[½âËø´ÎÊýÒÑ´æÔÚ]]></item>
+				<item id="100"><![CDATA[¶Ò»»ÊýÁ¿ÌîÐ´´íÎó]]></item>
+				<item id="101"><![CDATA[²»×ã]]></item>
+				<item id="102"><![CDATA[¶Ò»»³É¹¦]]></item>
+				<item id="103"><![CDATA[ÒÑ´ï½âËøÉÏÏÞ]]></item>
+				<item id="104"><![CDATA[ÌåÁ¦Öµ²»×ã]]></item>
+				<item id="105"><![CDATA[¸Ã×÷ÎïÒÑ³ÉÊì£¬ÎÞÐèÊ¹ÓÃ]]></item>
+				<item id="106"><![CDATA[¸ÃµÀ¾ßÎÞ·¨¶Ô¸ÃÓÃ»§Ê¹ÓÃ]]></item>
+				<item id="107"><![CDATA[ÒÑ¾­Ê¹ÓÃ¹ýÁË]]></item>
+				<item id="108"><![CDATA[ÒÑ¾­Íµ¹ýÁË]]></item>
+				<item id="109"><![CDATA[ÍµÇÔÊ§°Ü]]></item>
+				<item id="110"><![CDATA[Ê£ÓàÊýÁ¿²»×ã]]></item>
+				<item id="111"><![CDATA[³É¹¦¹ºÂò]]></item>
+				<item id="112"><![CDATA[²ÄÁÏ¸ñ×ÓÎ´ÌîÂú]]></item>
+				<item id="113"><![CDATA[¸ÃÉÌÆ·ÒÑ¹ºÂò]]></item>
+				<item id="114"><![CDATA[¸ö£¬ÏûºÄ]]></item>
+				<item id="115"><![CDATA[ÔÝÊ±Ã»ÓÐ»î¶¯ÈÎÎñ£¡]]></item>
+				<item id="116"><![CDATA[½âËø·ÑÓÃÌîÐ´´íÎó]]></item>
+				<item id="117"><![CDATA[Åä·½]]></item>
+				<item id="118"><![CDATA[×°°ç×°±¸]]></item>
+				<item id="119"><![CDATA[Àñ°ü]]></item>
+				<item id="120"><![CDATA[¸ÃÅ©ÌïÒÑ½âËø]]></item>
+				<item id="121"><![CDATA[Î´Ñ¡ÔñÅä·½]]></item>
+				<item id="129"><![CDATA[µ¥´Î¶Ò»»ÊýÁ¿²»ÄÜµÍÓÚ]]></item>
+				<item id="130"><![CDATA[Ã¿ÈÕ¶Ò»»ÊýÁ¿²»ÄÜ³¬¹ý]]></item>
+				<item id="131"><![CDATA[Íæ¼Ò×îµÍ]]></item>
+				<item id="132"><![CDATA[Êý²»ÄÜÉÙÓÚ]]></item>
+				<item id="140"><![CDATA[ÉÌµêÕÛ¿ÛÌîÐ´´íÎó]]></item>
+				<item id="141"><![CDATA[½âËøÕÛ¿ÛÌîÐ´´íÎó]]></item>
+				<item id="142"><![CDATA[½µµÍ±»ÍµÇÔ¸ßÊýÁ¿¼¸ÂÊÌîÐ´´íÎó]]></item>
+				<item id="143"><![CDATA[½µµÍ±»ÍµÇÔ³É¹¦ÂÊÌîÐ´´íÎó]]></item>
+				<item id="144"><![CDATA[Ôö¼ÓÍµÇÔ¸ßÊýÁ¿¼¸ÂÊÌîÐ´´íÎó]]></item>
+				<item id="145"><![CDATA[Ôö¼Óµ¥Î»Ê±¼ä»Ø¸´ÌåÁ¦ÖµÌîÐ´´íÎó]]></item>
+				<item id="146"><![CDATA[¸ÃÎïÆ·²»´æÔÚ]]></item>
+				<item id="147"><![CDATA[¸ÃÎïÆ·²»ÄÜÊ³ÓÃ]]></item>
+				<item id="148"><![CDATA[ÖÖÖ²ÈÕÖ¾]]></item>
+				<item id="149"><![CDATA[ÊÕ»ñÈÕÖ¾]]></item>
+				<item id="150"><![CDATA[ÍµÇÔÈÕÖ¾]]></item>
+				<item id="151"><![CDATA[ÉÌµêÂòÈëÈÕÖ¾]]></item>
+				<item id="152"><![CDATA[ÉÌµêÂô³öÈÕÖ¾]]></item>
+				<item id="153"><![CDATA[¹²ÇåÀí]]></item>
+				<item id="154"><![CDATA[Ìõ]]></item>
+				<item id=""><![CDATA[]]></item>
+				<item id="install0"><![CDATA[INSERT INTO `pre_gfarm_goods` (`id`, `sort`, `name`, `big_type`, `small_type`, `money_typeb`, `money_types`, `buy_price`, `sale_price`, `use_level`, `use_benevolence`, `use_flag`, `sale_count`, `add_date`, `sale_time_begin`, `sale_time_end`, `transaction_flag`, `img`, `description`, `depot_pile`, `create_time`, `create_uid`, `update_time`, `update_uid`) VALUES
+(74, '', '»Æ½ðÓÒÊÖ', 1, 2, 0, 0, 500, 200, 7, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204142256175.png', '»Æ½ðÓÒÊÖ£¬ÍµÇÔ³É¹¦ÊýÁ¿¼Ó³É10%¡£', 999, 1417674176, 1039, 1417675516, 1039),
+(75, '', 'Ç¬À¤´ü', 1, 3, 0, 0, 5000, 2000, 15, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204142355637.png', 'Ç¬À¤´ü£¬ÍµÇÔ³É¹¦ÊýÁ¿¼Ó³É50%', 999, 1417674235, 1039, 1417675544, 1039),
+(79, 'ZZS002', '³¬¼¶ÓñÃ×ÖÖ×Ó', 9, 0, 0, 0, 200, 20, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204150627697.png', '', 0, 1417676787, 2, 1417676787, 2),
+(80, 'ZZS003', '³¬¼¶Ê¯ÁñÖÖ×Ó', 9, 0, 0, 0, 300, 30, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204150724406.png', '', 0, 1417676844, 2, 1417676844, 2),
+(81, 'ZZS004', '³¬¼¶¿à¹ÏÖÖ×Ó', 9, 0, 0, 0, 400, 40, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204150840553.png', 'ÐèÒª´óÁ¿¿à¹ÏºÏ³É£¡', 0, 1417676920, 2, 1417676920, 2),
+(82, 'ZZS005', '³¬¼¶ÍÁ¶¹ÖÖ×Ó', 9, 0, 0, 0, 500, 50, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204150949288.png', 'ÐèÒª´óÁ¿ÍÁ¶¹ºÏ³É£¡', 0, 1417676989, 2, 1417676989, 2),
+(83, 'ZZS006', '³¬¼¶ÄÏ¹ÏÖÖ×Ó', 9, 0, 0, 0, 1200, 120, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204151113729.png', 'ÐèÒª´óÁ¿ÄÏ¹ÏºÏ³É£¡', 0, 1417677073, 2, 1417677073, 2),
+(76, '', 'Éñ¼¶Á­µ¶', 1, 2, 0, 0, 700, 200, 7, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204143323891.png', 'Éñ¼¶Á­µ¶', 999, 1417674803, 1039, 1417674827, 1039),
+(77, '', '¿ñÂÒÕ½¸«', 1, 3, 0, 0, 5000, 2000, 15, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204143440650.png', '¿ñÂÒÕ½¸«', 999, 1417674880, 1039, 1417675549, 1039),
+(78, 'ZZS001', '³¬¼¶Íã¶¹ÖÖ×Ó', 9, 0, 0, 0, 100, 10, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204145942592.png', 'ÐèÒª´óÁ¿Íã¶¹À´ºÏ³ÉÅ¶£¡£¡', 0, 1417676382, 2, 1417676583, 2),
+(84, 'ZZS007', '³¬¼¶·¬ÇÑÖÖ×Ó', 9, 0, 0, 0, 1400, 140, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204151244830.png', 'ÐèÒª´óÁ¿·¬ÇÑºÏ³É£¡', 0, 1417677164, 2, 1417677164, 2),
+(85, 'ZZS008', '³¬¼¶Æ»¹ûÖÖ×Ó', 9, 0, 0, 0, 1600, 160, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204151414371.png', 'ÐèÒª´óÁ¿Æ»¹ûºÏ³É£¡', 0, 1417677254, 2, 1417677254, 2);]]></item>
+				<item id="install1"><![CDATA[INSERT INTO `pre_gfarm_equipment` (`id`, `relation_id`, `add_steal_odds`, `add_steal_number`, `valid_time`) VALUES
+(1, 74, 0, 10, 3),
+(2, 75, 0, 50, 5),
+(3, 76, 10, 0, 3),
+(4, 77, 50, 0, 5);]]></item>
+				<item id="install2"><![CDATA[INSERT INTO `pre_gfarm_decorate` (`id`, `relation_id`, `add_steal_odds`, `add_steal_number`, `add_gain_number`, `add_gain_time`, `valid_time`) VALUES
+(1, 53, 0, 0, 0, 0, 0);]]></item>
+				<item id="install3"><![CDATA[INSERT INTO `pre_gfarm_set` (`id`, `mod_cn`, `mod_en`, `key_cn`, `key_en`, `regex_en`, `regex_cn`, `description`, `value`, `status`, `displayorder`, `create_time`, `update_time`, `type`) VALUES
+(32, '¶Ò³ö', 'exout', 'ÊÇ·ñ¶Ò³ö', 'isout', '/^[0-1]$/', 'Ñ¡Ôñ´íÎó', 'ÊÇ·ñ¿ªÆô¶Ò³ö¹¦ÄÜ', '1', 0, 0, 0, 0, 3),
+(33, '¶Ò³ö', 'exout', '¶Ò³ö»ý·ÖÀàÐÍ', 'outstyle', '/^([1-9]+[0-9]*)$/', '»ý·ÖÀàÐÍ´íÎó', '¶Ò³ö»ý·ÖÀàÐÍ', '8', 0, 1, 0, 0, 4),
+(34, '¶Ò³ö', 'exout', 'µ¥´Î¶Ò³ö×îµÍ»ý·ÖÊý', 'minexnum', '/^([1-9]+[0-9]*)$/', 'µ¥´Î¶Ò³ö×îµÍ»ý·ÖÊýÌîÐ´´íÎó', 'µ¥´Î¶Ò³ö×îµÍ»ý·ÖÊý', '1', 0, 2, 0, 0, 0),
+(35, '¶Ò³ö', 'exout', 'Íæ¼Ò×îÉÙÊ£Óà½ðÇ®Êý', 'minusernum', '/^([1-9]+[0-9]*)$/', 'Íæ¼Ò×îÉÙÊ£Óà½ðÇ®ÊýÌîÐ´´íÎó', 'Íæ¼Ò×îÉÙÊ£Óà½ðÇ®Êý', '2', 0, 3, 0, 0, 0),
+(36, '¶Ò³ö', 'exout', 'Ã¿ÈÕ×î¸ß¶Ò»»»ý·ÖÊý', 'maxexnum', '/^([1-9]+[0-9]*)$/', 'Ã¿ÈÕ×î¸ß¶Ò»»»ý·ÖÊýÌîÐ´´íÎó', 'Ã¿ÈÕ×î¸ß¶Ò»»»ý·ÖÊý', '3', 0, 4, 0, 0, 0),
+(37, '¶Ò³ö', 'exout', '¶Ò³ö±ÈÀý', 'outbase', '/^([1-9]+[0-9]*)$/', '¶Ò³ö±ÈÀýÌîÐ´´íÎó', '¶Ò³ö±ÈÀýÎªËùÌîÊý×Ö£º1', '2', 0, 1, 0, 0, 0);]]></item>
+				<item id="install4"><![CDATA[update `pre_gfarm_goods_separate` set separate_name='Ê³Æ·',pid=0,table_name='food' where id=14;]]></item>
+				<item id="install5"><![CDATA[]]></item>
+				<item id="install6"><![CDATA[]]></item>
+				<item id="install7"><![CDATA[]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="c001"><![CDATA[Åä·½ÐÅÏ¢]]></item>
+				<item id="c002"><![CDATA[Ñ§Ï°Ê±¼ä]]></item>
+				<item id="c003"><![CDATA[³õ´ÎÊ¹ÓÃÊ±¼ä]]></item>
+				<item id="c004"><![CDATA[×îºóÊ¹ÓÃÊ±¼ä]]></item>
+				<item id="c005"><![CDATA[Ê¹ÓÃ´ÎÊý]]></item>
+				<item id="c006"><![CDATA[ÐÂÔö]]></item>
+				<item id="c007"><![CDATA[±àºÅ]]></item>
+				<item id="c008"><![CDATA[Åä·½Ãû³Æ]]></item>
+				<item id="c009"><![CDATA[ºÏ³ÉÎïÆ·×é]]></item>
+				<item id="c010"><![CDATA[³É¹¦²ú³öÖÖ×Ó]]></item>
+				<item id="c011"><![CDATA[²ú³ö¸ÃÎïÆ·»úÂÊ]]></item>
+				<item id="c012"><![CDATA[Ê§°Ü²ú³öÖÖ×Ó]]></item>
+				<item id="c013"><![CDATA[²Ù×÷]]></item>
+				<item id="c014"><![CDATA[ÐÞ¸Ä]]></item>
+				<item id="c015"><![CDATA[×Ü¹²]]></item>
+				<item id="c016"><![CDATA[ÌõÊý¾Ý]]></item>
+				<item id="c017"><![CDATA[Ò³]]></item>
+				<item id="c018"><![CDATA[²ú³öÎïÆ·]]></item>
+				<item id="c019"><![CDATA[×î´ó²ú³öÊýÁ¿]]></item>
+				<item id="c020"><![CDATA[×îÉÙ²ú³öÊýÁ¿]]></item>
+				<item id="c021"><![CDATA[Ê¹ÓÃµÈ¼¶]]></item>
+				<item id="c022"><![CDATA[Ê§°Ü²ú³öÎïÆ·¼¸ÂÊ]]></item>
+				<item id="c023"><![CDATA[Ê§°ÜÈÔÄÜ²ú³öÖÖ×ÓµÄ¼¸ÂÊ,0±íÊ¾²»²ú³öÖÖ×Ó]]></item>
+				<item id="c024"><![CDATA[Ê§°Ü»ùÊý×é]]></item>
+				<item id="c025"><![CDATA[Ö»ÌîÒ»¸öÔò´ú±íÊ§°Ü¸ÅÂÊÏàµÈ]]></item>
+				<item id="c026"><![CDATA[È·¶¨]]></item>
+				<item id="c027"><![CDATA[ÓÃ/·Ö¿ª£¬±ØÐë4¸öÎïÆ·id]]></item>
+				<item id="c028"><![CDATA[ÎïÆ·ÊýÁ¿]]></item>
+				<item id="c029"><![CDATA[Ö»ÌîÒ»¸öÔò´ú±í4¸öÊýÁ¿ÏàµÈ]]></item>
+				<item id="c030"><![CDATA[²ú³öÎïÆ·]]></item>
+				<item id="c031"><![CDATA[ÖÖ×Ó]]></item>
+				<item id="c032"><![CDATA[×÷Îï]]></item>
+				<item id="c033"><![CDATA[²ú³ö¸Ã×÷Îï»úÂÊ]]></item>
+				<item id="c034"><![CDATA[¹ØÁªÐÅÏ¢]]></item>
+				<item id="c035"><![CDATA[ÊÕ»ñÊýÁ¿]]></item>
+				<item id="c036"><![CDATA[Ó°Ïì²ú³öÊýÁ¿°Ù·Ö±È]]></item>
+				<item id="c037"><![CDATA[Ó°Ïì²ú³öÊ±¼ä°Ù·Ö±È]]></item>
+				<item id="c038"><![CDATA[¼õÉÙ±»ÍµÇÔ³É¹¦ÂÊ]]></item>
+				<item id="c039"><![CDATA[¼õÉÙ±»Íµ¸ßÊýÁ¿¼¸ÂÊ]]></item>
+				<item id="c040"><![CDATA[ÓÐÐ§Ê¹ÓÃÌìÊý]]></item>
+				<item id="c041"><![CDATA[£¨²»Ìî»òÕß0Ôò´ú±íÎÞÓ°Ïì£©]]></item>
+				<item id="c042"><![CDATA[£¨²»Ìî»òÕß0Ôò´ú±íÎÞÌìÊýÉÏÏÞ£©]]></item>
+				<item id="c043"><![CDATA[Ó°ÏìÍµÇÔ³É¹¦ÂÊ]]></item>
+				<item id="c044"><![CDATA[Ó°ÏìÍµÇÔ¸ßÊýÁ¿¼¸ÂÊ]]></item>
+				<item id="c045"><![CDATA[ÄÛÃçÍ¼Æ¬]]></item>
+				<item id="c046"><![CDATA[»òÊäÈëÍ¼Æ¬µØÖ·£º]]></item>
+				<item id="c047"><![CDATA[Í¼Æ¬µØÖ·ÓÅÏÈ,½¨Òé]]></item>
+				<item id="c048"><![CDATA[³ÉÊìÍ¼Æ¬]]></item>
+				<item id="c049"><![CDATA[³ÉÊìÊ±¼ä]]></item>
+				<item id="c050"><![CDATA[·ÖÖÓ]]></item>
+				<item id="c051"><![CDATA[ÊÕ»ñ¾­Ñé]]></item>
+				<item id="c052"><![CDATA[°üº¬ÎïÆ·id×é]]></item>
+				<item id="c053"><![CDATA[ÓÃ/·Ö¿ª]]></item>
+				<item id="c054"><![CDATA[°üº¬ÎïÆ·ÊýÁ¿]]></item>
+				<item id="c055"><![CDATA[¿ªÆô·½Ê½]]></item>
+				<item id="c056"><![CDATA[È«²¿]]></item>
+				<item id="c057"><![CDATA[Ëæ»ú]]></item>
+				<item id="c058"><![CDATA[Ëæ»ú¿ª³öÎïÆ·ÊýÁ¿]]></item>
+				<item id="c059"><![CDATA[²»Ìî»òÕß0ÔòÈ«²¿¿ªÆô]]></item>
+				<item id="c060"><![CDATA[ÎïÆ·ÀàÐÍ]]></item>
+				<item id="c061"><![CDATA[==È«²¿==]]></item>
+				<item id="c062"><![CDATA[£º]]></item>
+				<item id="c063"><![CDATA[ÎïÆ·Ãû³Æ]]></item>
+				<item id="c064"><![CDATA[ËÑË÷]]></item>
+				<item id="c065"><![CDATA[ÎïÆ·id]]></item>
+				<item id="c066"><![CDATA[°üº¬ÎïÆ·]]></item>
+				<item id="c067"><![CDATA[¿ªÆôÊýÁ¿]]></item>
+				<item id="c068"><![CDATA[Ó°Ïì×Ô¼º°®ÐÄÖµ]]></item>
+				<item id="c069"><![CDATA[Ê¹ÓÃ¶ÔÏó]]></item>
+				<item id="c070"><![CDATA[¹ºÂò»õ±ÒÀàÐÍ]]></item>
+				<item id="c071"><![CDATA[¹ºÂò¼Û¸ñ]]></item>
+				<item id="c072"><![CDATA[Ê¹ÓÃµÈ¼¶]]></item>
+				<item id="c073"><![CDATA[Ê¹ÓÃ°®ÐÄÖµ]]></item>
+				<item id="c074"><![CDATA[ÊÇ·ñÉÏ¼ÜÉÌ³Ç]]></item>
+				<item id="c075"><![CDATA[ÊÇ·ñÍæ¼Ò½»Ò×]]></item>
+				<item id="c076"><![CDATA[ÎïÆ·Í¼Æ¬]]></item>
+				<item id="c077"><![CDATA[É¾³ý]]></item>
+				<item id="c078"><![CDATA[²ú³ö]]></item>
+				<item id="c079"><![CDATA[×Ô¼º]]></item>
+				<item id="c080"><![CDATA[±ðÈË]]></item>
+				<item id="c081"><![CDATA[¶Ò»»·½Ê½]]></item>
+				<item id="c082"><![CDATA[¶ÒÈë]]></item>
+				<item id="c083"><![CDATA[ÊÇ]]></item>
+				<item id="c084"><![CDATA[·ñ]]></item>
+				<item id="c085"><![CDATA[ËùÊô·ÖÀà]]></item>
+				<item id="c086"><![CDATA[ÎïÆ·ÐÅÏ¢]]></item>
+				<item id="c087"><![CDATA[×Ô¶¨Òå±àÂë]]></item>
+				<item id="c088"><![CDATA[Ñ¡ÔñÍ¼Æ¬]]></item>
+				<item id="c089"><![CDATA[ÃèÊö]]></item>
+				<item id="c090"><![CDATA[ÊÛ³ö»õ±ÒÀàÐÍ]]></item>
+				<item id="c091"><![CDATA[³öÊÛ¼Û¸ñ]]></item>
+				<item id="c092"><![CDATA[ÉÏ¼ÜÊýÁ¿]]></item>
+				<item id="c093"><![CDATA[²»Ìî»òÕß0Ôò´ú±íÎÞÏÞÖÆ]]></item>
+				<item id="c094"><![CDATA[²»Ìî»òÕß0Ôò´ú±í²»ÉÏ¼Ü]]></item>
+				<item id="c095"><![CDATA[²¹»õÖÜÆÚ£¨Ð¡Ê±£©]]></item>
+				<item id="c096"><![CDATA[²»Ìî»òÕß0Ôò´ú±íÈç¹û¸ÃÎïÆ·ÉÏ¼ÜÔòÊýÁ¿ÎÞÉÏÏÞ]]></item>
+				<item id="c097"><![CDATA[ÏÞ¹º¿ªÊ¼Ê±¼ä]]></item>
+				<item id="c098"><![CDATA[ÏÞ¹º½áÊøÊ±¼ä]]></item>
+				<item id="c099"><![CDATA[²Ö¿â¶ÑµþÊýÁ¿]]></item>
+				<item id="c100"><![CDATA[²»Ìî»òÕß0Ôò´ú±íÎÞÉÏÏÞ]]></item>
+				<item id="c101"><![CDATA[ÊÇ·ñÖ±½ÓÊ¹ÓÃ]]></item>
+				<item id="c102"><![CDATA[µÈ¼¶]]></item>
+				<item id="c103"><![CDATA[µÈ¼¶³ÆºÅ]]></item>
+				<item id="c104"><![CDATA[ËùÐè¾­Ñé]]></item>
+				<item id="c105"><![CDATA[Ôö¼ÓÌåÁ¦»ùÊý]]></item>
+				<item id="c106"><![CDATA[½âËøÅ©Ìï¸ñÊý]]></item>
+				<item id="c107"><![CDATA[µÈ¼¶ÐÅÏ¢]]></item>
+				<item id="c108"><![CDATA[²Ù×÷ÀàÐÍ]]></item>
+				<item id="c109"><![CDATA[À´Ô´ÎïÆ·]]></item>
+				<item id="c110"><![CDATA[²Ù×÷Ê±¼ä]]></item>
+				<item id="c111"><![CDATA[ºÏ³ÉÅä·½]]></item>
+				<item id="c112"><![CDATA[¼Ó¹¤Åä·½]]></item>
+				<item id="c113"><![CDATA[ÉèÖÃ]]></item>
+				<item id="c114"><![CDATA[Ìá½»]]></item>
+				<item id="c115"><![CDATA[Ç©µ½½±ÀøÉèÖÃ]]></item>
+				<item id="c116"><![CDATA[ÔÂÀÛ¼ÆÇ©µ½ÌìÊý]]></item>
+				<item id="c117"><![CDATA[ÏûºÄ]]></item>
+				<item id="c118"><![CDATA[¶Ò³ö]]></item>
+				<item id="c119"><![CDATA[½±ÀøµÀ¾ß]]></item>
+				<item id="c120"><![CDATA[ÎÞ]]></item>
+				<item id="c121"><![CDATA[µÀ¾ßÊýÁ¿]]></item>
+				<item id="c122"><![CDATA[½±Àø°®ÐÄÖµ]]></item>
+				<item id="c123"><![CDATA[½±Àø¾­ÑéÖµ]]></item>
+				<item id="c124"><![CDATA[Ç©µ½ÈÕÖ¾]]></item>
+				<item id="c125"><![CDATA[½±Àø]]></item>
+				<item id="c126"><![CDATA[ÓÃ»§Ãû]]></item>
+				<item id="c127"><![CDATA[Ç©µ½Ê±¼ä]]></item>
+				<item id="c128"><![CDATA[Ö÷ÏßÈÎÎñ¹ÜÀí]]></item>
+				<item id="c129"><![CDATA[ÈÕ³£ÈÎÎñ¹ÜÀí]]></item>
+				<item id="c130"><![CDATA[³É¾ÍÈÎÎñ¹ÜÀí]]></item>
+				<item id="c131"><![CDATA[»î¶¯ÈÎÎñ¹ÜÀí]]></item>
+				<item id="c132"><![CDATA[Ö÷ÏßÈÎÎñÈÕÖ¾]]></item>
+				<item id="c133"><![CDATA[ÈÕ³£ÈÎÎñÈÕÖ¾]]></item>
+				<item id="c134"><![CDATA[³É¾ÍÈÎÎñÈÕÖ¾]]></item>
+				<item id="c135"><![CDATA[»î¶¯ÈÎÎñÈÕÖ¾]]></item>
+				<item id="c136"><![CDATA[ÈÎÎñÃû³Æ]]></item>
+				<item id="c137"><![CDATA[ÊÇ·ñÁìÈ¡½±Àø]]></item>
+				<item id="c138"><![CDATA[ÁìÈ¡½±ÀøÊ±¼ä]]></item>
+				<item id="c139"><![CDATA[³É¾ÍÃû³Æ]]></item>
+				<item id="c140"><![CDATA[ÈÎÎñ·½Ê½]]></item>
+				<item id="c141"><![CDATA[ÈÎÎñ¶ÔÏó]]></item>
+				<item id="c142"><![CDATA[Íê³ÉÊýÁ¿]]></item>
+				<item id="c143"><![CDATA[ÊÇ·ñÏÔÊ¾]]></item>
+				<item id="c144"><![CDATA[²»ÏÞ]]></item>
+				<item id="c145"><![CDATA[ÉÏ½ÉÊýÁ¿]]></item>
+				<item id="c146"><![CDATA[ÊÇ·ñµÚÒ»¸öÍê³É]]></item>
+				<item id="c147"><![CDATA[ÊÇ·ñ×îºóÒ»¸öÍê³É]]></item>
+				<item id="c148"><![CDATA[ÉÏ½ÉÊ±¼ä]]></item>
+				<item id="c149"><![CDATA[Õ÷ÊÕ´ÎÊý]]></item>
+				<item id="c150"><![CDATA[Õ÷ÊÕ×÷Îï]]></item>
+				<item id="c151"><![CDATA[µ¥´ÎÕ÷ÊÕÊýÁ¿]]></item>
+				<item id="c152"><![CDATA[Íæ¼Ò´ÎÊýÉÏÏÞ]]></item>
+				<item id="c153"><![CDATA[µÈ¼¶ÏÞÖÆ]]></item>
+				<item id="c154"><![CDATA[Ç°ÖÃÈÎÎñ]]></item>
+				<item id="c155"><![CDATA[ÎÞÏÞÖÆ]]></item>
+				<item id="c156"><![CDATA[ÈÎÎñÐÅÏ¢]]></item>
+				<item id="c157"><![CDATA[ÊÇ·ñÁÐ±íÕ¹Ê¾]]></item>
+				<item id="c158"><![CDATA[ÈÎÎñÃèÊö]]></item>
+				<item id="c159"><![CDATA[*Ã¿¸öÍæ¼ÒÍê³É¸ÃÈÎÎñµÄ´ÎÊýÉÏÏÞ]]></item>
+				<item id="c160"><![CDATA[ÈÎÎñ¿ªÊ¼Ê±¼ä]]></item>
+				<item id="c161"><![CDATA[ÈÎÎñ½áÊøÊ±¼ä]]></item>
+				<item id="c162"><![CDATA[Òþ²ØÊ±½«¹Ø±Õµ±Ç°ÈÎÎñ£¬Çë½÷É÷²Ù×÷]]></item>
+				<item id="c163"><![CDATA[²åÈëÎ»ÖÃ]]></item>
+				<item id="c164"><![CDATA[Î²²¿]]></item>
+				<item id="c165"><![CDATA[Ö®Ç°]]></item>
+				<item id="c166"><![CDATA[²åÈëÎ»ÖÃ£¬Ìí¼Óºó²»ÄÜ¸ü¸Ä]]></item>
+				<item id="c167"><![CDATA[ÓÃ»§¹ÜÀí]]></item>
+				<item id="c168"><![CDATA[²Ö¿â¹ÜÀí]]></item>
+				<item id="c169"><![CDATA[Å©Ìï¹ÜÀí]]></item>
+				<item id="c170"><![CDATA[²Ö¿âÈÕÖ¾]]></item>
+				<item id="c171"><![CDATA[Å©ÌïÈÕÖ¾]]></item>
+				<item id="c172"><![CDATA[¶Ò»»ÈÕÖ¾]]></item>
+				<item id="c173"><![CDATA[ÎïÆ·×´Ì¬]]></item>
+				<item id="c174"><![CDATA[ÊÇ·ñËø¶¨]]></item>
+				<item id="c175"><![CDATA[Ê¹ÓÃÖÐ]]></item>
+				<item id="c176"><![CDATA[ÉÏ¼Ü]]></item>
+				<item id="c177"><![CDATA[Õý³£]]></item>
+				<item id="c178"><![CDATA[Ëø¶¨]]></item>
+				<item id="c179"><![CDATA[ÏêÏ¸]]></item>
+				<item id="c180"><![CDATA[²Ù×÷¶ÔÏó]]></item>
+				<item id="c181"><![CDATA[²Ù×÷ÊýÁ¿]]></item>
+				<item id="c182"><![CDATA[²Ù×÷±ÒÖÖ]]></item>
+				<item id="c183"><![CDATA[²Ù×÷½ð¶î]]></item>
+				<item id="c184"><![CDATA[ÉÌµêÂòÈë]]></item>
+				<item id="c185"><![CDATA[ÉÌµêÂô³ö]]></item>
+				<item id="c186"><![CDATA[ÊÐ³¡ÂòÈë]]></item>
+				<item id="c187"><![CDATA[ÊÐ³¡Âô³ö]]></item>
+				<item id="c188"><![CDATA[ÎïÆ·Ê¹ÓÃ]]></item>
+				<item id="c189"><![CDATA[½âËø´ÎÊý]]></item>
+				<item id="c190"><![CDATA[¶Ò»»Ê±¼ä]]></item>
+				<item id="c191"><![CDATA[Å©ÌïÎ»ÖÃ]]></item>
+				<item id="c192"><![CDATA[µ±Ç°ÖÖ×Ó]]></item>
+				<item id="c193"><![CDATA[²ú³ö×÷Îï]]></item>
+				<item id="c194"><![CDATA[²ú³öÊýÁ¿¼Ó³É]]></item>
+				<item id="c195"><![CDATA[Ô¤¼Æ²ú³öÊ±¼ä]]></item>
+				<item id="c196"><![CDATA[¶ÔÏóËùÊô]]></item>
+				<item id="c197"><![CDATA[½âËøÅ©Ìï]]></item>
+				<item id="c198"><![CDATA[ÖÖÖ²ÖÖ×Ó]]></item>
+				<item id="c199"><![CDATA[ÊÕ»ñ×÷Îï]]></item>
+				<item id="c200"><![CDATA[²ù³ýÅ©Ìï]]></item>
+				<item id="c201"><![CDATA[Ê¹ÓÃµÀ¾ß]]></item>
+				<item id="c202"><![CDATA[ÍµÇÔ×÷Îï]]></item>
+				<item id="c203"><![CDATA[Å©ÌïÐÅÏ¢]]></item>
+				<item id="c204"><![CDATA[ÓÃ»§ÐÅÏ¢]]></item>
+				<item id="c205"><![CDATA[Ôö¼Ó¾­ÑéÖµ]]></item>
+				<item id="c206"><![CDATA[Ôö¼Ó]]></item>
+				<item id="c207"><![CDATA[Ôö¼ÓÌåÁ¦]]></item>
+				<item id="c208"><![CDATA[Ôö¼Ó°®ÐÄÖµ]]></item>
+				<item id="c209"><![CDATA[Íæ¼Ò×´Ì¬]]></item>
+				<item id="c210"><![CDATA[½ûÓÃ]]></item>
+				<item id="c211"><![CDATA[¾­Ñé]]></item>
+				<item id="c212"><![CDATA[Ê£ÓàÌåÁ¦]]></item>
+				<item id="c213"><![CDATA[°®ÐÄÖµ]]></item>
+				<item id="c214"><![CDATA[²é¿´²Ö¿â]]></item>
+				<item id="c215"><![CDATA[²é¿´Å©Ìï]]></item>
+				<item id="c216"><![CDATA[Çå¿ÕºÜÎ£ÏÕ£¡]]></item>
+				<item id="c217"><![CDATA[Çå¿ÕÊý¾Ý]]></item>
+				<item id="c218"><![CDATA[ÐÅÏ¢]]></item>
+				<item id="c219"><![CDATA[Ãû³Æ]]></item>
+				<item id="c220"><![CDATA[¶ÔÓ¦ÓÃ»§×é]]></item>
+				<item id="c221"><![CDATA[*ÇëÑ¡ÔñÂÛÌ³¶ÔÓ¦ÓÃ»§×é]]></item>
+				<item id="c222"><![CDATA[Ôö¼ÓÍµÇÔ³É¹¦ÂÊ]]></item>
+				<item id="c223"><![CDATA[È·¶¨É¾³ýÂð£¿]]></item>
+				<item id="c224"><![CDATA[ÏµÍ³]]></item>
+				<item id="c225"><![CDATA[µÈ¼¶¾­Ñé]]></item>
+				<item id="c226"><![CDATA[¹ÜÀí]]></item>
+				<item id="c227"><![CDATA[ÎïÆ·]]></item>
+				<item id="c228"><![CDATA[ÓÃ»§]]></item>
+				<item id="c229"><![CDATA[ÈÎÎñ]]></item>
+				<item id="c230"><![CDATA[ÈÕÖ¾]]></item>
+				<item id="c231"><![CDATA[Ç©µ½]]></item>
+				<item id="c232"><![CDATA[Ê×Ò³]]></item>
+				<item id="c233"><![CDATA[ÐéÄâÅ©³¡]]></item>
+				<item id="c234"><![CDATA[¼Ó¹¤]]></item>
+				<item id="c235"><![CDATA[²Ö¿â]]></item>
+				<item id="c236"><![CDATA[Å©Ìï]]></item>
+				<item id="c237"><![CDATA[»î¶¯ÈÎÎñ]]></item>
+				<item id="c238"><![CDATA[Ö÷ÏßÈÎÎñ]]></item>
+				<item id="c239"><![CDATA[¶Ò»»]]></item>
+				<item id="c240"><![CDATA[ÈÕ³£ÈÎÎñ]]></item>
+				<item id="c241"><![CDATA[³É¾ÍÈÎÎñ]]></item>
+				<item id="c242"><![CDATA[Ç©µ½½±Àø]]></item>
+				<item id="c243"><![CDATA[×é¼þÃû³Æ]]></item>
+				<item id="c244"><![CDATA[Ìí¼ÓÊ±¼ä]]></item>
+				<item id="c245"><![CDATA[°²×°]]></item>
+				<item id="c246"><![CDATA[Ð¶ÔØ]]></item>
+				<item id="c247"><![CDATA[ÐòºÅ]]></item>
+				<item id="c248"><![CDATA[½âËø±ÒÖÖ]]></item>
+				<item id="c249"><![CDATA[½âËø·ÑÓÃ]]></item>
+				<item id="c257"><![CDATA[²å¼þºóÌ¨Ä¿Â¼]]></item>
+				<item id="c258"><![CDATA[²å¼þËµÃ÷£ºÕâÊÇGPlayÐéÄâÅ©³¡¡£<br>]]></item>
+				<item id="c259"><![CDATA[ £¬»¶Ó­½øÈë]]></item>
+				<item id="c260"><![CDATA[¹ÜÀíºóÌ¨£¬µ±Ç°°æ±¾£º]]></item>
+				<item id="c261"><![CDATA[ºóÌ¨Ê×Ò³]]></item>
+				<item id="c262"><![CDATA[Ç°Ì¨Ð§¹û]]></item>
+				<item id="c263"><![CDATA[»ù±¾ÉèÖÃ]]></item>
+				<item id="c264"><![CDATA[¾­Ñé»ñÈ¡ÉèÖÃ]]></item>
+				<item id="c265"><![CDATA[ÌåÁ¦ÏûºÄÉèÖÃ]]></item>
+				<item id="c266"><![CDATA[ÉÏÒ»Ò³]]></item>
+				<item id="c267"><![CDATA[ÏÂÒ»Ò³]]></item>
+				<item id="c268"><![CDATA[Í¨ÓÃÎïÆ·]]></item>
+				<item id="cp028"><![CDATA[ÒÑÊÇµÚÒ»Ò³]]></item>
+				<item id="cp030"><![CDATA[ÒÑÊÇ×îºóÒ»Ò³]]></item>
+				<item id="c269"><![CDATA[¼Ó¹¤]]></item>
+				<item id="c270"><![CDATA[²Ù×÷ÈÕÖ¾]]></item>
+				<item id="c271"><![CDATA[ÈÎÎñÈÕÖ¾]]></item>
+				<item id="c272"><![CDATA[³É¾Í¹ÜÀí]]></item>
+				<item id="c273"><![CDATA[¶Ò»»¹ÜÀí]]></item>
+				<item id="c274"><![CDATA[¶Ò»»·½Ê½]]></item>
+				<item id="c275"><![CDATA[¶Ò»»»ý·ÖÀàÐÍ]]></item>
+				<item id="c276"><![CDATA[¶Ò»»ÊýÖµ]]></item>
+				<item id="c277"><![CDATA[Íæ¼ÒÊ£Óà½ðÇ®]]></item>
+				<item id="cp009"><![CDATA[Powered&nbsp;by&nbsp;ÀÏ¹ù¹¤×÷ÊÒ&nbsp;&copy;&nbsp;www.47jh.com]]></item>
+				<item id="c301"><![CDATA[ÉÌµêÕÛ¿Û]]></item>
+				<item id="c302"><![CDATA[½âËøÕÛ¿Û]]></item>
+				<item id="c303"><![CDATA[½µµÍ±»Íµ¸ßÊýÁ¿¼¸ÂÊ]]></item>
+				<item id="c304"><![CDATA[½µµÍ±»Íµ³É¹¦ÂÊ]]></item>
+				<item id="c305"><![CDATA[Ôö¼ÓÍµ¸ßÊýÁ¿¼¸ÂÊ]]></item>
+				<item id="c306"><![CDATA[Ôö¼ÓÍµ³É¹¦ÂÊ]]></item>
+				<item id="c307"><![CDATA[Ôö¼Ó»Ø¸´ÌåÁ¦Öµ]]></item>
+				<item id="c308"><![CDATA[ÉÌµê¹ºÂòÉÌÆ·¼Û¸ñÕÛ¿Û]]></item>
+				<item id="c309"><![CDATA[½âËø·ÑÓÃÕÛ¿Û]]></item>
+				<item id="c310"><![CDATA[µ¥Î»Ê±¼äÄÚ¶îÍâ»Ø¸´µÄÌåÁ¦Öµ]]></item>
+				<item id="c311"><![CDATA[Ò»¼üÊÕ»ñÈ¨ÏÞ]]></item>
+				<item id="c312"><![CDATA[Ê³Æ·]]></item>
+				<item id="c313"><![CDATA[ÇåÀíÈÕÖ¾]]></item>
+				<item id="c314"><![CDATA[ÈÕÖ¾±£ÁôÌìÊý£º]]></item>
+				<item id="c315"><![CDATA[¿ªÊ¼ÇåÀí]]></item>
+				<item id="c316"><![CDATA[ÍµÇÔ]]></item>
+				<item id="c317"><![CDATA[]]></item>
+				<item id="c318"><![CDATA[]]></item>
+				<item id="c319"><![CDATA[]]></item>
+				<item id="c320"><![CDATA[]]></item>
+				<item id="c321"><![CDATA[]]></item>
+				<item id="c322"><![CDATA[ÇåÀí]]></item>
+				<item id="c323"><![CDATA[ÈÕÖ¾ÀàÐÍ]]></item>
+				<item id="c324"><![CDATA[¿ÉÇåÀíÈÕÖ¾ÌõÊý£¨·Çµ±ÈÕ£©]]></item>
+				<item id=""><![CDATA[]]></item>
+				<item id="f001"><![CDATA[³É¾Í×ÜÀÀ]]></item>
+				<item id="f002"><![CDATA[Î´Íê³ÉµÄ³É¾Í]]></item>
+				<item id="f003"><![CDATA[ÒÑÍê³ÉµÄ³É¾Í]]></item>
+				<item id="f004"><![CDATA[ÈÎÎñ¶¯×÷]]></item>
+				<item id="f005"><![CDATA[ÈÎÎñÄ¿±ê]]></item>
+				<item id="f006"><![CDATA[µ±Ç°½ø¶È]]></item>
+				<item id="f007"><![CDATA[Íê³É½±Àø]]></item>
+				<item id="f008"><![CDATA[ÈÎÎñ±êÌâ]]></item>
+				<item id="f009"><![CDATA[µ¥´ÎÕ÷ÊÕ½±Àø]]></item>
+				<item id="f010"><![CDATA[ÎÒµÄÍê³É´ÎÊý]]></item>
+				<item id="f011"><![CDATA[ÎÒµÄ×÷ÎïÊýÁ¿]]></item>
+				<item id="f012"><![CDATA[¸ö]]></item>
+				<item id="f013"><![CDATA[ÄãÒÑÍê³É±¾´ÎÕ÷ÊÕ£¡]]></item>
+				<item id="f014"><![CDATA[±¾´ÎÕ÷ÊÕÔ²Âú½áÊø£¡]]></item>
+				<item id="f015"><![CDATA[µÀ¾ß]]></item>
+				<item id="f016"><![CDATA[¼¶]]></item>
+				<item id="f017"><![CDATA[µ¥¼Û]]></item>
+				<item id="f018"><![CDATA[×Ü¼ÛÖµ]]></item>
+				<item id="f019"><![CDATA[Ò»¼ü]]></item>
+				<item id="f020"><![CDATA[½âËø]]></item>
+				<item id="f021"><![CDATA[Ò»¼üÂô³ö]]></item>
+				<item id="f022"><![CDATA[Âô³öÊýÁ¿]]></item>
+				<item id="f023"><![CDATA[ÎïÆ·µÈ¼¶]]></item>
+				<item id="f024"><![CDATA[µ¥¸öÊÛ¼Û]]></item>
+				<item id="f025"><![CDATA[×Ü¼ÆÊÕÈë]]></item>
+				<item id="f026"><![CDATA[ÒÑËø¶¨]]></item>
+				<item id="f027"><![CDATA[Î´Ëø¶¨]]></item>
+				<item id="f028"><![CDATA[µ±Ç°]]></item>
+				<item id="f029"><![CDATA[¶Ò»»ÊýÁ¿]]></item>
+				<item id="f030"><![CDATA[¶ÒÈë±ÈÀýÎª1:]]></item>
+				<item id="f031"><![CDATA[Ë¢ÐÂ]]></item>
+				<item id="f032"><![CDATA[ÖÖÖ²]]></item>
+				<item id="f033"><![CDATA[²ù³ý]]></item>
+				<item id="f034"><![CDATA[ÊÕ»ñ]]></item>
+				<item id="f035"><![CDATA[ÍµÈ¡]]></item>
+				<item id="f036"><![CDATA[Î´ÉèÖÃÈÎÎñ»òÈÎÎñÈ«²¿Íê³É]]></item>
+				<item id="f037"><![CDATA[ÔÝÊ±Ã»ÓÐ»î¶¯ÈÎÎñ£¡]]></item>
+				<item id="f038"><![CDATA[½øÈëºóÌ¨]]></item>
+				<item id="f039"><![CDATA[Ò»¼üÊÕ»ñ]]></item>
+				<item id="f040"><![CDATA[ÎÒµÄÅÅÃû]]></item>
+				<item id="f041"><![CDATA[°´µÈ¼¶]]></item>
+				<item id="f042"><![CDATA[°´°®ÐÄ]]></item>
+				<item id="f043"><![CDATA[°´ÊÕ²Ø]]></item>
+				<item id="f044"><![CDATA[È·¶¨²ù³ý¸Ã×÷ÎïÂð£¿]]></item>
+				<item id="f045"><![CDATA[£¬È·¶¨½âËø¸ÃÅ©ÌïÂð£¿]]></item>
+				<item id="f046"><![CDATA[Î²Ò³]]></item>
+				<item id="f047"><![CDATA[²é¿´ÏêÇé]]></item>
+				<item id="f048"><![CDATA[³ÉÊì]]></item>
+				<item id="f049"><![CDATA[Ê£Óà]]></item>
+				<item id="f050"><![CDATA[Ó×Ãç]]></item>
+				<item id="f051"><![CDATA[Ô¤¼Æ]]></item>
+				<item id="f052"><![CDATA[·ÖÖÓºó³ÉÊì]]></item>
+				<item id="f053"><![CDATA[Ô¤¼Æ²ú³ö]]></item>
+				<item id="f054"><![CDATA[ÈÎÎñ×´Ì¬]]></item>
+				<item id="f055"><![CDATA[ÒÑÍê³É]]></item>
+				<item id="f056"><![CDATA[Î´Íê³É]]></item>
+				<item id="f057"><![CDATA[ÒÑÁìÈ¡]]></item>
+				<item id="f058"><![CDATA[À´Å©³¡ÍµÈ¡ÁË]]></item>
+				<item id="f059"><![CDATA[À´Å©³¡Ê¹ÓÃÁËµÀ¾ß]]></item>
+				<item id="f060"><![CDATA[ÌåÁ¦]]></item>
+				<item id="f061"><![CDATA[°®ÐÄ]]></item>
+				<item id="f062"><![CDATA[ÎÒµÄ¼ÇÂ¼]]></item>
+				<item id="f063"><![CDATA[ÎÒ½âËøÁËÒ»¿éÅ©Ìï]]></item>
+				<item id="f064"><![CDATA[ÎÒÖÖÖ²ÁËÒ»¿Å]]></item>
+				<item id="f065"><![CDATA[ÎÒÊÕ»ñÁË]]></item>
+				<item id="f066"><![CDATA[ÎÒ²ù³ýÁËÒ»¿éÅ©Ìï]]></item>
+				<item id="f067"><![CDATA[ÎÒ¶Ô]]></item>
+				<item id="f068"><![CDATA[µÄÅ©³¡Ê¹ÓÃÁË]]></item>
+				<item id="f069"><![CDATA[ÎÒÔÚ]]></item>
+				<item id="f070"><![CDATA[µÄÅ©³¡ÍµÈ¡ÁË]]></item>
+				<item id="f071"><![CDATA[Äúµ±Ç°ÅÅÃûÎª]]></item>
+				<item id="f072"><![CDATA[ÅÅÃû]]></item>
+				<item id="f073"><![CDATA[½ð±ÒÉÌµê]]></item>
+				<item id="f074"><![CDATA[ÊÛ¼Û]]></item>
+				<item id="f075"><![CDATA[´æ»õ]]></item>
+				<item id="f076"><![CDATA[Ê±¼ä]]></item>
+				<item id="f077"><![CDATA[·ÖÖÓ]]></item>
+				<item id="f078"><![CDATA[ÀàÐÍ]]></item>
+				<item id="f079"><![CDATA[µ±Ç°×Ü¹²ÓÐ]]></item>
+				<item id="f080"><![CDATA[³öÊÛ]]></item>
+				<item id="f081"><![CDATA[ÒÑ¹ºÂò]]></item>
+				<item id="f082"><![CDATA[Ê£ÓàÊýÁ¿]]></item>
+				<item id="f083"><![CDATA[×Ü¼Æ]]></item>
+				<item id="f084"><![CDATA[Äú±¾ÔÂÀÛ¼ÆÇ©µ½]]></item>
+				<item id="f085"><![CDATA[´Î]]></item>
+				<item id="f086"><![CDATA[ÖÜÈÕ]]></item>
+				<item id="f087"><![CDATA[ÖÜÒ»]]></item>
+				<item id="f088"><![CDATA[ÖÜ¶þ]]></item>
+				<item id="f089"><![CDATA[ÖÜÈý]]></item>
+				<item id="f090"><![CDATA[ÖÜËÄ]]></item>
+				<item id="f091"><![CDATA[ÖÜÎå]]></item>
+				<item id="f092"><![CDATA[ÖÜÁù]]></item>
+				<item id="f093"><![CDATA[´ÎÇ©µ½]]></item>
+				<item id="f094"><![CDATA[Ä¿±êÊýÁ¿]]></item>
+				<item id="f095"><![CDATA[ÁìÈ¡ÈÎÎñ½±Àø£º]]></item>
+				<item id="f096"><![CDATA[ÒÑ¾­ÊÕ²Ø]]></item>
+				<item id="f097"><![CDATA[³É¹¦Âô³ö»ñµÃ]]></item>
+				<item id="f098"><![CDATA[È¡ÏûÊÕ²Ø]]></item>
+				<item id="f099"><![CDATA[ÊÕ²ØºÃÓÑ]]></item>
+				<item id="f100"><![CDATA[Ê©·Ê³É¹¦]]></item>
+				<item id="f101"><![CDATA[ÌøÖÁ×îÇ°]]></item>
+				<item id="f102"><![CDATA[ÌøÖÁ×îºó]]></item>
+				<item id="f103"><![CDATA[¿ª·ÅµÈ¼¶]]></item>
+				<item id="f104"><![CDATA[ËùÐè°®ÐÄ]]></item>
+				<item id="f105"><![CDATA[×÷ÎïÊÛ¼Û]]></item>
+				<item id="f106"><![CDATA[¹§Ï²Äú»ñµÃ£º]]></item>
+				<item id="f107"><![CDATA[ÒÑ½ÓÊÜ]]></item>
+				<item id="f108"><![CDATA[Ã»Ê²Ã´ºÃÍµµÄÁË]]></item>
+				<item id="f109"><![CDATA[ÉÏ´Î¼Ó¹¤Ê±¼ä£º]]></item>
+				<item id="f110"><![CDATA[¼Ó¹¤²ú³ö]]></item>
+				<item id="f111"><![CDATA[¿ÉÓÃÅä·½]]></item>
+				<item id="f112"><![CDATA[¹§Ï²ÄãºÏ³ÉÁË]]></item>
+				<item id="f113"><![CDATA[³É±¾]]></item>
+				<item id="f114"><![CDATA[²úÁ¿]]></item>
+				<item id="f115"><![CDATA[ÎïÆ·¹ÜÀí]]></item>
+				<item id="f116"><![CDATA[,²¢½âËøÁËÐÂÅä·½£º]]></item>
+				<item id="f117"><![CDATA[ºÏ³ÉÊ§°Ü]]></item>
+				<item id="f118"><![CDATA[£¬ÏµÍ³²¹³¥¸øÄú]]></item>
+				<item id="f119"><![CDATA[¿î]]></item>
+				<item id="f120"><![CDATA[¸æÊ¾ÅÆ]]></item>
+				<item id="f121"><![CDATA[µØÃ²]]></item>
+				<item id="f122"><![CDATA[ÎÝ×Ó]]></item>
+				<item id="f123"><![CDATA[³èÎï]]></item>
+				<item id="f124"><![CDATA[ÒÑ×°°ç]]></item>
+				<item id="f125"><![CDATA[×°±¸]]></item>
+				<item id="f126"><![CDATA[×°°ç]]></item>
+				<item id="f127"><![CDATA[¶Ò³ö±ÈÀýÎª]]></item>
+				<item id="f128"><![CDATA[½âËøÐèÒªÏûºÄ]]></item>
+				<item id="f129"><![CDATA[²ÄÁÏ]]></item>
+				<item id="f130"><![CDATA[ÍµÇÔ³É¹¦ÂÊ£º]]></item>
+				<item id="f131"><![CDATA[Íµ¸ßÊýÁ¿¼¸ÂÊ£º]]></item>
+				<item id="f132"><![CDATA[µ½ÆÚÊ±¼ä£º]]></item>
+				<item id="f133"><![CDATA[ÓÀ¾Ã]]></item>
+				<item id="f134"><![CDATA[¹ºÂò]]></item>
+				<item id="f135"><![CDATA[Ö÷×°±¸]]></item>
+				<item id="f136"><![CDATA[¸¨Öú×°±¸]]></item>
+				<item id="f137"><![CDATA[ÓµÓÐµÄ×°°ç]]></item>
+			</item>
+			<item id="installlang">
+				<item id="1"><![CDATA[INSERT INTO `pre_gfarm_set` (`id`, `mod_cn`, `mod_en`, `key_cn`, `key_en`, `regex_en`, `regex_cn`, `description`, `value`, `status`, `displayorder`, `create_time`, `update_time`, `type`) VALUES
+(1, '»ù±¾', 'base', 'ÌåÁ¦»ùÊý', 'power', '/^([1-9]+[0-9]*)$/', 'ÌåÁ¦»ùÊýÌîÐ´´íÎó', 'Ã¿¸öÍæ¼ÒÄ¬ÈÏµÄÌåÁ¦×î´óÖµ', '100', 0, 0, 0, 0, 0),
+(6, '»ù±¾', 'base', 'ÎÞÅä·½²ú³öÎïÆ·id', 'formgood', '/^(([1-9]+[0-9]*)|[0])$/', 'ÎÞÅä·½²ú³öÎïÆ·idÌîÐ´´íÎó', 'ÎÞÅä·½Ê±²ú³öµÄÎïÆ·,0±íÊ¾ÎÞ²úÆ·', '0', 0, 10, 0, 0, 0),
+(7, '»ù±¾', 'base', 'Ä¬ÈÏÍµÇÔ³É¹¦ÂÊ', 'steal_odds', '/^(([1-9]+[0-9]*)|[0])$/', 'ÍµÇÔ³É¹¦ÂÊÌîÐ´´íÎó', 'Ä¬ÈÏÍæ¼ÒÍµÈ¡ÆäËûÓÃ»§×÷ÎïµÄ³É¹¦ÂÊ', '80', 0, 12, 0, 0, 1),
+(8, '»ù±¾', 'base', 'Ä¬ÈÏ×îµÍÊ£ÓàÊýÖµ', 'steal_number', '/^([1-9]+[0-9]*)$/', '×îµÍÊ£ÓàÊýÖµÌîÐ´´íÎó', 'Ä¬ÈÏÍæ¼Ò×÷Îï×îµÍÊ£ÓàÊýÁ¿£¬µ±²»Âú×ã±ÈÀýÐèÇóÊ±°´×îµÍÊýÖµÎª×¼', '6', 0, 14, 0, 0, 0),
+(9, '»ù±¾', 'base', 'Ä¬ÈÏ»Ö¸´ÌåÁ¦Ê±¼ä', 'restrength_time', '/^([1-9]+[0-9]*)$/', '»Ö¸´ÌåÁ¦Ê±¼äÌîÐ´´íÎó', 'Ä¬ÈÏÃ¿¸ô¶àÉÙ·ÖÖÓ»Ö¸´Ò»´ÎÌåÁ¦', '1', 0, 16, 0, 0, 0),
+(10, '»ù±¾', 'base', 'Ä¬ÈÏ»Ö¸´ÌåÁ¦ÊýÖµ', 'restrength_number', '/^([1-9]+[0-9]*)$/', '»Ö¸´ÌåÁ¦ÖµÌîÐ´´íÎó', 'Ä¬ÈÏÃ¿´Î»Ö¸´ÌåÁ¦µÄÊýÖµ', '2', 0, 18, 0, 0, 0),
+(11, '»ù±¾', 'base', 'Ä¬ÈÏ½»Ò×µÄÊÖÐø·ÑÂÊ', 'poundage_rate', '/^(([1-9]+[0-9]*)|[0])$/', '½»Ò×ÊÖÐø·ÑÌîÐ´´íÎó', 'Ä¬ÈÏÍæ¼Ò½øÐÐ½»Ò×µÄÊÖÐø·ÑÂÊ', '20', 0, 20, 0, 0, 1),
+(12, '»ù±¾', 'base', 'ÎÞÈ¨½øÓÎÏ·µÄÌáÊ¾', 'authority_explain', '/^\\S/', 'ÌáÊ¾²»ÄÜÎª¿Õ', 'Íæ¼Ò²»ÊôÓÚÓÎÏ·ÓÃ»§×é½øÓÎÏ·µÄÌáÊ¾', 'ÔÝÎÞÈ¨ÏÞ', 0, 22, 0, 0, 0),
+(14, 'ÌåÁ¦ÏûºÄ', 'strength', '²ùÌïÏûºÄÌåÁ¦', 'uproot_power', '/^(([1-9]+[0-9]*)|[0])$/', '²ùÌïÏûºÄÌåÁ¦ÌîÐ´´íÎó', 'Íæ¼Ò²ùÌïÊ±Ã¿´ÎÏûºÄ¶àÉÙÌåÁ¦', '1', 0, 26, 0, 0, 0),
+(15, 'ÌåÁ¦ÏûºÄ', 'strength', 'ÍµÇÔÏûºÄÌåÁ¦', 'steal_power', '/^(([1-9]+[0-9]*)|[0])$/', 'ÍµÇÔÏûºÄÌåÁ¦ÌîÐ´´íÎó', 'Íæ¼ÒÍµÇÔÊ±Ã¿´ÎÏûºÄ¶àÉÙÌåÁ¦', '1', 0, 28, 0, 0, 0),
+(16, 'ÌåÁ¦ÏûºÄ', 'strength', 'ÖÖÖ²ÏûºÄÌåÁ¦', 'plant_power', '/^(([1-9]+[0-9]*)|[0])$/', 'ÖÖÖ²ÏûºÄÌåÁ¦ÌîÐ´´íÎó', 'Íæ¼ÒÖÖÖ²Ê±Ã¿´ÎÏûºÄ¶àÉÙÌåÁ¦', '1', 0, 30, 0, 0, 0),
+(17, 'ÌåÁ¦ÏûºÄ', 'strength', 'ÊÕ»ñÏûºÄÌåÁ¦', 'crop_power', '/^(([1-9]+[0-9]*)|[0])$/', 'ÊÕ»ñÏûºÄÌåÁ¦ÌîÐ´´íÎó', 'Íæ¼ÒÊÕ»ñÊ±Ã¿´ÎÏûºÄ¶àÉÙÌåÁ¦', '1', 0, 32, 0, 0, 0),
+(18, 'ÌåÁ¦ÏûºÄ', 'strength', 'ºÏ³ÉÏûºÄÌåÁ¦', 'compose_power', '/^(([1-9]+[0-9]*)|[0])$/', 'ºÏ³ÉÏûºÄÌåÁ¦ÌîÐ´´íÎó', 'Íæ¼ÒºÏ³ÉÊ±Ã¿´ÎÏûºÄ¶àÉÙÌåÁ¦', '1', 0, 34, 0, 0, 0),
+(19, 'ÌåÁ¦ÏûºÄ', 'strength', '¼Ó¹¤ÏûºÄÌåÁ¦', 'process_power', '/^(([1-9]+[0-9]*)|[0])$/', '¼Ó¹¤ÏûºÄÌåÁ¦ÌîÐ´´íÎó', 'Íæ¼Ò¼Ó¹¤Ê±Ã¿´ÎÏûºÄ¶àÉÙÌåÁ¦', '1', 0, 36, 0, 0, 0),
+(21, '¾­Ñé»ñÈ¡', 'exp', '²ùÌï»ñµÃ¾­Ñé', 'uproot_exp', '/^(([1-9]+[0-9]*)|[0])$/', '²ùÌï¾­ÑéÌîÐ´´íÎó', 'Íæ¼Ò²ùÌï³É¹¦Ê±Ã¿´Î»ñµÃ¶àÉÙ¾­Ñé', '0', 0, 40, 0, 0, 0),
+(22, '¾­Ñé»ñÈ¡', 'exp', 'ÍµÇÔ»ñµÃ¾­Ñé', 'steal_exp', '/^(([1-9]+[0-9]*)|[0])$/', 'ÍµÇÔ¾­ÑéÌîÐ´´íÎó', 'Íæ¼ÒÍµÇÔ³É¹¦Ê±Ã¿´Î»ñµÃ¶àÉÙ¾­Ñé', '0', 0, 42, 0, 0, 0),
+(23, '¾­Ñé»ñÈ¡', 'exp', 'ÖÖÖ²»ñµÃ¾­Ñé', 'plant_exp', '/^(([1-9]+[0-9]*)|[0])$/', 'ÖÖÖ²¾­ÑéÌîÐ´´íÎó', 'Íæ¼ÒÖÖÖ²³É¹¦Ê±Ã¿´Î»ñµÃ¶àÉÙ¾­Ñé', '0', 0, 44, 0, 0, 0),
+(24, '¾­Ñé»ñÈ¡', 'exp', 'ÊÕ»ñ»ñµÃ¾­Ñé', 'crop_exp', '/^(([1-9]+[0-9]*)|[0])$/', 'ÊÕ»ñ¾­ÑéÌîÐ´´íÎó', 'Íæ¼ÒÊÕ»ñ³É¹¦Ê±Ã¿´Î»ñµÃ¶àÉÙ¾­Ñé', '0', 0, 46, 0, 0, 0),
+(25, '¾­Ñé»ñÈ¡', 'exp', 'ºÏ³É»ñµÃ¾­Ñé', 'compose_exp', '/^(([1-9]+[0-9]*)|[0])$/', 'ºÏ³É¾­ÑéÌîÐ´´íÎó', 'Íæ¼ÒºÏ³É³É¹¦Ê±Ã¿´Î»ñµÃ¶àÉÙ¾­Ñé', '1', 0, 48, 0, 0, 0),
+(26, '¾­Ñé»ñÈ¡', 'exp', '¼Ó¹¤»ñµÃ¾­Ñé', 'process_exp', '/^(([1-9]+[0-9]*)|[0])$/', '¼Ó¹¤¾­ÑéÌîÐ´´íÎó', 'Íæ¼Ò¼Ó¹¤³É¹¦Ê±Ã¿´Î»ñµÃ¶àÉÙ¾­Ñé', '1', 0, 50, 0, 0, 0),
+(27, '»ù±¾', 'base', 'Ä¬ÈÏ×îµÍÊ£Óà±ÈÀý', 'steal_rate', '/^([1-9]+[0-9]*)$/', '×îµÍÊ£Óà±ÈÀýÌîÐ´´íÎó', 'Ä¬ÈÏÍæ¼Ò×÷Îï×îµÍÊ£ÓàÊýÁ¿Îª×ÜÊýÁ¿µÄ°Ù·Ö±È', '50', 0, 13, 0, 0, 1),
+(28, '»ù±¾', 'base', 'ÏµÍ³¹«¸æ', 'announce', '', '', 'ÏµÍ³¹«¸æ', 'ÐéÄâÅ©³¡²âÊÔ£¬»¶Ó­´ó¼ÒÓ»Ô¾²âÊÔ£¬»ý¼«ÕÒ³öÎÊÌâ¡£', 0, 24, 0, 0, 2),
+(29, '»ù´¡', 'base', '¹«¸æ±êÌâ', 'adtitle', '', '', '¹«¸æ±êÌâ', '¹«²âÍ¨Öª', 0, 23, 0, 0, 0),
+(32, '¶Ò³ö', 'exout', 'ÊÇ·ñ¶Ò³ö', 'isout', '/^[0-1]$/', 'Ñ¡Ôñ´íÎó', 'ÊÇ·ñ¿ªÆô¶Ò³ö¹¦ÄÜ', '1', 0, 0, 0, 0, 3),
+(33, '¶Ò³ö', 'exout', '¶Ò³ö»ý·ÖÀàÐÍ', 'outstyle', '/^([1-9]+[0-9]*)$/', '»ý·ÖÀàÐÍ´íÎó', '¶Ò³ö»ý·ÖÀàÐÍ', '8', 0, 1, 0, 0, 4),
+(34, '¶Ò³ö', 'exout', 'µ¥´Î¶Ò³ö×îµÍ»ý·ÖÊý', 'minexnum', '/^([1-9]+[0-9]*)$/', 'µ¥´Î¶Ò³ö×îµÍ»ý·ÖÊýÌîÐ´´íÎó', 'µ¥´Î¶Ò³ö×îµÍ»ý·ÖÊý', '1', 0, 2, 0, 0, 0),
+(35, '¶Ò³ö', 'exout', 'Íæ¼Ò×îÉÙÊ£Óà½ðÇ®Êý', 'minusernum', '/^([1-9]+[0-9]*)$/', 'Íæ¼Ò×îÉÙÊ£Óà½ðÇ®ÊýÌîÐ´´íÎó', 'Íæ¼Ò×îÉÙÊ£Óà½ðÇ®Êý', '2', 0, 3, 0, 0, 0),
+(36, '¶Ò³ö', 'exout', 'Ã¿ÈÕ×î¸ß¶Ò»»»ý·ÖÊý', 'maxexnum', '/^([1-9]+[0-9]*)$/', 'Ã¿ÈÕ×î¸ß¶Ò»»»ý·ÖÊýÌîÐ´´íÎó', 'Ã¿ÈÕ×î¸ß¶Ò»»»ý·ÖÊý', '3', 0, 4, 0, 0, 0),
+(37, '¶Ò³ö', 'exout', '¶Ò³ö±ÈÀý', 'outbase', '/^([1-9]+[0-9]*)$/', '¶Ò³ö±ÈÀýÌîÐ´´íÎó', '¶Ò³ö±ÈÀýÎªËùÌîÊý×Ö£º1', '2', 0, 1, 0, 0, 0);]]></item>
+				<item id="2"><![CDATA[INSERT INTO `pre_gfarm_goods_separate` (`id`, `separate_name`, `pid`, `table_name`) VALUES
+(1, '×°±¸', 0, 'equipment'),
+(2, 'Ö÷Òª×°±¸', 1, ''),
+(3, '¸¨Öú×°±¸', 1, ''),
+(4, '×°°ç', 0, 'decorate'),
+(5, '¸æÊ¾ÅÆ', 4, ''),
+(6, 'µØÃ²', 4, ''),
+(7, 'ÎÝ×Ó', 4, ''),
+(8, '³èÎï', 4, ''),
+(9, 'ÖÖ×Ó', 0, 'germ'),
+(11, 'Í¨ÓÃÎïÆ·', 0, 'goods'),
+(12, 'Å©×÷Îï', 11, ''),
+(13, 'Éú²ú²ÄÁÏ', 11, ''),
+(14, 'Ê³Æ·', 0, 'food'),
+(15, 'Àñ°ü', 0, 'gifts'),
+(19, 'µÀ¾ß', 0, 'items');]]></item>
+				<item id="3"><![CDATA[INSERT INTO `pre_gfarm_exp_level` (`id`, `name`, `level`, `experience`, `strength`, `land_number`, `create_time`, `update_time`) VALUES
+(1, '1¼¶', 1, 0, 0, 1, 1413335168, 1416816675),
+(2, '2¼¶', 2, 10, 1, 2, 1413335222, 1416816680),
+(3, '3¼¶', 3, 30, 1, 3, 1413335232, 1414720296),
+(4, '4¼¶', 4, 60, 2, 4, 1413335245, 1414720300),
+(5, '5¼¶', 5, 100, 2, 5, 1413335281, 1414720304),
+(6, '6¼¶', 6, 150, 3, 6, 1413335295, 1414720308),
+(7, '7¼¶', 7, 250, 3, 7, 1413335337, 1414720311),
+(8, '8¼¶', 8, 400, 4, 8, 1413335348, 1414720314),
+(9, '9¼¶', 9, 600, 4, 9, 1413335375, 1414720318),
+(10, '10¼¶', 10, 850, 5, 10, 1413335410, 1414720322),
+(11, '11¼¶', 11, 1350, 6, 11, 1413335427, 1417180484),
+(12, '12¼¶', 12, 2350, 7, 12, 1413335459, 1417180506),
+(13, '13¼¶', 13, 3850, 8, 13, 1413335473, 1417180522),
+(14, '14¼¶', 14, 5850, 9, 14, 1413335491, 1417180531),
+(15, '15¼¶', 15, 8350, 10, 15, 1413335520, 1417180541),
+(16, '16¼¶', 16, 13350, 12, 16, 1413335536, 1417180551),
+(17, '17¼¶', 17, 23350, 14, 17, 1413335547, 1417180556),
+(18, '18¼¶', 18, 38350, 16, 18, 1413335622, 1417180688),
+(19, '19¼¶', 19, 58350, 18, 19, 1413335647, 1417180694),
+(20, '20¼¶', 20, 83350, 20, 20, 1413335692, 1417180703);]]></item>
+				<item id="4"><![CDATA[INSERT INTO `pre_gfarm_task_way` (`id`, `way_name`, `create_time`, `way_type`, `achieve_flag`) VALUES
+(1, '½âËøÅ©Ìï¸öÊý', 0, 0, 0),
+(2, '²ù³ýÅ©Ìï´ÎÊý', 0, 0, 0),
+(3, 'ÖÖÖ²ÖÖ×Ó´ÎÊý', 0, 1, 0),
+(4, 'ÊÕ»ñ×÷Îï´ÎÊý', 0, 2, 0),
+(5, 'ÊÕ»ñ×÷Îï¸öÊý', 0, 2, 0),
+(6, 'ÍµÇÔ×÷Îï´ÎÊý', 0, 2, 0),
+(7, 'ÍµÇÔ×÷Îï¸öÊý', 0, 2, 0),
+(8, 'µÀ¾ßÊ¹ÓÃ´ÎÊý', 0, 3, 0),
+(9, '¶Ò»»½ðÇ®ÊýÁ¿', 0, 0, 0),
+(10, 'Ç©µ½ÌìÊý', 0, 0, 1),
+(11, 'ÉÌµêÂòÈëÖÖ×ÓÊýÁ¿', 0, 1, 0),
+(12, 'ÉÌµêÂòÈëµÀ¾ßÊýÁ¿', 0, 3, 0),
+(13, 'ÉÌµêÂô³ö×÷ÎïÊýÁ¿', 0, 2, 0),
+(14, 'ÉÌµêÂô³öÖÖ×ÓÊýÁ¿', 0, 1, 0),
+(15, 'ÉÌµêÂô³öµÀ¾ßÊýÁ¿', 0, 3, 0),
+(16, 'ÉÌµêÏû·Ñ½ð¶î', 0, 0, 0),
+(17, 'ÉÌµê×¬È¡½ð¶î', 0, 0, 0);]]></item>
+				<item id="5"><![CDATA[INSERT INTO `pre_gfarm_germ` (`id`, `relation_id`, `sprout_img`, `mature_img`, `experience`, `mature_time`) VALUES
+(1, 11, 'source/plugin/gfarm/upload/germ/20141126091414528.png', 'source/plugin/gfarm/upload/germ/20141126091414169.png', 1, 1),
+(2, 12, 'source/plugin/gfarm/upload/germ/20141126091325975.png', 'source/plugin/gfarm/upload/germ/20141126091325848.png', 2, 2),
+(3, 13, 'source/plugin/gfarm/upload/germ/20141126091644173.png', 'source/plugin/gfarm/upload/germ/20141126091644133.png', 3, 3),
+(4, 14, 'source/plugin/gfarm/upload/germ/20141126091756926.png', 'source/plugin/gfarm/upload/germ/20141126091756608.png', 4, 4),
+(5, 15, 'source/plugin/gfarm/upload/germ/20141126092131668.png', 'source/plugin/gfarm/upload/germ/20141126092131827.png', 5, 5),
+(6, 16, 'source/plugin/gfarm/upload/germ/20141126092303708.png', 'source/plugin/gfarm/upload/germ/20141126092303562.png', 5, 10),
+(7, 17, 'source/plugin/gfarm/upload/germ/20141126092429289.png', 'source/plugin/gfarm/upload/germ/20141126092429271.png', 10, 20),
+(8, 18, 'source/plugin/gfarm/upload/germ/20141126092539152.png', 'source/plugin/gfarm/upload/germ/20141126092539908.png', 15, 30),
+(9, 19, 'source/plugin/gfarm/upload/germ/20141126092650981.png', 'source/plugin/gfarm/upload/germ/20141126092650361.png', 20, 40),
+(10, 20, 'source/plugin/gfarm/upload/germ/20141126092802790.png', 'source/plugin/gfarm/upload/germ/20141126092802958.png', 25, 50),
+(11, 54, 'source/plugin/gfarm/upload/germ/20141126092940380.png', 'source/plugin/gfarm/upload/germ/20141126092940399.png', 30, 60),
+(12, 55, 'source/plugin/gfarm/upload/germ/20141126093314829.png', 'source/plugin/gfarm/upload/germ/20141126093330407.png', 40, 120),
+(13, 56, 'source/plugin/gfarm/upload/germ/20141126093459877.png', 'source/plugin/gfarm/upload/germ/20141126093459446.png', 60, 180),
+(14, 57, 'source/plugin/gfarm/upload/germ/20141126093715131.png', 'source/plugin/gfarm/upload/germ/20141126093715704.png', 80, 240),
+(15, 58, 'source/plugin/gfarm/upload/germ/20141126093758965.png', 'source/plugin/gfarm/upload/germ/20141126093758738.png', 100, 300),
+(16, 59, 'source/plugin/gfarm/upload/germ/20141126093841606.png', 'source/plugin/gfarm/upload/germ/20141126093841928.png', 120, 360),
+(17, 60, 'source/plugin/gfarm/upload/germ/20141126093927104.png', 'source/plugin/gfarm/upload/germ/20141126093927129.png', 140, 420),
+(18, 61, 'source/plugin/gfarm/upload/germ/20141126094020395.png', 'source/plugin/gfarm/upload/germ/20141126094020341.png', 160, 480),
+(19, 62, 'source/plugin/gfarm/upload/germ/20141126094107858.png', 'source/plugin/gfarm/upload/germ/20141126094107935.png', 240, 960),
+(20, 63, 'source/plugin/gfarm/upload/germ/20141126094151891.png', 'source/plugin/gfarm/upload/germ/20141126094151106.png', 360, 1440);]]></item>
+				<item id="6"><![CDATA[INSERT INTO `pre_gfarm_germ_crop` (`id`, `sort`, `germ_id`, `crop_id`, `produce_big`, `produce_small`, `produce_odds`, `create_time`, `create_uid`, `update_time`, `update_uid`) VALUES
+(1, '', 19, 9, 20, 20, 100, 1414033498, 1039, 1414721635, 2),
+(2, '', 20, 10, 20, 20, 100, 1414033556, 1039, 1416967147, 1039),
+(3, '', 11, 1, 20, 20, 100, 1414033592, 1039, 1414721574, 2),
+(4, '', 12, 2, 20, 20, 100, 1414033616, 1039, 1416967108, 1039),
+(5, '', 13, 3, 20, 20, 100, 1414033635, 1039, 1414721602, 2),
+(6, '', 14, 4, 20, 20, 100, 1414033650, 1039, 1416967118, 1039),
+(7, '', 15, 5, 20, 20, 100, 1414033673, 1039, 1416967124, 1039),
+(8, '', 16, 6, 20, 20, 100, 1414033693, 1039, 1416967130, 1039),
+(9, '', 17, 7, 20, 20, 100, 1414033711, 1039, 1414721624, 2),
+(10, '', 18, 8, 20, 20, 100, 1414033724, 1039, 1416967138, 1039),
+(11, '', 54, 64, 20, 20, 100, 1416967167, 1039, 1416967167, 1039),
+(12, '', 55, 65, 20, 20, 100, 1416967177, 1039, 1416967177, 1039),
+(13, '', 56, 66, 20, 20, 100, 1416967186, 1039, 1416967186, 1039),
+(14, '', 57, 67, 20, 20, 100, 1416967192, 1039, 1416967192, 1039),
+(15, '', 58, 68, 20, 20, 100, 1416967201, 1039, 1416967201, 1039),
+(16, '', 59, 69, 20, 20, 100, 1416967213, 1039, 1416967213, 1039),
+(17, '', 60, 70, 20, 20, 100, 1416967220, 1039, 1416967220, 1039),
+(18, '', 61, 71, 20, 20, 100, 1416967245, 1039, 1416967245, 1039),
+(19, '', 62, 72, 20, 20, 100, 1416967252, 1039, 1416967252, 1039),
+(20, '', 63, 73, 20, 20, 100, 1416967258, 1039, 1416967258, 1039);]]></item>
+				<item id="7"><![CDATA[INSERT INTO `pre_gfarm_goods` (`id`, `sort`, `name`, `big_type`, `small_type`, `money_typeb`, `money_types`, `buy_price`, `sale_price`, `use_level`, `use_benevolence`, `use_flag`, `sale_count`, `add_date`, `sale_time_begin`, `sale_time_end`, `transaction_flag`, `img`, `description`, `depot_pile`, `create_time`, `create_uid`, `update_time`, `update_uid`) VALUES
+(1, 'ZW001', 'Íã¶¹', 11, 12, 0, 0, 10, 1, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094815447.png', 'Íã¶¹', 999, 1414032195, 1039, 1417179330, 2),
+(2, 'ZW002', 'ÓñÃ×', 11, 12, 0, 0, 20, 2, 2, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094918266.png', 'ÓñÃ×', 999, 1414032297, 1039, 1417179341, 2),
+(3, 'ZW003', 'Ê¯Áñ', 11, 12, 0, 0, 30, 3, 3, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094954450.png', 'Ê¯Áñ', 999, 1414032324, 1039, 1417179349, 2),
+(4, 'ZW004', '¿à¹Ï', 11, 12, 0, 0, 40, 4, 4, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095016117.png', '¿à¹Ï', 999, 1414032355, 1039, 1417179357, 2),
+(5, 'ZW005', 'ÍÁ¶¹', 11, 12, 0, 0, 50, 5, 5, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095044231.png', 'ÍÁ¶¹', 999, 1414032397, 1039, 1417179363, 2),
+(6, 'ZW006', 'ÄÏ¹Ï', 11, 12, 0, 0, 120, 12, 6, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141128104619477.png', 'ÄÏ¹Ï', 999, 1414032419, 1039, 1417179375, 2),
+(7, 'ZW007', '·¬ÇÑ', 11, 12, 0, 0, 140, 14, 7, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095150667.png', '·¬ÇÑ', 999, 1414032445, 1039, 1417179385, 2),
+(8, 'ZW008', 'Æ»¹û', 11, 12, 0, 0, 160, 16, 8, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095224684.png', 'Æ»¹û', 999, 1414032469, 1039, 1417179420, 2),
+(9, 'ZW009', 'Ïã½¶', 11, 12, 0, 0, 180, 18, 9, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095254110.png', 'Ïã½¶', 999, 1414032493, 1039, 1417179404, 2),
+(10, 'ZW010', 'öùÀæ', 11, 12, 0, 0, 200, 20, 10, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141128092628381.png', 'öùÀæ', 999, 1414032515, 1039, 1417179413, 2),
+(11, '', 'Íã¶¹ÖÖ×Ó', 9, 0, 0, 0, 10, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126091414506.png', 'Íã¶¹ÖÖ×Ó', 999, 1414032740, 1039, 1417245666, 2),
+(12, '', 'ÓñÃ×ÖÖ×Ó', 9, 0, 0, 0, 20, 20, 2, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126091325462.png', 'ÓñÃ×ÖÖ×Ó', 999, 1414032873, 1039, 1417245670, 2),
+(13, '', 'Ê¯ÁñÖÖ×Ó', 9, 0, 0, 0, 30, 30, 3, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126091644489.png', 'Ê¯ÁñÖÖ×Ó', 999, 1414032932, 1039, 1417245675, 2),
+(14, '', '¿à¹ÏÖÖ×Ó', 9, 0, 0, 0, 40, 40, 4, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141128091648947.png', '¿à¹ÏÖÖ×Ó', 999, 1414032977, 1039, 1417245679, 2),
+(15, '', 'ÍÁ¶¹ÖÖ×Ó', 9, 0, 0, 0, 50, 50, 5, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092131470.png', 'ÍÁ¶¹ÖÖ×Ó
+', 999, 1414033018, 1039, 1417245683, 2),
+(16, '', 'ÄÏ¹ÏÖÖ×Ó', 9, 0, 0, 0, 120, 120, 6, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092303497.png', 'ÄÏ¹ÏÖÖ×Ó
+', 999, 1414033057, 1039, 1417245689, 2),
+(17, '', '·¬ÇÑÖÖ×Ó', 9, 0, 0, 0, 140, 140, 7, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092429979.png', '·¬ÇÑÖÖ×Ó
+', 999, 1414033093, 1039, 1417245647, 2),
+(18, '', 'Æ»¹ûÖÖ×Ó', 9, 0, 0, 0, 160, 160, 8, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092539255.png', 'Æ»¹ûÖÖ×Ó
+', 999, 1414033131, 1039, 1417245707, 2),
+(19, '', 'Ïã½¶ÖÖ×Ó', 9, 0, 0, 0, 180, 180, 9, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092650446.png', 'Ïã½¶ÖÖ×Ó
+', 999, 1414033173, 1039, 1417245716, 2),
+(20, '', 'öùÀæÖÖ×Ó', 9, 0, 0, 0, 200, 200, 10, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092802726.png', 'öùÀæÖÖ×Ó
+', 999, 1414033213, 1039, 1417245789, 2),
+(21, '', '10%ÔöÁ¿»¯·Ê', 19, 0, 0, 0, 100, 10, 1, 0, 0, 1000, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175251434.png', 'Ôö¼Ó×÷Îï10%µÄ²úÁ¿¡£', 999, 1414033269, 1039, 1417182988, 2),
+(22, '', '20%ÔöÁ¿»¯·Ê', 19, 0, 0, 0, 1000, 100, 5, 0, 0, 100, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175344675.png', 'Ôö¼Ó×÷Îï20%µÄ²úÁ¿¡£', 999, 1414033296, 1039, 1417183014, 2),
+(23, '', '30%ÔöÁ¿»¯·Ê', 19, 0, 0, 0, 10000, 1000, 10, 0, 0, 10, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175331502.png', 'Ôö¼Ó×÷Îï30%µÄ²úÁ¿¡£', 999, 1414033331, 1039, 1417183036, 2),
+(24, '', '10%¼ÓËÙ»¯·Ê', 19, 0, 0, 0, 100, 10, 1, 0, 0, 1000, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175406188.png', '¼õÉÙ10%×÷ÎïÉú²úÊ±¼ä¡£', 999, 1414033352, 1039, 1417183045, 2),
+(25, '', '20%¼ÓËÙ»¯·Ê', 19, 0, 0, 0, 1000, 100, 5, 0, 0, 100, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175427732.png', '¼õÉÙ20%×÷ÎïÉú²úÊ±¼ä¡£', 999, 1414033372, 1039, 1417183053, 2),
+(26, '', '30%¼ÓËÙ»¯·Ê', 19, 0, 0, 0, 10000, 1000, 10, 0, 0, 10, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175438795.png', '¼õÉÙ30%×÷ÎïÉú²úÊ±¼ä¡£', 999, 1414033392, 1039, 1417183065, 2),
+(27, '', 'Ä¬ÈÏ', 4, 5, 0, 0, 20, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141031093958294.png', 'Ä¬ÈÏ', 999, 1414719598, 1039, 1414719598, 1039),
+(28, '', '½ã²»ÖÖ²Ý', 4, 5, 0, 0, 30, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141031094053753.png', '½ã²»ÖÖ²Ý', 999, 1414719653, 1039, 1414719653, 1039),
+(29, '', 'ËÄ¼¾¸Ð¶¯', 4, 5, 0, 0, 30, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141031094135288.png', 'ËÄ¼¾¸Ð¶¯', 999, 1414719695, 1039, 1414719695, 1039),
+(30, '', 'Ç§Àï»ã', 4, 5, 0, 0, 30, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141031094207575.png', 'Ç§Àï»ã', 999, 1414719727, 1039, 1414719727, 1039),
+(41, '', 'ÎÝ×Ó01', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172421473.png', 'ÎÝ×Ó01', 999, 1416216261, 1039, 1416216320, 1039),
+(42, '', 'ÎÝ×Ó02', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172503248.png', 'ÎÝ×Ó02', 999, 1416216303, 1039, 1416216326, 1039),
+(43, '', 'ÎÝ×Ó03', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172546618.png', 'ÎÝ×Ó03', 999, 1416216346, 1039, 1416279925, 1039),
+(44, '', 'ÎÝ×Ó04', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172611157.png', 'ÎÝ×Ó04', 999, 1416216371, 1039, 1416279931, 1039),
+(45, '', 'ÎÝ×Ó05', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172637106.png', 'ÎÝ×Ó05', 999, 1416216397, 1039, 1416279939, 1039),
+(46, '', 'dog', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118115929597.png', 'dog', 999, 1416281222, 1039, 1416283169, 1039),
+(47, '', 'dog1', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118115939326.png', 'dog1', 999, 1416281244, 1039, 1416283179, 1039),
+(48, '', 'dog2', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118115947656.png', 'dog2', 999, 1416281261, 1039, 1416283187, 1039),
+(49, '', 'dog3', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118115956600.png', 'dog3', 999, 1416281290, 1039, 1416283196, 1039),
+(50, '', 'dog4', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118120004852.png', 'dog4', 999, 1416281311, 1039, 1416283204, 1039),
+(51, '', 'dog5', 4, 8, 0, 0, 50, 1, 1, 0, 0, 99, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118120014889.png', 'dog5', 999, 1416281333, 1039, 1416283214, 1039),
+(52, '', 'dog6', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118120039477.png', 'dog6', 999, 1416283239, 1039, 1416283239, 1039),
+(53, '', 'dog7', 4, 5, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118120055543.png', 'dog7', 999, 1416283255, 1039, 1416283255, 1039),
+(54, '', '³È×ÓÖÖ×Ó', 9, 0, 0, 0, 220, 220, 11, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092940301.png', '³È×ÓÖÖ×Ó
+', 999, 1416965380, 1039, 1417245798, 2),
+(55, '', 'ÀóÖ¦ÖÖ×Ó', 9, 0, 0, 0, 360, 360, 12, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093314867.png', 'ÀóÖ¦ÖÖ×Ó
+', 999, 1416965594, 1039, 1417245811, 2),
+(56, '', 'Ä¾¹ÏÖÖ×Ó', 9, 0, 0, 0, 390, 390, 13, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093459820.png', 'Ä¾¹ÏÖÖ×Ó
+', 999, 1416965699, 1039, 1417245827, 2),
+(57, '', '²¤ÂÜÃÛÖÖ×Ó', 9, 0, 0, 0, 420, 420, 14, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093715245.png', '²¤ÂÜÃÛÖÖ×Ó
+', 999, 1416965835, 1039, 1417245843, 2),
+(58, '', '±¡ºÉÖÖ×Ó', 9, 0, 0, 0, 450, 450, 15, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093758344.png', '±¡ºÉÖÖ×Ó
+', 999, 1416965878, 1039, 1417245855, 2),
+(59, '', 'Â«ÜöÖÖ×Ó', 9, 0, 0, 0, 480, 480, 16, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093841685.png', 'Â«ÜöÖÖ×Ó
+', 999, 1416965921, 1039, 1417245867, 2),
+(60, '', '¿É¿É¶¹ÖÖ×Ó', 9, 0, 0, 0, 510, 510, 17, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093927389.png', '¿É¿É¶¹ÖÖ×Ó
+', 999, 1416965967, 1039, 1417245874, 2),
+(61, '', 'éÏé­ÖÖ×Ó', 9, 0, 0, 0, 540, 540, 18, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094020500.png', 'éÏé­ÖÖ×Ó
+', 999, 1416966020, 1039, 1417245882, 2),
+(62, '', 'µÆÁý¹ûÖÖ×Ó', 9, 0, 0, 0, 760, 760, 19, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094107408.png', 'µÆÁý¹ûÖÖ×Ó
+', 999, 1416966067, 1039, 1417245888, 2),
+(63, '', '°ÙÏã¹ûÖÖ×Ó', 9, 0, 0, 0, 800, 800, 20, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094151899.png', '°ÙÏã¹ûÖÖ×Ó
+', 999, 1416966111, 1039, 1417245895, 2),
+(64, '', '³È×Ó', 11, 12, 0, 0, 220, 22, 11, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095419706.png', '³È×Ó', 999, 1416966859, 1039, 1417179195, 2),
+(65, '', 'ÀóÖ¦', 11, 12, 0, 0, 360, 36, 12, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095443355.png', 'ÀóÖ¦
+', 999, 1416966883, 1039, 1417179207, 2),
+(66, '', 'Ä¾¹Ï', 11, 12, 0, 0, 390, 39, 13, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095515682.png', 'Ä¾¹Ï', 999, 1416966915, 1039, 1417179215, 2),
+(67, '', '²¤ÂÜÃÛ', 11, 12, 0, 0, 420, 42, 14, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095535869.png', '²¤ÂÜÃÛ
+', 999, 1416966935, 1039, 1417179222, 2),
+(68, '', '±¡ºÉ', 11, 12, 0, 0, 450, 45, 15, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095557967.png', '±¡ºÉ', 999, 1416966957, 1039, 1417179232, 2),
+(69, '', 'Â«Üö', 11, 12, 0, 0, 480, 48, 16, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095627905.png', 'Â«Üö', 999, 1416966987, 1039, 1417179239, 2),
+(70, '', '¿É¿É¶¹', 11, 12, 0, 0, 510, 51, 17, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095649873.png', '¿É¿É¶¹', 999, 1416967009, 1039, 1417179264, 2),
+(71, '', 'éÏé­', 11, 12, 0, 0, 540, 54, 18, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095712118.png', 'éÏé­', 999, 1416967032, 1039, 1417179298, 2),
+(72, '', 'µÆÁý¹û', 11, 12, 0, 0, 760, 76, 19, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095733779.png', 'µÆÁý¹û
+', 999, 1416967053, 1039, 1417179290, 2),
+(73, '', '°ÙÏã¹û', 11, 12, 0, 0, 800, 80, 20, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095752740.png', '°ÙÏã¹û', 999, 1416967072, 1039, 1417179283, 2);]]></item>
+				<item id="8"><![CDATA[INSERT INTO `pre_gfarm_goods_update` (`id`, `goods_id`, `still_num`, `update_time`) VALUES
+(1, 1, 999, 1414032195),
+(2, 2, 999, 1414032297),
+(3, 3, 999, 1414032324),
+(4, 4, 999, 1414032355),
+(5, 5, 999, 1414032397),
+(6, 6, 999, 1414032419),
+(7, 7, 999, 1414032445),
+(8, 8, 999, 1414032469),
+(9, 9, 999, 1414032493),
+(10, 10, 999, 1414032515),
+(11, 11, 999, 1414032740),
+(12, 12, 999, 1416964405),
+(13, 13, 999, 1414032932),
+(14, 14, 999, 1416964676),
+(15, 15, 999, 1414033018),
+(16, 16, 999, 1416964983),
+(17, 17, 999, 1414033093),
+(18, 18, 999, 1416965139),
+(19, 19, 999, 1414033173),
+(20, 20, 999, 1416965282),
+(21, 21, 1000, 1417402869),
+(22, 22, 100, 1417402896),
+(23, 23, 10, 1417402931),
+(24, 24, 1000, 1417402952),
+(25, 25, 100, 1417402972),
+(26, 26, 10, 1417402992),
+(27, 27, 999, 1414719598),
+(28, 28, 999, 1414719653),
+(29, 29, 999, 1414719695),
+(30, 30, 999, 1414719727),
+(31, 31, 999, 1415601424),
+(32, 32, 999, 1415601459),
+(33, 33, 999, 1415601507),
+(34, 34, 999, 1415601571),
+(35, 35, 999, 1415601612),
+(36, 36, 999, 1415601632),
+(37, 37, 999, 1415601656),
+(38, 38, 999, 1415601676),
+(39, 39, 999, 1415601697),
+(40, 40, 999, 1415601729),
+(41, 41, 999, 1416216261),
+(42, 42, 999, 1416216303),
+(43, 43, 999, 1416216346),
+(44, 44, 999, 1416216371),
+(45, 45, 999, 1416216398),
+(46, 46, 999, 1416281222),
+(47, 47, 999, 1416281244),
+(48, 48, 999, 1416281261),
+(49, 49, 999, 1416281290),
+(50, 50, 999, 1416281311),
+(51, 51, 99, 1416281333),
+(52, 52, 999, 1416283239),
+(53, 53, 999, 1416283255),
+(54, 54, 999, 1416965380),
+(55, 55, 999, 1416965594),
+(56, 56, 999, 1416965699),
+(57, 57, 999, 1416965835),
+(58, 58, 999, 1416965878),
+(59, 59, 999, 1416965921),
+(60, 60, 999, 1416965967),
+(61, 61, 999, 1416966020),
+(62, 62, 999, 1416966067),
+(63, 63, 999, 1416966111),
+(64, 64, 999, 1416966859),
+(65, 65, 999, 1416966883),
+(66, 66, 999, 1416966915),
+(67, 67, 999, 1416966935),
+(68, 68, 999, 1416966957),
+(69, 69, 999, 1416966987),
+(70, 70, 999, 1416967009),
+(71, 71, 999, 1416967032),
+(72, 72, 999, 1416967053),
+(73, 73, 999, 1416967072);]]></item>
+				<item id="9"><![CDATA[INSERT INTO `pre_gfarm_items` (`id`, `relation_id`, `add_gain_number`, `add_gain_time`, `add_benevolence`, `use_target`) VALUES
+(1, 21, 10, 0, 0, 0),
+(2, 22, 20, 0, 0, 0),
+(3, 23, 30, 0, 0, 0),
+(4, 24, 0, -10, 0, 0),
+(5, 25, 0, -20, 0, 0),
+(6, 26, 0, -30, 0, 0);]]></item>
+				<item id="10"><![CDATA[INSERT INTO `pre_gfarm_main_task` (`id`, `task_name`, `task_way`, `target_object`, `target_num`, `reward_money`, `reward_items`, `items_num`, `reward_exp`, `reward_bene`, `task_describe`, `create_time`, `update_time`, `visible`) VALUES
+(2, '¹ºÂòÍã¶¹1', 11, 11, 1, 0, 0, 0, 1, 0, 'µ½ÉÌµê¹ºÂò1¸öÍã¶¹ÖÖ×Ó
+', 1416963049, 1417071383, 0),
+(1, '½âËøÅ©Ìï1', 1, 0, 1, 0, 0, 0, 1, 0, '½âËøÒ»¸öÅ©Ìï', 1417069125, 1417071505, 0),
+(5, 'Âô³öÍã¶¹', 13, 1, 10, 0, 0, 0, 1, 0, 'µ½²Ö¿âÖÐÂô³ö10Íã¶¹', 1417071104, 1417071406, 0),
+(3, 'ÖÖÖ²Íã¶¹1', 3, 11, 1, 0, 0, 0, 1, 0, 'µ½±³°üÖÐÑ¡ÔñÍã¶¹ÖÖ×Ó£¬ÖÖÖ²Ò»´Î', 1417070319, 1417071387, 0),
+(4, 'ÊÕ»ñÍã¶¹', 4, 1, 1, 0, 0, 0, 1, 0, 'ÊÕ»ñÒ»´ÎÍã¶¹
+', 1417070365, 1417071371, 0),
+(6, '¹ºÂòÍã¶¹2', 11, 11, 2, 0, 0, 0, 1, 0, 'ÖÖÖ²²»ÒªÍ££¬ÔÙÈ¥ÉÌµê¹ºÂò1¸öÍã¶¹ÖÖ×Ó¡£', 1417071277, 1417075798, 0),
+(7, 'ÖÖÖ²Íã¶¹2', 3, 11, 2, 0, 0, 0, 1, 0, 'ÖÖÖ²²»ÒªÍ££¬ÔÙÖÐÒ»´ÎÍã¶¹ÖÖ×Ó', 1417071445, 1417075787, 0),
+(8, '²ù³ýÅ©Ìï', 2, 0, 1, 0, 0, 0, 2, 0, '²ù³ýÒ»´ÎÅ©Ìï', 1417071473, 1417075903, 0),
+(9, '½âËøÅ©Ìï2', 1, 0, 2, 0, 0, 0, 3, 0, '½âËøÄúµÄµÚ¶þ¸öÅ©Ìï', 1417071546, 1417072129, 0),
+(10, '¹ºÂòÓñÃ×', 11, 12, 2, 0, 0, 0, 3, 0, 'ÔÚÉÌµêÂòÈë2¸öÓñÃ×ÖÖ×Ó', 1417071658, 1417071667, 0),
+(11, 'ÖÖÖ²ÓñÃ×', 3, 12, 2, 0, 0, 0, 3, 0, 'ÖÖÖ²2´ÎÓñÃ×', 1417071772, 1417071843, 0),
+(12, 'ÊÕ»ñÓñÃ×', 4, 2, 2, 0, 0, 0, 3, 0, 'ÊÕ»ñ2´ÎÓñÃ×', 1417071837, 1417071850, 0),
+(13, 'Âô³öÓñÃ×', 13, 2, 20, 0, 0, 0, 4, 0, 'µ½²Ö¿âÖÐÂô³ö20¸öÓñÃ×', 1417071886, 1417072173, 0),
+(14, '½âËøÅ©Ìï3', 1, 0, 3, 0, 0, 0, 4, 0, '½âËøµÚÈý¸öÅ©Ìï', 1417071923, 1417072135, 0),
+(15, '¹ºÂòÊ¯Áñ', 11, 13, 3, 0, 0, 0, 4, 0, 'µ½ÉÌµêÂòÈë3¸öÊ¯ÁñÖÖ×Ó', 1417072248, 1417072270, 0),
+(16, 'ÖÖÖ²Ê¯Áñ', 3, 13, 3, 0, 0, 0, 4, 0, 'ÖÖÖ²3¸öÊ¯ÁñÖÖ×Ó', 1417072305, 1417072429, 0),
+(17, 'ÊÕ»ñÊ¯Áñ', 4, 3, 3, 0, 0, 0, 4, 0, 'ÊÕ»ñ3´ÎÊ¯Áñ', 1417072387, 1417072437, 0),
+(18, 'Âô³öÊ¯Áñ', 13, 3, 30, 0, 0, 0, 5, 0, 'µ½²Ö¿âÂô³ö30¸öÊ¯Áñ', 1417072421, 1417072444, 0),
+(19, '½âËøÅ©Ìï4', 1, 0, 4, 0, 0, 0, 5, 0, '½âËøµÚËÄ¸öÅ©Ìï', 1417072482, 1417072482, 0),
+(20, '¹ºÂò¿à¹Ï', 11, 14, 4, 0, 0, 0, 5, 0, 'µ½ÉÌµê¹ºÂò4¸ö¿à¹ÏÖÖ×Ó', 1417072519, 1417072648, 0),
+(21, 'ÖÖÖ²¿à¹Ï', 3, 14, 4, 0, 0, 0, 5, 0, 'ÖÖÖ²4¸ö¿à¹Ï', 1417072546, 1417072639, 0),
+(22, 'ÊÕ»ñ¿à¹Ï', 4, 4, 4, 0, 0, 0, 5, 0, 'ÊÕ»ñ4´Î¿à¹Ï', 1417072569, 1417072632, 0),
+(23, 'Âô³ö¿à¹Ï', 13, 4, 40, 0, 0, 0, 5, 0, 'µ½²Ö¿âÂô³ö40¸ö¿à¹Ï', 1417072594, 1417072625, 0),
+(24, '½âËøÅ©Ìï5', 1, 0, 5, 0, 0, 0, 5, 0, '½âËøµÚÎå¸öÅ©Ìï', 1417072974, 1417072974, 0),
+(25, '¹ºÂòÍÁ¶¹', 11, 15, 5, 0, 0, 0, 5, 0, 'µ½ÉÌµê¹ºÂò5¸öÍÁ¶¹ÖÖ×Ó', 1417073353, 1417073364, 0),
+(26, 'ÖÖÖ²ÍÁ¶¹', 3, 15, 5, 0, 0, 0, 5, 0, 'ÖÖÖ²5´ÎÍÁ¶¹', 1417073508, 1417073508, 0),
+(27, 'ÊÕ»ñÍÁ¶¹', 4, 5, 5, 0, 0, 0, 5, 0, 'ÊÕ»ñÎå´ÎÍÁ¶¹', 1417073611, 1417073611, 0),
+(28, 'Âô³öÍÁ¶¹', 13, 5, 50, 0, 0, 0, 5, 0, 'µ½²Ö¿âÂô³ö50¸öÍÁ¶¹', 1417073641, 1417073641, 0),
+(29, '½âËøÅ©Ìï6', 1, 0, 6, 0, 0, 0, 6, 0, '½âËøµÚÁù¸öÅ©Ìï', 1417074120, 1417074120, 0),
+(30, '¹ºÂòÄÏ¹Ï', 11, 16, 5, 0, 0, 0, 6, 0, 'µ½ÉÌµê¹ºÂò5¸öÄÏ¹ÏÖÖ×Ó', 1417074198, 1417074198, 0),
+(31, 'ÖÖÖ²ÄÏ¹Ï', 3, 16, 5, 0, 0, 0, 6, 0, 'ÖÖÖ²5¸öÄÏ¹ÏÖÖ×Ó', 1417074230, 1417074230, 0),
+(32, 'ÊÕ»ñÄÏ¹Ï', 4, 6, 5, 0, 0, 0, 6, 0, 'ÊÕ»ñ5´ÎÄÏ¹Ï', 1417074262, 1417074262, 0),
+(33, 'Âô³öÄÏ¹Ï', 13, 6, 50, 0, 0, 0, 6, 0, 'µ½²Ö¿âÂô³ö50¸öÄÏ¹Ï', 1417074305, 1417074305, 0),
+(34, '¹ºÂò¼ÓËÙ»¯·Ê', 12, 24, 1, 0, 0, 0, 6, 0, 'µ½ÉÌµê¹ºÂò1¸ö10%µÄ¼ÓËÙ»¯·Ê', 1417074349, 1417076837, 0),
+(35, '¹ºÂò¼ÓÁ¿»¯·Ê', 12, 21, 1, 0, 0, 0, 6, 0, '¹ºÂòÒ»´Î10%¼ÓÁ¿»¯·Ê', 1417074539, 1417076848, 0),
+(36, 'Ê¹ÓÃ¼ÓËÙ»¯·Ê', 8, 24, 1, 0, 0, 0, 6, 0, 'Ê¹ÓÃÒ»´Î10%µÄ¼ÓËÙ»¯·Ê', 1417074620, 1417076862, 0),
+(37, 'Ê¹ÓÃ¼ÓÁ¿»¯·Ê', 8, 21, 1, 0, 0, 0, 6, 0, 'Ê¹ÓÃÒ»´Î¼ÓÁ¿»¯·Ê', 1417074644, 1417076856, 0),
+(38, '½âËøÅ©Ìï7', 1, 0, 7, 0, 0, 0, 7, 0, '½âËøµÚÆß¸öÅ©Ìï', 1417075173, 1417075173, 0),
+(39, '¹ºÂò·¬ÇÑ', 11, 17, 5, 0, 0, 0, 7, 0, 'µ½ÉÌµê¹ºÂò5¸ö·¬ÇÑÖÖ×Ó', 1417075283, 1417075283, 0),
+(40, 'ÖÖÖ²·¬ÇÑ', 3, 17, 5, 0, 0, 0, 7, 0, 'ÖÖÖ²5´Î·¬ÇÑ', 1417075316, 1417075316, 0),
+(41, 'ÊÕ»ñ·¬ÇÑ', 4, 7, 5, 0, 0, 0, 7, 0, 'ÊÕ»ñ5´Î·¬ÇÑ', 1417075354, 1417075354, 0),
+(42, 'Âô³ö·¬ÇÑ', 13, 7, 50, 0, 0, 0, 7, 0, 'µ½²Ö¿âÂô³ö50¸ö·¬ÇÑ', 1417075389, 1417075389, 0),
+(43, '½âËøÅ©Ìï8', 1, 0, 8, 0, 0, 0, 8, 0, '½âËøµÚ°Ë¸öÅ©Ìï', 1417079792, 1417079792, 0),
+(44, '¹ºÂòÆ»¹û', 11, 18, 5, 0, 0, 0, 8, 0, '¹ºÂò5¸öÆ»¹ûÖÖ×Ó', 1417079837, 1417079849, 0),
+(45, 'ÖÖÖ²Æ»¹û', 3, 18, 5, 0, 0, 0, 8, 0, 'ÖÖÖ²5¸öÆ»¹ûÖÖ×Ó', 1417079882, 1417079882, 0),
+(46, 'ÊÕ»ñÆ»¹û', 4, 8, 5, 0, 0, 0, 8, 0, 'ÊÕ»ñ5´ÎÆ»¹û', 1417079917, 1417079917, 0),
+(47, 'Âô³öÆ»¹û', 13, 8, 50, 0, 0, 0, 8, 0, 'µ½²Ö¿âÂô³ö50¸öÆ»¹û', 1417079976, 1417079976, 0),
+(48, '½âËøÅ©Ìï9', 1, 0, 9, 0, 0, 0, 9, 0, '½âËøµÚ¾Å¸öÅ©Ìï', 1417080300, 1417080300, 0),
+(49, '¹ºÂòÏã½¶', 11, 19, 5, 0, 0, 0, 9, 0, '¹ºÂò5¸öÏã½¶ÖÖ×Ó', 1417080335, 1417080335, 0),
+(50, 'ÖÖÖ²Ïã½¶', 3, 19, 5, 0, 0, 0, 9, 0, 'ÖÖÖ²5´ÎÏã½¶', 1417080366, 1417080366, 0),
+(51, 'ÊÕ»ñÏã½¶', 4, 9, 5, 0, 0, 0, 9, 0, 'ÊÕ»ñ5´ÎÏã½¶', 1417080414, 1417080414, 0),
+(52, 'Âô³öÏã½¶', 13, 9, 50, 0, 0, 0, 9, 0, 'Âô³ö50¸öÏã½¶', 1417080438, 1417080438, 0),
+(53, '½âËøÅ©Ìï10', 1, 0, 10, 0, 0, 0, 10, 0, '½âËøµÚÊ®¸öÅ©Ìï', 1417080798, 1417080798, 0),
+(54, '¹ºÂòöùÀæ', 11, 20, 5, 0, 0, 0, 10, 0, 'µ½ÉÌµê¹ºÂò5¸ööùÀæ', 1417080822, 1417080822, 0),
+(55, 'ÖÖÖ²öùÀæ', 3, 20, 5, 0, 0, 0, 10, 0, 'ÖÖÖ²5¸ööùÀæ', 1417080840, 1417080840, 0),
+(56, 'ÊÕ»ñöùÀæ', 4, 10, 5, 0, 0, 0, 10, 0, 'ÊÕ»ñ5¸ööùÀæ', 1417080858, 1417080858, 0),
+(57, 'Âô³ööùÀæ', 13, 10, 50, 0, 0, 0, 10, 0, 'Âô³ö50¸ööùÀæ', 1417080937, 1417080937, 0),
+(58, '½âËøÅ©Ìï11', 1, 0, 11, 0, 0, 0, 11, 0, '½âËøµÚÊ®Ò»¸öÅ©Ìï', 1417081385, 1417081385, 0),
+(59, '¹ºÂò³È×Ó', 11, 54, 5, 0, 0, 0, 11, 0, '¹ºÂò5¸ö³È×Ó', 1417081545, 1417081545, 0),
+(60, 'ÖÖÖ²³È×Ó', 3, 54, 5, 0, 0, 0, 11, 0, 'ÖÖÖ²5¸ö³È×Ó', 1417081576, 1417081576, 0),
+(61, 'ÊÕ»ñ³È×Ó', 4, 64, 5, 0, 0, 0, 11, 0, 'ÊÕ»ñ5¸ö³È×Ó', 1417081596, 1417081596, 0),
+(62, 'Âô³ö³È×Ó', 13, 64, 50, 0, 0, 0, 11, 0, 'Âô³ö50¸ö³È×Ó', 1417081616, 1417081622, 0),
+(63, '½âËøÅ©Ìï12', 1, 0, 12, 0, 0, 0, 12, 0, '½âËøµÚÊ®¶þ¸öÅ©Ìï', 1417081899, 1417081899, 0),
+(64, '¹ºÂòÀóÖ¦', 11, 55, 5, 0, 0, 0, 12, 0, 'µ½ÉÌµê¹ºÂò5¸öÀóÖ¦ÖÖ×Ó', 1417081932, 1417081932, 0),
+(65, 'ÖÖÖ²ÀóÖ¦', 3, 55, 5, 0, 0, 0, 12, 0, 'ÖÖÖ²5¸öÀóÖ¦', 1417081968, 1417081968, 0),
+(66, 'ÊÕ»ñÀóÖ¦', 4, 65, 5, 0, 0, 0, 12, 0, 'ÊÕ»ñ5´ÎÀóÖ¦', 1417081991, 1417081991, 0),
+(67, 'Âô³öÀóÖ¦', 13, 65, 50, 0, 0, 0, 12, 0, 'Âô³ö50¸öÀóÖ¦', 1417082009, 1417082009, 0),
+(68, '½âËøÅ©Ìï13', 1, 0, 13, 0, 0, 0, 13, 0, '½âËø13¸öÅ©Ìï', 1417082099, 1417082099, 0),
+(69, '¹ºÂòÄ¾¹Ï', 11, 56, 5, 0, 0, 0, 13, 0, '¹ºÂò5¸öÄ¾¹Ï', 1417082125, 1417082125, 0),
+(70, 'ÖÖÖ²Ä¾¹Ï', 3, 56, 5, 0, 0, 0, 13, 0, 'ÖÖÖ²5´ÎÄ¾¹Ï', 1417082159, 1417082159, 0),
+(71, 'ÊÕ»ñÄ¾¹Ï', 4, 66, 5, 0, 0, 0, 13, 0, 'ÊÕ»ñ5´ÎÄ¾¹Ï', 1417082179, 1417082179, 0),
+(72, 'Âô³öÄ¾¹Ï', 13, 66, 50, 0, 0, 0, 13, 0, 'Âô³ö50¸öÄ¾¹Ï', 1417082198, 1417082198, 0),
+(73, '½âËøÅ©Ìï14', 1, 0, 14, 0, 0, 0, 14, 0, '½âËøµÚÊ®ËÄ¸öÅ©Ìï', 1417082379, 1417082379, 0),
+(74, '¹ºÂò²¤ÂÜÃÛ', 11, 57, 5, 0, 0, 0, 14, 0, '¹ºÂò5¸ö²¤ÂÜÃÛ', 1417082408, 1417082408, 0),
+(75, 'ÖÖÖ²²¤ÂÜÃÛ', 3, 57, 5, 0, 0, 0, 14, 0, 'ÖÖÖ²5¸ö²¤ÂÜÃÛ', 1417082435, 1417082435, 0),
+(76, 'ÊÕ»ñ²¤ÂÜÃÛ', 4, 67, 5, 0, 0, 0, 14, 0, 'ÊÕ»ñ5´Î²¤ÂÜÃÛ', 1417082460, 1417082460, 0),
+(77, 'Âô³ö²¤ÂÜÃÛ', 13, 67, 50, 0, 0, 0, 14, 0, 'Âô³ö50¸ö²¤ÂÜÃÛ', 1417082482, 1417082482, 0),
+(78, '½âËøÅ©Ìï15', 1, 0, 15, 0, 0, 0, 15, 0, '½âËøµÚÊ®Îå¸öÅ©Ìï', 1417142140, 1417142140, 0),
+(79, '¹ºÂò±¡ºÉ', 11, 58, 5, 0, 0, 0, 15, 0, '¹ºÂò5¸ö±¡ºÉÖÖ×Ó', 1417142169, 1417142169, 0),
+(80, 'ÖÖÖ²±¡ºÉ', 3, 58, 5, 0, 0, 0, 15, 0, 'ÖÖÖ²5¸ö±¡ºÉÖÖ×Ó', 1417142192, 1417142192, 0),
+(81, 'ÊÕ»ñ±¡ºÉ', 4, 68, 5, 0, 0, 0, 15, 0, 'ÊÕ»ñ5´Î±¡ºÉ', 1417142214, 1417142214, 0),
+(82, 'Âô³ö±¡ºÉ', 13, 68, 50, 0, 0, 0, 15, 0, 'Âô³ö50¸ö±¡ºÉ', 1417142251, 1417142251, 0),
+(83, '½âËøÅ©Ìï16', 1, 0, 16, 0, 0, 0, 16, 0, '½âËøµÚÊ®ÁùÅ©Ìï', 1417142344, 1417142344, 0),
+(84, '¹ºÂòÂ«Üö', 11, 59, 5, 0, 0, 0, 16, 0, '¹ºÂò5¸öÂ«ÜöÖÖ×Ó', 1417142382, 1417142382, 0),
+(85, 'ÖÖÖ²Â«Üö', 3, 59, 5, 0, 0, 0, 16, 0, 'ÖÖÖ²5¸öÂ«Üö', 1417142402, 1417142402, 0),
+(86, 'ÊÕ»ñÂ«Üö', 4, 69, 5, 0, 0, 0, 16, 0, 'ÊÕ»ñ5´ÎÂ«Üö', 1417142432, 1417142432, 0),
+(87, 'Âô³öÂ«Üö', 13, 69, 50, 0, 0, 0, 16, 0, 'Âô³ö50¸öÂ«Üö', 1417142451, 1417142451, 0),
+(88, '½âËøÅ©Ìï17', 1, 0, 17, 0, 0, 0, 17, 0, '½âËøµÚÊ®Æß¸öÅ©Ìï', 1417142490, 1417142490, 0),
+(89, '¹ºÂò¿É¿É¶¹', 11, 60, 5, 0, 0, 0, 17, 0, '¹ºÂò5¸ö¿É¿É¶¹', 1417142510, 1417142510, 0),
+(90, 'ÖÖÖ²¿É¿É¶¹', 3, 60, 5, 0, 0, 0, 17, 0, 'ÖÖÖ²5´Î¿É¿É¶¹', 1417142535, 1417142535, 0),
+(91, 'ÊÕ»ñ¿É¿É¶¹', 4, 70, 5, 0, 0, 0, 17, 0, 'ÊÕ»ñ5´Î¿É¿É¶¹', 1417142556, 1417142556, 0),
+(92, 'Âô³ö¿É¿É¶¹', 13, 70, 50, 0, 0, 0, 17, 0, 'Âô³ö50¸ö¿É¿É¶¹', 1417142577, 1417142577, 0),
+(93, '½âËøÅ©Ìï18', 1, 0, 18, 0, 0, 0, 18, 0, '½âËøµÚÊ®°Ë¸öÅ©Ìï', 1417142962, 1417142962, 0),
+(94, '¹ºÂòéÏé­', 11, 61, 5, 0, 0, 0, 18, 0, '¹ºÂò5¸öéÏé­', 1417142982, 1417142982, 0),
+(95, 'ÖÖÖ²éÏé­', 3, 61, 5, 0, 0, 0, 18, 0, 'ÖÖÖ²5¸öéÏé­', 1417143004, 1417143004, 0),
+(96, 'ÊÕ»ñéÏé­', 4, 71, 5, 0, 0, 0, 18, 0, 'ÊÕ»ñ5´ÎéÏé­', 1417143033, 1417143033, 0),
+(97, 'Âô³öéÏé­', 13, 71, 50, 0, 0, 0, 18, 0, 'Âô³ö50¸öéÏé­', 1417143056, 1417143056, 0),
+(98, '½âËøÅ©Ìï19', 1, 0, 19, 0, 0, 0, 19, 0, '½âËøµÚÊ®¾Å¸öÅ©Ìï', 1417143077, 1417143077, 0),
+(99, '¹ºÂòµÆÁý¹û', 11, 62, 5, 0, 0, 0, 19, 0, '¹ºÂò5¸öµÆÁý¹û', 1417143136, 1417143136, 0),
+(100, 'ÖÖÖ²µÆÁý¹û', 3, 62, 5, 0, 0, 0, 19, 0, 'ÖÖÖ²5¸öµÆÁý¹û', 1417143158, 1417143158, 0),
+(101, 'ÊÕ»ñµÆÁý¹û', 4, 72, 5, 0, 0, 0, 19, 0, 'ÊÕ»ñ5´ÎµÆÁý¹û', 1417143180, 1417143180, 0),
+(102, 'Âô³öµÆÁý¹û', 13, 72, 50, 0, 0, 0, 19, 0, 'Âô³ö50¸öµÆÁý¹û', 1417143203, 1417143203, 0),
+(103, '½âËøÅ©Ìï20', 1, 0, 20, 0, 0, 0, 20, 0, '½âËøµÚ¶þÊ®¸öÅ©Ìï', 1417143226, 1417143226, 0),
+(104, '¹ºÂò°ÙÏã¹û', 11, 63, 5, 0, 0, 0, 20, 0, '¹ºÂò5¸ö°ÙÏã¹û', 1417143248, 1417143248, 0),
+(105, 'ÖÖÖ²°ÙÏã¹û', 3, 63, 5, 0, 0, 0, 20, 0, 'ÖÖÖ²5¸ö°ÙÏã¹û', 1417143274, 1417143274, 0),
+(106, 'ÊÕ»ñ°ÙÏã¹û', 4, 73, 5, 0, 0, 0, 20, 0, 'ÊÕ»ñ5´Î°ÙÏã¹û', 1417143293, 1417143293, 0),
+(107, 'Âô³ö°ÙÏã¹û', 13, 73, 50, 0, 0, 0, 20, 0, 'Âô³ö50¸ö°ÙÏã¹û', 1417143311, 1417143311, 0);]]></item>
+				<item id="11"><![CDATA[INSERT INTO `pre_gfarm_signin` (`id`, `sign_day`, `reward_money`, `reward_yuan`, `reward_items`, `items_num`, `reward_exp`, `reward_bene`, `create_time`, `update_time`) VALUES
+(1, 1, 100, 0, 0, 0, 0, 0, 1416301749, 1416301749),
+(2, 2, 200, 0, 0, 0, 0, 0, 1416301787, 1416301787),
+(3, 3, 300, 0, 0, 0, 0, 0, 1416301890, 1416301890),
+(4, 4, 400, 0, 0, 0, 10, 10, 1416302660, 1416302674),
+(5, 5, 500, 0, 0, 0, 20, 20, 1416302717, 1416302717),
+(6, 6, 600, 0, 0, 0, 30, 30, 1416302729, 1416302729);]]></item>
+				<item id="12"><![CDATA[INSERT INTO `pre_gfarm_signin_reward` (`id`, `uid`, `sign_id`, `reward_flag`, `create_time`, `update_time`) VALUES
+(2, 15, 1, 0, 1417079372, 1417395957),
+(3, 241, 1, 1, 1417091209, 1417091209),
+(4, 5, 1, 1, 1417093198, 1417093198),
+(5, 1, 1, 1, 1417095623, 1417095623),
+(6, 2159, 1, 1, 1417096307, 1417096307),
+(7, 2626, 1, 1, 1417098840, 1417098840),
+(8, 1786, 1, 1, 1417100372, 1417391202),
+(9, 1786, 2, 0, 1417104205, 1417391202),
+(10, 42, 1, 1, 1417124756, 1417384881),
+(11, 2159, 2, 1, 1417128488, 1417128488),
+(12, 2628, 1, 1, 1417135558, 1417135558),
+(13, 15, 2, 0, 1417135600, 1417395957),
+(19, 2, 1, 1, 1417190170, 1417190170),
+(15, 1536, 1, 1, 1417140880, 1417140880),
+(16, 2622, 1, 1, 1417158131, 1417158131),
+(17, 1996, 1, 1, 1417162716, 1417162716),
+(18, 590, 1, 1, 1417165432, 1417365196),
+(20, 2159, 3, 1, 1417190488, 1417190488),
+(21, 2, 2, 1, 1417190912, 1417190912),
+(22, 42, 2, 0, 1417210417, 1417384881),
+(23, 1786, 3, 0, 1417232719, 1417391202),
+(24, 590, 2, 0, 1417260203, 1417365196),
+(25, 42, 3, 0, 1417301714, 1417384881),
+(26, 590, 3, 0, 1417342961, 1417365196),
+(27, 2, 3, 1, 1417350186, 1417350186),
+(28, 1786, 4, 0, 1417351352, 1417391202),
+(29, 2663, 1, 1, 1417353379, 1417353379),
+(30, 1816, 1, 1, 1417355302, 1417355302),
+(31, 850, 1, 1, 1417393836, 1417393836),
+(32, 13, 1, 1, 1417395726, 1417395726),
+(33, 2536, 1, 1, 1417413025, 1417413025);]]></item>
+				<item id="13"><![CDATA[INSERT INTO `pre_gfarm_daily_task` (`id`, `task_name`, `min_level`, `max_level`, `task_way`, `target_object`, `target_num`, `reward_money`, `reward_items`, `items_num`, `reward_exp`, `reward_bene`, `task_describe`, `create_time`, `update_time`, `visible`, `task_preid`) VALUES
+(1, 'ÌìÌìÖÖÌïI', 5, 20, 3, 0, 10, 10, 0, 0, 0, 0, 'ÇÚÀÍÖÂ¸»£¬Ã¿ÌìÖÖÖÖÌï£¬½ðÇ®¹ö¹öÀ´¡£', 1417514198, 1417514198, 0, 0),
+(2, 'ÌìÌìÖÖÌïII', 5, 20, 3, 0, 100, 100, 0, 0, 0, 0, 'ÇÚÀÍÖÂ¸»£¬Ã¿ÌìÖÖÖÖÌï£¬½ðÇ®¹ö¹öÀ´¡£', 1417514223, 1417514223, 0, 1),
+(3, 'ÌìÌìÖÖÌïIII', 5, 20, 3, 0, 1000, 1000, 0, 0, 0, 0, 'ÇÚÀÍÖÂ¸»£¬Ã¿ÌìÖÖÖÖÌï£¬½ðÇ®¹ö¹öÀ´¡£', 1417514247, 1417514247, 0, 2),
+(4, 'ÌìÌìÍµ²ËI', 5, 20, 6, 0, 10, 0, 21, 1, 0, 0, 'Íµ¶«Î÷»¹ÓÐ½±Àø£¬Ã»ÌìÀíÁË¡£', 1417514857, 1417514909, 0, 0),
+(5, 'ÌìÌìÍµ²ËII', 5, 20, 6, 0, 100, 0, 21, 10, 0, 0, 'Íµ¶«Î÷»¹ÓÐ½±Àø£¬Ã»ÌìÀíÁË¡£', 1417514902, 1417514902, 0, 4),
+(6, 'ÌìÌìÍµ²ËIII', 5, 20, 6, 0, 1000, 0, 21, 100, 0, 0, 'Íµ¶«Î÷»¹ÓÐ½±Àø£¬Ã»ÌìÀíÁË¡£', 1417514935, 1417514935, 0, 5),
+(7, '°Ü¼ÒÓÐÀñI', 5, 20, 16, 0, 100, 0, 24, 1, 0, 0, 'ÕâÊÇ²¹³¥¡£', 1417516042, 1417518592, 0, 0),
+(8, 'ÌìÌìÊ©·ÊI', 5, 20, 8, 0, 10, 0, 0, 0, 10, 0, 'Ã¿ÌìÊ©·Ê£¬¾­Ñéµ½ÊÖ¡£', 1417516242, 1417516242, 0, 0),
+(9, 'ÌìÌìÊ©·ÊII', 5, 20, 8, 0, 100, 0, 0, 0, 100, 0, 'Ã¿ÌìÊ©·Ê£¬¾­Ñéµ½ÊÖ¡£', 1417516282, 1417516282, 0, 8),
+(10, 'ÌìÌìÊ©·ÊIII', 5, 20, 8, 0, 1000, 0, 0, 0, 1000, 0, 'Ã¿ÌìÊ©·Ê£¬¾­Ñéµ½ÊÖ¡£', 1417516316, 1417516316, 0, 9),
+(11, '°Ü¼ÒÓÐÀñII', 5, 20, 16, 0, 1000, 0, 24, 2, 0, 0, 'ÕâÊÇ²¹³¥', 1417518631, 1417518631, 0, 7),
+(12, '°Ü¼ÒÓÐÀñIII', 5, 20, 16, 0, 10000, 0, 24, 5, 0, 0, 'ÕâÊÇ²¹³¥¡£', 1417518667, 1417518667, 0, 11);]]></item>
+			</item>
+			<item id="systemlang">
+				<item id="file">
+					<item id="english"><![CDATA[chinese]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

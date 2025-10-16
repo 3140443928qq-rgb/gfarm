@@ -1,0 +1,28 @@
+{template common/header_ajax}
+<h2 class="flb" style="cursor: move;border: 1px solid #666666;border-bottom: 0;"><em>{lang gfarm:c234}</em>
+	<span ><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span>	
+</h2>
+<div style="border: 1px solid #666666;padding:5px 10px;text-align: left;width: 570px;height: 360px;overflow: auto;">
+	<ul id='ul4' class='tline'>
+	<!--{loop $formulas $key $val}-->
+	<li>
+		<div style="width: 70px;position: relative;">
+			<img src="$val['img']" width="70px" title="{$val['name']}"/>
+			{if !$userformulas[$key]}
+			<div style="position: absolute;width: 70px;height: 70px;left:0px;top:0px;background: gray;opacity:0.8"></div>
+			{/if}
+		</div>
+	</li>
+	<!--{/loop}-->
+	</ul>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

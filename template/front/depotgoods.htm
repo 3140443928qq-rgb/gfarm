@@ -1,0 +1,110 @@
+{template common/header_ajax}
+<script type="text/javascript" reload=1>
+(function(){
+	var dnum={$depot['number']};
+	var dprice={$good['sale_price']};
+	jq('#dnum').keydown(function(event){	
+		if(dnum!=-1){
+			var dsize=dnum.toString().length;
+			jq('#dnum').attr('maxlength',dsize+1);
+		}else{
+			jq('#dnum').attr('maxlength',3);
+		}
+		var keycode;
+	    if(window.event) // IE 浏览器
+	    {
+	        keycode = event.keyCode;
+	    }
+	    else if(event.which) // Netscape/Firefox/Opera浏览器
+	    {
+	        keycode = event.which;
+	    }
+		if(!((keycode <= 57 && keycode >= 48)||(keycode <= 105 && keycode >= 96)||keycode==8||keycode==46)) {
+			return false;
+		}
+	});
+	jq('#dnum').keyup(function(){	
+		this.value=this.value.replace(/[\u4e00-\u9fa5]/g,'');
+		if(parseInt(jq('#dnum').val())>parseInt(dnum)){
+			jq('#dnum').val(dnum);
+			jq('#dprice').html(dprice*dnum);
+			return false;
+		}
+		if(parseInt(jq('#dnum').val())<1){
+			jq('#dnum').val(1);
+			jq('#dprice').html(dprice);
+			return false;
+		}
+		jq('#dprice').html(dprice*jq('#dnum').val());
+	});
+})();
+</script>
+<style>
+#fwin_gfarm1 .m_c{background:url(source/plugin/gfarm/img/ui/sold.png) no-repeat;}
+</style>
+<div style="padding:5px 10px;text-align: left;width: 380px;height: 301px;position: relative;" onmousedown="dragMenu($('fwin_gfarm1'),event,1)">
+<div class='shopclose' style="right: -5px;" onclick="hideWindow('gfarm1');"></div>
+<form id='depotform' action="plugin.php?id=gfarm:front&mod=depot&act=sale&formhash={FORMHASH}" method="post" target="myframe">
+	<input type="hidden" name="depotid" value="{$depotid}"/>
+	<input type="hidden" name="do" value="{$do}"/>
+	<div style="text-align: center;height: 170px;margin-top: 20px">	
+	<div style="float: left;width: 120px;color: #aaa;font-size: 12px;padding-left: 25px;padding-top: 40px">
+		<img src="{$good['img']}" width="120px"/>
+		<input type="text" name='dnum' id='dnum' size="5" value="{$depot['number']}" onkeyup="this.value=this.value.replace(/[\u4e00-\u9fa5]/g,'');return check()" onkeydown="return calcn(event)" onpaste="this.value=this.value.replace(/\D/g,'')" style="text-align: center;ime-mode:disabled;margin-top: 10px;height: 14px"/><br/>
+	{lang gfarm:f022}(1~{$depot['number']})
+	</div>
+	<div style="float: right;width: 210px;background: url(source/plugin/gfarm/img/ui/bgpage.png) no-repeat;height: 170px;margin-top: 30px;padding-top: 20px">
+		<font style="font-size: 17px;color: #7e4d06;margin-left: 10px;" class="listti">{$good['name']}</font>
+		<div style="text-align: left;width:200px;padding-left: 40px;padding-top: 5px;line-height: 24px;color: #a17e4f">
+			<div>
+				<span>{lang gfarm:f023}{lang gfarm:c062}</span>
+				<span><font color="#7e4d06" style="margin-left: 5px">{$good['use_level']}</font></span>
+			</div>
+			<div>
+				<span>{lang gfarm:f024}{lang gfarm:c062}</span>
+				<span><font color="red">{if $good['money_typeb']==1}
+				<img title="{$config['bullionsname']}" src="source/plugin/gfarm/img/ui/gold-1.png">{else}
+				<img title="{$config['moneyname']}" src="source/plugin/gfarm/img/ui/money-1.png">{/if}</font><font color="#7e4d06" style="margin-left: 5px">{$good['sale_price']}</font></span>
+			</div>
+			<div>
+				<span>{lang gfarm:f025}{lang gfarm:c062}</span>
+				<span><font color="red">{if $good['money_typeb']==1}
+				<img title="{$config['bullionsname']}" src="source/plugin/gfarm/img/ui/gold-1.png">{else}
+				<img title="{$config['moneyname']}" src="source/plugin/gfarm/img/ui/money-1.png">{/if}</font><font id='dprice' color="#7e4d06" style="margin-left: 5px">{eval echo $good['sale_price']*$depot['number']}</font></span>
+			</div>
+		</div>
+		<div class='lockbutton'>
+		<span id='suo'>	
+		{if $depot['islock']}
+		<img src="source/plugin/gfarm/img/ui/lock.png" style="vertical-align: bottom"/>	
+		{lang gfarm:f026}<a onclick="ajaxget('plugin.php?id=gfarm:front&mod=depot&act=lock&depotid={$depotid}&formhash={FORMHASH}','suo')">{lang gfarm:f020}</a>
+		{else}
+		<img src="source/plugin/gfarm/img/ui/jiesuo.png" style="vertical-align: bottom"/>	
+		{lang gfarm:f027}<a onclick="ajaxget('plugin.php?id=gfarm:front&mod=depot&act=lock&depotid={$depotid}&formhash={FORMHASH}','suo')">{lang gfarm:c178}</a>
+		{/if}
+		</span>
+		</div>
+	</div>
+	</div>
+	<div class='shopbuy'>
+	<span id='hassale'>
+	{if empty($depot['islock'])}
+	<img src='source/plugin/gfarm/img/ui/yesale.png' onclick="jq('#depotform').submit()"/>
+	{else}
+	<img src='source/plugin/gfarm/img/ui/nosale.png'/>
+	{/if}
+	</span>
+	<img src='source/plugin/gfarm/img/ui/nobuy.png' style="margin-left: 20px" onclick="clo_window()"/>
+	</div>
+</form>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm1');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

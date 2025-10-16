@@ -1,0 +1,170 @@
+{template common/header_ajax}
+<script type="text/javascript" reload=1>
+(function(){
+	if(jq('#fwin_gfarm').css('top').substr(0,1)=='-'){
+		jq('#fwin_gfarm').css('top','63px');
+	}
+})();
+var flag;
+jq('#ul1 input[type=checkbox]').each(function(){
+	if(jq(this).attr('checked')!=true){
+		flag=false;
+		return flag;
+	}
+});
+if(flag!=false){
+	jq('#allselect').attr('checked',true);
+}
+jq('#ul1 input[type=checkbox]').each(function(){
+	jq(this).click(function(){
+		if(jq(this).attr('checked')!=true){
+			if(jq('#allselect').attr('checked')==true){
+				jq('#allselect').removeAttr('checked');
+			}
+		}else{
+			var flag;
+			jq('#ul1 input[type=checkbox]').each(function(){
+				if(jq(this).attr('checked')!=true){
+					flag=false;
+					return flag;
+				}
+			});
+			if(flag!=false){
+				jq('#allselect').attr('checked',true);
+			}
+		}
+	});
+});
+var demo=function(obj){
+	if(jq(obj).attr('checked')==true){
+		jq('#ul1 input[type=checkbox]').each(function(){
+			jq(this).attr('checked',true);
+		});
+	}else{
+		jq('#ul1 input[type=checkbox]').each(function(){
+			jq(this).removeAttr('checked');
+		});
+	}
+}
+</script>
+<h2 class="flb" style="cursor: move;border: 1px solid #666666;border-bottom: 0;"><em>{lang gfarm:c086}</em>
+	<span ><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span>	
+</h2>
+<div style="border: 1px solid #666666;padding:5px 10px">
+	<form name="psForm" action="plugin.php?id=gfarm:cp&mod=goods&act=update&formhash={FORMHASH}" method="post" target="myframe" enctype="multipart/form-data">
+		<input type="hidden" name='gid' value="{$gid}"/>
+		<input type="hidden" name='do' value="{$do}"/>
+		<input type="hidden" name="imgsrc0" id="imgsrc0" value="{$goods['img']}"/>
+		<table class="table001" style="margin-top: 10px;width: 600px">
+			<tr><td class="table002" align="right">{lang gfarm:c087}</td>
+ 				<td><input type="text" name="sort" value="{$goods['sort']}"/></td>
+			</tr> 
+			{if $flag=='1'}
+			<tr>
+				<td class="table002" align="right"><font color="red">*</font>{lang gfarm:c085}</td>
+				<td><select name="small_type">
+ 				{loop $smalltype $val}
+ 				<option value="{$val['id']}" {if $val['id']==$goods['small_type']}selected{/if}>{$val['separate_name']}</option>
+ 				{/loop}
+ 				</select>
+ 				</td>
+			</tr>
+			{/if}			
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c063}</td>
+ 				<td><input type="text" name="name" value="{$goods['name']}"/></td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c088}</td>
+ 				<td><!--{if $goods['img']}--><img src="{$goods['img']}" style="max-width:50px;max-height:50px"/><!--{/if}--><span><input type="file" name="img" id="img" value="{$goods['img']}" fwin="crazy_commun" onchange="jq('#imgsrc0').val(jq(this).val())">
+ 				<br/>{lang gfarm:c046}<input type="text" name="_img" id='_img' value="{$goods['img']}"/><font color="red">{lang gfarm:c047}{if $do=='1'}50*50{else}120*120{/if}</font>
+ 				</span>
+ 				</td>
+			</tr> 
+			<tr><td class="table002" align="right" style="vertical-align: top">{lang gfarm:c089}</td>
+ 				<td><textarea name="description" style="width: 200px;height: 50px">{$goods['description']}</textarea></td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c070}</td>
+ 				<td>
+ 				<input type='radio' name="money_typeb" value="1" id='money_typeb1' <!--{if $goods['money_typeb']==1}-->checked="checked"<!--{/if}-->/><label for="money_typeb1">{$config['bullionsname']}</label>
+ 				<input type='radio' name="money_typeb" value="0" id='money_typeb2' <!--{if $goods['money_typeb']!=1}-->checked="checked"<!--{/if}-->/><label for="money_typeb2">{$config['moneyname']}</label>
+ 				</td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c071}</td>
+ 				<td><input type="text" name="buy_price" value="{$goods['buy_price']}"/></td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c090}</td>
+ 				<td>
+ 				<input type='radio' name="money_types" value="1" id='money_types1' <!--{if $goods['money_types']==1}-->checked="checked"<!--{/if}-->/><label for="money_types1">{$config['bullionsname']}</label>
+ 				<input type='radio' name="money_types" value="0" id='money_types2' <!--{if $goods['money_types']!=1}-->checked="checked"<!--{/if}-->/><label for="money_types2">{$config['moneyname']}</label>
+ 				</td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c091}</td>
+ 				<td><input type="text" name="sale_price" value="{$goods['sale_price']}"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c072}</td>
+ 				<td><input type="text" name="use_level" value="{$goods['use_level']}"/><font color="red">{lang gfarm:c093}</font></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c073}</td>
+ 				<td><input type="text" name="use_benevolence" value="{$goods['use_benevolence']}"/><font color="red">{lang gfarm:c093}</font></td>
+			</tr> 			
+			
+			<tr><td class="table002" align="right">{lang gfarm:c092}</td>
+ 				<td><input type="text" name="sale_count" value="{$goods['sale_count']}"/><font color="red">{lang gfarm:c094}</font></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c095}</td>
+ 				<td><input type="text" name="add_date" value="{$goods['add_date']}"/><font color="red">{lang gfarm:c096}</font></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c097}</td>
+ 				<td><input type="text" name="sale_time_begin" value="{if $goods['sale_time_begin']}{eval echo dgmdate($goods['sale_time_begin'], 'Y-m-d H:i');}{/if}" onClick="showcalendar(event, this, 1);"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c098}</td>
+ 				<td><input type="text" name="sale_time_end" value="{if $goods['sale_time_end']}{eval echo dgmdate($goods['sale_time_end'], 'Y-m-d H:i');}{/if}" onClick="showcalendar(event, this, 1);"/></td>
+			</tr> 
+					
+			
+			<tr><td class="table002" align="right">{lang gfarm:c099}</td>
+ 				<td><input type="text" name="depot_pile" value="{$goods['depot_pile']}"/><font color="red">{lang gfarm:c100}</font></td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c101}</td>
+ 				<td>
+				<input type='radio' name="use_flag" value="0" id='use_flag1' <!--{if $goods['use_flag']==0}-->checked="checked"<!--{/if}-->/><label for="use_flag1">{lang gfarm:c083}</label>
+ 				<input type='radio' name="use_flag" value="1" id='use_flag2' <!--{if $goods['use_flag']!=0}-->checked="checked"<!--{/if}-->/><label for="use_flag2">{lang gfarm:c084}</label>
+ 				</td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c075}</td>
+ 				<td>
+				<input type='radio' name="transaction_flag" value="0" id='transaction_flag1' <!--{if $goods['transaction_flag']==0}-->checked="checked"<!--{/if}-->/><label for="transaction_flag1">{lang gfarm:c083}</label>
+ 				<input type='radio' name="transaction_flag" value="1" id='transaction_flag2' <!--{if $goods['transaction_flag']!=0}-->checked="checked"<!--{/if}-->/><label for="transaction_flag2">{lang gfarm:c084}</label>
+ 				</td>
+			</tr> 	
+			
+			{if $do=='9'}		<!-- -------------种子-------------- -->	
+			{template gfarm:cp/goods/germ}		
+			{/if}
+			{if $do=='4'}			<!-- -------------装扮-------------- -->	
+			{template gfarm:cp/goods/decorate}			
+			{/if}
+			{if $do=='1'}			<!-- -------------装备-------------- -->	
+			{template gfarm:cp/goods/equipment}				
+			{/if}
+			{if $do=='15'}			<!-- -------------礼包-------------- -->	
+			{template gfarm:cp/goods/gifts}			
+			{/if}
+			{if $do=='19'}			<!-- -------------道具-------------- -->	
+			{template gfarm:cp/goods/items}			
+			{/if}
+			<tr><td class="table002"></td>
+ 				<td><input type="submit" class="g47jh_content_submit" style='width: 50px;margin-top: -4px' value="{lang gfarm:c026}"/></td>
+			</tr> 
+		</table>
+	</form>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

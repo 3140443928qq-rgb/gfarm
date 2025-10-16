@@ -1,0 +1,38 @@
+{template common/header}
+<div style="text-align: center;color: #0099ff">{$good[name]}</div>
+<table>
+<tr>
+<td>{lang gfarm:f103}{lang gfarm:c062}</td>
+<td class="numpic">{$good[use_level]}{lang gfarm:f016}</td>
+</tr>
+<tr>
+<td>{lang gfarm:f104}{lang gfarm:c062}</td>
+<td class="numpic">{$good[use_benevolence]}{lang gfarm:f061}</td>
+</tr>
+<tr>
+<td>{lang gfarm:c071}{lang gfarm:c062}</td>
+<td class="numpic">{$good[buy_price]}{if $good[money_typeb]==1}{$config['bullionsname']}{else}{$config['moneyname']}{/if}</td>
+</tr>
+<tr>
+<td>{lang gfarm:c049}{lang gfarm:c062}</td>
+<td class="numpic">{$germ[mature_time]}{lang gfarm:f077}</td>
+</tr>
+<tr>
+<td>{lang gfarm:c051}{lang gfarm:c062}</td>
+<td class="numpic">{$germ[experience]}{lang gfarm:c211}</td>
+</tr>
+<tr>
+<td>{lang gfarm:c035}{lang gfarm:c062}</td>
+<td class="numpic">{$germcrop[produce_big]}{lang gfarm:f012}</td>
+</tr>
+<tr>
+<td>{lang gfarm:f105}{lang gfarm:c062}</td>
+<td class="numpic">{$good[sale_price]}{$config[moneyname]}</td>
+</tr>
+</table>
+<script type="text/javascript" reload=1>
+(function(){
+	jq('.picimg').html("<img src='{$germ[mature_img]}'/>");
+})();
+</script>
+{template common/footer}

@@ -1,0 +1,217 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/bg-mid.png) no-repeat;}
+</style>
+<div class='depotclass' onmousedown="dragMenu($('fwin_gfarm'),event,1)">
+<div class='depotclose' onclick="hideWindow('gfarm1');hideWindow('gfarm');"></div>
+<img src='source/plugin/gfarm/img/ui/equipt.png' class='depottitle'/>
+<div style="width: 520px;height: 380px;margin-left: 10px;margin-top: 50px">
+<ul class='tline ttline2'>
+	<li>
+		{lang gfarm:f135}
+	</li>
+	<li>
+		{lang gfarm:f136}
+	</li>
+</ul>
+<div style="background: #feeecc;border: 2px solid #d8b599;height: 340px;position: relative;">
+<div style="height: 70px;padding-top: 10px">
+<div style="position: relative;">
+<div id='mainequip' class='cued'>
+{if $ownmainequip}
+<img src="{$ownmainequip['img']}" title="{$ownmainequip['name']}"/>
+<div>{lang gfarm:f130}{if $mymainequip['add_steal_odds']>=0}+{/if}{$mymainequip['add_steal_odds']}%<br/>
+{lang gfarm:f131}{if $mymainequip['add_steal_number']>=0}+{/if}{$mymainequip['add_steal_number']}%</div>
+<div class='equipb'>{lang gfarm:f132}{if empty($mymainequip['valid_time'])}{lang gfarm:f133}{else}{eval echo dgmdate($mymainequip['valid_time']*24*60*60+$ownmainequip['create_time'],'Y-m-d H:i:s')}{/if}</div>
+{/if}
+</div>
+<div id='importequip' class='cued'>
+{if $ownimportequip}
+<img src="{$ownimportequip['img']}" title="{$ownimportequip['name']}"/>
+<div>{lang gfarm:f130}{if $myimportequip['add_steal_odds']>=0}+{/if}{$myimportequip['add_steal_odds']}%<br/>
+{lang gfarm:f131}{if $myimportequip['add_steal_number']>=0}+{/if}{$myimportequip['add_steal_number']}%</div>
+<div class='equipb'>{lang gfarm:f132}{if empty($myimportequip['valid_time'])}{lang gfarm:f133}{else}{eval echo dgmdate($myimportequip['valid_time']*24*60*60+$ownimportequip['create_time'],'Y-m-d H:i:s')}{/if}</div>
+{/if}
+</div>
+</div>
+</div>
+<img src='source/plugin/gfarm/img/ui/eqline.png' class='eqline'/>
+<div style="height: 200px;position: relative;margin-top: 60px;margin-left: 10px">
+<div id='eout' class='eout'>
+<img src='source/plugin/gfarm/img/ui/first01.png'/>
+<div id='ein' class='ein'>
+	<ul class='tline' style="white-space: nowrap;">
+	<!--{loop $equipments $val}-->
+	{if $val['small_type']=='2'}
+	<li id='ed_{$val[id]}'>
+		<div style="width: 75px;text-align: center;">
+			<img src="$val['img']" width="50px" height="50px" title="{$val['name']}" onclick="funcequip1({$val[id]})"/>
+		</div>
+		<div class='ecohide listti' ondblclick='funcdeco1({$val[id]})' {if $val['status']==1}style="display:block"{/if}></div>
+	</li>
+	{/if}
+	<!--{/loop}-->
+	</ul>
+	<div class='escrollBar' id='escrollBar'>
+	<div class='ehandle' id='ehandle'></div>
+	</div>
+</div>
+</div>
+<div id='eout1' class='eout' style="margin-top: 20px">
+<img src='source/plugin/gfarm/img/ui/second01.png' style="top: -8px"/>
+<div id='ein1' class='ein'>
+	<ul class='tline' style="white-space: nowrap;">
+	<!--{loop $equipments $val}-->
+	{if $val['small_type']=='3'}
+	<li id='ed_{$val[id]}'>
+		<div style="width: 75px;text-align: center;">
+			<img src="$val['img']" width="50px" height="50px" title="{$val['name']}" onclick="funcequip1({$val[id]})"/>
+		</div>
+		<div class='ecohide listti' ondblclick='funcdeco1({$val[id]})' {if $val['status']==1}style="display:block"{/if}></div>
+	</li>
+	{/if}
+	<!--{/loop}-->
+	</ul>
+	<div class='escrollBar' id='escrollBar1'>
+	<div class='ehandle' id='ehandle1'></div>
+	</div>
+</div>
+</div>
+</div>	
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	function funcequip1(obj){
+		ajaxget('plugin.php?id=gfarm:front&mod=equipment&act=learn&depotid='+obj+'&formhash='+jq('#formhash').val(),'');
+	}
+	function funcdeco1(obj){
+		ajaxget('plugin.php?id=gfarm:front&mod=equipment&act=forget&depotid='+obj+'&formhash={FORMHASH}','');
+	}
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<script reload=1>
+var ximen = {
+	$:function(o){ return document.getElementById(o); },
+	getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+	getOffset:function(o) {
+		var t = o.offsetTop,h = o.offsetHeight;
+		while(o = o.offsetParent) { t += o.offsetTop; }
+		return { top:t, height:h };
+	},
+	bind:function(o,eType,fn) {
+		if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+		else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	unbind:function(o,eType,fn) {
+		if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+		else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	stopPropagate:function(e) {
+		if(e && e.stopPropagation) { e.stopPropagation(); } 
+		else { window.event.cancelBubble = true; }
+		return false;
+	},
+	stopDefault:function(e) {
+		e = e || window.event;
+		e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+	}
+};
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relX,
+		out = ximen.$("eout"),
+		content = ximen.$("ein"),
+		scrollBar = ximen.$("escrollBar"),
+		scrollBarHandle = ximen.$("ehandle"),
+		contentScrollWidth = content.scrollWidth,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleWidth = parseInt(content.offsetWidth/content.scrollWidth * scrollBar.offsetWidth),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleWidth==scrollBar.offsetWidth){scrollBar.style.display='none';}
+		else { scrollBarHandleWidth = 30; scrollBarHandle.style.Width = "30px"; }
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollLeft = (e.clientX - relX)/(scrollBar.offsetWidth - scrollBarHandleWidth)*(content.scrollWidth - content.offsetWidth);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relX = event.clientX - et.offsetLeft;		
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollLeft -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollLeft += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.left = content.scrollLeft/(content.scrollWidth - content.offsetWidth) * (scrollBar.offsetWidth - scrollBarHandleWidth)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relX,
+		out = ximen.$("eout1"),
+		content = ximen.$("ein1"),
+		scrollBar = ximen.$("escrollBar1"),
+		scrollBarHandle = ximen.$("ehandle1"),
+		contentScrollWidth = content.scrollWidth,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleWidth = parseInt(content.offsetWidth/content.scrollWidth * scrollBar.offsetWidth),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleWidth==scrollBar.offsetWidth){scrollBar.style.display='none';}
+		else { scrollBarHandleWidth = 30; scrollBarHandle.style.Width = "30px"; }
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollLeft = (e.clientX - relX)/(scrollBar.offsetWidth - scrollBarHandleWidth)*(content.scrollWidth - content.offsetWidth);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relX = event.clientX - et.offsetLeft;		
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollLeft -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollLeft += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.left = content.scrollLeft/(content.scrollWidth - content.offsetWidth) * (scrollBar.offsetWidth - scrollBarHandleWidth)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+</script>
+{template common/footer_ajax}

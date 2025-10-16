@@ -1,0 +1,41 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/bg03.png) no-repeat;}
+</style>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class='taskclass' onmousedown="dragMenu($('fwin_gfarm'),event,1)">
+<div class='taskclose' onclick="hideWindow('gfarm1');hideWindow('gfarm');"></div>
+<div class='taskcontent'>
+<span>{lang gfarm:f008}{lang gfarm:c062}</span>{$mytask['task_name']}<br/>
+<span>{lang gfarm:c161}{lang gfarm:c062}</span>{eval echo dgmdate($mytask['end_time'],'Y-m-d H:i')}<br/>
+<span>{lang gfarm:c150}{lang gfarm:c062}</span>{$good['name']}x{$mytask['target_num']}<br/>
+<span>{lang gfarm:c149}{lang gfarm:c062}</span><font id='jindu'>{$mytask['ready_num']}</font>/{$mytask['task_num']}<br/>
+<span>{lang gfarm:f009}{lang gfarm:c062}</span>{$wardstr}<br/>
+<div style="height: 40px">
+<span>{lang gfarm:c158}{lang gfarm:c062}</span>{$mytask['task_describe']}
+</div>
+<span>{lang gfarm:f010}{lang gfarm:c062}</span><font id='cishu'>{$mynum}</font>/{$mytask['member_num']}<br/>
+<span>{lang gfarm:f011}{lang gfarm:c062}</span><font id='mycrop'>{if $mysum}{$mysum}{else}0{/if}{lang gfarm:f012}{$good['name']}</font><br/>
+<div id='shangjiao' style="position: absolute;top: 195px;left: 0px;width: 340px;text-align: center;">
+{if empty($mytask['success_flag'])}
+{if $mynum>=$mytask['member_num']}
+{lang gfarm:f013}
+{else}
+<img src="source/plugin/gfarm/img/ui/upcrop.png" style="cursor: pointer;" onclick="ajaxget('plugin.php?id=gfarm:front&mod=acttask&act=reward&formhash={FORMHASH}','');"/>
+{/if}
+{else}
+{lang gfarm:f014}
+{/if}
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

@@ -1,0 +1,41 @@
+{template common/header}
+{if $lock}
+<img src="source/plugin/gfarm/img/ui/lock.png" style="vertical-align: bottom"/>	
+	{lang gfarm:f026}<a onclick="ajaxget('plugin.php?id=gfarm:front&mod=depot&act=lock&depotid={$depotid}&formhash={FORMHASH}','suo')">{lang gfarm:f020}</a>
+	{else}
+	<img src="source/plugin/gfarm/img/ui/jiesuo.png" style="vertical-align: bottom"/>	
+	{lang gfarm:f027}<a onclick="ajaxget('plugin.php?id=gfarm:front&mod=depot&act=lock&depotid={$depotid}&formhash={FORMHASH}','suo')">{lang gfarm:c178}</a>
+{/if}
+<script type="text/javascript" reload=1>
+(function(){
+	var str='';
+	{if $lock}
+	str+="<img src='source/plugin/gfarm/img/ui/nosale.png'/>";
+	{else}
+	str+="<img src='source/plugin/gfarm/img/ui/yesale.png' onclick=\"jq('#depotform').submit()\"/>";
+	{/if}
+	jq('#hassale').html(str);
+	var jin=parseInt(jq('#jin').html());
+	var yuan=parseInt(jq('#yuan').html());
+	{if $lock}
+	{if $depot['money_types']}
+	yuan=yuan-{eval echo $good['sale_price']*$depot['number']};
+	{else}
+	jin=jin-{eval echo $good['sale_price']*$depot['number']};
+	{/if}
+	jq('#lock_{$depotid}').css('background-image',"url('source/plugin/gfarm/img/ui/lock.png')");
+	{else}
+	{if $depot['money_types']}
+	yuan=yuan+{eval echo $good['sale_price']*$depot['number']};
+	{else}
+	jin=jin+{eval echo $good['sale_price']*$depot['number']};
+	{/if}
+	jq('#lock_{$depotid}').css('background-image',"url('source/plugin/gfarm/img/ui/jiesuo.png')");
+	{/if}	
+	jq('.footdepotright').html("<span><a onclick=\"hideWindow('gfarm1');ajaxget('plugin.php?id=gfarm:front&mod=depot&act=allsuo&do=$do&formhash={FORMHASH}&sflag=$flag','')\">{lang gfarm:f019}{if empty($flag)}{lang gfarm:f020}{else}{lang gfarm:c178}{/if}</a></span>"
+			+"<span><a {if empty($flag)}disabled style='color:gray'{else}onclick=\"hideWindow('gfarm1');ajaxget('plugin.php?id=gfarm:front&mod=depot&act=allsale&do=$do&formhash={FORMHASH}','outdepots')\"{/if}>{lang gfarm:f021}</a></span>");
+	jq('#jin').html(jin);
+	jq('#yuan').html(yuan);
+})();
+</script>
+{template common/footer}

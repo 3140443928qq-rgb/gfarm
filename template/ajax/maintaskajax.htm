@@ -1,0 +1,42 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	window.showDialog('{$mess}', 'error', '', function() {}, 0);
+	{else}		
+		{if $mytask['task_type']!=2}
+		window.hideWindow('gfarm');	
+		{else}		
+		jq('#bo'+{$tid}).remove();
+		{/if}		
+		var str='{lang gfarm:f095}<br/>';
+		{if !empty($mytask['reward_money'])}
+		jq('#usermoney').html({eval echo $user['money']+$mytask['reward_money']});	
+		str+="{$config['moneyname']}x{$mytask['reward_money']}<br/>";
+		{/if}
+		{if !empty($mytask['reward_bene'])}
+		jq('#userbene').html({eval echo $user['benevolence']+$mytask['reward_bene']});	
+		str+="{lang gfarm:c213}x{$mytask['reward_bene']}<br/>";
+		{/if}	
+		{if !empty($mytask['reward_exp'])}	
+		jq('#userexp').html({$userarr['experience']}+'/'+{$nextlevel['experience']});
+		{if !empty($levelflag)}
+		{if $countland<$mylevel1['land_number']}
+		jq('.jiesuoimg').each(function(){
+		jq(this).show();
+		});
+		{/if}
+		jq('#userlevel').html({$mylevel1['level']});	
+		jq('#userleveltip').show();
+		setTimeout( function(){jq('#userleveltip').fadeOut();}, ( 3 * 1000 ) ); 
+		{/if}
+		str+="{lang gfarm:c211}x{$mytask['reward_exp']}<br/>";
+		{/if}	
+		{if !empty($mytask['reward_items'])}
+		str+="{$item['name']}x{$mytask['items_num']}";
+		{/if}			
+		window.showDialog(str, 'right', '', function() {showWindow('gfarm','plugin.php?id=gfarm:front&mod=maintask&act=showtask&type=1')}, 0);
+	{/if}		
+})();
+</script>
+{template common/footer}

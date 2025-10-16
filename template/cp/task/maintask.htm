@@ -1,0 +1,63 @@
+{template gfarm:cp/nav}
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class="g47jh_cp_content">
+	<div class="g47jh_content_div">
+		<div class="g47jh_content_title">	
+			<a class="g47jh_content_button" href="javascript:" onclick="showWindow('gfarm','plugin.php?id=gfarm:cp&mod=maintask&act=update')">{lang gfarm:c006}</a>
+		</div>	
+		<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 1px" >
+	<tr>
+		<th class="xw1" style="text-align: center;cursor: pointer;" onclick="location.href='plugin.php?id=gfarm:cp&mod=maintask&ordertype=id&orderflag={$orderflag}'">{lang gfarm:c007}</th>  
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c136}</th>  
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c140}</th>  
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c141}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c142}</th> 
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c143}</th> 
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c013}</th>
+	</tr>
+	<!--{loop $taskInfos $key $val}-->
+	<tr <!--{if $key%2==1}-->class="alt"<!--{/if}-->>	
+		<td>{$val['id']}</td> 	
+		<td>{$val['task_name']}</td> 
+		<td>{$val['way_name']}</td> 
+		<td>{if $val['way_type']=='0'}----{else}
+		{if $val['target_object']=='0'}
+		{lang gfarm:c144}
+		{else}
+		{$objects[$key]['name']}
+		{/if}{/if}</td> 
+    	<td>{$val['target_num']}</td>
+    	<td>{if $val['visible']=='0'}{lang gfarm:c083}{elseif $val['visible']=='1'}{lang gfarm:c084}{/if}</td> 
+    	<td><a href='plugin.php?id=gfarm:cp&mod=maintask&act=update&tid={$val["id"]}' onclick="showWindow('gfarm',this.href)">{lang gfarm:c014}</a>
+      	</td>
+	</tr>
+	<!--{/loop}-->
+</table>
+	</div>
+	<!--分页-->
+	<div class="adjust_page_div" style="margin-top: -20px;">
+		<div class="adjust_page_span">{lang gfarm:c015}<i style="color: #4689cf">{$num}</i>{lang gfarm:c016}</div>
+		<div class="adjust_page_right">
+			<div class="view_page_div" style="width: {$page_width_arr['div_width']}px">
+				<ul>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page=1{$text}">{lang gfarm:c232}</a></li>
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==1}showerror('{lang gfarm:cp028}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage-1}{$text}';{/if}">{lang gfarm:c266}</a></li>
+					<!--{loop $page_number_arr $key $val_page}-->
+						<li class="view_page_number"  style="width:{$page_width_arr['li_width'][$key]}px; {if $currpage==$val_page} background: #78b3ef;border-color: #78b3ef; {/if}" ><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$val_page}{$text}"  style="{if $currpage==$val_page} color: #ffffff ;{/if}" >{$val_page}</a></li>
+					<!--{/loop}-->
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==$maxpage}showerror('{lang gfarm:cp030}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage+1}{$text}';{/if}">{lang gfarm:c267}</a></li>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$maxpage}{$text}" >{lang gfarm:f046}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+	function showmsg(msg){
+		window.showDialog(msg,'right','',function(){window.location.href='plugin.php?id=gfarm:cp&mod=maintask'},0);
+	}
+</script>
+{template gfarm:cp/footer}

@@ -1,0 +1,12 @@
+{template common/header} 
+{if $flag=='1'}
+<tr>
+	<td class="table002" align="right">{lang gfarm:c085}</td>
+	<td><select name="small_type">
+		{loop $smalltype $val}
+		<option value="{$val['id']}" {if $val['id']==$goods['small_type']}selected{/if}>{$val['separate_name']}</option>
+		{/loop}
+	</select></td>
+</tr>
+{/if}
+{template common/footer}

@@ -1,0 +1,11 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	window.showDialog('{$mess}', 'error', '', function() {}, 0);
+	{else}
+	jq('#userpower').html($power);
+	{/if}
+})();
+</script>
+{template common/footer}

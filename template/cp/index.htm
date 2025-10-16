@@ -1,0 +1,87 @@
+{template gfarm:cp/nav}
+<div class="g47jh_cp_content">	
+	<div class="g47jh_content_div">
+		<div class="g47jh_content_title">	
+			<span class="g47jh_content_span">{lang gfarm:c257}</span>
+		</div>	
+		<div class="g47jh_mainpart" style="padding: 20px 0px ; background: #ffffff;">
+			<div class="g47jh_module">{lang gfarm:c258}</div>
+		</div>
+		<div class="g47jh_mainpart">
+			<div class="g47jh_module">
+				<div style="background-color:#FC6E51;">
+					<a href="plugin.php?id=gfarm:cp&mod=user">
+						<img src="./source/plugin/gfarm/cp_img/user.png"/>
+						<span>{lang gfarm:c167}</span>
+					</a>
+				</div>
+				<div style="background-color:#654321;">
+					<a href="plugin.php?id=gfarm:cp&mod=exchangelog">
+						<img src="./source/plugin/gfarm/cp_img/exchange.png"/>
+						<span>{lang gfarm:c273}</span>
+					</a>
+				</div>
+				<div style="background-color:#48cfad;">
+					<a href="plugin.php?id=gfarm:cp&mod=depotlog">
+						<img src="./source/plugin/gfarm/cp_img/log.png"/>
+						<span>{lang gfarm:c270}</span>
+					</a>
+				</div>
+				<div style="background-color:#A0D468;">
+					<a href="plugin.php?id=gfarm:cp&mod=goods">
+						<img src="./source/plugin/gfarm/cp_img/good.png"/>
+						<span>{lang gfarm:c227}{lang gfarm:c226}</span>
+					</a>
+				</div>
+				{if $cformula=='1'}
+				<div style="background-color:#123456;">
+					<a href="plugin.php?id=gfarm:cp&mod=formulagoods">
+						<img src="./source/plugin/gfarm/cp_img/process.png"/>
+						<span>{lang gfarm:c269}{lang gfarm:c226}</span>
+					</a>
+				</div>
+				{/if}
+				<div style="background-color:#4FC1E9;">
+					<a href="plugin.php?id=gfarm:cp&mod=maintask">
+						<img src="./source/plugin/gfarm/cp_img/task.png"/>
+						<span>{lang gfarm:c229}{lang gfarm:c226}</span>
+					</a>
+				</div>	
+				<div style="background-color:#5d9cec;">
+					<a href="plugin.php?id=gfarm:cp&mod=mainlog">
+						<img src="./source/plugin/gfarm/cp_img/log.png"/>
+						<span>{lang gfarm:c271}</span>
+					</a>
+				</div>
+				<div style="background-color:#FFCE54;">
+					<a href="plugin.php?id=gfarm:cp&mod=signin">
+						<img src="./source/plugin/gfarm/cp_img/signin.png"/>
+						<span>{lang gfarm:c231}{lang gfarm:c226}</span>
+					</a>
+				</div>
+				{if $cvip=='1'}
+				<div style="background-color:#4a2938;">
+					<a href="plugin.php?id=gfarm:cp&mod=vip">
+						<img src="./source/plugin/gfarm/cp_img/vip.png"/>
+						<span>VIP{lang gfarm:c226}</span>
+					</a>
+				</div>
+				{/if}															
+				<div style="background-color:#ac92ec;">
+					<a href="plugin.php?id=gfarm:cp&mod=pset&do=base">
+						<img src="./source/plugin/gfarm/cp_img/set.png"/>
+						<span>{lang gfarm:c224}{lang gfarm:c113}</span>
+					</a>
+				</div>				
+			</div>
+		</div>
+		<!--老郭工作室公告-->
+		<div class="g47jh_mainpart" style="padding: 20px 0px ; background: #ffffff;">
+			<div class="g47jh_module" id="laoguo_post">
+				<span ></span>
+			</div>
+		</div>
+	</div>		
+</div>	
+	
+{template gfarm:cp/footer}

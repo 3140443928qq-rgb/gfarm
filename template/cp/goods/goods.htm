@@ -1,0 +1,149 @@
+{template gfarm:cp/nav}
+<script type="text/javascript">
+	function showmsg(msg) {
+		window.showDialog(msg, 'right', '', function() {
+			window.location.href = 'plugin.php?id=gfarm:cp&mod=goods&do=$do&page=$currpage&orderfield=$orderfield1&ordertype=$ordertype1'
+		}, 0);
+	}
+	function showmsg1(msg) {
+		window.showDialog(msg, 'right', '', function() {}, 0);
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class="g47jh_cp_content">
+	<div class="g47jh_content_div">
+		<div class="g47jh_content_title">	
+			{if empty($do)}
+			<span class="g47jh_content_span"><div style="margin: 2px 10px">
+<form action="plugin.php?id=gfarm:cp&mod=goods" method="post">
+<span>{lang gfarm:c060}{lang gfarm:c062}<select name="goodtype">
+<option value="0">{lang gfarm:c061}</option>
+{loop $separate $val}
+<option value="$val['id']" {if $val['id']==$goodtype}selected{/if}>{$val['separate_name']}</option>
+{/loop}
+</select></span>
+<span>{lang gfarm:c065}{lang gfarm:c062}<input type="text" name="goodid" value="$goodid"/></span>
+<span>{lang gfarm:c063}{lang gfarm:c062}<input type="text" name='goodname' value="$goodname"/></span>
+<button class="g47jh_content_submit">{lang gfarm:c064}</button>
+</form>
+</div></span>
+			{else}
+			<a class="g47jh_content_button" href="javascript:" onclick="showWindow('gfarm','plugin.php?id=gfarm:cp&mod=goods&do=$do&act=update')">{lang gfarm:c006}</a>
+			{/if}
+		</div>	
+		<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 1px;border-top: 1px solid #cdcdcd" >
+	<tr>
+	   
+	    <th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=id&ordertype=$ordertype">{lang gfarm:c065}</A></th>
+    	<!--<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=sort&ordertype=$ordertype">鑷畾涔夌紪鐮�/A></th>-->
+	 	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=name&ordertype=$ordertype">{lang gfarm:c063}</A></th>  
+	 	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=big_type&ordertype=$ordertype">{lang gfarm:c060}</A></th>
+	 	{if !empty($do)}
+	 	{if $do=='9'}
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c049}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c051}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c045}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c048}</th>
+	 	{elseif $do=='1'}
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c043}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c044}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c040}</th>
+	 	{elseif $do=='4'}
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c036}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c037}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c038}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c039}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c040}</th>
+	 	{elseif $do=='15'}
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c066}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c067}</th>
+	 	{elseif $do=='19'}
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c036}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c037}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c068}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c069}</th>
+	 	{/if}
+	 	{else}	
+	 	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=money_typeb&ordertype=$ordertype">{lang gfarm:c070}</A></th>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=buy_price&ordertype=$ordertype">{lang gfarm:c071}</A></th>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=use_level&ordertype=$ordertype">{lang gfarm:c072}</A></th>  
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=use_benevolence&ordertype=$ordertype">{lang gfarm:c073}</A></th>    
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=sale_count&ordertype=$ordertype">{lang gfarm:c074}</A></th>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=goods&do=$do&orderfield=transaction_flag&ordertype=$ordertype">{lang gfarm:c075}</A></th>   
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c076}</th>    	
+    	{/if}
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c013}</th>
+	</tr>
+	<!--{loop $goodsInfos $key $val}-->
+	<tr <!--{if $key%2==1}-->class="alt"<!--{/if}-->>
+		
+    	<td>{$val['id']}</td>
+    	<!--<td>{$val['sort']}</td>-->
+	    <td>{$val['name']}</td> 
+	    <td>{if $separats[$val['small_type']]}{$separats[$val['small_type']]['separate_name']}{else}{$separats[$val['big_type']]['separate_name']}{/if}</td> 
+	    {if !empty($do)}
+	 	{if $do=='9'}
+	 	<td>{$datas[$key]['mature_time']}</td> 
+	 	<td>{$datas[$key]['experience']}</td> 
+	 	<td><img src="{$datas[$key]['sprout_img']}" height="50px" width="50px"/></td>
+	 	<td><img src="{$datas[$key]['mature_img']}" height="50px" width="50px"/></td>
+	 	{elseif $do=='1'}
+	 	<td>{$datas[$key]['add_steal_odds']}</td> 
+	 	<td>{$datas[$key]['add_steal_number']}</td> 
+	 	<td>{$datas[$key]['valid_time']}</td> 
+	 	{elseif $do=='4'}
+	 	<td>{$datas[$key]['add_gain_number']}</td> 
+	 	<td>{$datas[$key]['add_gain_time']}</td> 
+	 	<td>{$datas[$key]['add_steal_odds']}</td> 
+	 	<td>{$datas[$key]['add_steal_number']}</td> 
+	 	<td>{$datas[$key]['valid_time']}</td> 
+	 	{elseif $do=='15'}
+	 	<td>{$strss[$key]}</td> 
+	 	<td>{if $datas[$key]['open_type']==1}{$datas[$key]['open_number']}{else}{lang gfarm:c056}{/if}</td>
+	 	{elseif $do=='19'}
+	 	<td>{$datas[$key]['add_gain_number']}</td> 
+	 	<td>{$datas[$key]['add_gain_time']}</td> 
+	 	<td>{$datas[$key]['add_benevolence']}</td> 
+	 	<td>{if $datas[$key]['use_target']==0}{lang gfarm:c056}{elseif $datas[$key]['use_target']==1}{lang gfarm:c079}{else}{lang gfarm:c080}{/if}</td>
+	 	{/if}
+	 	{else}	
+    	<td>{if $val['money_typeb']=='1'}{$config['bullionsname']}{else}{$config['moneyname']}{/if}</td>
+    	<td>{$val['buy_price']}</td> 
+    	<td>{$val['use_level']}</td> 
+    	<td>{$val['use_benevolence']}</td> 
+    	<td>{if !empty($val['sale_count'])}{lang gfarm:c083}{else}{lang gfarm:c084}{/if}</td> 
+    	<td>{if $val['transaction_flag']=='0'}{lang gfarm:c083}{else}{lang gfarm:c084}{/if}</td>
+    	<td><img src="{$val['img']}" height="50px" width="50px"/></td>
+    	{/if}    
+    	<td>
+		<a href='plugin.php?id=gfarm:cp&mod=goods&act=update&do={$val[big_type]}&gid={$val[id]}&page={$currpage}&orderfield=$orderfield1&ordertype=$ordertype1' onclick="showWindow('gfarm',this.href)">{lang gfarm:c014}</a>
+		<a href='plugin.php?id=gfarm:cp&mod=goods&act=delete&formhash={FORMHASH}&do={$val[big_type]}&gid={$val[id]}&page={$currpage}&orderfield=$orderfield1&ordertype=$ordertype1' target="myframe">{lang gfarm:c077}</a>
+		{if $do=='9'}<a href='plugin.php?id=gfarm:cp&mod=germcrop&act=update&germ_id={$val[id]}' onclick="showWindow('gfarm',this.href)">{lang gfarm:c078}</a>{/if}
+		</td>	
+	</tr>
+	<!--{/loop}-->
+</table>
+	</div>
+	<!--分页-->
+	<div class="adjust_page_div" style="margin-top: -20px;">
+		<div class="adjust_page_span">{lang gfarm:c015}<i style="color: #4689cf">{$num}</i>{lang gfarm:c016}</div>
+		<div class="adjust_page_right">
+			<div class="view_page_div" style="width: {$page_width_arr['div_width']}px">
+				<ul>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page=1{$text}">{lang gfarm:c232}</a></li>
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==1}showerror('{lang gfarm:cp028}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage-1}{$text}';{/if}">{lang gfarm:c266}</a></li>
+					<!--{loop $page_number_arr $key $val_page}-->
+						<li class="view_page_number"  style="width:{$page_width_arr['li_width'][$key]}px; {if $currpage==$val_page} background: #78b3ef;border-color: #78b3ef; {/if}" ><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$val_page}{$text}"  style="{if $currpage==$val_page} color: #ffffff ;{/if}" >{$val_page}</a></li>
+					<!--{/loop}-->
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==$maxpage}showerror('{lang gfarm:cp030}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage+1}{$text}';{/if}">{lang gfarm:c267}</a></li>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$maxpage}{$text}" >{lang gfarm:f046}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</div>
+{template gfarm:cp/footer}

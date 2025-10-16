@@ -1,0 +1,31 @@
+{template common/header_ajax}
+<h2 class="flb" style="cursor: move;border: 1px solid #666666;border-bottom: 0;"><em>{lang gfarm:c001}</em>
+	<span ><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span>	
+</h2>
+<div style="border: 1px solid #666666;padding:5px 10px">	
+	<input type="hidden" name='did' value="{$did}"/>
+	<table class="table001" style="margin-top: 10px" cellpadding="8px">
+		<tr><td class="table002" align="right">{lang gfarm:c002}</td>
+ 			<td>{eval echo dgmdate($formula['create_time'],'Y-m-d H:i:s')}</td>
+		</tr> 
+		<tr><td class="table002" align="right">{lang gfarm:c003}</td>
+ 			<td>{eval echo dgmdate($formula['use_first_time'],'Y-m-d H:i:s')}</td>
+		</tr> 
+		<tr><td class="table002" align="right">{lang gfarm:c004}</td>
+ 			<td>{eval echo dgmdate($formula['update_time'],'Y-m-d H:i:s')}</td>
+		</tr> 
+		<tr><td class="table002" align="right">{lang gfarm:c005}</td>
+ 			<td>{$formula['use_number']}</td>
+		</tr> 
+	</table>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

@@ -1,0 +1,8 @@
+{template common/header}
+<td class="table002" align="right">任务道具</td>
+ 				<td><select name="target_object">
+ 				{loop $object $val}
+ 				<option value="{$val['relation_id']}" {if $task['target_object']==$val['relation_id']}selected{/if}>{$val['name']}</option>
+ 				{/loop}
+ 				</select></td>
+{template common/footer}

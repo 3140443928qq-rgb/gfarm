@@ -1,0 +1,10 @@
+{template common/header}
+<img width="40px" height="40px" src="{$good['img']}" title="{$good['name']}"/>
+	<div id='form{$pos}' class='formbottom'>{if $depotnum}{$depotnum}{else}0{/if}</div>
+	<script type="text/javascript" reload=1>
+	jq('#mix{$pos}').css('background','url(source/plugin/gfarm/img/ui/bg0.png)');
+	{if $formula}	
+	jq('#mix').css('background','url(source/plugin/gfarm/img/ui/bg1.png)').html("<img width='40px' height='40px' src='{$formula[img]}' title='{$formula[goodname]}'/>");
+	{/if}
+	</script>
+{template common/footer}

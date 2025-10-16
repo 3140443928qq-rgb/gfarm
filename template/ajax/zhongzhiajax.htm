@@ -1,0 +1,32 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	window.showDialog('{$mess}', 'error', '', function() {}, 0);
+	{else}
+	jq('#userexp').html({$userarr['experience']}+'/'+{$nextlevel['experience']});
+	{if !empty($levelflag)}
+	{if $countland<$mylevel1['land_number']}
+	jq('.jiesuoimg').each(function(){
+	jq(this).show();
+	});
+	{/if}
+	jq('#userlevel').html({$mylevel1['level']});	
+	jq('#userleveltip').show();
+	setTimeout( function(){jq('#userleveltip').fadeOut();}, ( 3 * 1000 ) ); 
+	{/if}
+	jq('#userpower').html($power);
+	var depotnum=parseInt(jq('#depot_'+{$depot['id']}+' font').html());
+	jq('#_'+$currentland['land_id']).html("<img class='cropimg' id='germimg' src='source/plugin/gfarm/img/ui/germ.png'/>");
+	jq('#title_'+{$currentland['land_id']}).html('{$germ[name]}<br/>{lang gfarm:f051}{eval echo ceil($germtime/60)}{lang gfarm:f052}<br/>{lang gfarm:f053}{$num}{lang gfarm:f012}');
+	if(depotnum-1>0){
+		jq('#depot_'+{$depot['id']}+' font').html(depotnum-1);
+	}else{
+		jq('#moveimg').hide();
+		jq('#depot_'+{$depot['id']}).remove();
+		jq('#maindiv').css('cursor','auto');
+	}
+	{/if}		
+})();
+</script>
+{template common/footer}

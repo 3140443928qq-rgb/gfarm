@@ -1,0 +1,58 @@
+{template common/header}
+<div id='wordleft' class="listti">{if $do=='9'}{lang gfarm:c031}{else}{lang gfarm:f015}{/if}</div>
+<div id='fontleft' onclick="func1(1)"></div>
+<div id='menudiv'>
+<ul class='line' style="padding-top: 10px">
+{loop $depotInfos $val}
+<li id='depot_{$val[id]}' {if !empty($do)}onclick="changeimg(jq(this).children('img'))"{/if}><img title="$val['name']" alt="$val['name']" src="{$val['img']}" dataid="{$val['id']}" tid='{$do}' height="40px"/>
+{if $do!='10'}<br/><font style="line-height: 10px">{$val['number']}</font>{/if}
+</li>
+{/loop}
+</ul>
+</div>
+<div id='fontright' onclick="func1(2)"></div>
+<div id='cornerright'>
+<div><input type="text" id='cornerrighttext' maxlength="10" value="{$name}"/></div>
+<div style="margin-top: 5px;margin-left: 20px;cursor: pointer;" onclick="func1(3)">{lang gfarm:f101}</div>
+<div style="margin-left: 20px;cursor: pointer;" onclick="func1(4)">{lang gfarm:f102}</div>
+</div>
+<script type="text/javascript" reload=1>
+	jq('#cornerrighttext').keyup(function(){
+		ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&do=9&name='+jq(this).val(),'itemsul');
+	});
+	function func1(obj){
+		var nleft=jq('#menudiv ul').css('left');
+		var pleft=Math.abs(nleft.substr(0,nleft.length-2));//位移前
+		var cleft;//位移后
+		if(obj==1){
+			if(pleft>0){
+				if(pleft-jq('#menudiv').width()<0){
+					cleft=0;
+				}else{
+					cleft=pleft-jq('#menudiv').width();
+				}
+				jq('#menudiv ul').css('left',-cleft);
+			}			
+		}
+		if(obj==2){
+			if(pleft+jq('#menudiv').width()<jq('#menudiv ul').width()){
+				if(pleft+jq('#menudiv').width()*2<jq('#menudiv ul').width()){
+					cleft=pleft+jq('#menudiv').width();
+				}else{
+					cleft=jq('#menudiv ul').width()-jq('#menudiv').width()+4;
+				}
+				jq('#menudiv ul').css('left',-cleft);
+			}		
+		}
+		if(obj==4){
+			if(jq('#menudiv').width()<jq('#menudiv ul').width()){	
+				cleft=jq('#menudiv ul').width()-jq('#menudiv').width()+4;
+				jq('#menudiv ul').css('left',-cleft);	
+			}				
+		}
+		if(obj==3){
+			jq('#menudiv ul').css('left','0');				
+		}
+	}
+</script>
+{template common/footer}

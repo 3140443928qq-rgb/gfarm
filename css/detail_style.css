@@ -1,0 +1,6 @@
+/*模块显示区域*/
+.g47jh_module{width:600px;margin:0 auto;}
+.g47jh_module div{height:100px;width:100px;margin-right:30px;margin-bottom:30px;padding:10px;border-radius:20px;text-align:center;cursor:pointer;float:left;box-shadow: #AAB2BD 0px 0px 3px;}
+.g47jh_module div a{width:100px;height:100px;display:block;}
+.g47jh_module div a img{margin-left:auto;margin-right:auto;border:none}
+.g47jh_module div a span{width:100%;font-size:16px;color:#ffffff;line-height:30px;border-top: 1px solid #ffffff;float:left;}

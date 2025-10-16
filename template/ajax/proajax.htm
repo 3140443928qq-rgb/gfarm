@@ -1,0 +1,35 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	window.showDialog('{$mess}', 'error', '', function() {}, 0);
+	{else}
+	window.showDialog('{lang gfarm:f112}{$rand}{lang gfarm:f012}{$good[name]}', 'right', '', function() {}, 0);
+	jq('#showF').html("{lang gfarm:f109}{eval echo dgmdate($mylog['create_time'],'Y-m-d H:i:s')}"+' {lang gfarm:f110}'+"{$spstr[1]}"+'{lang gfarm:f012}'+"{$spstr[0]}");
+	jq('#userpower').html($power);
+	jq('#form1').html({$depots[0]});
+	jq('#form2').html({$depots[1]});
+	jq('#form3').html({$depots[2]});
+	jq('#form4').html({$depots[3]});
+	{if !empty($levelflag)}
+	{if $countland<$mylevel1['land_number']}
+	jq('.jiesuoimg').each(function(){
+	jq(this).show();
+	});
+	{/if}
+	jq('#userlevel').html({$mylevel1['level']});	
+	jq('#userleveltip').show();
+	setTimeout( function(){jq('#userleveltip').fadeOut();}, ( 3 * 1000 ) ); 
+	{/if}
+	{/if}
+	jq('#ulpro li').each(function(){
+		jq(this).click(function(){		
+			var thisid=jq(this).children('div:first-child').attr('id');
+			jq('#formid').val(thisid);
+			ajaxget('plugin.php?id=gfarm:front&mod=produce&act=ajax&formid='+thisid,'noline');			
+		});
+	});
+})();
+
+</script>
+{template common/footer}

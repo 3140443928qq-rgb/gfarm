@@ -1,0 +1,44 @@
+{template gfarm:cp/nav}
+<script type="text/javascript">
+	function showmsg(msg) {
+		window.showDialog(msg, 'right', '', function() {
+			window.location.href = 'plugin.php?id=gfarm:cp&mod=formula&page={$currpage}&orderfield=$orderfield1&ordertype=$ordertype1'
+		}, 0);
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<ul class="tb cl">
+<li class="a"><a href='plugin.php?id=gfarm:cp&mod=formula'>{lang gfarm:c111}{lang gfarm:c226}</a></li>
+<li><a href='plugin.php?id=gfarm:cp&mod=formulagoods'>{lang gfarm:c112}{lang gfarm:c226}</a></li>
+<li><a href='plugin.php?id=gfarm:cp&mod=formulalog'>{lang gfarm:c234}{lang gfarm:c230}</a></li>
+</ul>
+<button class="pn pnc" type="button" style="margin-top:4px;margin-left: 10px" onclick="showWindow('gfarm','plugin.php?id=gfarm:cp&mod=formula&act=update')"><strong>{lang gfarm:c006}</strong></button>
+<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 1px" >
+	<tr>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=formula&orderfield=id&ordertype=$ordertype">{lang gfarm:c007}</A></th>
+	 	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=formula&orderfield=name&ordertype=$ordertype">{lang gfarm:c008}</A></th> 
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c009}</th> 	 
+	 	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=formula&orderfield=goodname&ordertype=$ordertype">{lang gfarm:c010}</A></th>	
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=formula&orderfield=success_odd&ordertype=$ordertype">{lang gfarm:c011}</A></th> 	
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=formula&orderfield=germname&ordertype=$ordertype">{lang gfarm:c012}</A></th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c013}</th>
+	</tr>
+	<!--{loop $fgInfos $key $val}-->
+	<tr <!--{if $key%2==1}-->class="alt"<!--{/if}-->>
+    	<td>{$val['id']}</td>
+	    <td>{$val['name']}</td> 
+    	<td>{$strss[$key]}</td>
+    	<td>{$val['goodname']}</td> 
+    	<td>{$val['success_odd']}</td> 
+    	<td>{if !empty($val['fail_odd'])}{$val['germname']}{else}----{/if}</td> 
+    	<td><a href='plugin.php?id=gfarm:cp&mod=formula&act=update&fgid={$val[id]}&page={$currpage}&orderfield=$orderfield1&ordertype=$ordertype1' onclick="showWindow('gfarm',this.href)">{lang gfarm:c014}</a>
+    	</td>
+	</tr>
+	<!--{/loop}-->
+	<tr  height="30"style="border-top:2px solid #D3D3D3"><td colspan="3" align="left">{lang gfarm:c015}{$num}{lang gfarm:c016}{$currpage}{lang gfarm:c017}</td><td colspan="9">{$paging}</td></tr>
+</table>
+
+{template gfarm:cp/footer}

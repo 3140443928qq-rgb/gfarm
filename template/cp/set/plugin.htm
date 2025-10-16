@@ -1,0 +1,58 @@
+{template gfarm:cp/nav}
+<div class="g47jh_cp_content">
+	<div class="g47jh_content_div">
+		<iframe id="myframe" name="myframe" style="display:none"></iframe>
+		<form name="psForm" action="plugin.php?id=gfarm:cp&mod=pset&formhash={FORMHASH}" method="post" target="myframe">
+	<input type="hidden" name="do" value="$do">
+	<table cellspacing="0" cellpadding="0" id="profilelist" class="g47jh_content_table">
+		<tbody>			
+			<!--{loop $setInfos $key $val}-->
+			<tr class="g47jh_content_t{if $key%2==1}r{else}w{/if}"><th style="padding-left:10px;width: 120px ;">{$val['key_cn']}</th>
+				<td>
+				{if $val['type']==0}
+				<input class="g47jh_content_input" type="text" name="{$val['key_en']}" value="{$val['value']}"/>
+				{elseif $val['type']==1}	
+				<input class="g47jh_content_input" type="text" name="{$val['key_en']}" value="{$val['value']}"/><span>%</span>
+				{elseif $val['type']==2}	
+				<textarea class="g47jh_content_textarea" name="{$val['key_en']}" style="width: 200px;height: 80px">{$val['value']}</textarea>
+				{elseif $val['type']==3}	
+				<input type="radio" name="{$val['key_en']}" id='r1' value="0" {if $val['value']!=1}checked{/if}/><label for="r1">{lang gfarm:c084}</label>
+				<input type="radio" name="{$val['key_en']}" id='r2' value="1" {if $val['value']==1}checked{/if}/><label for="r2">{lang gfarm:c083}</label>
+				{elseif $val['type']==4}	
+				<select class="g47jh_content_input" name="{$val['key_en']}">
+				{loop $_G[setting][extcredits] $key1 $val1}
+				<option value="{$key1}" {if $val['value']==$key1}selected{/if}>{$val1[title]}</option>
+				{/loop}
+				</select>
+				{/if}		
+				<font style="color: red;">{$val['description']}</font>
+				</td>
+			</tr>
+			<!--{/loop}-->
+			<tr>
+				<th>&nbsp;</th>
+				<td colspan="2">
+					<button class="g47jh_content_submit" type="submit"><strong>{lang gfarm:c114}</strong></button>
+					<span class="rq" id="submit_result"></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+	</div>
+	
+</div>
+
+
+
+<script type="text/javascript">
+function showmsg(msg) {
+	window.showDialog(msg, 'right', '', function() {
+		window.location.href = 'plugin.php?id=gfarm:cp&mod=pset&do=$do'
+	}, 0);
+}
+function showerror(msg) {
+	window.showDialog(msg, 'error', '', function() {}, 0);
+}
+</script>
+{template gfarm:cp/footer}

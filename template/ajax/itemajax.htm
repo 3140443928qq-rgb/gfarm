@@ -1,0 +1,31 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	jq('#tip_'+{$currentland['land_id']}).html('{$mess}').show();	
+	setTimeout( function(){jq('#tip_'+{$currentland['land_id']}).fadeOut();}, ( 1 * 1000 ) ); 
+	{else}
+	var depotnum=parseInt(jq('#depot_'+{$depot['id']}+' font').html());
+	{if $cropflag==1}
+	jq('#_'+$currentland['land_id']).html("<img class='cropimg' id='cropimg' src='{$germ[mature_img]}'/>");
+	jq('#title_'+{$currentland['land_id']}).html('{lang gfarm:f048}{$crop[name]}<br/>{lang gfarm:f049}{$num1}{lang gfarm:f012}');
+	{elseif $cropflag==2}
+	jq('#_'+$currentland['land_id']).html("<img class='cropimg' id='germimg' src='{$germ[sprout_img]}'/>");
+	jq('#title_'+{$currentland['land_id']}).html('{$crop[name]}{lang gfarm:f050}<br/>{lang gfarm:f051}{eval echo ceil(($time1-time())/60)}{lang gfarm:f052}<br/>{lang gfarm:f053}{$num1}{lang gfarm:f012}');
+	{else}
+	jq('#title_'+{$currentland['land_id']}).html('{$germ[name]}<br/>{lang gfarm:f051}{eval echo ceil(($time1-time())/60)}{lang gfarm:f052}<br/>{lang gfarm:f053}{$num1}{lang gfarm:f012}');
+	{/if}	
+	if(depotnum-1>0){
+		jq('#depot_'+{$depot['id']}+' font').html(depotnum-1);
+	}else{
+		jq('#moveimg').hide();
+		jq('#depot_'+{$depot['id']}).remove();
+		jq('#maindiv').css('cursor','auto');
+	}
+	jq('#userbene').html({eval echo $currentuser['benevolence']+$item['add_benevolence']});
+	jq('#tip_'+{$currentland['land_id']}).html('{lang gfarm:f100}').show();	
+	setTimeout( function(){jq('#tip_'+{$currentland['land_id']}).fadeOut();}, ( 1 * 1000 ) ); 
+	{/if}		
+})();
+</script>
+{template common/footer}

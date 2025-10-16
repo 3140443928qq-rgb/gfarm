@@ -1,0 +1,54 @@
+{template gfarm:cp/nav}
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class="g47jh_cp_content">
+	<div class="g47jh_content_div">
+		<div class="g47jh_content_title">	
+			<span class="g47jh_content_span"><form action="plugin.php?id=gfarm:cp&mod=formulalog" method="post">
+<span>UID{lang gfarm:c062}<input type="text" name="uid" value="$uid"/></span>
+<span>{lang gfarm:f076}{lang gfarm:c062}
+<input type="text" name="start_time" value="{if $start_time}{eval echo dgmdate($start_time, 'Y-m-d H:i');}{/if}" onClick="showcalendar(event, this, 1);"/>~<input type="text" name="end_time" value="{if $end_time}{eval echo dgmdate($end_time, 'Y-m-d H:i');}{/if}" onClick="showcalendar(event, this, 1);"/></span>
+<button class="g47jh_content_submit">{lang gfarm:c064}</button>
+</form></span>
+		</div>	
+		<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 1px" >
+	<tr>
+    	<th class="xw1" style="text-align: center;">UID</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c126}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c008}</th>	 	
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c234}{lang gfarm:f078}</th> 	
+    	<th class="xw1" style="text-align: center;" width="20%">{lang gfarm:c109}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c018}</th>
+    	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=formulalog&ordertype=$ordertype">{lang gfarm:c110}</A></th>
+	</tr>
+	<!--{loop $formulalogInfos $key $val}-->
+	<tr <!--{if $key%2==1}-->class="alt"<!--{/if}-->>
+	    <td>{$val['uid']}</td> 
+	    <td>{$users[$key]['username']}</td>
+	    <td>{if !empty($val['formula_id'])}{$val['formula_name']}{else}----{/if}</td>
+	    <td>{if !empty($val['formula_id'])}{if $val['type']==1}{lang gfarm:c111}{else}{lang gfarm:c112}{/if}{else}----{/if}</td>   	
+    	<td>{$val['goods']}</td> 
+    	<td>{if !empty($val['formula_id'])}{$val['produce']}{else}----{/if}</td> 
+    	<td>{eval echo dgmdate($val['create_time'],'Y-m-d H:i:s')}</td> 
+	</tr>
+	<!--{/loop}-->
+</table>
+	</div>
+	<!--分页-->
+	<div class="adjust_page_div" style="margin-top: -20px;">
+		<div class="adjust_page_span">{lang gfarm:c015}<i style="color: #4689cf">{$num}</i>{lang gfarm:c016}</div>
+		<div class="adjust_page_right">
+			<div class="view_page_div" style="width: {$page_width_arr['div_width']}px">
+				<ul>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page=1{$text}">{lang gfarm:c232}</a></li>
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==1}showerror('{lang gfarm:cp028}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage-1}{$text}';{/if}">{lang gfarm:c266}</a></li>
+					<!--{loop $page_number_arr $key $val_page}-->
+						<li class="view_page_number"  style="width:{$page_width_arr['li_width'][$key]}px; {if $currpage==$val_page} background: #78b3ef;border-color: #78b3ef; {/if}" ><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$val_page}{$text}"  style="{if $currpage==$val_page} color: #ffffff ;{/if}" >{$val_page}</a></li>
+					<!--{/loop}-->
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==$maxpage}showerror('{lang gfarm:cp030}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage+1}{$text}';{/if}">{lang gfarm:c267}</a></li>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$maxpage}{$text}" >{lang gfarm:f046}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{template gfarm:cp/footer}

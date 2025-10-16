@@ -1,0 +1,37 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	jq('#ed_'+{$depot['id']}+' .decohide').hide();
+	{if $deco['small_type']=='5'}
+	jq('#gaoshi>span').html("{lang gfarm:f120}");
+	jq('#gaoshi+div>div').html("");
+	{elseif $deco['small_type']=='6'}
+	jq('#dimao>span').html("{lang gfarm:f121}");
+	jq('#dimao+div>div').html("");
+	{elseif $deco['small_type']=='7'}
+	jq('#wuzi>span').html("{lang gfarm:f122}");
+	jq('#wuzi+div>div').html("");
+	{else}
+	jq('#dog>span').html("{lang gfarm:f123}");
+	jq('#dog+div>div').html("");
+	{/if}
+	if ($_G['uid']==jq('#userid').val()){
+		{if $deco['small_type']=='5'}
+		jq('#center').html("");
+		{elseif $deco['small_type']=='6'}
+		jq('#backland').css('background-image','url(source/plugin/gfarm/img/ui/backgroup_01.png)');
+		{elseif $deco['small_type']=='7'}
+		jq('#seven').html("");
+		{else}
+		jq('#eight').html("");
+		{/if}
+	}
+	function funcequip(obj){
+		ajaxget('plugin.php?id=gfarm:front&mod=decorate&act=learn&depotid='+obj+'&formhash={FORMHASH}','');
+	}
+	function funcdeco(obj){
+		ajaxget('plugin.php?id=gfarm:front&mod=decorate&act=forget&depotid='+obj+'&formhash={FORMHASH}','');
+	}
+})();
+</script>
+{template common/footer}

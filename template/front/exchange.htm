@@ -1,0 +1,86 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/exbg.png) no-repeat;}
+</style>
+<div style="width: 580px;height: 330px;padding-top: 20px" align="center" onmousedown="dragMenu($('fwin_gfarm'),event,1)">
+<div style="text-align: left;width: 300px;margin-top: 60px;margin-left:100px;height: 200px;">
+<div class='shopclose' style="right: 25px;top:5px" onclick="hideWindow('gfarm1');hideWindow('gfarm');"></div>
+	<form id='exform' action="plugin.php?id=gfarm:front&mod=exchange&act=in" method="post" target="myframe">
+	<input type="hidden" name='formhash' value='{FORMHASH}'/>
+	<div style="padding: 20px">
+	<table>
+	<tr>
+	<td><img src='source/plugin/gfarm/img/ui/gold.png'/></td>
+	<td style="min-width: 100px">{lang gfarm:f028}{$config['bullionsname']}{lang gfarm:c062}</td>
+	<td style="color: #db9c29;">{$user_credit}</td>
+	</tr>
+	<tr>
+	<td><img src='source/plugin/gfarm/img/ui/change.png'/></td>
+	<td>{lang gfarm:f029}{lang gfarm:c062}</td>
+	<td style="color: #db9c29;" valign="middle"><input type="text" name='dnum' id='dnum' size='7' onpaste="this.value=this.value.replace(/\D/g,'')"
+	 style="text-align: center;ime-mode:disabled;height: 16px;border-style: inset;border-color: #d4f658;background: #f3e2bc;color:#db9c29;font-size: 15px; "/></td>
+	</tr>
+	<tr>
+	<td colspan="3" align="right">({lang gfarm:f030}{$config['exchangebase']})</td>
+	</tr>
+	<tr>
+	<td><img src='source/plugin/gfarm/img/ui/money1.png'/></td>
+	<td>{lang gfarm:c239}{$config['moneyname']}{lang gfarm:c062}</td>
+	<td style="color: #db9c29"><span id='dprice'>0</span></td>
+	</tr>
+	</table>
+	</div>
+	<div style="margin-top: 30px"><img style="cursor: pointer;" src='source/plugin/gfarm/img/ui/yes.png' onclick="jq('#exform').submit();"/><img style="margin-left: 40px;cursor: pointer;" src='source/plugin/gfarm/img/ui/no.png' onclick='clo_window()'/></div>
+	</form>
+</div>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<script type="text/javascript" reload=1>
+(function(){
+	var dnum={$user_credit};
+	var dprice={$config['exchangebase']};
+	jq('#dnum').keydown(function(event){	
+		if(dnum!=-1){
+			var dsize=dnum.toString().length;
+			jq('#dnum').attr('maxlength',dsize+1);
+		}else{
+			jq('#dnum').attr('maxlength',3);
+		}
+		var keycode;
+	    if(window.event) // IE 浏览器
+	    {
+	        keycode = event.keyCode;
+	    }
+	    else if(event.which) // Netscape/Firefox/Opera浏览器
+	    {
+	        keycode = event.which;
+	    }
+		if(!((keycode <= 57 && keycode >= 48)||(keycode <= 105 && keycode >= 96)||keycode==8||keycode==46)) {
+			return false;
+		}
+	});
+	jq('#dnum').keyup(function(){	
+		this.value=this.value.replace(/[\u4e00-\u9fa5]/g,'');
+		if(parseInt(jq('#dnum').val())>parseInt(dnum)){
+			jq('#dnum').val(dnum);
+			jq('#dprice').html(dprice*dnum);
+			return false;
+		}
+		if(parseInt(jq('#dnum').val())<1){
+			jq('#dnum').val(1);
+			jq('#dprice').html(dprice);
+			return false;
+		}
+		jq('#dprice').html(dprice*jq('#dnum').val());
+	});
+})();
+</script>
+{template common/footer_ajax}

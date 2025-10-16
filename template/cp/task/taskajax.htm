@@ -1,0 +1,9 @@
+{template common/header}
+<td class="table002" align="right">{lang gfarm:c141}</td>
+ 			<td><select name="target_object">
+ 			<option value="0">{lang gfarm:c144}</option>
+ 			{loop $object $val}
+ 			<option value="{$val['id']}" {if $task['target_object']==$val['id']}selected{/if}>{$val['name']}</option>
+ 			{/loop}
+ 			</select></td>
+{template common/footer}

@@ -1,0 +1,25 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	window.showDialog('{$mess}', 'error', '', function() {}, 0);
+	{else}
+	jq('#useryuan').html('{$user_credit}');
+	jq('#usermoney').html('{$user[money]}');
+	{if $lock['money']}
+	jq('#jiesuoval').val('1');
+	{else}
+	jq('#jiesuoval').val('0');
+	{/if}
+	jq('#mjs').val("{lang gfarm:f128}{if $lock['money']}{$lock['money']}{else}0{/if}{if $lock['money_type']=='1'}{$config['bullionsname']}{else}{$config['moneyname']}{/if}{lang gfarm:f045}");
+	jq('#'+{$landid}).prev().attr('_id',{$landid});
+	jq('#'+{$landid}).html("<img class='landimg' src='source/plugin/gfarm/img/ui/useland.png'>");
+	{if $countland+1>=$mylevel['land_number']}
+	jq('.jiesuoimg').each(function(){
+		jq(this).hide();
+	});
+	{/if}
+	{/if}
+})();
+</script>
+{template common/footer}

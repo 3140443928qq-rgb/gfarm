@@ -1,0 +1,95 @@
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0;padding:0;}
+ul , li { list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+body{font:12px/1.5 Microsoft YaHei;}
+
+/*全局页面容器*/
+.g47jh_vessel{margin-left:auto;;min-width:960px;background-color:#fafafa;margin-right:auto;}
+
+/*主导航区域*/
+.g47jh_mainnav{width:100%;height:50px;background-color:#323c48;border-bottom:1px solid #242e3a;}
+.g47jh_mainnav_left{margin-top:5px;height:40px;float:left;}
+.g47jh_mainnav_icon{width:40px;height:60px;float:right;line-height:40px;margin-top:5px;margin-right:10px;font-size:14px;color:#FFFFFF;cursor:pointer;position: relative;}
+.g47jh_mainnav_title{float:left;line-height:40px;margin-left:10px;font-size:14px;color:#FFFFFF;}
+.g47jh_mainnav_avatar{margin-left:20px;height:40px;width:40px;float:left}
+.g47jh_mainnav_avatar img{height:100%;width:100%;border-radius:40px;}
+
+/*导航区域菜单图标*/
+.icon-menu:before{content: "\e604";font-size:40px;color:#ffffff;}
+
+/*导航区域标签样式*/
+.g47jh_navmenu{float:right;line-height:40px;width:120px;text-align:center;background-color:#5d9cec;margin-right:10px;font-size:14px;color:#FFFFFF;border-radius: 0px 0px 2px 2px;cursor:pointer;}
+.g47jh_navmenu a{width:120px;height:40px;line-height:40px;text-align:center;font-size:14px;color:#FFFFFF;text-decoration:none;display:block}
+
+/*主内容区域*/
+.g47jh_main_div{width:100%;background-color:#fafafa;float:left;position:relative;min-height: 50px;margin-top: -14px;}
+.g47jh_mainpart{width:100%;padding-top:50px;padding-bottom:50px;background-color:#fafafa;float:left;position:relative;}
+
+/*快捷导航区域样式*/
+.g47jh_gonav{display:none;min-width:120px;background-color:#ffffff;border-left:1px solid #c7cdd8;border-right:1px solid #c7cdd8;border-bottom:1px solid #c7cdd8;padding-left:10px;padding-right:10px;position:absolute;right:3px;top:-5px;z-index:900;}
+.g47jh_gonav div{line-height:40px;font-size:16px;text-align:center;}
+.g47jh_gonav li{line-height:30px;border-top:1px solid #c7cdd8;font-size:14px;text-align:center;}
+.g47jh_gonav a{text-decoration:none;color:#323c48;font-weight:bold;}
+
+/*全局尾部区域*/
+.g47jh_foot{width:100%;text-align:center;line-height:40px;height:60px;font-size:12px;float:right;background-color:#4489ce;}
+.g47jh_foot a{text-decoration:none;color:#556272;text-align:center;color: #ffffff;font-size: 14px;}
+
+/*每个页面的整体布局*/
+.g47jh_cp_whole{width: 96%;min-height: 100px;position: relative;float: left;background: #4489ce;padding-left: 2%;padding-right: 2%;padding-top:30px;padding-bottom:10px;z-index:1;}
+.g47jh_cp_title{width: 97%;float: left;position: relative;height: 32px;margin-left: 15px;overflow: hidden}
+.g47jh_cp_title_li{height: 32px;float: left;background: #ffffff;margin-right:5px;border-radius:8px 8px 0px 0px;}
+.g47jh_cp_title_a{height:36px;line-height: 36px;font-size: 16px;font-weight: bold;display: block;padding-left: 20px;padding-right: 20px;color: #1a5b93;background: #4489ce;opacity:0.6;text-decoration: none;border-radius:8px 8px 0px 0px;text-align: center;}
+.g47jh_cp_title_a:hover{background: #ffffff;text-decoration: none;}
+.g47jh_cp_content{width: 100%;float: right;position: relative;min-height: 150px;background: #ffffff;border-radius:8px;}
+
+
+.g47jh_content_div{width: 96%;float: left;min-height: 50px;margin-left: 2%;margin-top: 25px;border-radius: 8px 8px 0px 0px;border: 1px solid #e5e5e5;overflow: hidden;margin-bottom: 25px;}
+.g47jh_content_title{width: 100%;height: 36px;float: left;position: relative;background: #78b3ef;color: #ffffff;text-align: left;line-height: 36px;font-size: 14px;overflow: hidden;font-weight: bold;}
+.g47jh_content_button{float: right;height: 36px;min-width: 30px;padding-right:20px;line-height: 36px;color: #ffffff;text-align: center;}
+.g47jh_content_span{height: 36px;line-height: 36px;color: #ffffff;float: left;padding-left: 20px;}
+.g47jh_content_table{width: 100%;float: left;border: none;line-height: 35px;}
+.g47jh_content_tr {width: 100%;min-height: 35px;background: #f9f9f9;text-align:left; }
+.g47jh_content_tw {width: 100%;min-height: 35px;background: #ffffff;text-align:left; }
+
+.g47jh_content_tr:hover {background: #95c6f7;color: #ffffff}
+.g47jh_content_tw:hover {background: #95c6f7;color: #ffffff}
+.g47jh_content_th{border-right: 1px solid #e5e5e5; text-align: center;}
+.g47jh_content_input{width: 150px;background: #ffffff;border: 1px solid #e5e5e5;height: 22px;}
+.g47jh_content_img{max-width: 316px;max-height: 35px;}
+.g47jh_content_textarea{width: 316px;background: #ffffff;border: 1px solid #e5e5e5;height: 80px;margin: 3px 0px}
+.g47jh_content_submit{width: 80px;height: 28px;line-height: 25px;background: #78b3ef;border: 1px solid #4489ce;border-radius:4px;color: #ffffff;margin: 3px 0px;font-size: 14px;font-weight: bold;cursor: pointer;}
+
+.adjust_page_div{width: 96%;height: 30px; position: relative;float: left;overflow: hidden;margin-left: 2%;margin-bottom: 25px;}
+.adjust_page_span{float: left;height: 30px;width: 150px;line-height: 30px;color: #666666;text-align: left;font-size: 14px;}
+.adjust_page_right{float: right;height: 30px;width: 590px;}
+	/*分页显示*/
+	.view_page_div{ height: 23px;margin-top:3px; text-align: center;position: relative;width: 501px;float: right;margin-right: -40px;}
+	
+	.view_page_next{width: 50px;height: 20px;border: 1px solid #d3d3d3;background: #ffffff;line-height: 20px;text-align: center;margin-right: 8px;border-radius:3px;margin: auto;position: relative;float: left;margin-right: 5px;}
+	.view_page_number{width: 20px;height: 20px;border: 1px solid #d3d3d3;background: #ffffff;line-height: 20px;text-align: center;margin-right: 8px;border-radius:3px;margin: auto;position: relative;float: left;margin-right: 5px;}
+	.view_page_next a,.view_page_number a{width: 100%;height: 100%;display: inline-block;color: #666666;}
+	
+	.view_page_next:hover{background: #78b3ef;border-color: #78b3ef}
+	.view_page_number:hover{background: #78b3ef;border-color: #78b3ef}
+	
+	.view_page_next a:hover{color: #ffffff;text-decoration: none;}
+	.view_page_number a:hover{color: #ffffff;text-decoration: none;}
+
+.check_div{width:100%;min-height: 70px;position: relative;float: left;border-bottom:1px solid #e9e9e9;}
+	.check_every_div{width: 100px;height: 50px;float: left;margin-right: 2px;margin-top: 8px;color: #666666;line-height: 25px;}
+	.check_every_input{width: 90px;height: 24px;border: 1px solid #e9e9e9;background: #f9f9f9;border-radius:4px;}
+	.check_every_button{width: 90px;height: 24px;background: #4689cf;border: 1px solid #3e89d7;border-radius:4px;color: #ffffff;line-height: 22px;text-align: center;letter-spacing: 3px; cursor: pointer}
+	
+/*插件说明*/
+.g47jh_plugin_intro{}
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+{template gfarm:cp/nav}
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 10px" >
+	<tr>
+		<th class="xw1" style="text-align: center;">{lang gfarm:c007}</th>
+    	<th class="xw1" style="text-align: center;">UID</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c108}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c008}</th>	 	
+    	<th class="xw1" style="text-align: center;" width="20%">{lang gfarm:c109}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c018}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c110}</th>
+	</tr>
+	<!--{loop $formulalogInfos $key $val}-->
+	<tr <!--{if $key%2==1}-->class="alt"<!--{/if}-->>
+    	<td>{$val['id']}</td>
+	    <td>{$val['uid']}</td> 
+	    <td>{if $val['type']==1}{lang gfarm:c111}{else}{lang gfarm:c112}{/if}</td>
+    	<td>{$val['formula_name']}</td>
+    	<td>{$str2}</td> 
+    	<td>{$val['name']}</td> 
+    	<td>{eval echo dgmdate($val['create_time'],'Y-m-d H:i:s')}</td> 
+	</tr>
+	<!--{/loop}-->
+	<tr  height="30"style="border-top:2px solid #D3D3D3"><td colspan="3" align="left">{lang gfarm:c015}{$num}{lang gfarm:c016}{$currpage}{lang gfarm:c017}</td><td colspan="9">{$paging}</td></tr>
+</table>
+
+{template gfarm:cp/footer}

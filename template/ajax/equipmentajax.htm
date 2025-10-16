@@ -1,0 +1,22 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	jq('#ed_'+{$depot['id']}+' .ecohide').show();
+	jq('#ed_'+{$depot['id']}).siblings().find('.ecohide').hide();
+	var str="<img src='{$equip[img]}' title='{$equip[name]}'><div>{lang gfarm:f130}{if $mymainequip['add_steal_odds']>=0}+{/if}{$mymainequip['add_steal_odds']}%<br/>"+
+	"{lang gfarm:f131}{if $mymainequip['add_steal_number']>=0}+{/if}{$mymainequip['add_steal_number']}%</div>"+
+	"<div class='equipb'>{lang gfarm:f132}{if empty($mymainequip['valid_time'])}{lang gfarm:f133}{else}{eval echo dgmdate($mymainequip['valid_time']*24*60*60+$depot['create_time'],'Y-m-d H:i:s')}{/if}</div>"
+	{if $equip['small_type']=='2'}
+	jq('#mainequip').html(str);
+	{else}
+	jq('#importequip').html(str);
+	{/if}
+		function funcequip1(obj){
+			ajaxget('plugin.php?id=gfarm:front&mod=equipment&act=learn&depotid='+obj+'&formhash='+jq('#formhash').val(),'');
+		}
+		function funcdeco1(obj){
+			ajaxget('plugin.php?id=gfarm:front&mod=equipment&act=forget&depotid='+obj+'&formhash={FORMHASH}','');
+		}
+})();
+</script>
+{template common/footer}

@@ -1,0 +1,81 @@
+{template common/header_ajax}
+<h2 class="flb" style="cursor: move;border: 1px solid #666666;border-bottom: 0;"><em>发布任务</em>
+	<span ><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span>	
+</h2>
+<div style="border: 1px solid #666666;padding:5px 10px">
+	<form id='psForm' name="psForm" action="plugin.php?id=gfarm:front&mod=task&act=posttask&formhash={FORMHASH}" method="post" target="myframe">
+		<input type="hidden" name='tid' value="{$tid}"/>
+		<table class="table001" style="margin-top: 10px">
+			<tr><td class="table002" align="right">任务名称</td>
+ 				<td><input type="text" name="task_name" maxlength="25" value="{$task['task_name']}"/><font style="color: red;">*</font></td>
+			</tr> 	
+			<tr><td class="table002" align="right">目标对象</td>
+ 				<td><input type="radio" id='target_uid1' checked name="target_obj" value="1" onclick="jq('#target_uid').hide()"/><label>自己</label>
+ 				<input type="radio" id='target_uid2' name="target_obj" value="2" onclick="jq('#target_uid').show()"/><label>别人</label></td>
+			</tr> 	
+			<tr id='target_uid' style="display: none"><td class="table002" align="right">目标uid</td>
+ 				<td><input type="text" name="target_uid" maxlength="25" value="{$task['target_uid']}"/><font style="color: red;">*</font></td>
+			</tr> 			
+			<tr>
+			<td class="table002" align="right">任务道具</td>
+ 				<td><select name="target_object">
+ 				{loop $object $val}
+ 				<option value="{$val['relation_id']}" {if $task['target_object']==$val['relation_id']}selected{/if}>{$val['name']}</option>
+ 				{/loop}
+ 				</select></td>
+			</tr> 
+			<tr><td class="table002" align="right">完成数量</td>
+ 				<td><input type="text" name="target_num" value="{$task['target_num']}"/><font style="color: red;">*</font></td>
+			</tr> 
+			<tr><td class="table002" align="right">奖励金钱</td>
+ 				<td><input type="text" name="reward_money" value="{$task['reward_money']}"/></td>
+			</tr> 
+			<!--<tr><td class="table002" align="right">奖励元宝</td>
+ 				<td><input type="text" name="reward_yuan" value="{$task['reward_yuan']}"/></td>
+			</tr>-->
+			<tr><td class="table002" align="right">奖励道具</td>
+ 				<td><select id='reward_items' name="reward_items">
+ 				<option value="0">无</option>
+ 				{loop $items $val}
+ 				<option value="{$val['goods_id']}" {if $task['reward_items']==$val['id']}selected{/if}>{$val['name']}</option>
+ 				{/loop}
+ 				</select></td>
+			</tr> 
+			<tr id='items_num' {if !$task||$task['reward_items']=='0'}style="display: none"{/if}>
+				<td class="table002" align="right">道具数量</td>
+ 				<td><input type="text" name="items_num" value="{$task['items_num']}"/></td>
+			</tr> 	
+			<tr><td class="table002" align="right">限制时间</td>
+ 				<td><input type="text" name="task_time" value="{$task['task_time']}"/>小时<font style="color: red;">不填或者0表示不限制完成时间，时间从任务被接收时算起</font></td>
+			</tr> 
+			<tr><td class="table002" align="right">任务描述</td>
+ 				<td><textarea name="task_describe">{$task['task_describe']}</textarea></td>
+			</tr> 
+			<tr><td class="table002"></td>
+ 				<td><input type="submit"  class='pn pnc' style='width: 50px;margin-top: -4px' value="确定"/></td>
+			</tr> 
+		</table>
+	</form>
+</div>
+<script type="text/javascript" reload=1>
+(function(){		
+	jq('#reward_items').change(function(){
+		if(jq(this).val()=='0'){
+			jq('#items_num').hide();
+		}else{
+			jq('#items_num').show();
+		}
+	});
+})();
+	function showmsg(msg,money,yuan) {
+		window.showDialog(msg, 'right', '', function() {jq('#usermoney').html(money);jq('#useryuan').html(yuan);}, 0);
+	}
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

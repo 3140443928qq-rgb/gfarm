@@ -1,0 +1,153 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	jq('#ulmenu li').each(function(){
+		jq(this).click(function(){
+			jq(this).css('background','url(source/plugin/gfarm/img/ui/select.png) no-repeat').children('a').css('color','white').addClass('acolor');
+			jq(this).siblings().css('background','url(source/plugin/gfarm/img/ui/noselect.png) no-repeat').children('a').css('color','#934f13').removeClass('acolor');
+		});		
+	});
+	/*jq('#ul3 li').each(function(){
+		jq(this).mousedown(function(event){	//判断是否右击
+			if(event.which==3){
+				if(jq(this).find('#marksale').css('display')=='block'){
+					jq(this).find('#marksale').hide();
+				}else{
+					jq(this).find('#marksale').show();
+					jq(this).siblings().find('#marksale').hide();
+				}		
+				window.hideWindow('gfarm1');
+			}
+		});	
+	});*/
+})();
+</script>
+<div id='indepots'>
+	<ul class='line' id='ul3'>
+	<!--{loop $depotInfos $key $val}-->
+	<li id='li_{$val[id]}'>
+		<div style="position: absolute;">
+			<div class='showattr'>
+			<div class='showborder'>
+			<div id='{$val[id]}' onclick="openWD(this)">
+			<img  src="{$val['img']}" width="40px" title="{$val['name']}"/>
+			<div class="bottomlevel">
+			{$val['use_level']}{lang gfarm:f016}
+			</div>	
+			</div>
+			<div class="toplock" id='lock_{$val[id]}' {if !$val['islock']}style="background-image:url('source/plugin/gfarm/img/ui/jiesuo.png')"{/if} onclick="ajaxget('plugin.php?id=gfarm:front&mod=depot&act=lock&depotid={$val[id]}&formhash={FORMHASH}','')">			
+			</div>			
+			</div>
+			<div class='depotnum'>
+			{$val['number']}
+			</div>			
+			</div>
+		</div>
+		<div id='marksale'>
+		<input type="text" value="{lang gfarm:f017}" id='dnum1' size="5" onfocus="this.value=this.value.replace(/[\u4e00-\u9fa5]/g,'');" maxlength="5" onkeyup="this.value=this.value.replace(/[\u4e00-\u9fa5]/g,'');return check()" onkeydown="return calcn(event)" onpaste="this.value=this.value.replace(/\D/g,'')" style="text-align: center;ime-mode:disabled;font-size: 10px;height: 12px"/><br/>
+		<a onclick="hideWindow('gfarm1');openSale({$val[id]})">{lang gfarm:c187}</a>
+		</div>
+	</li>
+	<!--{/loop}-->
+	</ul>
+	</div>
+	<div id=scrollbartop></div>
+	<div id='scrollBars' style="height: 250px">
+	<div id='handles'></div>
+	</div>
+	<div id='scrollbarbottom'></div>	
+	<script reload=1>
+	var ximen = {
+	$:function(o){ return document.getElementById(o); },
+	getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+	getOffset:function(o) {
+		var t = o.offsetTop,h = o.offsetHeight;
+		while(o = o.offsetParent) { t += o.offsetTop; }
+		return { top:t, height:h };
+	},
+	bind:function(o,eType,fn) {
+		if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+		else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	unbind:function(o,eType,fn) {
+		if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+		else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	stopPropagate:function(e) {
+		if(e && e.stopPropagation) { e.stopPropagation(); } 
+		else { window.event.cancelBubble = true; }
+		return false;
+	},
+	stopDefault:function(e) {
+		e = e || window.event;
+		e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+	}
+};
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relY,
+		out = ximen.$("outdepots"),
+		content = ximen.$("indepots"),
+		scrollBar = ximen.$("scrollBars"),
+		scrollBarHandle = ximen.$("handles"),
+		contentScrollHeight = content.scrollHeight,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleHeight = parseInt(content.offsetHeight/content.scrollHeight * scrollBar.offsetHeight),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleHeight==scrollBar.offsetHeight){scrollBar.style.display='none';jq('#scrollbartop').hide();jq('#scrollbarbottom').hide();}
+		else { scrollBarHandleHeight = 20; scrollBarHandle.style.height = "20px"; jq('#scrollbartop').show();jq('#scrollbarbottom').show();}
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollTop = (e.clientY - relY)/(scrollBar.offsetHeight - scrollBarHandleHeight)*(content.scrollHeight - content.offsetHeight);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relY = event.clientY - et.offsetTop;
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollTop -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollTop += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.top = content.scrollTop/(content.scrollHeight - content.offsetHeight) * (scrollBar.offsetHeight - scrollBarHandleHeight)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+	jq('#scrollbarbottom').click(function(){
+		content.scrollTop += contentScrollHeight;
+	});
+	jq('#scrollbartop').click(function(){
+		content.scrollTop -= contentScrollHeight;
+	});
+	jq('.footdepotright').html("<span><a onclick=\"hideWindow('gfarm1');ajaxget('plugin.php?id=gfarm:front&mod=depot&act=allsuo&do=$do&formhash={FORMHASH}&sflag=$flag','')\">{lang gfarm:f019}{if empty($flag)}{lang gfarm:f020}{else}{lang gfarm:c178}{/if}</a></span>"
+			+"<span><a {if empty($flag)}disabled style='color:gray'{else}onclick=\"hideWindow('gfarm1');ajaxget('plugin.php?id=gfarm:front&mod=depot&act=allsale&do=$do&formhash={FORMHASH}','outdepots')\"{/if}>{lang gfarm:f021}</a></span>");
+	{if $issale}
+	window.showDialog('{lang gfarm:f097}{$jin}{$config[moneyname]}{$yuan}{$config[bullionsname]}', 'right', '', function() {
+		jq('#jin').html('0');
+		jq('#yuan').html('0');	
+		jq('#useryuan').html({$user_credit});
+		jq('#usermoney').html({$user['money']});		
+	}, 0);
+	{else}
+	jq('#jin').html({$jin});
+	jq('#yuan').html({$yuan});
+	{/if}
+})();
+
+</script>
+{template common/footer}

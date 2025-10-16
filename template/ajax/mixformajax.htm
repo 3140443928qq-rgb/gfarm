@@ -1,0 +1,64 @@
+{template common/header}
+	<div id='mix1' class="mix" style='background: url(source/plugin/gfarm/img/ui/bg0.png)'>
+		<img width="40px" height="40px" src="{$goods['0']['img']}" title="$goods['0']['name']"/>
+		<div id='form1' class='formbottom'>{if $depot[$goods[0]['id']]}{$depot[$goods[0]['id']]}{else}0{/if}</div>
+	</div>
+	<div class='baseimg'>
+		<img src="source/plugin/gfarm/img/ui/plus.png" width='15px'/>
+	</div>
+	<div id='mix2' class="mix" style='background: url(source/plugin/gfarm/img/ui/bg0.png)'>
+		<img width="40px" height="40px" src="{$goods['1']['img']}" title="$goods['1']['name']"/>
+		<div id='form2' class='formbottom'>{if $depot[$goods['1']['id']]}{$depot[$goods['1']['id']]}{else}0{/if}</div>
+	</div>
+	<div class='baseimg'>
+		<img src="source/plugin/gfarm/img/ui/plus.png" width='15px'/>
+	</div>
+	<div id='mix3' class="mix" style='background: url(source/plugin/gfarm/img/ui/bg0.png)'>
+		<img width="40px" height="40px" src="{$goods['2']['img']}" title="$goods['2']['name']"/>
+		<div id='form3' class='formbottom'>{if $depot[$goods['2']['id']]}{$depot[$goods['2']['id']]}{else}0{/if}</div>
+	</div>
+	<div class='baseimg'>
+		<img src="source/plugin/gfarm/img/ui/plus.png" width='15px'/>
+	</div>
+	<div id='mix4' class="mix" style='background: url(source/plugin/gfarm/img/ui/bg0.png)'>
+		<img width="40px" height="40px" src="{$goods['3']['img']}" title="$goods['3']['name']"/>
+		<div id='form4' class='formbottom'>{if $depot[$goods['3']['id']]}{$depot[$goods['3']['id']]}{else}0{/if}</div>
+	</div>
+	<div class='baseimg' style="width: 62px">
+		<img src="source/plugin/gfarm/img/ui/direction.png" width='55px' style="bottom: 35px"/>
+		<img src="source/plugin/gfarm/img/ui/start.png" width='45px' style="bottom: 5px;left: 10px;cursor: pointer;" onclick="ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=react','ul4');"/>
+	</div>
+<script type="text/javascript" reload=1>
+(function(){
+	jq('#mix').css('background','url(source/plugin/gfarm/img/ui/bg1.png)').html("<img width='40px' height='40px' src='{$good[img]}' title='{$good[name]}'/>");
+	jq('#noline>.mix').each(function(){
+		jq(this).click(function(){
+			var position=jq(this).attr('id').substr(3);
+			jq(this).css('background','url(source/plugin/gfarm/img/ui/bg2.png)').html('');
+			jq('#mix').css('background','url(source/plugin/gfarm/img/ui/bg2.png)').html("");
+			ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=delete&position='+position,'');				
+		});
+	});
+	jq('#ul4 li').each(function(){
+		jq(this).click(function(){
+			var position;
+			var thisid=jq(this).children('div:first-child').attr('id');
+			if(jq('#mix1').children('img').length=='0'){
+				position=1;
+			}else if(jq('#mix2').children('img').length=='0'){
+				position=2;
+			}else if(jq('#mix3').children('img').length=='0'){
+				position=3;
+			}else if(jq('#mix4').children('img').length=='0'){
+				position=4;
+			}else{
+				position=5;
+			}
+			if(position!='5'){
+				ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=ajax&depotid='+thisid+'&depotposit='+position,'mix'+position);
+			}				
+		});
+	});
+})();
+</script>
+{template common/footer}

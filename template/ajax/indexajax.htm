@@ -1,0 +1,250 @@
+{template common/header}
+<table>
+<!--{loop $map $key $val}-->
+<tr>
+<!--{loop $val $key1 $val1}-->
+	<td>
+	<!--{if $test[$key][$key1]}-->
+		<div class='makeland' <!--{if $landInfoss[$test[$key][$key1]]}-->_id='{$test[$key][$key1]}'<!--{/if}-->>	
+		</div>
+		<span id='{$test[$key][$key1]}'>
+		<!--{if !$landInfoss[$test[$key][$key1]]['land_id']}-->
+		<img class='landimg' src="source/plugin/gfarm/img/ui/nouseland.png">
+		<img class='jiesuoimg' style='display:{if $countland<$mylevel['land_number']&&$_G['uid']==$uid}block{else}none{/if}' src="source/plugin/gfarm/img/ui/hoe.png"/>		
+		<!--{else}-->
+		<img class='landimg' src="source/plugin/gfarm/img/ui/useland.png">
+		<!--{/if}-->
+		</span>
+		<span id='_{$test[$key][$key1]}'>
+		<!--{if $landInfoss[$test[$key][$key1]]['germname']}-->
+		<!--{if $landInfoss[$test[$key][$key1]]['gain_time']<=time()}-->
+		<img class='cropimg' id='cropimg' src="$germs[$test[$key][$key1]]['mature_img']"/>
+		<!--{elseif $landInfoss[$test[$key][$key1]]['germ_time']+($landInfoss[$test[$key][$key1]]['gain_time']-$landInfoss[$test[$key][$key1]]['germ_time'])/3<=time()}-->
+		<img class='cropimg' id='germimg' src="$germs[$test[$key][$key1]]['sprout_img']"/>
+		<!--{else}-->
+		<img class='cropimg' id='germimg' src="source/plugin/gfarm/img/ui/germ.png"/>
+		<!--{/if}-->	
+		<!--{/if}-->
+		</span>	
+		<div class='tipdiv' id='tip_{$test[$key][$key1]}'>	
+		</div>
+		<!--{if $landInfoss[$test[$key][$key1]]}-->
+		<div class='titlediv' id='title_{$test[$key][$key1]}'>	
+		<!--{if $landInfoss[$test[$key][$key1]]['germname']}-->
+		<!--{if $landInfoss[$test[$key][$key1]]['gain_time']<=time()}-->
+		{lang gfarm:f048}{$landInfoss[$test[$key][$key1]]['cropname']}<br/>
+		{lang gfarm:f049}{$landInfoss[$test[$key][$key1]]['gain_number']}{lang gfarm:f012}
+		<!--{elseif $landInfoss[$test[$key][$key1]]['germ_time']+($landInfoss[$test[$key][$key1]]['gain_time']-$landInfoss[$test[$key][$key1]]['germ_time'])/3<=time()}-->
+		{$landInfoss[$test[$key][$key1]]['cropname']}{lang gfarm:f050}<br/>
+		{lang gfarm:f051}{eval echo ceil(($landInfoss[$test[$key][$key1]]['gain_time']-time())/60)}{lang gfarm:f052}<br/>
+		{lang gfarm:f053}{$landInfoss[$test[$key][$key1]]['gain_number']}{lang gfarm:f012}
+		<!--{else}-->
+		{$landInfoss[$test[$key][$key1]]['germname']}<br/>
+		{lang gfarm:f051}{eval echo ceil(($landInfoss[$test[$key][$key1]]['gain_time']-time())/60)}{lang gfarm:f052}<br/>
+		{lang gfarm:f053}{$landInfoss[$test[$key][$key1]]['gain_number']}{lang gfarm:f012}
+		<!--{/if}-->		
+		<!--{/if}-->
+		</div>	
+		<!--{/if}-->
+	<!--{/if}-->
+	
+	</td>
+<!--{/loop}-->
+</tr>
+<!--{/loop}-->
+</table>
+<script type="text/javascript" reload=1>
+(function(){
+	var str="";
+	var str1="";
+	var str2="";
+	{if $uid!=$_G['uid']}
+	{if $myvip['opensteal']=='1'}
+	str1+="<img src='source/plugin/gfarm/img/ui/allsteal.png' title='{lang gfarm:f139}' onclick=\"ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&formhash={FORMHASH}&act=allsteal&uid={$uid}','');\"/>";
+	{/if}
+	str1+="<img class='home' onclick=\"location.href='plugin.php?id=gfarm:front'\" src='source/plugin/gfarm/img/ui/home.png'/>";
+	str+="<img class='yuanbao01' src='source/plugin/gfarm/img/ui/yuanbao01.png'/>"+
+		"<img class='money01' src='source/plugin/gfarm/img/ui/money01.png'/>"+
+	"<img class='streng01' src='source/plugin/gfarm/img/ui/streng01.png'/><div style='width: 65px;height: 70px;float: left;'>"+
+	"<img style='margin-top:16px;margin-left: 3px' src=\"{eval echo avatar($uid,'origin',true);}\" width='55px' height='55px'/><span style='margin-top: 5px;color: white' id='collect'>"+
+	{if !$hascollect}
+	"<a onclick=\"ajaxget('plugin.php?id=gfarm:front&mod=sort&formhash={FORMHASH}&act=collect&uid=$uid','collect')\" style='color: white'>[{lang gfarm:f099}]</a>"+
+	{else}
+	"[{lang gfarm:f096}]"+
+	{/if}
+	"</span></div>"+
+	"<div style='width: 155px;float: left;line-height: 17px;'>"+
+	"<div id='userinfo'>{$currentuser['username']}<br/>"+
+	"Lv.{$currentlevel['level']}({$currentuser['experience']}/{$nextlevel['experience']})</div>"+
+	"<div style='width: 155px;float: left;'>"+
+	"<div style='height: 30px;margin-left: 28px'><span>{$currentuser['money']}</span><br/>"+
+	"<span>{$current_credit}</span><br/>"+
+	"<span>{$currentuser['now_strength']}/{eval echo $setInfo['power']+$currentlevel['strength']}</span>"+
+	"</div>"+
+	"<img style='position: absolute;top:110px;left: 45px;cursor:pointer' onclick='upordown()' src='source/plugin/gfarm/img/ui/3.png'/></div><div style='height: 10px;text-align: right;float:right;'>"+	
+	"</div></div>";
+	jq('#lefttopother').html(str).show();
+	str2+="<span onclick=\"changeimg(jq(this).children('img'));jq('#itemsul').hide();jq('#closemenu').hide()\"><img src='source/plugin/gfarm/img/ui/hand.png' dataid='-3' tid='-3'/><font>{lang gfarm:f035}</font></span>"+
+	"<span><a href='javascript:;' onclick=\"ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&do=19','itemsul');jq('#itemsul').show();jq('#closemenu').show()\"><img src='source/plugin/gfarm/img/ui/tool.png'/><font>{lang gfarm:f015}</font></a></span>";
+	{else}
+	{if $myvip['openget']=='1'}
+	str1+="<img src='source/plugin/gfarm/img/ui/allget.png' title='{lang gfarm:f039}' onclick=\"ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&formhash={FORMHASH}&act=allgot','');\"/>";
+	{/if}
+	str2+="<input type='hidden' id='hasuser' value='1'/>"+
+	"<span><a href='javascript:;' onclick=\"ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&do=9','itemsul');jq('#itemsul').show();jq('#closemenu').show()\"><img src='source/plugin/gfarm/img/ui/setgerm.png'/><font>{lang gfarm:f032}</font></a></span>"+
+	"<span onclick=\"changeimg(jq(this).children('img'));jq('#itemsul').hide();jq('#closemenu').hide()\"><img src='source/plugin/gfarm/img/ui/shovel.png' dataid='-1' tid='-1'><font>{lang gfarm:f033}</font></span>"+
+	"<span onclick=\"changeimg(jq(this).children('img'));jq('#itemsul').hide();jq('#closemenu').hide()\"><img src='source/plugin/gfarm/img/ui/hand.png' dataid='-2' tid='-2'/><font>{lang gfarm:f034}</font></span>"+
+	"<span><a href='javascript:;' onclick=\"ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&do=19','itemsul');jq('#itemsul').show();jq('#closemenu').show()\"><img src='source/plugin/gfarm/img/ui/tool.png'/><font>{lang gfarm:f015}</font></a></span>";
+	jq('#lefttopother').hide();
+	{/if}	
+	jq('#userid').val({$uid});	
+	jq('#bottomright').html(str1);		
+	jq('#usermenu').html(str2);		
+	var str3="";
+	var str4="";
+	var str5="";
+	{if $fived}
+	str3+="<span><a href='javascript:;'><img src='{$fived[img]}'/></a></span>";
+	{/if}
+	{if $sixd}
+	jq('#backland').css('background','url($sixd[img]) no-repeat center').css('filter',"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$sixd[img]',sizingMethod='scale')");
+	{else}
+	jq('#backland').css('background','url(source/plugin/gfarm/img/ui/backgroup_01.png)');
+	{/if}
+	{if $sevend}
+	str4+="<span><a href='javascript:;'><img src='{$sevend[img]}'/></a></span>";
+	{/if}
+	{if $eightd}
+	str5+="<span><a href='javascript:;'><img src='{$eightd[img]}'/></a></span>";
+	{/if}
+	jq('#center').html(str3);	
+	jq('#seven').html(str4);	
+	jq('#eight').html(str5);			
+	jq('#closemenu').hide();
+	jq('#itemsul').hide();
+	jq('#moveimg').hide();
+	jq('#maindiv').css('cursor','auto');						
+})();
+</script>
+<script type="text/javascript" reload=1>
+function upordown(){
+	if(jq('#lefttopother').css('top')=='110px'){
+		jq('#lefttopother').animate({top:'0px'},1000);
+	}else{
+		jq('#lefttopother').animate({top:'110px'},1000);
+	}
+}
+jq(function(){
+	jq('#friendname').val('');
+	demo=function(event){
+		var newX;
+		var newY;
+		if(jq('#goodtype').val()==9){
+			newX = parseInt(event.pageX)-jq('#moveimg').width()/2;
+			newY = parseInt(event.pageY)-jq('#moveimg').height()/1.3;
+		}
+		if(jq('#goodtype').val()==19){
+			newX = parseInt(event.pageX)-jq('#moveimg').width()/2;
+			newY = parseInt(event.pageY)-jq('#moveimg').height()/1.3;
+		}
+		if(jq('#goodtype').val()<0){
+			newX = parseInt(event.pageX)-jq('#moveimg').width()/30;
+			newY = parseInt(event.pageY)-jq('#moveimg').height()/2;
+		}
+		jq('#moveimg').css("left",newX + "px").css("top",newY + "px");	
+	}
+	jq('#goodtype').val('');
+	jq('#maindiv').bind('mousemove',function(event){//鍥剧墖闅忛紶鏍囩Щ鍔�
+		demo(event);
+	});
+	jq('#maindiv').bind("contextmenu",function(e){  //鍏抽棴鍙抽敭鍔熻兘
+		return false;   
+	});
+	jq('#maindiv').mousedown(function(event){	//鍒ゆ柇鏄惁鍙冲嚮
+		if(event.which==3){
+			jq('#moveimg').hide();
+			jq('#maindiv').css('cursor','auto');
+		}
+	});
+	changeimg=function(obj){		//鏄剧ず绉诲姩鍥剧墖
+		if(jq(obj).attr('tid')=='9'){
+			jq('#moveimg').attr('src','source/plugin/gfarm/img/ui/germ1.png').show();
+		}else{
+			jq('#moveimg').attr('src',jq(obj).attr('src')).show();
+		}
+		jq('#maindiv').css('cursor','none');
+		jq('#dataid').val(jq(obj).attr('dataid'));
+		jq('#goodtype').val(jq(obj).attr('tid'));	
+	}
+	jq('#ptable .makeland').each(function(){
+		var tar=jq(this).next().attr('id');
+		var _tar='_'+jq(this).next().attr('id');
+		jq(this).next().find('.jiesuoimg').click(function(){
+			if(jq('#hasuser').val()=='1'){
+				if(jq(this).parent().prev().attr("_id")==undefined&&jq('#moveimg').css('display')=='none'){//解锁
+					window.hideWindow('gfarm');
+					window.hideWindow('gfarm1');
+					if(jq('#jiesuoval').val()=='1'){
+						window.showDialog(jq('#mjs').val(), 'confirm', '', function() {ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&formhash='+jq('#formhash').val()+'&act=landajax&landid='+tar,'');});
+					}else{
+						ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&formhash='+jq('#formhash').val()+'&act=landajax&landid='+tar,'');
+					}
+				}	
+			}			
+		});
+		this.onclick=function(){			
+			if(jq('#hasuser').val()=='1'){
+				if(jq('#goodtype').val()=='9'&&jq(this).attr("_id")){//绉嶆
+					if(jq(this).next().next().children('img').length!=1&&jq('#moveimg').css('display')!='none'){					
+						ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&depotid='+jq('#dataid').val()+'&formhash='+jq('#formhash').val()+'&act=germajax&landid='+tar,'');
+					}
+				}
+				if(jq('#goodtype').val()=='-1'&&jq('#moveimg').css('display')!='none'&&jq(this).attr("_id")){//閾查櫎浣滅墿
+					var tarhtml=jq('#'+_tar).html();
+					jq('#maindiv').unbind('mousemove');
+					if(jq(this).next().next().children('img').length==1){	
+						jq('#moveimg').attr('src','source/plugin/gfarm/img/ui/sholve1.png');
+						setTimeout(function(){jq('#moveimg').attr('src','source/plugin/gfarm/img/ui/sholve.png');window.showDialog(jq('#mcc').val(), 'confirm', '', function() {ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&formhash='+jq('#formhash').val()+'&act=delete&landid='+tar,'');jq('#maindiv').bind('mousemove',function(event){
+							demo(event);
+						});},0,function(){jq('#maindiv').bind('mousemove',function(event){
+							demo(event);
+						});});	},100);							
+					}
+				}
+				if(jq('#goodtype').val()=='-2'&&jq('#moveimg').css('display')!='none'&&jq(this).next().next().children('img').attr('id')=='cropimg'){//鏀惰幏
+					jq('#moveimg').attr('src','source/plugin/gfarm/img/ui/hand1.png');
+					setTimeout(function(){jq('#moveimg').attr('src','source/plugin/gfarm/img/ui/hand.png')},100);					
+					ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&formhash='+jq('#formhash').val()+'&act=getcrop&landid='+tar,'');
+				}
+			}		
+			if(jq('#goodtype').val()=='19'&&jq(this).attr("_id")){//閬撳叿			
+				if(jq(this).next().next().children('img').length==1&&jq(this).next().next().children('img').attr('id')!='cropimg'&&jq('#moveimg').css('display')!='none'){					
+					ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&depotid='+jq('#dataid').val()+'&formhash='+jq('#formhash').val()+'&act=itemajax&landid='+tar+'&uid='+jq('#userid').val(),'');
+				}
+			}
+			if(jq('#goodtype').val()=='-3'&&jq('#moveimg').css('display')!='none'&&jq(this).next().next().children('img').attr('id')=='cropimg'){//鍋风獌
+				jq('#moveimg').attr('src','source/plugin/gfarm/img/ui/hand1.png');
+				setTimeout(function(){jq('#moveimg').attr('src','source/plugin/gfarm/img/ui/hand.png')},100);	
+				ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&formhash='+jq('#formhash').val()+'&uid='+jq('#userid').val()+'&act=stealcrop&landid='+tar,'');
+			}				
+		}	
+		jq(this).hover(function(){	
+			jq(this).parent().children('.titlediv').show();
+			//ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&act=seedetail&landid='+tar,'title_'+tar);		
+		},function(){
+			jq(this).parent().children('.titlediv').hide();
+		});
+	});
+	jq('#closemenu').click(function(){
+		jq('#closemenu').hide();
+		jq('#itemsul').hide();
+	});
+	jq('#bottomcenter span').each(function(){
+		jq(this).click(function(){
+			window.hideWindow('gfarm');
+			window.hideWindow('gfarm1');
+		});
+	});
+});
+</script>
+{template common/footer}

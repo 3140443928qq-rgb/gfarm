@@ -1,0 +1,60 @@
+{template gfarm:cp/nav}
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class="g47jh_cp_content">
+	<div class="g47jh_content_div">
+		<div class="g47jh_content_title">	
+			<span class="g47jh_content_span">
+			<form action="plugin.php?id=gfarm:cp&mod=dailylog" method="post">
+<span>UID{lang gfarm:c062}<input type="text" name="uid" value="$uid"/></span>
+<span>{lang gfarm:f076}{lang gfarm:c062}
+<input type="text" name="start_time" value="{if $start_time}{eval echo dgmdate($start_time, 'Y-m-d H:i');}{/if}" onClick="showcalendar(event, this, 1);"/>~<input type="text" name="end_time" value="{if $end_time}{eval echo dgmdate($end_time, 'Y-m-d H:i');}{/if}" onClick="showcalendar(event, this, 1);"/></span>
+<button class="g47jh_content_submit">{lang gfarm:c064}</button>
+</form>
+</span>
+		</div>	
+		<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 1px" >
+	<tr>
+    	<th class="xw1" style="text-align: center;">UID</th>  
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c126}</th>  
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c136}</th> 
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c137}</th>
+	 	<th class="xw1" style="text-align: center;"><A href="plugin.php?id=gfarm:cp&mod=dailylog&ordertype=$ordertype">{lang gfarm:c138}</A></th>
+	</tr>
+	<!--{loop $taskInfos $key $val}-->
+	<tr <!--{if $key%2==1}-->class="alt"<!--{/if}-->>		
+		<td>{$val['uid']}</td> 
+		<td>{$users[$key]['username']}</td> 
+    	<td>{$val['task_name']}</td>
+    	<td>{if $val['reward_flag']=='1'}{lang gfarm:c083}{elseif $val['visible']=='0'}{lang gfarm:c084}{/if}</td> 
+      	<td>{if $val['reward_time']}{eval echo dgmdate($val['reward_time'],'Y-m-d H:i:s')}{else}----{/if}</td>
+	</tr>
+	<!--{/loop}-->
+</table>
+	</div>
+	<!--分页-->
+	<div class="adjust_page_div" style="margin-top: -20px;">
+		<div class="adjust_page_span">{lang gfarm:c015}<i style="color: #4689cf">{$num}</i>{lang gfarm:c016}</div>
+		<div class="adjust_page_right">
+			<div class="view_page_div" style="width: {$page_width_arr['div_width']}px">
+				<ul>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page=1{$text}">{lang gfarm:c232}</a></li>
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==1}showerror('{lang gfarm:cp028}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage-1}{$text}';{/if}">{lang gfarm:c266}</a></li>
+					<!--{loop $page_number_arr $key $val_page}-->
+						<li class="view_page_number"  style="width:{$page_width_arr['li_width'][$key]}px; {if $currpage==$val_page} background: #78b3ef;border-color: #78b3ef; {/if}" ><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$val_page}{$text}"  style="{if $currpage==$val_page} color: #ffffff ;{/if}" >{$val_page}</a></li>
+					<!--{/loop}-->
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==$maxpage}showerror('{lang gfarm:cp030}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage+1}{$text}';{/if}">{lang gfarm:c267}</a></li>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$maxpage}{$text}" >{lang gfarm:f046}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+	function showmsg(msg){
+		window.showDialog(msg,'right','',function(){window.location.href='plugin.php?id=gfarm:cp&mod=dailylog'},0);
+	}
+</script>
+{template gfarm:cp/footer}

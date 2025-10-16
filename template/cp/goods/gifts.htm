@@ -1,0 +1,15 @@
+<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c052}</td>
+ 				<td><input type="text" name="goods_id" value="{$gifts['goods_id']}"/><font color="red">{lang gfarm:c053}</font></td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c054}</td>
+ 				<td><input type="text" name="goods_number" value="{$gifts['goods_number']}"/><font color="red">{lang gfarm:c053}</font></td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c055}</td>
+ 				<td>
+ 				<input type='radio' name="open_type" value="0" id='open_type0' onclick="jq('#randnum').hide()" <!--{if $gifts['open_type']==0}-->checked="checked"<!--{/if}-->/><label for="open_type0">{lang gfarm:c056}</label>
+ 				<input type='radio' name="open_type" value="1" id='open_type1' onclick="jq('#randnum').show()" <!--{if $gifts['open_type']==1}-->checked="checked"<!--{/if}-->/><label for="open_type1">{lang gfarm:c057}</label>
+ 				</td>
+			</tr> 
+			<tr id='randnum' {if $gifts['open_type']!='1'}style="display:none"{/if}><td class="table002" align="right">{lang gfarm:c058}</td>
+ 				<td><input type="text" name="open_number" value="{$gifts['open_number']}"/><font color="red">{lang gfarm:c059}</font></td>
+			</tr> 	

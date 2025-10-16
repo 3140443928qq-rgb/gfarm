@@ -1,0 +1,72 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/signbg.png) no-repeat;}
+</style>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class='signclass' onmousedown="dragMenu($('fwin_gfarm'),event,1)">
+<div class='signclose' onclick="hideWindow('gfarm');hideWindow('gfarm1');"></div>
+<div id='signout'>
+<div id='signtop'>
+	<div class='signtitle listti'>{lang gfarm:f084}<span id='titsign'>{$csign}</span>{lang gfarm:f085}</div>
+	<table id='signtable'>
+	<thead>
+	<tr>
+	<td>{lang gfarm:f086}</td>
+	<td>{lang gfarm:f087}</td>
+	<td>{lang gfarm:f088}</td>
+	<td>{lang gfarm:f089}</td>
+	<td>{lang gfarm:f090}</td>
+	<td>{lang gfarm:f091}</td>
+	<td>{lang gfarm:f092}</td>
+	</tr>
+	</thead>
+	{loop $weeks $key $val}
+	<tr>
+	<td><div id='sign{$key}0' {if $usersigns[$key][0]}style='background-image:url(source/plugin/gfarm/img/ui/signcheck.png)'{/if}>{if $val[0]}{$val[0]}{/if}</div></td>
+	<td><div id='sign{$key}1' {if $usersigns[$key][1]}style='background-image:url(source/plugin/gfarm/img/ui/signcheck.png)'{/if}>{if $val[1]}{$val[1]}{/if}</div></td>
+	<td><div id='sign{$key}2' {if $usersigns[$key][2]}style='background-image:url(source/plugin/gfarm/img/ui/signcheck.png)'{/if}>{if $val[2]}{$val[2]}{/if}</div></td>
+	<td><div id='sign{$key}3' {if $usersigns[$key][3]}style='background-image:url(source/plugin/gfarm/img/ui/signcheck.png)'{/if}>{if $val[3]}{$val[3]}{/if}</div></td>
+	<td><div id='sign{$key}4' {if $usersigns[$key][4]}style='background-image:url(source/plugin/gfarm/img/ui/signcheck.png)'{/if}>{if $val[4]}{$val[4]}{/if}</div></td>
+	<td><div id='sign{$key}5' {if $usersigns[$key][5]}style='background-image:url(source/plugin/gfarm/img/ui/signcheck.png)'{/if}>{if $val[5]}{$val[5]}{/if}</div></td>
+	<td><div id='sign{$key}6' {if $usersigns[$key][6]}style='background-image:url(source/plugin/gfarm/img/ui/signcheck.png)'{/if}>{if $val[6]}{$val[6]}{/if}</div></td>
+	</tr>
+	{/loop}
+	</table>
+	</div>	
+	{if !$hassign}<img id='signcenter' src="source/plugin/gfarm/img/ui/01.png" onclick="ajaxget('plugin.php?id=gfarm:front&mod=sort&act=signin&pact=in&formhash={FORMHASH}','')"/>{/if}
+	<div id='signbottom'>
+	<div id='signnote'>
+	</div>
+	<div id='signnote1'>
+	</div>
+	<div id='signcontent'>
+	{loop $signInfos $key $val}
+	<div title="{$rewardstrs[$key]}"><div class="signco" {if !empty($signwards[$key])}style="display:block"{/if}></div><span>{$val['sign_day']}{lang gfarm:f093}</span><br/><img src='source/plugin/gfarm/img/ui/gift0{eval echo $key+1}.png'/>
+	<div id='signco{$val[id]}' class="onsignco" {if $csign>=$val['sign_day']&&empty($signwards[$key])}style="cursor:pointer;display:block"  onclick="ajaxget('plugin.php?id=gfarm:front&mod=sort&act=signin&pact=getward&formhash={FORMHASH}&signid={$val[id]}','')"{/if}></div>
+	</div>
+	{/loop}
+	</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript" reload=1>
+(function(){
+	if($max>0){
+		if($max==1){
+			jq('#signnote1').css('width','55px');
+		}else if($max<6){
+			jq('#signnote1').css('width','{eval echo 55+121*($max-1)}px');
+		}else{
+			jq('#signnote1').css('width','700px');
+		}		
+	}
+})();
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

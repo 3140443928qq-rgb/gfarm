@@ -1,0 +1,74 @@
+{template gfarm:cp/nav}
+<script type="text/javascript">
+	function showmsg(msg) {
+		window.showDialog(msg, 'right', '', function() {
+			window.location.href = 'plugin.php?id=gfarm:cp&mod=vip&page=$currpage&orderfield=$orderfield1&ordertype=$ordertype1'
+		}, 0);
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class="g47jh_cp_content">
+	<div class="g47jh_content_div">
+		<div class="g47jh_content_title">	
+			<a class="g47jh_content_button" href="javascript:" onclick="showWindow('gfarm','plugin.php?id=gfarm:cp&mod=vip&act=update')">{lang gfarm:c006}</a>
+		</div>	
+		<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 10px" >
+	<tr>
+    	<th class="xw1" style="text-align: center;">VIP{lang gfarm:c219}</th>
+	 	<th class="xw1" style="text-align: center;">{lang gfarm:c220}</th>  
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c301}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c302}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c303}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c304}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c305}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c306}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c307}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c311}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c317}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c325}</th>
+    	<th class="xw1" style="text-align: center;min-width: 130px">{lang gfarm:c013}</th>
+	</tr>
+	<!--{loop $vipInfos $key $val}-->
+	<tr <!--{if $key%2==1}-->class="alt"<!--{/if}-->>
+    	<td>{$val['vipname']}</td>
+	    <td>{if $val['grouptitle']}{$val['grouptitle']}{else}{lang gcity:f039}{/if}</td> 
+    	<td>{$val['reshopmoney']}</td> 
+    	<td>{$val['relockmoney']}</td> 
+    	<td>{$val['addstealodd']}</td> 
+    	<td>{$val['addstealnumber']}</td> 
+    	<td>{$val['restealodd']}</td> 
+    	<td>{$val['restealnumber']}</td> 
+    	<td>{$val['addstrength']}</td> 
+    	<td>{if $val['openget']}{lang gfarm:c083}{else}{lang gfarm:c084}{/if}</td> 
+    	<td>{if $val['opensteal']}{lang gfarm:c083}{else}{lang gfarm:c084}{/if}</td> 
+    	<td>{if $val['openindex']}{lang gfarm:c083}{else}{lang gfarm:c084}{/if}</td> 
+    	<td>
+    	<a href='plugin.php?id=gfarm:cp&mod=vip&act=update&vipid={$val[id]}&page={$currpage}&orderfield=$orderfield1&ordertype=$ordertype1' onclick="showWindow('gfarm',this.href)">{lang gfarm:c014}</a>
+    	<a href='javascript:;' onclick="showDialog('{lang gfarm:c223}','confirm','',function(){myframe.location.href = 'plugin.php?id=gfarm:cp&mod=vip&act=delete&vipid={$val[id]}&page={$currpage}&formhash={FORMHASH}&orderfield=$orderfield1&ordertype=$ordertype1'},0)">{lang gfarm:c077}</a>
+    	</td>
+	</tr>
+	<!--{/loop}-->
+</table>
+	</div>
+	<!--分页-->
+	<div class="adjust_page_div" style="margin-top: -20px;">
+		<div class="adjust_page_span">{lang gfarm:c015}<i style="color: #4689cf">{$num}</i>{lang gfarm:c016}</div>
+		<div class="adjust_page_right">
+			<div class="view_page_div" style="width: {$page_width_arr['div_width']}px">
+				<ul>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page=1{$text}">{lang gfarm:c232}</a></li>
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==1}showerror('{lang gfarm:cp028}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage-1}{$text}';{/if}">{lang gfarm:c266}</a></li>
+					<!--{loop $page_number_arr $key $val_page}-->
+						<li class="view_page_number"  style="width:{$page_width_arr['li_width'][$key]}px; {if $currpage==$val_page} background: #78b3ef;border-color: #78b3ef; {/if}" ><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$val_page}{$text}"  style="{if $currpage==$val_page} color: #ffffff ;{/if}" >{$val_page}</a></li>
+					<!--{/loop}-->
+					<li class="view_page_next"><a href="javascript:" onclick="{if $currpage==$maxpage}showerror('{lang gfarm:cp030}');{else}document.location.href='plugin.php?id=gfarm:cp&mod={$mod}&page={eval echo $currpage+1}{$text}';{/if}">{lang gfarm:c267}</a></li>
+					<li class="view_page_next"><a href="plugin.php?id=gfarm:cp&mod={$mod}&page={$maxpage}{$text}" >{lang gfarm:f046}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{template gfarm:cp/footer}

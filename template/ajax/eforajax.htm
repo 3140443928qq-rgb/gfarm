@@ -1,0 +1,18 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	jq('#ed_'+{$depot['id']}+' .ecohide').hide();
+	{if $deco['small_type']=='2'}
+	jq('#mainequip').html("");
+	{else}
+	jq('#importequip').html("");
+	{/if}
+		function funcequip1(obj){
+			ajaxget('plugin.php?id=gfarm:front&mod=equipment&act=learn&depotid='+obj+'&formhash='+jq('#formhash').val(),'');
+		}
+		function funcdeco1(obj){
+			ajaxget('plugin.php?id=gfarm:front&mod=equipment&act=forget&depotid='+obj+'&formhash={FORMHASH}','');
+		}
+})();
+</script>
+{template common/footer}

@@ -1,0 +1,19 @@
+{template common/header}
+<script type="text/javascript">
+jq('#sign{$tflag}').css('background-image','url(source/plugin/gfarm/img/ui/signcheck.png)');
+if($max1!=$max){
+	if($max1==1){
+		jq('#signnote1').css('width','55px');
+	}else if($max1<6){
+		jq('#signnote1').css('width','{eval echo 55+121*($max1-1)}px');
+	}else{
+		jq('#signnote1').css('width','700px');
+	}	
+	jq('#signco{$signInfos[$max][id]}').show().click(function(){
+		ajaxget('plugin.php?id=gfarm:front&mod=sort&act=signin&pact=getward&formhash={FORMHASH}&signid={$signInfos[$max][id]}','');
+	});	
+}
+jq('#signcenter').remove();
+jq('#titsign').html(parseInt(jq('#titsign').html())+1);
+</script>
+{template common/footer}

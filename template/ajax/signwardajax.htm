@@ -1,0 +1,37 @@
+{template common/header}
+<script type="text/javascript">
+jq('#signco{$signid}').removeAttr('onclick').hide().siblings('.signco').show();
+var str="<ul class='dialogul'>";
+{if !empty($signin['reward_money'])}
+str+="<li>{$config['moneyname']}x{$signin['reward_money']}</li>";
+jq('#usermoney').html({eval echo $user['money']+$signin['reward_money']});
+{/if}
+{if !empty($signin['reward_exp'])}
+str+="<li>EXPx{$signin['reward_exp']}</li>";
+jq('#userexp').html({$userarr['experience']}+'/'+{$nextlevel['experience']});
+{if !empty($levelflag)}
+{if $countland<$mylevel1['land_number']}
+jq('.jiesuoimg').each(function(){
+jq(this).show();
+});
+{/if}
+jq('#userlevel').html({$mylevel1['level']});	
+jq('#userleveltip').show();
+setTimeout( function(){jq('#userleveltip').fadeOut();}, ( 3 * 1000 ) ); 
+{/if}
+{/if}
+{if !empty($signin['reward_bene'])}
+str+="<li>{lang gfarm:c213}x{$signin['reward_bene']}</li>";
+jq('#userbene').html({eval echo $user['benevolence']+$signin['reward_bene']});
+{/if}
+{if !empty($signin['reward_yuan'])}
+str+="<li>{$config['bullionsname']}x{$signin['reward_yuan']}</li>";
+jq('#useryuan').html({$user_credit});
+{/if}
+{if !empty($signin['reward_items'])}
+str+="<li>{$item['name']}x{$signin['items_num']}</li>";
+{/if}
+str+='</ul>';
+window.showDialog(str, 'right', '{lang gfarm:f106}', function() {}, 0);
+</script>
+{template common/footer}

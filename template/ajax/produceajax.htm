@@ -1,0 +1,33 @@
+{template common/header}
+	<div class='promaimg' style="left: 103px">
+	<img src="{$goods[0][img]}" title="{$goods[0][name]}" width="75px"/>	
+	<div id='form1' class='formbottom'>{if $depot[$goods[0]['id']]}{$depot[$goods[0]['id']]}{else}0{/if}</div>
+	<div class='formnum'>x {$goodnums[0]}</div>
+	</div>
+	<div class='promaimg' style="left: 226px">
+	<img src="{$goods[1][img]}" title="{$goods[1][name]}" width="75px"/>
+	<div id='form2' class='formbottom'>{if $depot[$goods[1]['id']]}{$depot[$goods[1]['id']]}{else}0{/if}</div>
+	<div class='formnum'>x {$goodnums[1]}</div>
+	</div>
+	<div class='promaimg' style="right: 227px">
+	<img src="{$goods[2][img]}" title="{$goods[2][name]}" width="75px"/>
+	<div id='form3' class='formbottom'>{if $depot[$goods[2]['id']]}{$depot[$goods[2]['id']]}{else}0{/if}</div>
+	<div class='formnum'>x {$goodnums[2]}</div>
+	</div>
+	<div class='promaimg' style="right: 102px">
+	<img src="{$goods[3][img]}" title="{$goods[3][name]}" width="75px"/>
+	<div id='form4' class='formbottom'>{if $depot[$goods[3]['id']]}{$depot[$goods[3]['id']]}{else}0{/if}</div>
+	<div class='formnum'>x {$goodnums[3]}</div>
+	</div>
+<script type="text/javascript" reload=1>
+(function(){
+	jq('#mix').html("<img src='{$good[img]}' width='75px'/>");
+	jq('#protable').html("<tr><td colspan='2' style='font-size: 14px;font-weight: bold;'>{$good[name]}</td></tr>"+
+			""+
+			"<tr><td>{lang gfarm:f114}{lang gfarm:c062}</td><td style='text-align:left'>{$formulagood[produce_small]}~{$formulagood[produce_big]}</td></tr>"+
+			"<tr><td>{lang gfarm:f113}{lang gfarm:c062}</td><td style='text-align:left'>{if $good['money_types']==1}<img title='{$config[bullionsname]}' src='source/plugin/gfarm/img/ui/gold-1.png'>{else}<img title='{$config[moneyname]}' src='source/plugin/gfarm/img/ui/money-1.png'>{/if}{$allcount}</td></tr>"+
+			"<tr><td>{lang gfarm:f017}{lang gfarm:c062}</td><td style='text-align:left'>{if $good['money_types']==1}<img title='{$config[bullionsname]}' src='source/plugin/gfarm/img/ui/gold-1.png'>{else}<img title='{$config[moneyname]}' src='source/plugin/gfarm/img/ui/money-1.png'>{/if}{$good[sale_price]}</td></tr>"+
+			"<tr><td>{lang gfarm:f078}{lang gfarm:c062}</td><td style='text-align:left'>{$separate[separate_name]}</td></tr>");
+})();
+</script>
+{template common/footer}

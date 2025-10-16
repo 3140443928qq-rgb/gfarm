@@ -1,0 +1,216 @@
+{template common/header}
+<link rel="stylesheet" type="text/css" href="source/plugin/gfarm/css/style.css" />
+<script type="text/javascript" src="source/plugin/gfarm/js/jquery.js"></script>
+<script type="text/javascript">
+	var jq=jQuery.noConflict();
+</script>
+<script type="text/javascript">
+jq(function(){
+	if({eval echo date('Ymd',$user['last_restrength'])}<{eval echo date('Ymd')}&&!empty($maintask)&&empty($maintask['reward_flag'])){
+		window.showWindow('gfarm','plugin.php?id=gfarm:front&mod=maintask&act=showtask&type=1');
+	}		
+});
+</script>
+<script type="text/javascript" src="source/plugin/gfarm/js/index.js"></script>
+<body>
+<div id='maindiv'>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div id="append_parent"></div>
+<input type="hidden" id="formhash" value="{FORMHASH}"/>
+<input type="hidden" id="dataid"/>
+<input type="hidden" id="userid" value="{$uid}"/>
+<input type="hidden" id="mcc" value="{lang gfarm:f044}"/>
+<input type="hidden" id="jiesuoval" value="{if $lock['money']}1{else}0{/if}"/>
+<input type="hidden" id="mjs" value="{lang gfarm:f128}{if $lock['money']}{$lock['money']}{else}0{/if}{if $lock['money_type']=='1'}{$config['bullionsname']}{else}{$config['moneyname']}{/if}{lang gfarm:f045}"/>
+<input type="hidden" id="goodtype"/>
+<div style="position: relative;">
+<div id='maxbottomright'>
+{if $setInfo['isout']}
+<span><a href="plugin.php?id=gfarm:front&mod=exchange&act=out" onclick="showWindow('gfarm',this.href)">{lang gfarm:c118}</a></span>
+{/if}
+{if in_array($_G['uid'],$admins)||$_G['groupid']==1}
+<span><a href="plugin.php?id=gfarm:cp" target="_blank">{lang gfarm:f038}</a></span>
+{/if}
+</div>
+<div id='backland' {if $sixd}style="background: url($sixd[img]) no-repeat center;background-size:100% ;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$sixd[img]',sizingMethod='scale');"{/if}>
+<div id='righttop'>
+<span><a href="plugin.php?id=gfarm:front&mod=depot" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/depot.png'/></a></span>
+<span><a href="plugin.php?id=gfarm:front&mod=shop" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/shop.png'/></a></span>
+<span><a href="plugin.php?id=gfarm:front&mod=rank&do=experience" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/ranking.png'/></a></span>
+<span><a href="plugin.php?id=gfarm:front&mod=picture" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/pic.png'/></a></span>
+{if $cequipment=='1'}
+<span><a href="plugin.php?id=gfarm:front&mod=equipment" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/equipment.png'/></a></span>
+<span><a href="plugin.php?id=gfarm:front&mod=decorate" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/decorate.png'/></a></span>
+{/if}
+{if $cformula=='1'}
+<span><a href="plugin.php?id=gfarm:front&mod=produce" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/process.png'/></a></span>
+{/if}
+</div>
+<div id='leftcenter'>
+<span><a href="plugin.php?id=gfarm:front&mod=sort&act=signin" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/signin.png'/></a></span>
+<span><a href="plugin.php?id=gfarm:front&mod=sort&act=ad" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/ad.png'/></a></span>
+<span><a href="plugin.php?id=gfarm:front&mod=sort&act=message" onclick="hideWindow('gfarm1');showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/mess.png'/></a></span>
+</div>
+<div id='refresh' title="{lang gfarm:f031}"></div>
+<div id='bottomcenter'>
+<div id='itemsul' style="display: none">
+</div>
+<div id='closemenu'></div>
+<div id='usermenu'>
+{if $_G['uid']==$currentuser['uid']}
+<input type="hidden" id="hasuser" value="1"/>
+<span><a href="javascript:;" onclick="ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&do=9','itemsul');jq('#itemsul').show();jq('#closemenu').show()"><img src='source/plugin/gfarm/img/ui/setgerm.png'/><font>{lang gfarm:f032}</font></a></span>
+<span onclick="changeimg(jq(this).children('img'));jq('#itemsul').hide();jq('#closemenu').hide()"><img src='source/plugin/gfarm/img/ui/shovel.png' dataid="-1" tid='-1'><font>{lang gfarm:f033}</font></span>
+<span onclick="changeimg(jq(this).children('img'));jq('#itemsul').hide();jq('#closemenu').hide()"><img src='source/plugin/gfarm/img/ui/hand.png' dataid="-2" tid='-2'/><font>{lang gfarm:f034}</font></span>
+<span><a href="javascript:;" onclick="ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&do=19','itemsul');jq('#itemsul').show();jq('#closemenu').show()"><img src='source/plugin/gfarm/img/ui/tool.png'/><font>{lang gfarm:f015}</font></a></span>
+{else}
+<span onclick="changeimg(jq(this).children('img'));jq('#itemsul').hide();jq('#closemenu').hide()"><img src='source/plugin/gfarm/img/ui/hand.png' dataid="-3" tid='-3'/><font>{lang gfarm:f035}</font></span>
+<span><a href="javascript:;" onclick="ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&do=19','itemsul');jq('#itemsul').show();jq('#closemenu').show()"><img src='source/plugin/gfarm/img/ui/tool.png'/><font>{lang gfarm:f015}</font></a></span>
+{/if}
+</div>
+</div>
+<div id='bottomleft'>
+<span><a {if !empty($maintask)&&empty($maintask['reward_flag'])}href="plugin.php?id=gfarm:front&mod=maintask&act=showtask&type=1" onclick="showWindow('gfarm',this.href)"{else}onclick="showDialog('{lang gfarm:f036}', 'error', '', function() {}, 0);"{/if}><img src='source/plugin/gfarm/img/ui/maintask.png'/></a></span>
+<span><a href="plugin.php?id=gfarm:front&mod=dailytask&act=daily" onclick="showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/basetask.png'/></a></span>
+<span><a {if !empty($dailyact)}href="plugin.php?id=gfarm:front&mod=acttask" onclick="showWindow('gfarm',this.href)"{else}onclick="showDialog('{lang gfarm:f037}', 'error', '', function() {}, 0);"{/if}><img src='source/plugin/gfarm/img/ui/active.png'/></a></span>
+</div>
+<div id='bottomright'>
+{if $myvip['openget']=='1'}
+<img src='source/plugin/gfarm/img/ui/allget.png' title="{lang gfarm:f039}" onclick="ajaxget('plugin.php?id=gfarm:front&mod=gfarm_ajax&formhash={FORMHASH}&act=allgot','');"/>
+{/if}
+</div>
+<div id='rightcenter'>
+<div class='friendiv'>
+<span class='clickfriend'><input type="hidden" id='friendflag' value="0"/></span>
+{lang gfarm:f040}{lang gfarm:c062}<span id='mysort'>{$mysort}</span><br/>
+<input type="text" size="17" style="height:16px" id='friendname' onkeyup="ajaxget('plugin.php?id=gfarm:front&mod=friend&name='+jq('#friendname').val()+'&act='+jq('#act').val()+'&ordertype='+jq('#ordertype').val(),'out');"/>
+<img src='source/plugin/gfarm/img/ui/search.png' style="vertical-align: top;"/><br/>
+<div id='sortmenu'>
+<input id='act' type="hidden"/>
+<input id='ordertype' type="hidden"/>
+<span style="background: #fff2d7"><a style="color: #897654" onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&ordertype=experience','out');">{lang gfarm:f041}</a></span>
+<span><a onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&act=ajax&ordertype=benevolence','out');">{lang gfarm:f042}</a></span>
+<span><a onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&act=collect','out');">{lang gfarm:f043}</a></span>
+</div>
+<div id='out'>
+<div id='insul'>
+<table width="100%">
+<!--{loop $users $key $val}-->
+<tr onclick="ajaxget('plugin.php?id=gfarm:front&act=ajax&uid={$val[uid]}','ptable');">
+	<td width="10%" style="font-weight: bold;">{eval echo $key+1}</td>
+	<td width="20%"><img src="{eval echo avatar($val['uid'],'origin',true);}" height="35px" width="35px"/></td>
+	<td><font style="font-weight: bold;color: #85b200">Lv{$levels[$key]['level']}</font><br/><font class='listti' style="margin-left: 10px">{$val['username']}</font></td>
+</tr>
+<!--{/loop}-->
+</table>
+</div>
+<div id='insulbottom'>
+<a style="color: gray">{lang gfarm:c232}</a>
+<img src='source/plugin/gfarm/img/ui/left.png'/>
+<span>1/{$cnum}</span>
+<img src='source/plugin/gfarm/img/ui/right.png' {if $cnum>1}onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&page=2&name='+jq('#friendname').val(),'out');"{/if}/>
+<a {if $cnum<2}style="color: gray"{else}onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&page={$cnum}&name='+jq('#friendname').val(),'out');"{/if}>{lang gfarm:f046}</a>
+</div>
+</div>
+</div>
+</div>
+<div id='center'>
+<span>{if $fived}<a href="javascript:;"><img src='{$fived[img]}'/></a>{/if}</span>
+</div>
+<div id='seven'>
+<span>{if $sevend}<a href="javascript:;"><img src='{$sevend[img]}'/></a>{/if}</span>
+</div>
+<div id='eight'>
+<span>{if $eightd}<a href="javascript:;"><img src='{$eightd[img]}'/></a>{/if}</span>
+</div>
+<div id='lefttop'>
+<img class='yuanbao01' src='source/plugin/gfarm/img/ui/yuanbao01.png'/>
+<img class='money01' src='source/plugin/gfarm/img/ui/money01.png'/>
+<img class='streng01' src='source/plugin/gfarm/img/ui/streng01.png'/>
+{if $cvip==1}
+<span class='uservip' onclick="showWindow('gfarm','plugin.php?id=gfarm:front&mod=vip')">{$myvip['vipname']}</span>
+{/if}
+<div style="width: 65px;height: 70px;float: left;">
+<img style="margin-top:16px;margin-left: 3px" src="{eval echo avatar($_G['uid'],'origin',true);}" width="55px" height="55px"/>
+<span style="margin-top: 5px"><a href="plugin.php?id=gfarm:front&mod=myself&uid=$_G['uid']" onclick="showWindow('gfarm',this.href)" style="color: white">[{lang gfarm:f047}]</a></span>
+</div>
+<div style="width: 145px;float: left;line-height: 17px;">
+<div id='userinfo'>{$user['username']}
+<br/>LV.<span style="position: relative;"><span id='userlevel'>{$mylevel['level']}</span><img src='source/plugin/gfarm/img/ui/up_alt.png' id='userleveltip'/></span>(<span id='userexp'>{$user['experience']}/{$nextlevel['experience']}</span>)</div>
+<div style="width: 145px;float: left;">
+<div style="height: 30px;margin-left: 28px"><span id='usermoney'>{$user['money']}</span><br/>
+<span id='useryuan'>{$user_credit}</span><br/>
+<span id='userpower'>{$user['now_strength']}</span>/{eval echo $setInfo['power']+$mylevel['strength']}
+</div>
+</div>
+<div style="height: 10px;text-align: right;float:right;"><a href="plugin.php?id=gfarm:front&mod=exchange&act=in" onclick="showWindow('gfarm',this.href)"><img src='source/plugin/gfarm/img/ui/exchange.png'/></a></div>
+</div>
+</div>
+<div id='lefttopother'>
+</div>
+<div id='ptable'>
+<table>
+<!--{loop $map $key $val}-->
+<tr>
+<!--{loop $val $key1 $val1}-->
+	<td>
+	<!--{if $test[$key][$key1]}-->
+		<div class='makeland' <!--{if $landInfoss[$test[$key][$key1]]}-->_id='{$test[$key][$key1]}'<!--{/if}-->>	
+		</div>
+		<span id='{$test[$key][$key1]}'>
+		<!--{if !$landInfoss[$test[$key][$key1]]['land_id']}-->
+		<img class='landimg' src="source/plugin/gfarm/img/ui/nouseland.png">
+		<img class='jiesuoimg' style='display:{if $countland<$mylevel['land_number']}block{else}none{/if}' src="source/plugin/gfarm/img/ui/hoe.png"/>		
+		<!--{else}-->
+		<img class='landimg' src="source/plugin/gfarm/img/ui/useland.png">
+		<!--{/if}-->
+		</span>
+		<span id='_{$test[$key][$key1]}'>
+		<!--{if $landInfoss[$test[$key][$key1]]['germname']}-->
+		<!--{if $landInfoss[$test[$key][$key1]]['gain_time']<=time()}-->
+		<img class='cropimg' id='cropimg' src="$germs[$test[$key][$key1]]['mature_img']"/>
+		<!--{elseif $landInfoss[$test[$key][$key1]]['germ_time']+($landInfoss[$test[$key][$key1]]['gain_time']-$landInfoss[$test[$key][$key1]]['germ_time'])/3<=time()}-->
+		<img class='cropimg' id='germimg' src="$germs[$test[$key][$key1]]['sprout_img']"/>
+		<!--{else}-->
+		<img class='cropimg' id='germimg' src="source/plugin/gfarm/img/ui/germ.png"/>
+		<!--{/if}-->	
+		<!--{/if}-->
+		</span>	
+		<div class='tipdiv' id='tip_{$test[$key][$key1]}'>	
+		</div>
+		<div class='titlediv' id='title_{$test[$key][$key1]}'>	
+		<!--{if $landInfoss[$test[$key][$key1]]['germname']}-->
+		<!--{if $landInfoss[$test[$key][$key1]]['gain_time']<=time()}-->
+		{lang gfarm:f048}{$landInfoss[$test[$key][$key1]]['cropname']}<br/>
+		{lang gfarm:f049}{$landInfoss[$test[$key][$key1]]['gain_number']}{lang gfarm:f012}
+		<!--{elseif $landInfoss[$test[$key][$key1]]['germ_time']+($landInfoss[$test[$key][$key1]]['gain_time']-$landInfoss[$test[$key][$key1]]['germ_time'])/3<=time()}-->
+		{$landInfoss[$test[$key][$key1]]['cropname']}{lang gfarm:f050}<br/>
+		{lang gfarm:f051}{eval echo ceil(($landInfoss[$test[$key][$key1]]['gain_time']-time())/60)}{lang gfarm:f052}<br/>
+		{lang gfarm:f053}{$landInfoss[$test[$key][$key1]]['gain_number']}{lang gfarm:f012}
+		<!--{else}-->
+		{$landInfoss[$test[$key][$key1]]['germname']}<br/>
+		{lang gfarm:f051}{eval echo ceil(($landInfoss[$test[$key][$key1]]['gain_time']-time())/60)}{lang gfarm:f052}<br/>
+		{lang gfarm:f053}{$landInfoss[$test[$key][$key1]]['gain_number']}{lang gfarm:f012}
+		<!--{/if}-->		
+		<!--{/if}-->
+		</div>	
+		<!--{/if}-->
+	
+	</td>
+<!--{/loop}-->
+</tr>
+<!--{/loop}-->
+</table>
+</div>
+</div>
+</div>
+<img id='moveimg' style="position: absolute;display: none" width="50px"/>
+</div>
+<div style="height: 35px;background: white"></div>
+<script>
+function showmsg(msg,money,yuan,flag) {
+	window.showDialog(msg, 'right', '', function() {jq('#usermoney').html(money);if(flag=='1'){jq('#useryuan').html(yuan);}}, 0);
+}
+
+</script>
+{template common/footer}

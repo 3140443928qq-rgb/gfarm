@@ -1,0 +1,48 @@
+{template common/header}
+<script type="text/javascript" reload=1>
+(function(){
+	jq('#ed_'+{$depot['id']}+' .decohide').show();
+	jq('#ed_'+{$depot['id']}).siblings().find('.decohide').hide();
+	var str="<span>{lang gfarm:c038}{lang gfarm:c062}</span>{$data['add_steal_odds']}%<br/>"+
+	"<span>{lang gfarm:c039}{lang gfarm:c062}</span>{$data['add_steal_number']}%<br/>"+
+	"<span>{lang gfarm:c036}{lang gfarm:c062}</span>{if $data['add_gain_number']>=0}+{/if}{$data['add_gain_number']}%<br/>"+
+	"<span>{lang gfarm:c037}{lang gfarm:c062}</span>{if $data['add_gain_time']>=0}+{/if}{$data['add_gain_time']}%";
+	var str1='';
+	{if $data['valid_time']}
+	str1+="<img class='ontime' src='source/plugin/gfarm/img/ui/time{if time()-$depot[create_time]>24*60*60}1{else}2{/if}.png'/>"+
+	"<div class='timetip'>{lang gfarm:f132}{eval echo dgmdate($depot['create_time']+$data['valid_time']*24*60*60,'Y-m-d H:i:s')}</div>";
+	{/if}
+	{if $deco['small_type']=='5'}
+	jq('#gaoshi').html("<img src='{$deco[img]}' title='{$deco[name]}'/>"+str1);
+	jq('#gaoshi+div>div').html(str);
+	{elseif $deco['small_type']=='6'}
+	jq('#dimao').html("<img src='{$deco[img]}' title='{$deco[name]}'/>"+str1);
+	jq('#dimao+div>div').html(str);
+	{elseif $deco['small_type']=='7'}
+	jq('#wuzi').html("<img src='{$deco[img]}' title='{$deco[name]}'/>"+str1);
+	jq('#wuzi+div>div').html(str);
+	{else}
+	jq('#dog').html("<img src='{$deco[img]}' title='{$deco[name]}'/>"+str1);
+	jq('#dog+div>div').html(str);
+	{/if}
+	if ($_G['uid']==jq('#userid').val()){
+		{if $deco['small_type']=='5'}
+		jq('#center').html("<img src='{$deco[img]}'/>");
+		jq()
+		{elseif $deco['small_type']=='6'}
+		jq('#backland').css('background-image','url({$deco[img]})');
+		{elseif $deco['small_type']=='7'}
+		jq('#seven').html("<img src='{$deco[img]}'/>");
+		{else}
+		jq('#eight').html("<img src='{$deco[img]}'/>");
+		{/if}
+	}
+	function funcequip(obj){
+		ajaxget('plugin.php?id=gfarm:front&mod=decorate&act=learn&depotid='+obj+'&formhash={FORMHASH}','ed_'+obj);
+	}
+	function funcdeco(obj){
+		ajaxget('plugin.php?id=gfarm:front&mod=decorate&act=forget&depotid='+obj+'&formhash={FORMHASH}','');
+	}
+})();
+</script>
+{template common/footer}

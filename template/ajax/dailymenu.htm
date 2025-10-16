@@ -1,0 +1,145 @@
+{template common/header}
+<div id='ins'>
+	<ul id='boul'>
+	<!--{loop $dailytasks $key=>$val}-->
+	<li>
+		<div>
+			<span class='boulname'>{$val['task_name']}</span>
+			<div style="padding: 7px;padding-top: 3px">
+			<div class="boulcontent">
+			<div style="height: 40px">
+			<span>{lang gfarm:c158}{lang gfarm:c062}</span>{$val['task_describe']}
+			</div>
+			<span>{lang gfarm:f007}{lang gfarm:c062}</span>{$rewardstrs[$key]}<br/>
+			<span>{lang gfarm:f006}{lang gfarm:c062}</span>{if $csnums[$key]}{$csnums[$key]}{else}0{/if}/{$val['target_num']}<br/>
+			{if $csnums[$key]>=$val['target_num']}
+			<img src="source/plugin/gfarm/img/ui/getw.png" onclick="ajaxget('plugin.php?id=gfarm:front&mod=dailytask&tid={$val[myid]}&act=rewardaily&formhash={FORMHASH}','outs');"/>
+			{/if}
+			</div>			
+			</div>
+		</div>
+	</li>
+	<!--{/loop}-->
+	</ul>
+	</div>
+	<div id=shopscrollbartop></div>
+	<div id='shopscrollBars'>
+	<div id='shophandles'></div>
+	</div>
+	<div id='shopscrollbarbottom'></div>	
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	window.showDialog('{$mess}', 'error', '', function() {}, 0);
+	{else}		
+		var str='{lang gfarm:f095}<br/>';
+		{if !empty($mytask['reward_money'])}
+		jq('#usermoney').html({eval echo $user['money']+$mytask['reward_money']});	
+		str+="{$config['moneyname']}x{$mytask['reward_money']}<br/>";
+		{/if}
+		{if !empty($mytask['reward_bene'])}
+		jq('#userbene').html({eval echo $user['benevolence']+$mytask['reward_bene']});	
+		str+="{lang gfarm:c213}x{$mytask['reward_bene']}<br/>";
+		{/if}	
+		{if !empty($mytask['reward_exp'])}	
+		jq('#userexp').html({$userarr['experience']}+'/'+{$nextlevel['experience']});
+		{if !empty($levelflag)}
+		{if $countland<$mylevel1['land_number']}
+		jq('.jiesuoimg').each(function(){
+		jq(this).show();
+		});
+		{/if}
+		jq('#userlevel').html({$mylevel1['level']});	
+		jq('#userleveltip').show();
+		setTimeout( function(){jq('#userleveltip').fadeOut();}, ( 3 * 1000 ) ); 
+		{/if}
+		str+="{lang gfarm:c211}x{$mytask['reward_exp']}<br/>";
+		{/if}	
+		{if !empty($mytask['reward_items'])}
+		str+="{$item['name']}x{$mytask['items_num']}";
+		{/if}			
+		window.showDialog(str, 'right', '', function() {}, 0);
+	{/if}		
+})();
+</script>
+<script reload=1>
+var ximen = {
+		$:function(o){ return document.getElementById(o); },
+		getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+		getOffset:function(o) {
+			var t = o.offsetTop,h = o.offsetHeight;
+			while(o = o.offsetParent) { t += o.offsetTop; }
+			return { top:t, height:h };
+		},
+		bind:function(o,eType,fn) {
+			if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+			else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+			else { o["on" + eType] = fn; }
+		},
+		unbind:function(o,eType,fn) {
+			if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+			else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+			else { o["on" + eType] = fn; }
+		},
+		stopPropagate:function(e) {
+			if(e && e.stopPropagation) { e.stopPropagation(); } 
+			else { window.event.cancelBubble = true; }
+			return false;
+		},
+		stopDefault:function(e) {
+			e = e || window.event;
+			e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+		}
+	};
+	(function(){
+		var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relY,
+			out = ximen.$("outs"),
+			content = ximen.$("ins"),
+			scrollBar = ximen.$("shopscrollBars"),
+			scrollBarHandle = ximen.$("shophandles"),
+			contentScrollHeight = content.scrollHeight,//灏哻ontent.scrollHeight璧嬩竴娆″�,瑙ｅ喅IE6涓媠crollHeight闇�皟鐢ㄤ袱娆＄殑bug
+			scrollBarHandleHeight = parseInt(content.offsetHeight/content.scrollHeight * scrollBar.offsetHeight),
+			setScrollBarHandle = function() {//褰撳唴瀹硅秴澶氭椂璁剧疆鎷栨嫿鏉″瓙鐨勬渶灏忛珮搴�
+			if(scrollBarHandleHeight==scrollBar.offsetHeight){scrollBar.style.display='none';jq('#shopscrollbartop').hide();jq('#shopscrollbarbottom').hide();}
+			else { scrollBarHandleHeight = 20; scrollBarHandle.style.height = "20px"; jq('#shopscrollbartop').show();jq('#shopscrollbarbottom').show();}
+			},
+			clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+			forMousemove = function(e) {
+				var e = e || window.event;
+				content.scrollTop = (e.clientY - relY)/(scrollBar.offsetHeight - scrollBarHandleHeight)*(content.scrollHeight - content.offsetHeight);
+			},
+			forMouseDown = function(event){
+				var et = event.target || event.srcElement;//target鐏嫄srcElementIE		
+				relY = event.clientY - et.offsetTop;
+				ximen.bind(document,"mousemove",forMousemove);
+			},
+			scrollDir = function(e) {
+				var e = e || window.event,eDir;					//璁剧疆婊氳疆浜嬩欢,e.wheelDelta涓巈.detail鍒嗗埆鍏煎IE銆乄3C锛屾牴鎹繑鍥炲�鐨勬璐熸潵鍒ゆ柇婊氬姩鏂瑰悜
+				if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+				else if(e.detail) { eDir = -e.detail/3; }
+				if(eDir > 0) { content.scrollTop -= 80; }	//姝ラ暱璁�0鍍忕礌a姣旇緝鎺ヨ繎window婊氬姩鏉＄殑婊氬姩閫熷害
+				else { content.scrollTop += 80; }
+				ximen.stopDefault(e);
+			};
+		setScrollBarHandle();
+		ximen.bind(content,"scroll",function(){
+			scrollBarHandle.style.top = content.scrollTop/(content.scrollHeight - content.offsetHeight) * (scrollBar.offsetHeight - scrollBarHandleHeight)+ "px";
+		});
+		ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+		ximen.bind(document,"mouseup",function(){
+			ximen.unbind(document,"mousemove",forMousemove);
+			ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+		});
+		ximen.bind(out,"selectstart",function(){ return false; });
+		ximen.bind(out,"select",function(){ document.selection.empty(); });
+		ximen.bind(out,"mousewheel",scrollDir);
+		ximen.bind(out,"DOMMouseScroll",scrollDir);
+		jq('#shopscrollbarbottom').click(function(){
+			content.scrollTop += contentScrollHeight;
+		});
+		jq('#shopscrollbartop').click(function(){
+			content.scrollTop -= contentScrollHeight;
+		});
+	})();
+</script>
+{template common/footer}

@@ -1,0 +1,59 @@
+{template common/header}
+<!--{loop $cropInfos $key $val}-->
+	<li onclick="showcrop({$val['id']})">
+		<div class='ulpbg' {if empty($mycrop[$val['relation_id']])}style='background-image:url(source/plugin/gfarm/img/ui/un-littlewin2.png)'{/if} onclick="choose(this)">
+			<img src="{$val['sprout_img']}" title="{$val['name']}" style="width: 45px;margin-top: 13px;height: 45px"/>
+			<div class="bottomlevel1">
+			{$val['use_level']}{lang gfarm:f016}
+			</div>	
+			<img src='source/plugin/gfarm/img/ui/bg-choose.png' class="lockbg">				
+		</div>
+	</li>
+	<!--{/loop}-->	
+<script type="text/javascript" reload=1>
+(function(){
+	jq('.picbottom').html("<img class='turnl' src='source/plugin/gfarm/img/ui/turnl.png' {if $currpage-1>0}onclick=\"ajaxget('plugin.php?id=gfarm:front&mod=picture&act=ajax&page={eval echo $currpage-1}','ulp')\"{/if}/>"+
+			"<img class='turnr' src='source/plugin/gfarm/img/ui/turnr.png' {if $currpage+1<=$ispage}onclick=\"ajaxget('plugin.php?id=gfarm:front&mod=picture&act=ajax&page={eval echo $currpage+1}','ulp')\"{/if}/>{$currpage}/{$ispage}");	
+})();
+var dnum={$ispage};
+function calcn(event){	
+	var dsize=dnum.toString().length;
+	jq('#dnum').attr('maxlength',dsize+1);
+	var keycode;
+    if(window.event) // IE 娴忚鍣�
+    {
+        keycode = event.keyCode;
+    }
+    else if(event.which) // Netscape/Firefox/Opera娴忚鍣�
+    {
+        keycode = event.which;
+    }
+	if(!((keycode <= 57 && keycode >= 48)||(keycode <= 105 && keycode >= 96)||keycode==8||keycode==46)) {
+		return false;
+	}
+}
+function check(){	
+	if(parseInt(jq('#dnum').val())>parseInt(dnum)){
+		jq('#dnum').val(dnum);
+		return false;
+	}
+	if(parseInt(jq('#dnum').val())<1){
+		jq('#dnum').val(1);
+		return false;
+	}
+}
+function showcrop(obj){
+	ajaxget('plugin.php?id=gfarm:front&mod=picture&act=showajax&gid='+obj,'picinfo');
+}
+function choose(obj){
+	jq(obj).find('.lockbg').show().parents('.ulpbg').parent().siblings().find('.lockbg').hide();
+}
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer}

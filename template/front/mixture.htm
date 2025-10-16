@@ -1,0 +1,204 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/BG.png) no-repeat;}
+</style>
+<div style="padding:5px 50px;text-align: left;width: 515px;height: 470px;position: relative;">
+<div class='exitclose' onclick="hideWindow('gfarm');hideWindow('gfarm1');"></div>
+<div class='mixhis'></div>
+<div class=noline>
+<div id='noline'>
+	<div id='mix1' class="mix" {if $goods['1']}style='background: url(source/plugin/gfarm/img/ui/bg0.png)'{/if}>
+		{if $goods['1']}
+		<img width="40px" height="40px" src="{$goods['1']['img']}" title="$goods['1']['name']"/>
+		<div id='form1' class='formbottom'>{if $depot[$goods['1']['id']]}{$depot[$goods['1']['id']]}{else}0{/if}</div>
+		{/if}
+	</div>
+	<div class='baseimg'>
+		<img src="source/plugin/gfarm/img/ui/plus.png" width='15px'/>
+	</div>
+	<div id='mix2' class="mix" {if $goods['2']}style='background: url(source/plugin/gfarm/img/ui/bg0.png)'{/if}>
+		{if $goods['2']}
+		<img width="40px" height="40px" src="{$goods['2']['img']}" title="$goods['2']['name']"/>
+		<div id='form2' class='formbottom'>{if $depot[$goods['2']['id']]}{$depot[$goods['2']['id']]}{else}0{/if}</div>
+		{/if}
+	</div>
+	<div class='baseimg'>
+		<img src="source/plugin/gfarm/img/ui/plus.png" width='15px'/>
+	</div>
+	<div id='mix3' class="mix" {if $goods['3']}style='background: url(source/plugin/gfarm/img/ui/bg0.png)'{/if}>
+		{if $goods['3']}
+		<img width="40px" height="40px" src="{$goods['3']['img']}" title="$goods['3']['name']"/>
+		<div id='form3' class='formbottom'>{if $depot[$goods['3']['id']]}{$depot[$goods['3']['id']]}{else}0{/if}</div>
+		{/if}
+	</div>
+	<div class='baseimg'>
+		<img src="source/plugin/gfarm/img/ui/plus.png" width='15px'/>
+	</div>
+	<div id='mix4' class="mix" {if $goods['4']}style='background: url(source/plugin/gfarm/img/ui/bg0.png)'{/if}>
+		{if $goods['4']}
+		<img width="40px" height="40px" src="{$goods['4']['img']}" title="$goods['4']['name']"/>
+		<div id='form4' class='formbottom'>{if $depot[$goods['4']['id']]}{$depot[$goods['4']['id']]}{else}0{/if}</div>
+		{/if}
+	</div>
+	<div class='baseimg' style="width: 62px">
+		<img src="source/plugin/gfarm/img/ui/direction.png" width='55px' style="bottom: 35px"/>
+		<img src="source/plugin/gfarm/img/ui/start.png" width='45px' style="bottom: 5px;left: 10px;cursor: pointer;" onclick="ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=react','ul4');"/>
+	</div>
+</div>
+<div id='mix' class='mix' {if $formula}style='background: url(source/plugin/gfarm/img/ui/bg1.png)'{/if}>
+	{if $formula}
+	<img width="40px" height="40px" src="{$formula[img]}" title="{$formula[name]}"/>
+	{/if}
+</div>
+</div>
+<div class='overshow'></div>
+<div class='bg3'>
+<div class='mixtop' style="padding-left: 10px">
+<img src='source/plugin/gfarm/img/ui/icon1.png' style="vertical-align: middle;margin-right: 10px"/>{lang gfarm:f115}
+</div>
+<div style="width: 100%;height: 160px;padding-top: 1px">
+	<div class='mixtop' id='mixtop'>
+	<div class='visa' onclick="ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=crop','mixout');">{lang gfarm:c032}</div>
+	<div onclick="ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=formula','mixout');">{lang gfarm:c234}</div>
+	</div>
+	<div id='mixout'>
+	<div id='mixin'>
+	<ul class='mixline' id='ul4' style="margin-left: 5px;">
+	<!--{loop $depotInfos $val}-->
+	<li>
+		<div id='{$val[id]}' style="width: 100%;text-align: center;">
+			<img src="$val['img']" title="{$val['name']}"/>
+			<div class='mixnumber'><span id='mix_{$val[id]}'>{$val['number']}</span></div>
+		</div>
+	</li>
+	<!--{/loop}-->
+	</ul>
+	</div>
+	<div id='mixscrollBar'>
+	<div id='mixhandle'></div>
+	</div>
+	</div>
+	
+</div>
+	
+	</div>
+</div>
+<script type="text/javascript" reload=1>
+	(function(){
+		jq('#mixtop>div').each(function(){
+			jq(this).click(function(){
+				jq(this).addClass('visa').siblings().removeClass('visa');;
+			});
+		});
+		jq('#noline>.mix').each(function(){
+			jq(this).click(function(){
+				var position=jq(this).attr('id').substr(3);
+				jq(this).css('background','url(source/plugin/gfarm/img/ui/bg2.png)').html('');
+				jq('#mix').css('background','url(source/plugin/gfarm/img/ui/bg2.png)').html("");
+				ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=delete&position='+position,'');				
+			});
+		});
+		jq('#ul4 li').each(function(){
+			jq(this).click(function(){
+				var position;
+				var thisid=jq(this).children('div:first-child').attr('id');
+				if(jq('#mix1').children('img').length=='0'){
+					position=1;
+				}else if(jq('#mix2').children('img').length=='0'){
+					position=2;
+				}else if(jq('#mix3').children('img').length=='0'){
+					position=3;
+				}else if(jq('#mix4').children('img').length=='0'){
+					position=4;
+				}else{
+					position=5;
+				}
+				if(position!='5'){
+					ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=ajax&depotid='+thisid+'&depotposit='+position,'mix'+position);
+				}				
+			});
+		});
+	})();
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<script reload=1>
+var ximen = {
+	$:function(o){ return document.getElementById(o); },
+	getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+	getOffset:function(o) {
+		var t = o.offsetTop,h = o.offsetHeight;
+		while(o = o.offsetParent) { t += o.offsetTop; }
+		return { top:t, height:h };
+	},
+	bind:function(o,eType,fn) {
+		if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+		else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	unbind:function(o,eType,fn) {
+		if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+		else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	stopPropagate:function(e) {
+		if(e && e.stopPropagation) { e.stopPropagation(); } 
+		else { window.event.cancelBubble = true; }
+		return false;
+	},
+	stopDefault:function(e) {
+		e = e || window.event;
+		e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+	}
+};
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relY,
+		out = ximen.$("mixout"),
+		content = ximen.$("mixin"),
+		scrollBar = ximen.$("mixscrollBar"),
+		scrollBarHandle = ximen.$("mixhandle"),
+		contentScrollHeight = content.scrollHeight,//灏哻ontent.scrollHeight璧嬩竴娆″�,瑙ｅ喅IE6涓媠crollHeight闇�皟鐢ㄤ袱娆＄殑bug
+		scrollBarHandleHeight = parseInt(content.offsetHeight/content.scrollHeight * scrollBar.offsetHeight),
+		setScrollBarHandle = function() {//褰撳唴瀹硅秴澶氭椂璁剧疆鎷栨嫿鏉″瓙鐨勬渶灏忛珮搴�
+		if(scrollBarHandleHeight==scrollBar.offsetHeight){scrollBar.style.display='none';}
+		else { scrollBarHandleHeight = 30; scrollBarHandle.style.height = "30px"; }
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollTop = (e.clientY - relY)/(scrollBar.offsetHeight - scrollBarHandleHeight)*(content.scrollHeight - content.offsetHeight);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target鐏嫄srcElementIE		
+			relY = event.clientY - et.offsetTop;
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//璁剧疆婊氳疆浜嬩欢,e.wheelDelta涓巈.detail鍒嗗埆鍏煎IE銆乄3C锛屾牴鎹繑鍥炲�鐨勬璐熸潵鍒ゆ柇婊氬姩鏂瑰悜
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollTop -= 80; }	//姝ラ暱璁�0鍍忕礌a姣旇緝鎺ヨ繎window婊氬姩鏉＄殑婊氬姩閫熷害
+			else { content.scrollTop += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.top = content.scrollTop/(content.scrollHeight - content.offsetHeight) * (scrollBar.offsetHeight - scrollBarHandleHeight)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+</script>
+{template common/footer_ajax}

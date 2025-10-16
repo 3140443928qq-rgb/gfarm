@@ -1,0 +1,35 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/mainbg.png) no-repeat;}
+</style>
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class='taskclass' onmousedown="dragMenu($('fwin_gfarm'),event,1)">
+<div class='taskclose' onclick="hideWindow('gfarm1');hideWindow('gfarm');"></div>
+<div class='taskcontent'>
+<span>{lang gfarm:f008}{lang gfarm:c062}</span>{$mytask['task_name']}
+<div style="height: 60px">
+<span>{lang gfarm:c158}{lang gfarm:c062}</span>{$mytask['task_describe']}
+</div>
+<span>{lang gfarm:f007}{lang gfarm:c062}</span>{$wardstr}<br/>
+<span>{lang gfarm:f006}{lang gfarm:c062}</span>{if $csnum}{$csnum}{else}0{/if}/{$mytask['target_num']}<br/>
+<span>{lang gfarm:f054}{lang gfarm:c062}</span>{if $csnum>=$mytask['target_num']}{lang gfarm:f055}<br/>
+<div style="position: absolute;top: 170px;left: 0px;width: 340px;text-align: center;">
+{if empty($mytask['reward_flag'])}
+<img src="source/plugin/gfarm/img/ui/getw.png" style="cursor: pointer;" onclick="ajaxget('plugin.php?id=gfarm:front&mod=maintask&tid={$tid}&act=reward&formhash={FORMHASH}','');"/>
+{else}{lang gfarm:f057}{/if}
+</div>
+{else}
+{lang gfarm:f056}
+{/if}
+</div>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

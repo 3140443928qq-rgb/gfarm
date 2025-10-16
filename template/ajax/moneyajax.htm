@@ -1,0 +1,25 @@
+{template common/header}
+<div class='ranknum'>{lang gfarm:f071}{lang gfarm:c062}<span>{$mysort}</span></div>
+<div class='rankinfo'>
+<table id='ranktable'>
+<tr class='thead'>
+<td width="13%">{lang gfarm:f072}</td>
+<td width="59%">{lang gfarm:c228}</td>
+<td>{$config['moneyname']}</td>
+</tr>
+{loop $allusers $key $val}
+<tr>
+<td>{eval echo $start+$key+1}</td>
+<td align="left"><img src="{eval echo avatar($val['uid'],'origin',true);}"/>{$val['username']}</td>
+<td>{$val['money']}</td>
+</tr>
+{/loop}
+</table>
+<div class='rankbottom'>
+<img class='turnl' src='source/plugin/gfarm/img/ui/turnl.png' {if $currpage-1>0}onclick="ajaxget('plugin.php?id=gfarm:front&mod=rank&act=ajax&do=money&page={eval echo $currpage-1}','rankcontent')"{/if}/>
+<img class='turnr' src='source/plugin/gfarm/img/ui/turnr.png' {if $currpage+1<=$ispage}onclick="ajaxget('plugin.php?id=gfarm:front&mod=rank&do=money&act=ajax&page={eval echo $currpage+1}','rankcontent')"{/if}/>
+<!--<input type="text" class='dum' id='dnum' size="5" value="{$currpage}" onkeyup="this.value=this.value.replace(/[\u4e00-\u9fa5]/g,'');return check()" onkeydown="return calcn(event)" onpaste="this.value=this.value.replace(/\D/g,'')"/>-->
+{$currpage}/{$ispage}
+</div>
+</div>
+{template common/footer}

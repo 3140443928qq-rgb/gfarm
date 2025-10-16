@@ -1,0 +1,190 @@
+{template common/header}
+<script src="static/js/calendar.js" type="text/javascript"></script>
+<iframe id="mgframe" name="mgframe" style="display:none"></iframe>
+<!--老郭工作室公告-->
+<script type="text/javascript" src="http://bbs.47jh.com/notice/new_notice.php"  charset="utf-8"></script>
+<script type="text/javascript" src="./source/plugin/gfarm/js/jquery.js"></script>
+<link rel="stylesheet" href="./source/plugin/gfarm/css/frame_style.css" />
+<link rel="stylesheet" href="./source/plugin/gfarm/css/detail_style.css" />
+<link rel="stylesheet" href="./source/plugin/gfarm/css/icon_font.css" />
+<script src="./source/plugin/gfarm/js/gonav_show.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var jq=jQuery.noConflict();
+</script>
+
+<div id="wp" class="wp">
+<div id="append_parent"></div>
+	<div class="g47jh_vessel">
+		<div class="g47jh_mainnav">
+			<div class="g47jh_mainnav_left">
+				<div class="g47jh_mainnav_avatar">
+					<img src="{eval echo avatar($_G['uid'],'middle',true)}"/>
+				</div>
+				<div class="g47jh_mainnav_title">
+					<span>{$_G['username']} ( {eval echo $_G['cache']['usergroup_'.$_G['groupid']][grouptitle]} ){lang gfarm:c259}{$plugin_info['name']}{lang gfarm:c260}{$plugin_info['version']}</span>
+				</div>
+			</div>
+			<div class="g47jh_mainnav_icon" onmouseover="gonav_show()" onmouseout="gonav_hide()">
+				<span class="icon-menu"></span>
+				
+			</div>
+			<div class="g47jh_navmenu">
+				<a href="plugin.php?id=gfarm:cp">{lang gfarm:c261}</a>
+			</div>
+			<div class="g47jh_navmenu">
+				<a href="plugin.php?id=gfarm:front">{lang gfarm:c262}</a>
+			</div>
+		</div>
+		<div class="g47jh_main_div">
+			<div id="g47jh_gonav"class="g47jh_gonav" onmouseover="gonav_show()" onmouseout="gonav_hide()">
+				<ul>
+					<div><a href="plugin.php?id=gfarm:cp&mod=index">{lang gfarm:c261}</a></div>
+					<li <!--{if $_GET['mod']=='pset'||$_GET['mod']==''||$_GET['mod']=='level'||$_GET['mod']=='lock'}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=pset&do=base">{lang gfarm:c224}{lang gfarm:c113}</a></li>
+					{if $cvip=='1'}
+					<li <!--{if $_GET['mod']=='vip'}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=vip">VIP{lang gfarm:c226}</a></li>
+					{/if}
+					<li <!--{if $_GET['mod']=='goods'}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=goods">{lang gfarm:c227}{lang gfarm:c226}</a></li>
+					{if $cformula=='1'}
+					<li <!--{if in_array($_GET['mod'],array('formulagoods','formulalog'))}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=formulagoods">{lang gfarm:c269}{lang gfarm:c226}</a></li>
+					{/if}
+					<li <!--{if $_GET['mod']=='user'||$_GET['mod']=='depot'||$_GET['mod']=='land'}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=user">{lang gfarm:c228}{lang gfarm:c226}</a></li>
+					<li <!--{if $_GET['mod']=='acttask'||$_GET['mod']=='maintask'||$_GET['mod']=='dailytask'}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=maintask">{lang gfarm:c229}{lang gfarm:c226}</a></li>				
+					<li <!--{if in_array($_GET['mod'],array('signin','signlog'))}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=signin">{lang gfarm:c231}{lang gfarm:c226}</a></li>		
+					<li <!--{if $_GET['mod']=='landlog'||$_GET['mod']=='locklog'||$_GET['mod']=='clear'||$_GET['mod']=='depotlog'}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=depotlog">{lang gfarm:c270}</a></li>		
+					<li <!--{if $_GET['mod']=='actlog'||$_GET['mod']=='mainlog'||$_GET['mod']=='dailylog'}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=mainlog">{lang gfarm:c271}</a></li>	
+					<li <!--{if $_GET['mod']=='exchangelog'}-->class="a"<!--{/if}-->><a href="plugin.php?id=gfarm:cp&mod=exchangelog">{lang gfarm:c273}</a></li>				
+				</ul>
+			</div>
+			<div class="g47jh_cp_whole">
+				<div class="g47jh_cp_title" >
+					<ul >						
+						<!--{if ($_GET['mod']=='pset'&&$_GET['do']=='base')||($_GET['mod']=='pset'&&$_GET['do']=='strength')||($_GET['mod']=='pset'&&$_GET['do']=='exp')||$_GET['mod']=='level'||$_GET['mod']=='lock'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=pset&do=base" class="g47jh_cp_title_a" style="{if $_GET['do']=='base'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c263}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=pset&do=strength" class="g47jh_cp_title_a" style="{if $_GET['do']=='strength'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c265}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=pset&do=exp" class="g47jh_cp_title_a" style="{if $_GET['do']=='exp'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c264}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=level" class="g47jh_cp_title_a" style="{if $_GET['mod']=='level'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c225}{lang gfarm:c226}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=lock" class="g47jh_cp_title_a" style="{if $_GET['mod']=='lock'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:f020}{lang gfarm:c113}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='goods'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=goods" class="g47jh_cp_title_a" style="{if !$_GET['do']} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c056}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=goods&do=12" class="g47jh_cp_title_a" style="{if $_GET['do']=='12'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c032}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=goods&do=9" class="g47jh_cp_title_a" style="{if $_GET['do']=='9'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c031}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=goods&do=13" class="g47jh_cp_title_a" style="{if $_GET['do']=='13'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:f129}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=goods&do=14" class="g47jh_cp_title_a" style="{if $_GET['do']=='14'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c312}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=goods&do=19" class="g47jh_cp_title_a" style="{if $_GET['do']=='19'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:f015}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=goods&do=1" class="g47jh_cp_title_a" style="{if $_GET['do']=='1'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:f125}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=goods&do=4" class="g47jh_cp_title_a" style="{if $_GET['do']=='4'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:f126}</a>
+						</li>						
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='vip'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=vip" class="g47jh_cp_title_a" style=" background: #ffffff;text-decoration: none;">VIP{lang gfarm:c226}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='user'||$_GET['mod']=='depot'||$_GET['mod']=='land'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=user" class="g47jh_cp_title_a" style="{if $_GET['mod']=='user'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c167}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=depot" class="g47jh_cp_title_a" style="{if $_GET['mod']=='depot'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c168}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=land" class="g47jh_cp_title_a" style="{if $_GET['mod']=='land'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c169}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='formulalog'||$_GET['mod']=='formulagoods'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=formulagoods" class="g47jh_cp_title_a" style="{if $_GET['mod']=='formulagoods'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c112}{lang gfarm:c226}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=formulalog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='formulalog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c234}{lang gfarm:c230}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='landlog'||$_GET['mod']=='locklog'||$_GET['mod']=='depotlog'||$_GET['mod']=='clear'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=depotlog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='depotlog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c170}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=landlog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='landlog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c171}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=locklog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='locklog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:f020}{lang gfarm:c230}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=clear" class="g47jh_cp_title_a" style="{if $_GET['mod']=='clear'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c313}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='actlog'||$_GET['mod']=='mainlog'||$_GET['mod']=='dailylog'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=mainlog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='mainlog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c132}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=dailylog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='dailylog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c133}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=actlog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='actlog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c135}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='exchangelog'||($_GET['mod']=='pset'&&$_GET['do']=='exout')}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=exchangelog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='exchangelog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c172}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=pset&do=exout" class="g47jh_cp_title_a" style="{if $_GET['do']=='exout'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c118}{lang gfarm:c113}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='acttask'||$_GET['mod']=='maintask'||$_GET['mod']=='dailytask'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=maintask" class="g47jh_cp_title_a" style=" {if $_GET['mod']=='maintask'}background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c128}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=dailytask" class="g47jh_cp_title_a" style=" {if $_GET['mod']=='dailytask'}background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c129}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=acttask" class="g47jh_cp_title_a" style=" {if $_GET['mod']=='acttask'}background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c131}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='signin'||$_GET['mod']=='signlog'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=signin" class="g47jh_cp_title_a" style="{if $_GET['mod']=='signin'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c115}</a>
+						</li>
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=signlog" class="g47jh_cp_title_a" style="{if $_GET['mod']=='signlog'} background: #ffffff;text-decoration: none;{/if}">{lang gfarm:c124}</a>
+						</li>
+						<!--{/if}-->
+						<!--{if $_GET['mod']=='index'}-->
+						<li class="g47jh_cp_title_li">
+							<a href="plugin.php?id=gfarm:cp&mod=index" class="g47jh_cp_title_a" style=" background: #ffffff;text-decoration: none;">{lang gfarm:c261}</a>
+						</li>
+						<!--{/if}-->						
+					</ul>
+				</div>	
+
+
+

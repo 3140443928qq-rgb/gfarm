@@ -1,0 +1,1322 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-10-24 09:53]]></item>
+	<item id="From"><![CDATA[魔趣吧（www.moqu8.com）]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[魔趣吧_GPlay虛擬農場]]></item>
+			<item id="identifier"><![CDATA[gfarm]]></item>
+			<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   ]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[gfarm/]]></item>
+			<item id="copyright"><![CDATA[魔趣吧（www.moqu8.com）]]></item>
+			<item id="version"><![CDATA[1.0.5]]></item>
+			<item id="__modules">
+				<item id="21">
+					<item id="name"><![CDATA[myyapmagoo]]></item>
+					<item id="menu"><![CDATA[<span style="color:#E53333;"><b>魔趣吧</b></span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="0">
+					<item id="name"><![CDATA[com_download]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[組件下載]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[front]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[GPLAY虛擬農場]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[component]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[組件管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[admin_cp]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[后臺管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[<font color='red'>推薦插件</font>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[管理員UID]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   管理員UID，用”/”隔開]]></item>
+				<item id="variable"><![CDATA[adminuids]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1/2/8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[標題]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   網頁標題]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[GPlay虛擬農場]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[關鍵字]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   網頁關鍵字]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[GPlay虛擬農場]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[描述]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   網頁描述]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[GPlay虛擬農場]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[可使用用戶組]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   可以正常進入游戲的用戶組]]></item>
+				<item id="variable"><![CDATA[usergroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+					<item id="1"><![CDATA[9]]></item>
+					<item id="2"><![CDATA[10]]></item>
+					<item id="3"><![CDATA[11]]></item>
+					<item id="4"><![CDATA[12]]></item>
+					<item id="5"><![CDATA[13]]></item>
+					<item id="6"><![CDATA[14]]></item>
+					<item id="7"><![CDATA[15]]></item>
+					<item id="8"><![CDATA[20]]></item>
+					<item id="9"><![CDATA[16]]></item>
+					<item id="10"><![CDATA[17]]></item>
+					<item id="11"><![CDATA[18]]></item>
+					<item id="12"><![CDATA[19]]></item>
+					<item id="13"><![CDATA[1]]></item>
+					<item id="14"><![CDATA[2]]></item>
+					<item id="15"><![CDATA[3]]></item>
+					<item id="16"><![CDATA[4]]></item>
+					<item id="17"><![CDATA[5]]></item>
+					<item id="18"><![CDATA[6]]></item>
+					<item id="19"><![CDATA[7]]></item>
+					<item id="20"><![CDATA[8]]></item>
+				</item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[元寶綁定積分]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   游戲元寶綁定的論壇積分類型]]></item>
+				<item id="variable"><![CDATA[bullionstype]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[元寶名稱]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   元寶在游戲中顯示的名稱]]></item>
+				<item id="variable"><![CDATA[bullionsname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[元寶1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[金錢名稱]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   金錢在游戲中顯示的名稱]]></item>
+				<item id="variable"><![CDATA[moneyname]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[金錢1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[最大金錢上限]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   游戲中最多能存多少金錢]]></item>
+				<item id="variable"><![CDATA[maxmoney]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[9999999]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[默認金錢]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   玩家注冊賬號的初始金錢]]></item>
+				<item id="variable"><![CDATA[firstmoney]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[元寶金錢兌換比例]]></item>
+				<item id="description"><![CDATA[更多免费DZ插件：www.moqu8.com    |   元寶基數為1，輸入數字則比例為1：數字]]></item>
+				<item id="variable"><![CDATA[exchangebase]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[101]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="logy_m_g"><![CDATA[<h2 style="text-align:-webkit-center;">
+	<span style="color:#4C33E5;">推薦一個dz商</span><span style="color:#4C33E5;">業插件模版下載的</span><span style="color:#4C33E5;"></span><span style="color:#4C33E5;">網站給大家</span><a href="http://www.moqu8.com" target="_blank"><span style="color:#4C33E5;">魔趣吧魔趣吧</span></a><span style="color:#4C33E5;">（www.moqu8.com）</span> 
+</h2>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">這</span><span style="color:#E53333;">是一個</span><span style="color:#E53333;">dz商業</span><a href="http://www.moqu8.com/dzchajian/" target="_blank"><span style="color:#337FE5;">插</span><u><span style="color:#337FE5;"></span></u><span style="color:#337FE5;">件</span></a><a href="http://www.moqu8.com/discuz/" target="_blank"><u><span style="color:#337FE5;">模</span></u><u><span style="color:#337FE5;"></span></u><u><span style="color:#337FE5;">版</span></u></a><span style="color:#E53333;">資源破解分享的網站，而且還有很多精品的網站源碼下載</span> 
+</h3>
+<h3 style="text-align:-webkit-center;">
+	<span style="color:#E53333;">他們資源每天更新，并且很多都是他們自己出錢在應用中心購買后破解分享出來的</span><br />
+</h3>
+<h3>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">不過還是替他們說一下</span> 
+	</div>
+	<div style="text-align:center;">
+		<span style="color:#E53333;">&nbsp;他們站下載的資源只限于自己學習研究內含的設計思想和原理 請勿有任何商業盈利行為</span> 
+	</div>
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#999999;">介紹也介紹完了，給大家做個小導航吧</span> 
+</h3>
+<h3 style="text-align:center;">
+	<span style="color:#337FE5;"><a href="http://www.moqu8.com/dzchajian/" target="_blank">dz商業破解插件下載</a> &nbsp; <a href="http://www.moqu8.com/discuz/" target="_blank">dz商業風格模版下載</a> &nbsp; &nbsp;<a href="http://www.moqu8.com/yuanma/" target="_blank">精品網站源碼下載</a> &nbsp; &nbsp;<a href="http://www.moqu8.com/forum.php?gid=59" target="_blank">工具素材下載</a></span><span style="color:#337FE5;">&nbsp; &nbsp; <a href="http://www.moqu8.com/webschool/" target="_blank">精選教程區</a></span> 
+</h3> ]]></item>
+				<item id="001"><![CDATA[請登錄]]></item>
+				<item id="002"><![CDATA[名稱不能為空]]></item>
+				<item id="003"><![CDATA[名稱已存在]]></item>
+				<item id="004"><![CDATA[任務名稱字數不能超過25字]]></item>
+				<item id="005"><![CDATA[完成數量填寫錯誤]]></item>
+				<item id="006"><![CDATA[至少選擇一種獎勵]]></item>
+				<item id="007"><![CDATA[獎勵]]></item>
+				<item id="008"><![CDATA[道具數量填寫錯誤]]></item>
+				<item id="009"><![CDATA[獎勵愛心值填寫錯誤]]></item>
+				<item id="010"><![CDATA[獎勵經驗填寫錯誤]]></item>
+				<item id="011"><![CDATA[任務描述不能為空]]></item>
+				<item id="012"><![CDATA[操作成功]]></item>
+				<item id="013"><![CDATA[任務次數填寫錯誤]]></item>
+				<item id="014"><![CDATA[玩家次數上限填寫錯誤]]></item>
+				<item id="015"><![CDATA[單次征收數量填寫錯誤]]></item>
+				<item id="016"><![CDATA[開始時間不能為空]]></item>
+				<item id="017"><![CDATA[結束時間不能為空]]></item>
+				<item id="018"><![CDATA[開始時間不能大于結束時間]]></item>
+				<item id="019"><![CDATA[該時間段已有任務存在]]></item>
+				<item id="020"><![CDATA[兌出功能已關閉]]></item>
+				<item id="021"><![CDATA[最低級別填寫錯誤]]></item>
+				<item id="022"><![CDATA[最高級別填寫錯誤]]></item>
+				<item id="023"><![CDATA[物品數量填寫錯誤]]></item>
+				<item id="024"><![CDATA[農作物id填寫錯誤]]></item>
+				<item id="025"><![CDATA[收獲數量填寫錯誤]]></item>
+				<item id="026"><![CDATA[作物id不存在]]></item>
+				<item id="027"><![CDATA[該關聯已存在]]></item>
+				<item id="028"><![CDATA[請選擇上傳圖片]]></item>
+				<item id="029"><![CDATA[非法圖片格式]]></item>
+				<item id="030"><![CDATA[購買價格填寫錯誤]]></item>
+				<item id="031"><![CDATA[出售價格填寫錯誤]]></item>
+				<item id="032"><![CDATA[使用等級填寫錯誤]]></item>
+				<item id="033"><![CDATA[使用愛心值填寫錯誤]]></item>
+				<item id="034"><![CDATA[上架數量填寫錯誤]]></item>
+				<item id="035"><![CDATA[補貨周期填寫錯誤]]></item>
+				<item id="036"><![CDATA[堆疊數量填寫錯誤]]></item>
+				<item id="037"><![CDATA[請選擇嫩苗圖片]]></item>
+				<item id="038"><![CDATA[請選擇成熟圖片]]></item>
+				<item id="039"><![CDATA[成熟時間填寫錯誤]]></item>
+				<item id="040"><![CDATA[收獲經驗填寫錯誤]]></item>
+				<item id="041"><![CDATA[影響偷竊成功率填寫錯誤]]></item>
+				<item id="042"><![CDATA[影響偷竊高數量幾率填寫錯誤]]></item>
+				<item id="043"><![CDATA[有效使用天數填寫錯誤]]></item>
+				<item id="044"><![CDATA[影響產出數量百分比填寫錯誤]]></item>
+				<item id="045"><![CDATA[影響產出時間百分比填寫錯誤]]></item>
+				<item id="046"><![CDATA[影響愛心值填寫錯誤]]></item>
+				<item id="047"><![CDATA[請輸入禮包物品]]></item>
+				<item id="048"><![CDATA[第]]></item>
+				<item id="049"><![CDATA[個物品id填寫錯誤]]></item>
+				<item id="050"><![CDATA[請輸入對應物品數量]]></item>
+				<item id="051"><![CDATA[物品數量不匹配]]></item>
+				<item id="052"><![CDATA[個物品數量填寫錯誤]]></item>
+				<item id="053"><![CDATA[隨機物品數量填寫錯誤]]></item>
+				<item id="054"><![CDATA[該物品id組已存在]]></item>
+				<item id="055"><![CDATA[請輸入4個物品id]]></item>
+				<item id="056"><![CDATA[個物品id不存在]]></item>
+				<item id="057"><![CDATA[產出物品id填寫錯誤]]></item>
+				<item id="058"><![CDATA[產出物品id不存在]]></item>
+				<item id="059"><![CDATA[產出物品id不能為物品組id]]></item>
+				<item id="060"><![CDATA[該產出物品已存在]]></item>
+				<item id="061"><![CDATA[成功產出幾率填寫錯誤]]></item>
+				<item id="062"><![CDATA[失敗產出幾率填寫錯誤]]></item>
+				<item id="063"><![CDATA[該配方已存在]]></item>
+				<item id="064"><![CDATA[最大產出數量填寫錯誤]]></item>
+				<item id="065"><![CDATA[最小產出數量填寫錯誤]]></item>
+				<item id="066"><![CDATA[最大產出數量不能小于最小產出數量]]></item>
+				<item id="067"><![CDATA[產出數量加成填寫錯誤]]></item>
+				<item id="068"><![CDATA[只能刪除最大等級]]></item>
+				<item id="069"><![CDATA[刪除成功]]></item>
+				<item id="070"><![CDATA[經驗值填寫錯誤]]></item>
+				<item id="071"><![CDATA[體力填寫錯誤]]></item>
+				<item id="072"><![CDATA[解鎖農田數填寫錯誤]]></item>
+				<item id="073"><![CDATA[該等級經驗值必須大于上一級經驗值]]></item>
+				<item id="074"><![CDATA[天數填寫錯誤]]></item>
+				<item id="075"><![CDATA[月累計簽到天數不能超過31天]]></item>
+				<item id="076"><![CDATA[該簽到天數已存在]]></item>
+				<item id="077"><![CDATA[增加]]></item>
+				<item id="078"><![CDATA[解鎖次數填寫錯誤]]></item>
+				<item id="079"><![CDATA[經驗]]></item>
+				<item id="080"><![CDATA[愛心]]></item>
+				<item id="081"><![CDATA[增加經驗填寫錯誤]]></item>
+				<item id="082"><![CDATA[填寫錯誤]]></item>
+				<item id="083"><![CDATA[增加體力填寫錯誤]]></item>
+				<item id="084"><![CDATA[增加愛心值填寫錯誤]]></item>
+				<item id="085"><![CDATA[該用戶組已被占用]]></item>
+				<item id="086"><![CDATA[增加偷竊成功率填寫錯誤]]></item>
+				<item id="087"><![CDATA[任務未完成]]></item>
+				<item id="088"><![CDATA[獎勵已領取]]></item>
+				<item id="089"><![CDATA[該任務已結束]]></item>
+				<item id="090"><![CDATA[數量不足]]></item>
+				<item id="091"><![CDATA[個人任務次數已達上限]]></item>
+				<item id="092"><![CDATA[目標uid填寫錯誤]]></item>
+				<item id="093"><![CDATA[目標uid不存在]]></item>
+				<item id="094"><![CDATA[任務道具未選擇]]></item>
+				<item id="095"><![CDATA[剩余金額不足]]></item>
+				<item id="096"><![CDATA[道具數量不足]]></item>
+				<item id="097"><![CDATA[限制時間填寫錯誤]]></item>
+				<item id="098"><![CDATA[成功售出獲得]]></item>
+				<item id="099"><![CDATA[解鎖次數已存在]]></item>
+				<item id="100"><![CDATA[兌換數量填寫錯誤]]></item>
+				<item id="101"><![CDATA[不足]]></item>
+				<item id="102"><![CDATA[兌換成功]]></item>
+				<item id="103"><![CDATA[已達解鎖上限]]></item>
+				<item id="104"><![CDATA[體力值不足]]></item>
+				<item id="105"><![CDATA[該作物已成熟，無需使用]]></item>
+				<item id="106"><![CDATA[該道具無法對該用戶使用]]></item>
+				<item id="107"><![CDATA[已經使用過了]]></item>
+				<item id="108"><![CDATA[已經偷過了]]></item>
+				<item id="109"><![CDATA[偷竊失敗]]></item>
+				<item id="110"><![CDATA[剩余數量不足]]></item>
+				<item id="111"><![CDATA[成功購買]]></item>
+				<item id="112"><![CDATA[材料格子未填滿]]></item>
+				<item id="113"><![CDATA[該商品已購買]]></item>
+				<item id="114"><![CDATA[個，消耗]]></item>
+				<item id="115"><![CDATA[暫時沒有活動任務！]]></item>
+				<item id="116"><![CDATA[解鎖費用填寫錯誤]]></item>
+				<item id="117"><![CDATA[配方]]></item>
+				<item id="118"><![CDATA[裝扮裝備]]></item>
+				<item id="119"><![CDATA[禮包]]></item>
+				<item id="120"><![CDATA[該農田已解鎖]]></item>
+				<item id="121"><![CDATA[未選擇配方]]></item>
+				<item id="129"><![CDATA[單次兌換數量不能低于]]></item>
+				<item id="130"><![CDATA[每日兌換數量不能超過]]></item>
+				<item id="131"><![CDATA[玩家最低]]></item>
+				<item id="132"><![CDATA[數不能少于]]></item>
+				<item id="140"><![CDATA[商店折扣填寫錯誤]]></item>
+				<item id="141"><![CDATA[解鎖折扣填寫錯誤]]></item>
+				<item id="142"><![CDATA[降低被偷竊高數量幾率填寫錯誤]]></item>
+				<item id="143"><![CDATA[降低被偷竊成功率填寫錯誤]]></item>
+				<item id="144"><![CDATA[增加偷竊高數量幾率填寫錯誤]]></item>
+				<item id="145"><![CDATA[增加單位時間回復體力值填寫錯誤]]></item>
+				<item id="146"><![CDATA[該物品不存在]]></item>
+				<item id="147"><![CDATA[該物品不能食用]]></item>
+				<item id="148"><![CDATA[種植日志]]></item>
+				<item id="149"><![CDATA[收獲日志]]></item>
+				<item id="150"><![CDATA[偷竊日志]]></item>
+				<item id="151"><![CDATA[商店買入日志]]></item>
+				<item id="152"><![CDATA[商店賣出日志]]></item>
+				<item id="153"><![CDATA[共清理]]></item>
+				<item id="154"><![CDATA[條]]></item>
+				<item id=""><![CDATA[]]></item>
+				<item id="install0"><![CDATA[INSERT INTO `pre_gfarm_goods` (`id`, `sort`, `name`, `big_type`, `small_type`, `money_typeb`, `money_types`, `buy_price`, `sale_price`, `use_level`, `use_benevolence`, `use_flag`, `sale_count`, `add_date`, `sale_time_begin`, `sale_time_end`, `transaction_flag`, `img`, `description`, `depot_pile`, `create_time`, `create_uid`, `update_time`, `update_uid`) VALUES
+(74, '', '黃金右手', 1, 2, 0, 0, 500, 200, 7, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204142256175.png', '黃金右手，偷竊成功數量加成10%。', 999, 1417674176, 1039, 1417675516, 1039),
+(75, '', '乾坤袋', 1, 3, 0, 0, 5000, 2000, 15, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204142355637.png', '乾坤袋，偷竊成功數量加成50%', 999, 1417674235, 1039, 1417675544, 1039),
+(79, 'ZZS002', '超級玉米種子', 9, 0, 0, 0, 200, 20, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204150627697.png', '', 0, 1417676787, 2, 1417676787, 2),
+(80, 'ZZS003', '超級石榴種子', 9, 0, 0, 0, 300, 30, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204150724406.png', '', 0, 1417676844, 2, 1417676844, 2),
+(81, 'ZZS004', '超級苦瓜種子', 9, 0, 0, 0, 400, 40, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204150840553.png', '需要大量苦瓜合成！', 0, 1417676920, 2, 1417676920, 2),
+(82, 'ZZS005', '超級土豆種子', 9, 0, 0, 0, 500, 50, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204150949288.png', '需要大量土豆合成！', 0, 1417676989, 2, 1417676989, 2),
+(83, 'ZZS006', '超級南瓜種子', 9, 0, 0, 0, 1200, 120, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204151113729.png', '需要大量南瓜合成！', 0, 1417677073, 2, 1417677073, 2),
+(76, '', '神級鐮刀', 1, 2, 0, 0, 700, 200, 7, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204143323891.png', '神級鐮刀', 999, 1417674803, 1039, 1417674827, 1039),
+(77, '', '狂亂戰斧', 1, 3, 0, 0, 5000, 2000, 15, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204143440650.png', '狂亂戰斧', 999, 1417674880, 1039, 1417675549, 1039),
+(78, 'ZZS001', '超級豌豆種子', 9, 0, 0, 0, 100, 10, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204145942592.png', '需要大量豌豆來合成哦！！', 0, 1417676382, 2, 1417676583, 2),
+(84, 'ZZS007', '超級番茄種子', 9, 0, 0, 0, 1400, 140, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204151244830.png', '需要大量番茄合成！', 0, 1417677164, 2, 1417677164, 2),
+(85, 'ZZS008', '超級蘋果種子', 9, 0, 0, 0, 1600, 160, 10, 0, 0, 0, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141204151414371.png', '需要大量蘋果合成！', 0, 1417677254, 2, 1417677254, 2);]]></item>
+				<item id="install1"><![CDATA[INSERT INTO `pre_gfarm_equipment` (`id`, `relation_id`, `add_steal_odds`, `add_steal_number`, `valid_time`) VALUES
+(1, 74, 0, 10, 3),
+(2, 75, 0, 50, 5),
+(3, 76, 10, 0, 3),
+(4, 77, 50, 0, 5);]]></item>
+				<item id="install2"><![CDATA[INSERT INTO `pre_gfarm_decorate` (`id`, `relation_id`, `add_steal_odds`, `add_steal_number`, `add_gain_number`, `add_gain_time`, `valid_time`) VALUES
+(1, 53, 0, 0, 0, 0, 0);]]></item>
+				<item id="install3"><![CDATA[INSERT INTO `pre_gfarm_set` (`id`, `mod_cn`, `mod_en`, `key_cn`, `key_en`, `regex_en`, `regex_cn`, `description`, `value`, `status`, `displayorder`, `create_time`, `update_time`, `type`) VALUES
+(32, '兌出', 'exout', '是否兌出', 'isout', '/^[0-1]$/', '選擇錯誤', '是否開啟兌出功能', '1', 0, 0, 0, 0, 3),
+(33, '兌出', 'exout', '兌出積分類型', 'outstyle', '/^([1-9]+[0-9]*)$/', '積分類型錯誤', '兌出積分類型', '8', 0, 1, 0, 0, 4),
+(34, '兌出', 'exout', '單次兌出最低積分數', 'minexnum', '/^([1-9]+[0-9]*)$/', '單次兌出最低積分數填寫錯誤', '單次兌出最低積分數', '1', 0, 2, 0, 0, 0),
+(35, '兌出', 'exout', '玩家最少剩余金錢數', 'minusernum', '/^([1-9]+[0-9]*)$/', '玩家最少剩余金錢數填寫錯誤', '玩家最少剩余金錢數', '2', 0, 3, 0, 0, 0),
+(36, '兌出', 'exout', '每日最高兌換積分數', 'maxexnum', '/^([1-9]+[0-9]*)$/', '每日最高兌換積分數填寫錯誤', '每日最高兌換積分數', '3', 0, 4, 0, 0, 0),
+(37, '兌出', 'exout', '兌出比例', 'outbase', '/^([1-9]+[0-9]*)$/', '兌出比例填寫錯誤', '兌出比例為所填數字：1', '2', 0, 1, 0, 0, 0);]]></item>
+				<item id="install4"><![CDATA[update `pre_gfarm_goods_separate` set separate_name='食品',pid=0,table_name='food' where id=14;]]></item>
+				<item id="install5"><![CDATA[]]></item>
+				<item id="install6"><![CDATA[]]></item>
+				<item id="install7"><![CDATA[]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="c001"><![CDATA[配方信息]]></item>
+				<item id="c002"><![CDATA[學習時間]]></item>
+				<item id="c003"><![CDATA[初次使用時間]]></item>
+				<item id="c004"><![CDATA[最后使用時間]]></item>
+				<item id="c005"><![CDATA[使用次數]]></item>
+				<item id="c006"><![CDATA[新增]]></item>
+				<item id="c007"><![CDATA[編號]]></item>
+				<item id="c008"><![CDATA[配方名稱]]></item>
+				<item id="c009"><![CDATA[合成物品組]]></item>
+				<item id="c010"><![CDATA[成功產出種子]]></item>
+				<item id="c011"><![CDATA[產出該物品機率]]></item>
+				<item id="c012"><![CDATA[失敗產出種子]]></item>
+				<item id="c013"><![CDATA[操作]]></item>
+				<item id="c014"><![CDATA[修改]]></item>
+				<item id="c015"><![CDATA[總共]]></item>
+				<item id="c016"><![CDATA[條數據]]></item>
+				<item id="c017"><![CDATA[頁]]></item>
+				<item id="c018"><![CDATA[產出物品]]></item>
+				<item id="c019"><![CDATA[最大產出數量]]></item>
+				<item id="c020"><![CDATA[最少產出數量]]></item>
+				<item id="c021"><![CDATA[使用等級]]></item>
+				<item id="c022"><![CDATA[失敗產出物品幾率]]></item>
+				<item id="c023"><![CDATA[失敗仍能產出種子的幾率,0表示不產出種子]]></item>
+				<item id="c024"><![CDATA[失敗基數組]]></item>
+				<item id="c025"><![CDATA[只填一個則代表失敗概率相等]]></item>
+				<item id="c026"><![CDATA[確定]]></item>
+				<item id="c027"><![CDATA[用/分開，必須4個物品id]]></item>
+				<item id="c028"><![CDATA[物品數量]]></item>
+				<item id="c029"><![CDATA[只填一個則代表4個數量相等]]></item>
+				<item id="c030"><![CDATA[產出物品]]></item>
+				<item id="c031"><![CDATA[種子]]></item>
+				<item id="c032"><![CDATA[作物]]></item>
+				<item id="c033"><![CDATA[產出該作物機率]]></item>
+				<item id="c034"><![CDATA[關聯信息]]></item>
+				<item id="c035"><![CDATA[收獲數量]]></item>
+				<item id="c036"><![CDATA[影響產出數量百分比]]></item>
+				<item id="c037"><![CDATA[影響產出時間百分比]]></item>
+				<item id="c038"><![CDATA[減少被偷竊成功率]]></item>
+				<item id="c039"><![CDATA[減少被偷高數量幾率]]></item>
+				<item id="c040"><![CDATA[有效使用天數]]></item>
+				<item id="c041"><![CDATA[（不填或者0則代表無影響）]]></item>
+				<item id="c042"><![CDATA[（不填或者0則代表無天數上限）]]></item>
+				<item id="c043"><![CDATA[影響偷竊成功率]]></item>
+				<item id="c044"><![CDATA[影響偷竊高數量幾率]]></item>
+				<item id="c045"><![CDATA[嫩苗圖片]]></item>
+				<item id="c046"><![CDATA[或輸入圖片地址：]]></item>
+				<item id="c047"><![CDATA[圖片地址優先,建議]]></item>
+				<item id="c048"><![CDATA[成熟圖片]]></item>
+				<item id="c049"><![CDATA[成熟時間]]></item>
+				<item id="c050"><![CDATA[分鐘]]></item>
+				<item id="c051"><![CDATA[收獲經驗]]></item>
+				<item id="c052"><![CDATA[包含物品id組]]></item>
+				<item id="c053"><![CDATA[用/分開]]></item>
+				<item id="c054"><![CDATA[包含物品數量]]></item>
+				<item id="c055"><![CDATA[開啟方式]]></item>
+				<item id="c056"><![CDATA[全部]]></item>
+				<item id="c057"><![CDATA[隨機]]></item>
+				<item id="c058"><![CDATA[隨機開出物品數量]]></item>
+				<item id="c059"><![CDATA[不填或者0則全部開啟]]></item>
+				<item id="c060"><![CDATA[物品類型]]></item>
+				<item id="c061"><![CDATA[==全部==]]></item>
+				<item id="c062"><![CDATA[：]]></item>
+				<item id="c063"><![CDATA[物品名稱]]></item>
+				<item id="c064"><![CDATA[搜索]]></item>
+				<item id="c065"><![CDATA[物品id]]></item>
+				<item id="c066"><![CDATA[包含物品]]></item>
+				<item id="c067"><![CDATA[開啟數量]]></item>
+				<item id="c068"><![CDATA[影響自己愛心值]]></item>
+				<item id="c069"><![CDATA[使用對象]]></item>
+				<item id="c070"><![CDATA[購買貨幣類型]]></item>
+				<item id="c071"><![CDATA[購買價格]]></item>
+				<item id="c072"><![CDATA[使用等級]]></item>
+				<item id="c073"><![CDATA[使用愛心值]]></item>
+				<item id="c074"><![CDATA[是否上架商城]]></item>
+				<item id="c075"><![CDATA[是否玩家交易]]></item>
+				<item id="c076"><![CDATA[物品圖片]]></item>
+				<item id="c077"><![CDATA[刪除]]></item>
+				<item id="c078"><![CDATA[產出]]></item>
+				<item id="c079"><![CDATA[自己]]></item>
+				<item id="c080"><![CDATA[別人]]></item>
+				<item id="c081"><![CDATA[兌換方式]]></item>
+				<item id="c082"><![CDATA[兌入]]></item>
+				<item id="c083"><![CDATA[是]]></item>
+				<item id="c084"><![CDATA[否]]></item>
+				<item id="c085"><![CDATA[所屬分類]]></item>
+				<item id="c086"><![CDATA[物品信息]]></item>
+				<item id="c087"><![CDATA[自定義編碼]]></item>
+				<item id="c088"><![CDATA[選擇圖片]]></item>
+				<item id="c089"><![CDATA[描述]]></item>
+				<item id="c090"><![CDATA[售出貨幣類型]]></item>
+				<item id="c091"><![CDATA[出售價格]]></item>
+				<item id="c092"><![CDATA[上架數量]]></item>
+				<item id="c093"><![CDATA[不填或者0則代表無限制]]></item>
+				<item id="c094"><![CDATA[不填或者0則代表不上架]]></item>
+				<item id="c095"><![CDATA[補貨周期（小時）]]></item>
+				<item id="c096"><![CDATA[不填或者0則代表如果該物品上架則數量無上限]]></item>
+				<item id="c097"><![CDATA[限購開始時間]]></item>
+				<item id="c098"><![CDATA[限購結束時間]]></item>
+				<item id="c099"><![CDATA[倉庫堆疊數量]]></item>
+				<item id="c100"><![CDATA[不填或者0則代表無上限]]></item>
+				<item id="c101"><![CDATA[是否直接使用]]></item>
+				<item id="c102"><![CDATA[等級]]></item>
+				<item id="c103"><![CDATA[等級稱號]]></item>
+				<item id="c104"><![CDATA[所需經驗]]></item>
+				<item id="c105"><![CDATA[增加體力基數]]></item>
+				<item id="c106"><![CDATA[解鎖農田格數]]></item>
+				<item id="c107"><![CDATA[等級信息]]></item>
+				<item id="c108"><![CDATA[操作類型]]></item>
+				<item id="c109"><![CDATA[來源物品]]></item>
+				<item id="c110"><![CDATA[操作時間]]></item>
+				<item id="c111"><![CDATA[合成配方]]></item>
+				<item id="c112"><![CDATA[加工配方]]></item>
+				<item id="c113"><![CDATA[設置]]></item>
+				<item id="c114"><![CDATA[提交]]></item>
+				<item id="c115"><![CDATA[簽到獎勵設置]]></item>
+				<item id="c116"><![CDATA[月累計簽到天數]]></item>
+				<item id="c117"><![CDATA[消耗]]></item>
+				<item id="c118"><![CDATA[兌出]]></item>
+				<item id="c119"><![CDATA[獎勵道具]]></item>
+				<item id="c120"><![CDATA[無]]></item>
+				<item id="c121"><![CDATA[道具數量]]></item>
+				<item id="c122"><![CDATA[獎勵愛心值]]></item>
+				<item id="c123"><![CDATA[獎勵經驗值]]></item>
+				<item id="c124"><![CDATA[簽到日志]]></item>
+				<item id="c125"><![CDATA[獎勵]]></item>
+				<item id="c126"><![CDATA[用戶名]]></item>
+				<item id="c127"><![CDATA[簽到時間]]></item>
+				<item id="c128"><![CDATA[主線任務管理]]></item>
+				<item id="c129"><![CDATA[日常任務管理]]></item>
+				<item id="c130"><![CDATA[成就任務管理]]></item>
+				<item id="c131"><![CDATA[活動任務管理]]></item>
+				<item id="c132"><![CDATA[主線任務日志]]></item>
+				<item id="c133"><![CDATA[日常任務日志]]></item>
+				<item id="c134"><![CDATA[成就任務日志]]></item>
+				<item id="c135"><![CDATA[活動任務日志]]></item>
+				<item id="c136"><![CDATA[任務名稱]]></item>
+				<item id="c137"><![CDATA[是否領取獎勵]]></item>
+				<item id="c138"><![CDATA[領取獎勵時間]]></item>
+				<item id="c139"><![CDATA[成就名稱]]></item>
+				<item id="c140"><![CDATA[任務方式]]></item>
+				<item id="c141"><![CDATA[任務對象]]></item>
+				<item id="c142"><![CDATA[完成數量]]></item>
+				<item id="c143"><![CDATA[是否顯示]]></item>
+				<item id="c144"><![CDATA[不限]]></item>
+				<item id="c145"><![CDATA[上繳數量]]></item>
+				<item id="c146"><![CDATA[是否第一個完成]]></item>
+				<item id="c147"><![CDATA[是否最后一個完成]]></item>
+				<item id="c148"><![CDATA[上繳時間]]></item>
+				<item id="c149"><![CDATA[征收次數]]></item>
+				<item id="c150"><![CDATA[征收作物]]></item>
+				<item id="c151"><![CDATA[單次征收數量]]></item>
+				<item id="c152"><![CDATA[玩家次數上限]]></item>
+				<item id="c153"><![CDATA[等級限制]]></item>
+				<item id="c154"><![CDATA[前置任務]]></item>
+				<item id="c155"><![CDATA[無限制]]></item>
+				<item id="c156"><![CDATA[任務信息]]></item>
+				<item id="c157"><![CDATA[是否列表展示]]></item>
+				<item id="c158"><![CDATA[任務描述]]></item>
+				<item id="c159"><![CDATA[*每個玩家完成該任務的次數上限]]></item>
+				<item id="c160"><![CDATA[任務開始時間]]></item>
+				<item id="c161"><![CDATA[任務結束時間]]></item>
+				<item id="c162"><![CDATA[隱藏時將關閉當前任務，請謹慎操作]]></item>
+				<item id="c163"><![CDATA[插入位置]]></item>
+				<item id="c164"><![CDATA[尾部]]></item>
+				<item id="c165"><![CDATA[之前]]></item>
+				<item id="c166"><![CDATA[插入位置，添加后不能更改]]></item>
+				<item id="c167"><![CDATA[用戶管理]]></item>
+				<item id="c168"><![CDATA[倉庫管理]]></item>
+				<item id="c169"><![CDATA[農田管理]]></item>
+				<item id="c170"><![CDATA[倉庫日志]]></item>
+				<item id="c171"><![CDATA[農田日志]]></item>
+				<item id="c172"><![CDATA[兌換日志]]></item>
+				<item id="c173"><![CDATA[物品狀態]]></item>
+				<item id="c174"><![CDATA[是否鎖定]]></item>
+				<item id="c175"><![CDATA[使用中]]></item>
+				<item id="c176"><![CDATA[上架]]></item>
+				<item id="c177"><![CDATA[正常]]></item>
+				<item id="c178"><![CDATA[鎖定]]></item>
+				<item id="c179"><![CDATA[詳細]]></item>
+				<item id="c180"><![CDATA[操作對象]]></item>
+				<item id="c181"><![CDATA[操作數量]]></item>
+				<item id="c182"><![CDATA[操作幣種]]></item>
+				<item id="c183"><![CDATA[操作金額]]></item>
+				<item id="c184"><![CDATA[商店買入]]></item>
+				<item id="c185"><![CDATA[商店賣出]]></item>
+				<item id="c186"><![CDATA[市場買入]]></item>
+				<item id="c187"><![CDATA[市場賣出]]></item>
+				<item id="c188"><![CDATA[物品使用]]></item>
+				<item id="c189"><![CDATA[解鎖次數]]></item>
+				<item id="c190"><![CDATA[兌換時間]]></item>
+				<item id="c191"><![CDATA[農田位置]]></item>
+				<item id="c192"><![CDATA[當前種子]]></item>
+				<item id="c193"><![CDATA[產出作物]]></item>
+				<item id="c194"><![CDATA[產出數量加成]]></item>
+				<item id="c195"><![CDATA[預計產出時間]]></item>
+				<item id="c196"><![CDATA[對象所屬]]></item>
+				<item id="c197"><![CDATA[解鎖農田]]></item>
+				<item id="c198"><![CDATA[種植種子]]></item>
+				<item id="c199"><![CDATA[收獲作物]]></item>
+				<item id="c200"><![CDATA[鏟除農田]]></item>
+				<item id="c201"><![CDATA[使用道具]]></item>
+				<item id="c202"><![CDATA[偷竊作物]]></item>
+				<item id="c203"><![CDATA[農田信息]]></item>
+				<item id="c204"><![CDATA[用戶信息]]></item>
+				<item id="c205"><![CDATA[增加經驗值]]></item>
+				<item id="c206"><![CDATA[增加]]></item>
+				<item id="c207"><![CDATA[增加體力]]></item>
+				<item id="c208"><![CDATA[增加愛心值]]></item>
+				<item id="c209"><![CDATA[玩家狀態]]></item>
+				<item id="c210"><![CDATA[禁用]]></item>
+				<item id="c211"><![CDATA[經驗]]></item>
+				<item id="c212"><![CDATA[剩余體力]]></item>
+				<item id="c213"><![CDATA[愛心值]]></item>
+				<item id="c214"><![CDATA[查看倉庫]]></item>
+				<item id="c215"><![CDATA[查看農田]]></item>
+				<item id="c216"><![CDATA[清空很危險！]]></item>
+				<item id="c217"><![CDATA[清空數據]]></item>
+				<item id="c218"><![CDATA[信息]]></item>
+				<item id="c219"><![CDATA[名稱]]></item>
+				<item id="c220"><![CDATA[對應用戶組]]></item>
+				<item id="c221"><![CDATA[*請選擇論壇對應用戶組]]></item>
+				<item id="c222"><![CDATA[增加偷竊成功率]]></item>
+				<item id="c223"><![CDATA[確定刪除嗎？]]></item>
+				<item id="c224"><![CDATA[系統]]></item>
+				<item id="c225"><![CDATA[等級經驗]]></item>
+				<item id="c226"><![CDATA[管理]]></item>
+				<item id="c227"><![CDATA[物品]]></item>
+				<item id="c228"><![CDATA[用戶]]></item>
+				<item id="c229"><![CDATA[任務]]></item>
+				<item id="c230"><![CDATA[日志]]></item>
+				<item id="c231"><![CDATA[簽到]]></item>
+				<item id="c232"><![CDATA[首頁]]></item>
+				<item id="c233"><![CDATA[虛擬農場]]></item>
+				<item id="c234"><![CDATA[加工]]></item>
+				<item id="c235"><![CDATA[倉庫]]></item>
+				<item id="c236"><![CDATA[農田]]></item>
+				<item id="c237"><![CDATA[活動任務]]></item>
+				<item id="c238"><![CDATA[主線任務]]></item>
+				<item id="c239"><![CDATA[兌換]]></item>
+				<item id="c240"><![CDATA[日常任務]]></item>
+				<item id="c241"><![CDATA[成就任務]]></item>
+				<item id="c242"><![CDATA[簽到獎勵]]></item>
+				<item id="c243"><![CDATA[組件名稱]]></item>
+				<item id="c244"><![CDATA[添加時間]]></item>
+				<item id="c245"><![CDATA[安裝]]></item>
+				<item id="c246"><![CDATA[卸載]]></item>
+				<item id="c247"><![CDATA[序號]]></item>
+				<item id="c248"><![CDATA[解鎖幣種]]></item>
+				<item id="c249"><![CDATA[解鎖費用]]></item>
+				<item id="c257"><![CDATA[插件后臺目錄]]></item>
+				<item id="c258"><![CDATA[插件說明：這是GPlay虛擬農場。<br>]]></item>
+				<item id="c259"><![CDATA[ ，歡迎進入]]></item>
+				<item id="c260"><![CDATA[管理后臺，當前版本：]]></item>
+				<item id="c261"><![CDATA[后臺首頁]]></item>
+				<item id="c262"><![CDATA[前臺效果]]></item>
+				<item id="c263"><![CDATA[基本設置]]></item>
+				<item id="c264"><![CDATA[經驗獲取設置]]></item>
+				<item id="c265"><![CDATA[體力消耗設置]]></item>
+				<item id="c266"><![CDATA[上一頁]]></item>
+				<item id="c267"><![CDATA[下一頁]]></item>
+				<item id="c268"><![CDATA[通用物品]]></item>
+				<item id="cp028"><![CDATA[已是第一頁]]></item>
+				<item id="cp030"><![CDATA[已是最后一頁]]></item>
+				<item id="c269"><![CDATA[加工]]></item>
+				<item id="c270"><![CDATA[操作日志]]></item>
+				<item id="c271"><![CDATA[任務日志]]></item>
+				<item id="c272"><![CDATA[成就管理]]></item>
+				<item id="c273"><![CDATA[兌換管理]]></item>
+				<item id="c274"><![CDATA[兌換方式]]></item>
+				<item id="c275"><![CDATA[兌換積分類型]]></item>
+				<item id="c276"><![CDATA[兌換數值]]></item>
+				<item id="c277"><![CDATA[玩家剩余金錢]]></item>
+				<item id="cp009"><![CDATA[Powered&nbsp;by&nbsp;老郭工作室&nbsp;&copy;&nbsp;www.47jh.com]]></item>
+				<item id="c301"><![CDATA[商店折扣]]></item>
+				<item id="c302"><![CDATA[解鎖折扣]]></item>
+				<item id="c303"><![CDATA[降低被偷高數量幾率]]></item>
+				<item id="c304"><![CDATA[降低被偷成功率]]></item>
+				<item id="c305"><![CDATA[增加偷高數量幾率]]></item>
+				<item id="c306"><![CDATA[增加偷成功率]]></item>
+				<item id="c307"><![CDATA[增加回復體力值]]></item>
+				<item id="c308"><![CDATA[商店購買商品價格折扣]]></item>
+				<item id="c309"><![CDATA[解鎖費用折扣]]></item>
+				<item id="c310"><![CDATA[單位時間內額外回復的體力值]]></item>
+				<item id="c311"><![CDATA[一鍵收獲權限]]></item>
+				<item id="c312"><![CDATA[食品]]></item>
+				<item id="c313"><![CDATA[清理日志]]></item>
+				<item id="c314"><![CDATA[日志保留天數：]]></item>
+				<item id="c315"><![CDATA[開始清理]]></item>
+				<item id="c316"><![CDATA[偷竊]]></item>
+				<item id="c317"><![CDATA[]]></item>
+				<item id="c318"><![CDATA[]]></item>
+				<item id="c319"><![CDATA[]]></item>
+				<item id="c320"><![CDATA[]]></item>
+				<item id="c321"><![CDATA[]]></item>
+				<item id="c322"><![CDATA[清理]]></item>
+				<item id="c323"><![CDATA[日志類型]]></item>
+				<item id="c324"><![CDATA[可清理日志條數（非當日）]]></item>
+				<item id=""><![CDATA[]]></item>
+				<item id="f001"><![CDATA[成就總覽]]></item>
+				<item id="f002"><![CDATA[未完成的成就]]></item>
+				<item id="f003"><![CDATA[已完成的成就]]></item>
+				<item id="f004"><![CDATA[任務動作]]></item>
+				<item id="f005"><![CDATA[任務目標]]></item>
+				<item id="f006"><![CDATA[當前進度]]></item>
+				<item id="f007"><![CDATA[完成獎勵]]></item>
+				<item id="f008"><![CDATA[任務標題]]></item>
+				<item id="f009"><![CDATA[單次征收獎勵]]></item>
+				<item id="f010"><![CDATA[我的完成次數]]></item>
+				<item id="f011"><![CDATA[我的作物數量]]></item>
+				<item id="f012"><![CDATA[個]]></item>
+				<item id="f013"><![CDATA[你已完成本次征收！]]></item>
+				<item id="f014"><![CDATA[本次征收圓滿結束！]]></item>
+				<item id="f015"><![CDATA[道具]]></item>
+				<item id="f016"><![CDATA[級]]></item>
+				<item id="f017"><![CDATA[單價]]></item>
+				<item id="f018"><![CDATA[總價值]]></item>
+				<item id="f019"><![CDATA[一鍵]]></item>
+				<item id="f020"><![CDATA[解鎖]]></item>
+				<item id="f021"><![CDATA[一鍵賣出]]></item>
+				<item id="f022"><![CDATA[賣出數量]]></item>
+				<item id="f023"><![CDATA[物品等級]]></item>
+				<item id="f024"><![CDATA[單個售價]]></item>
+				<item id="f025"><![CDATA[總計收入]]></item>
+				<item id="f026"><![CDATA[已鎖定]]></item>
+				<item id="f027"><![CDATA[未鎖定]]></item>
+				<item id="f028"><![CDATA[當前]]></item>
+				<item id="f029"><![CDATA[兌換數量]]></item>
+				<item id="f030"><![CDATA[兌入比例為1:]]></item>
+				<item id="f031"><![CDATA[刷新]]></item>
+				<item id="f032"><![CDATA[種植]]></item>
+				<item id="f033"><![CDATA[鏟除]]></item>
+				<item id="f034"><![CDATA[收獲]]></item>
+				<item id="f035"><![CDATA[偷取]]></item>
+				<item id="f036"><![CDATA[未設置任務或任務全部完成]]></item>
+				<item id="f037"><![CDATA[暫時沒有活動任務！]]></item>
+				<item id="f038"><![CDATA[進入后臺]]></item>
+				<item id="f039"><![CDATA[一鍵收獲]]></item>
+				<item id="f040"><![CDATA[我的排名]]></item>
+				<item id="f041"><![CDATA[按等級]]></item>
+				<item id="f042"><![CDATA[按愛心]]></item>
+				<item id="f043"><![CDATA[按收藏]]></item>
+				<item id="f044"><![CDATA[確定鏟除該作物嗎？]]></item>
+				<item id="f045"><![CDATA[，確定解鎖該農田嗎？]]></item>
+				<item id="f046"><![CDATA[尾頁]]></item>
+				<item id="f047"><![CDATA[查看詳情]]></item>
+				<item id="f048"><![CDATA[成熟]]></item>
+				<item id="f049"><![CDATA[剩余]]></item>
+				<item id="f050"><![CDATA[幼苗]]></item>
+				<item id="f051"><![CDATA[預計]]></item>
+				<item id="f052"><![CDATA[分鐘后成熟]]></item>
+				<item id="f053"><![CDATA[預計產出]]></item>
+				<item id="f054"><![CDATA[任務狀態]]></item>
+				<item id="f055"><![CDATA[已完成]]></item>
+				<item id="f056"><![CDATA[未完成]]></item>
+				<item id="f057"><![CDATA[已領取]]></item>
+				<item id="f058"><![CDATA[來農場偷取了]]></item>
+				<item id="f059"><![CDATA[來農場使用了道具]]></item>
+				<item id="f060"><![CDATA[體力]]></item>
+				<item id="f061"><![CDATA[愛心]]></item>
+				<item id="f062"><![CDATA[我的記錄]]></item>
+				<item id="f063"><![CDATA[我解鎖了一塊農田]]></item>
+				<item id="f064"><![CDATA[我種植了一顆]]></item>
+				<item id="f065"><![CDATA[我收獲了]]></item>
+				<item id="f066"><![CDATA[我鏟除了一塊農田]]></item>
+				<item id="f067"><![CDATA[我對]]></item>
+				<item id="f068"><![CDATA[的農場使用了]]></item>
+				<item id="f069"><![CDATA[我在]]></item>
+				<item id="f070"><![CDATA[的農場偷取了]]></item>
+				<item id="f071"><![CDATA[您當前排名為]]></item>
+				<item id="f072"><![CDATA[排名]]></item>
+				<item id="f073"><![CDATA[金幣商店]]></item>
+				<item id="f074"><![CDATA[售價]]></item>
+				<item id="f075"><![CDATA[存貨]]></item>
+				<item id="f076"><![CDATA[時間]]></item>
+				<item id="f077"><![CDATA[分鐘]]></item>
+				<item id="f078"><![CDATA[類型]]></item>
+				<item id="f079"><![CDATA[當前總共有]]></item>
+				<item id="f080"><![CDATA[出售]]></item>
+				<item id="f081"><![CDATA[已購買]]></item>
+				<item id="f082"><![CDATA[剩余數量]]></item>
+				<item id="f083"><![CDATA[總計]]></item>
+				<item id="f084"><![CDATA[您本月累計簽到]]></item>
+				<item id="f085"><![CDATA[次]]></item>
+				<item id="f086"><![CDATA[周日]]></item>
+				<item id="f087"><![CDATA[周一]]></item>
+				<item id="f088"><![CDATA[周二]]></item>
+				<item id="f089"><![CDATA[周三]]></item>
+				<item id="f090"><![CDATA[周四]]></item>
+				<item id="f091"><![CDATA[周五]]></item>
+				<item id="f092"><![CDATA[周六]]></item>
+				<item id="f093"><![CDATA[次簽到]]></item>
+				<item id="f094"><![CDATA[目標數量]]></item>
+				<item id="f095"><![CDATA[領取任務獎勵：]]></item>
+				<item id="f096"><![CDATA[已經收藏]]></item>
+				<item id="f097"><![CDATA[成功賣出獲得]]></item>
+				<item id="f098"><![CDATA[取消收藏]]></item>
+				<item id="f099"><![CDATA[收藏好友]]></item>
+				<item id="f100"><![CDATA[施肥成功]]></item>
+				<item id="f101"><![CDATA[跳至最前]]></item>
+				<item id="f102"><![CDATA[跳至最后]]></item>
+				<item id="f103"><![CDATA[開放等級]]></item>
+				<item id="f104"><![CDATA[所需愛心]]></item>
+				<item id="f105"><![CDATA[作物售價]]></item>
+				<item id="f106"><![CDATA[恭喜您獲得：]]></item>
+				<item id="f107"><![CDATA[已接受]]></item>
+				<item id="f108"><![CDATA[沒什么好偷的了]]></item>
+				<item id="f109"><![CDATA[上次加工時間：]]></item>
+				<item id="f110"><![CDATA[加工產出]]></item>
+				<item id="f111"><![CDATA[可用配方]]></item>
+				<item id="f112"><![CDATA[恭喜你合成了]]></item>
+				<item id="f113"><![CDATA[成本]]></item>
+				<item id="f114"><![CDATA[產量]]></item>
+				<item id="f115"><![CDATA[物品管理]]></item>
+				<item id="f116"><![CDATA[,并解鎖了新配方：]]></item>
+				<item id="f117"><![CDATA[合成失敗]]></item>
+				<item id="f118"><![CDATA[，系統補償給您]]></item>
+				<item id="f119"><![CDATA[款]]></item>
+				<item id="f120"><![CDATA[告示牌]]></item>
+				<item id="f121"><![CDATA[地貌]]></item>
+				<item id="f122"><![CDATA[屋子]]></item>
+				<item id="f123"><![CDATA[寵物]]></item>
+				<item id="f124"><![CDATA[已裝扮]]></item>
+				<item id="f125"><![CDATA[裝備]]></item>
+				<item id="f126"><![CDATA[裝扮]]></item>
+				<item id="f127"><![CDATA[兌出比例為]]></item>
+				<item id="f128"><![CDATA[解鎖需要消耗]]></item>
+				<item id="f129"><![CDATA[材料]]></item>
+				<item id="f130"><![CDATA[偷竊成功率：]]></item>
+				<item id="f131"><![CDATA[偷高數量幾率：]]></item>
+				<item id="f132"><![CDATA[到期時間：]]></item>
+				<item id="f133"><![CDATA[永久]]></item>
+				<item id="f134"><![CDATA[購買]]></item>
+				<item id="f135"><![CDATA[主裝備]]></item>
+				<item id="f136"><![CDATA[輔助裝備]]></item>
+				<item id="f137"><![CDATA[擁有的裝扮]]></item>
+			</item>
+			<item id="installlang">
+				<item id="1"><![CDATA[INSERT INTO `pre_gfarm_set` (`id`, `mod_cn`, `mod_en`, `key_cn`, `key_en`, `regex_en`, `regex_cn`, `description`, `value`, `status`, `displayorder`, `create_time`, `update_time`, `type`) VALUES
+(1, '基本', 'base', '體力基數', 'power', '/^([1-9]+[0-9]*)$/', '體力基數填寫錯誤', '每個玩家默認的體力最大值', '100', 0, 0, 0, 0, 0),
+(6, '基本', 'base', '無配方產出物品id', 'formgood', '/^(([1-9]+[0-9]*)|[0])$/', '無配方產出物品id填寫錯誤', '無配方時產出的物品,0表示無產品', '0', 0, 10, 0, 0, 0),
+(7, '基本', 'base', '默認偷竊成功率', 'steal_odds', '/^(([1-9]+[0-9]*)|[0])$/', '偷竊成功率填寫錯誤', '默認玩家偷取其他用戶作物的成功率', '80', 0, 12, 0, 0, 1),
+(8, '基本', 'base', '默認最低剩余數值', 'steal_number', '/^([1-9]+[0-9]*)$/', '最低剩余數值填寫錯誤', '默認玩家作物最低剩余數量，當不滿足比例需求時按最低數值為準', '6', 0, 14, 0, 0, 0),
+(9, '基本', 'base', '默認恢復體力時間', 'restrength_time', '/^([1-9]+[0-9]*)$/', '恢復體力時間填寫錯誤', '默認每隔多少分鐘恢復一次體力', '1', 0, 16, 0, 0, 0),
+(10, '基本', 'base', '默認恢復體力數值', 'restrength_number', '/^([1-9]+[0-9]*)$/', '恢復體力值填寫錯誤', '默認每次恢復體力的數值', '2', 0, 18, 0, 0, 0),
+(11, '基本', 'base', '默認交易的手續費率', 'poundage_rate', '/^(([1-9]+[0-9]*)|[0])$/', '交易手續費填寫錯誤', '默認玩家進行交易的手續費率', '20', 0, 20, 0, 0, 1),
+(12, '基本', 'base', '無權進游戲的提示', 'authority_explain', '/^\\S/', '提示不能為空', '玩家不屬于游戲用戶組進游戲的提示', '暫無權限', 0, 22, 0, 0, 0),
+(14, '體力消耗', 'strength', '鏟田消耗體力', 'uproot_power', '/^(([1-9]+[0-9]*)|[0])$/', '鏟田消耗體力填寫錯誤', '玩家鏟田時每次消耗多少體力', '1', 0, 26, 0, 0, 0),
+(15, '體力消耗', 'strength', '偷竊消耗體力', 'steal_power', '/^(([1-9]+[0-9]*)|[0])$/', '偷竊消耗體力填寫錯誤', '玩家偷竊時每次消耗多少體力', '1', 0, 28, 0, 0, 0),
+(16, '體力消耗', 'strength', '種植消耗體力', 'plant_power', '/^(([1-9]+[0-9]*)|[0])$/', '種植消耗體力填寫錯誤', '玩家種植時每次消耗多少體力', '1', 0, 30, 0, 0, 0),
+(17, '體力消耗', 'strength', '收獲消耗體力', 'crop_power', '/^(([1-9]+[0-9]*)|[0])$/', '收獲消耗體力填寫錯誤', '玩家收獲時每次消耗多少體力', '1', 0, 32, 0, 0, 0),
+(18, '體力消耗', 'strength', '合成消耗體力', 'compose_power', '/^(([1-9]+[0-9]*)|[0])$/', '合成消耗體力填寫錯誤', '玩家合成時每次消耗多少體力', '1', 0, 34, 0, 0, 0),
+(19, '體力消耗', 'strength', '加工消耗體力', 'process_power', '/^(([1-9]+[0-9]*)|[0])$/', '加工消耗體力填寫錯誤', '玩家加工時每次消耗多少體力', '1', 0, 36, 0, 0, 0),
+(21, '經驗獲取', 'exp', '鏟田獲得經驗', 'uproot_exp', '/^(([1-9]+[0-9]*)|[0])$/', '鏟田經驗填寫錯誤', '玩家鏟田成功時每次獲得多少經驗', '0', 0, 40, 0, 0, 0),
+(22, '經驗獲取', 'exp', '偷竊獲得經驗', 'steal_exp', '/^(([1-9]+[0-9]*)|[0])$/', '偷竊經驗填寫錯誤', '玩家偷竊成功時每次獲得多少經驗', '0', 0, 42, 0, 0, 0),
+(23, '經驗獲取', 'exp', '種植獲得經驗', 'plant_exp', '/^(([1-9]+[0-9]*)|[0])$/', '種植經驗填寫錯誤', '玩家種植成功時每次獲得多少經驗', '0', 0, 44, 0, 0, 0),
+(24, '經驗獲取', 'exp', '收獲獲得經驗', 'crop_exp', '/^(([1-9]+[0-9]*)|[0])$/', '收獲經驗填寫錯誤', '玩家收獲成功時每次獲得多少經驗', '0', 0, 46, 0, 0, 0),
+(25, '經驗獲取', 'exp', '合成獲得經驗', 'compose_exp', '/^(([1-9]+[0-9]*)|[0])$/', '合成經驗填寫錯誤', '玩家合成成功時每次獲得多少經驗', '1', 0, 48, 0, 0, 0),
+(26, '經驗獲取', 'exp', '加工獲得經驗', 'process_exp', '/^(([1-9]+[0-9]*)|[0])$/', '加工經驗填寫錯誤', '玩家加工成功時每次獲得多少經驗', '1', 0, 50, 0, 0, 0),
+(27, '基本', 'base', '默認最低剩余比例', 'steal_rate', '/^([1-9]+[0-9]*)$/', '最低剩余比例填寫錯誤', '默認玩家作物最低剩余數量為總數量的百分比', '50', 0, 13, 0, 0, 1),
+(28, '基本', 'base', '系統公告', 'announce', '', '', '系統公告', '虛擬農場測試，歡迎大家踴躍測試，積極找出問題。', 0, 24, 0, 0, 2),
+(29, '基礎', 'base', '公告標題', 'adtitle', '', '', '公告標題', '公測通知', 0, 23, 0, 0, 0),
+(32, '兌出', 'exout', '是否兌出', 'isout', '/^[0-1]$/', '選擇錯誤', '是否開啟兌出功能', '1', 0, 0, 0, 0, 3),
+(33, '兌出', 'exout', '兌出積分類型', 'outstyle', '/^([1-9]+[0-9]*)$/', '積分類型錯誤', '兌出積分類型', '8', 0, 1, 0, 0, 4),
+(34, '兌出', 'exout', '單次兌出最低積分數', 'minexnum', '/^([1-9]+[0-9]*)$/', '單次兌出最低積分數填寫錯誤', '單次兌出最低積分數', '1', 0, 2, 0, 0, 0),
+(35, '兌出', 'exout', '玩家最少剩余金錢數', 'minusernum', '/^([1-9]+[0-9]*)$/', '玩家最少剩余金錢數填寫錯誤', '玩家最少剩余金錢數', '2', 0, 3, 0, 0, 0),
+(36, '兌出', 'exout', '每日最高兌換積分數', 'maxexnum', '/^([1-9]+[0-9]*)$/', '每日最高兌換積分數填寫錯誤', '每日最高兌換積分數', '3', 0, 4, 0, 0, 0),
+(37, '兌出', 'exout', '兌出比例', 'outbase', '/^([1-9]+[0-9]*)$/', '兌出比例填寫錯誤', '兌出比例為所填數字：1', '2', 0, 1, 0, 0, 0);]]></item>
+				<item id="2"><![CDATA[INSERT INTO `pre_gfarm_goods_separate` (`id`, `separate_name`, `pid`, `table_name`) VALUES
+(1, '裝備', 0, 'equipment'),
+(2, '主要裝備', 1, ''),
+(3, '輔助裝備', 1, ''),
+(4, '裝扮', 0, 'decorate'),
+(5, '告示牌', 4, ''),
+(6, '地貌', 4, ''),
+(7, '屋子', 4, ''),
+(8, '寵物', 4, ''),
+(9, '種子', 0, 'germ'),
+(11, '通用物品', 0, 'goods'),
+(12, '農作物', 11, ''),
+(13, '生產材料', 11, ''),
+(14, '食品', 0, 'food'),
+(15, '禮包', 0, 'gifts'),
+(19, '道具', 0, 'items');]]></item>
+				<item id="3"><![CDATA[INSERT INTO `pre_gfarm_exp_level` (`id`, `name`, `level`, `experience`, `strength`, `land_number`, `create_time`, `update_time`) VALUES
+(1, '1級', 1, 0, 0, 1, 1413335168, 1416816675),
+(2, '2級', 2, 10, 1, 2, 1413335222, 1416816680),
+(3, '3級', 3, 30, 1, 3, 1413335232, 1414720296),
+(4, '4級', 4, 60, 2, 4, 1413335245, 1414720300),
+(5, '5級', 5, 100, 2, 5, 1413335281, 1414720304),
+(6, '6級', 6, 150, 3, 6, 1413335295, 1414720308),
+(7, '7級', 7, 250, 3, 7, 1413335337, 1414720311),
+(8, '8級', 8, 400, 4, 8, 1413335348, 1414720314),
+(9, '9級', 9, 600, 4, 9, 1413335375, 1414720318),
+(10, '10級', 10, 850, 5, 10, 1413335410, 1414720322),
+(11, '11級', 11, 1350, 6, 11, 1413335427, 1417180484),
+(12, '12級', 12, 2350, 7, 12, 1413335459, 1417180506),
+(13, '13級', 13, 3850, 8, 13, 1413335473, 1417180522),
+(14, '14級', 14, 5850, 9, 14, 1413335491, 1417180531),
+(15, '15級', 15, 8350, 10, 15, 1413335520, 1417180541),
+(16, '16級', 16, 13350, 12, 16, 1413335536, 1417180551),
+(17, '17級', 17, 23350, 14, 17, 1413335547, 1417180556),
+(18, '18級', 18, 38350, 16, 18, 1413335622, 1417180688),
+(19, '19級', 19, 58350, 18, 19, 1413335647, 1417180694),
+(20, '20級', 20, 83350, 20, 20, 1413335692, 1417180703);]]></item>
+				<item id="4"><![CDATA[INSERT INTO `pre_gfarm_task_way` (`id`, `way_name`, `create_time`, `way_type`, `achieve_flag`) VALUES
+(1, '解鎖農田個數', 0, 0, 0),
+(2, '鏟除農田次數', 0, 0, 0),
+(3, '種植種子次數', 0, 1, 0),
+(4, '收獲作物次數', 0, 2, 0),
+(5, '收獲作物個數', 0, 2, 0),
+(6, '偷竊作物次數', 0, 2, 0),
+(7, '偷竊作物個數', 0, 2, 0),
+(8, '道具使用次數', 0, 3, 0),
+(9, '兌換金錢數量', 0, 0, 0),
+(10, '簽到天數', 0, 0, 1),
+(11, '商店買入種子數量', 0, 1, 0),
+(12, '商店買入道具數量', 0, 3, 0),
+(13, '商店賣出作物數量', 0, 2, 0),
+(14, '商店賣出種子數量', 0, 1, 0),
+(15, '商店賣出道具數量', 0, 3, 0),
+(16, '商店消費金額', 0, 0, 0),
+(17, '商店賺取金額', 0, 0, 0);]]></item>
+				<item id="5"><![CDATA[INSERT INTO `pre_gfarm_germ` (`id`, `relation_id`, `sprout_img`, `mature_img`, `experience`, `mature_time`) VALUES
+(1, 11, 'source/plugin/gfarm/upload/germ/20141126091414528.png', 'source/plugin/gfarm/upload/germ/20141126091414169.png', 1, 1),
+(2, 12, 'source/plugin/gfarm/upload/germ/20141126091325975.png', 'source/plugin/gfarm/upload/germ/20141126091325848.png', 2, 2),
+(3, 13, 'source/plugin/gfarm/upload/germ/20141126091644173.png', 'source/plugin/gfarm/upload/germ/20141126091644133.png', 3, 3),
+(4, 14, 'source/plugin/gfarm/upload/germ/20141126091756926.png', 'source/plugin/gfarm/upload/germ/20141126091756608.png', 4, 4),
+(5, 15, 'source/plugin/gfarm/upload/germ/20141126092131668.png', 'source/plugin/gfarm/upload/germ/20141126092131827.png', 5, 5),
+(6, 16, 'source/plugin/gfarm/upload/germ/20141126092303708.png', 'source/plugin/gfarm/upload/germ/20141126092303562.png', 5, 10),
+(7, 17, 'source/plugin/gfarm/upload/germ/20141126092429289.png', 'source/plugin/gfarm/upload/germ/20141126092429271.png', 10, 20),
+(8, 18, 'source/plugin/gfarm/upload/germ/20141126092539152.png', 'source/plugin/gfarm/upload/germ/20141126092539908.png', 15, 30),
+(9, 19, 'source/plugin/gfarm/upload/germ/20141126092650981.png', 'source/plugin/gfarm/upload/germ/20141126092650361.png', 20, 40),
+(10, 20, 'source/plugin/gfarm/upload/germ/20141126092802790.png', 'source/plugin/gfarm/upload/germ/20141126092802958.png', 25, 50),
+(11, 54, 'source/plugin/gfarm/upload/germ/20141126092940380.png', 'source/plugin/gfarm/upload/germ/20141126092940399.png', 30, 60),
+(12, 55, 'source/plugin/gfarm/upload/germ/20141126093314829.png', 'source/plugin/gfarm/upload/germ/20141126093330407.png', 40, 120),
+(13, 56, 'source/plugin/gfarm/upload/germ/20141126093459877.png', 'source/plugin/gfarm/upload/germ/20141126093459446.png', 60, 180),
+(14, 57, 'source/plugin/gfarm/upload/germ/20141126093715131.png', 'source/plugin/gfarm/upload/germ/20141126093715704.png', 80, 240),
+(15, 58, 'source/plugin/gfarm/upload/germ/20141126093758965.png', 'source/plugin/gfarm/upload/germ/20141126093758738.png', 100, 300),
+(16, 59, 'source/plugin/gfarm/upload/germ/20141126093841606.png', 'source/plugin/gfarm/upload/germ/20141126093841928.png', 120, 360),
+(17, 60, 'source/plugin/gfarm/upload/germ/20141126093927104.png', 'source/plugin/gfarm/upload/germ/20141126093927129.png', 140, 420),
+(18, 61, 'source/plugin/gfarm/upload/germ/20141126094020395.png', 'source/plugin/gfarm/upload/germ/20141126094020341.png', 160, 480),
+(19, 62, 'source/plugin/gfarm/upload/germ/20141126094107858.png', 'source/plugin/gfarm/upload/germ/20141126094107935.png', 240, 960),
+(20, 63, 'source/plugin/gfarm/upload/germ/20141126094151891.png', 'source/plugin/gfarm/upload/germ/20141126094151106.png', 360, 1440);]]></item>
+				<item id="6"><![CDATA[INSERT INTO `pre_gfarm_germ_crop` (`id`, `sort`, `germ_id`, `crop_id`, `produce_big`, `produce_small`, `produce_odds`, `create_time`, `create_uid`, `update_time`, `update_uid`) VALUES
+(1, '', 19, 9, 20, 20, 100, 1414033498, 1039, 1414721635, 2),
+(2, '', 20, 10, 20, 20, 100, 1414033556, 1039, 1416967147, 1039),
+(3, '', 11, 1, 20, 20, 100, 1414033592, 1039, 1414721574, 2),
+(4, '', 12, 2, 20, 20, 100, 1414033616, 1039, 1416967108, 1039),
+(5, '', 13, 3, 20, 20, 100, 1414033635, 1039, 1414721602, 2),
+(6, '', 14, 4, 20, 20, 100, 1414033650, 1039, 1416967118, 1039),
+(7, '', 15, 5, 20, 20, 100, 1414033673, 1039, 1416967124, 1039),
+(8, '', 16, 6, 20, 20, 100, 1414033693, 1039, 1416967130, 1039),
+(9, '', 17, 7, 20, 20, 100, 1414033711, 1039, 1414721624, 2),
+(10, '', 18, 8, 20, 20, 100, 1414033724, 1039, 1416967138, 1039),
+(11, '', 54, 64, 20, 20, 100, 1416967167, 1039, 1416967167, 1039),
+(12, '', 55, 65, 20, 20, 100, 1416967177, 1039, 1416967177, 1039),
+(13, '', 56, 66, 20, 20, 100, 1416967186, 1039, 1416967186, 1039),
+(14, '', 57, 67, 20, 20, 100, 1416967192, 1039, 1416967192, 1039),
+(15, '', 58, 68, 20, 20, 100, 1416967201, 1039, 1416967201, 1039),
+(16, '', 59, 69, 20, 20, 100, 1416967213, 1039, 1416967213, 1039),
+(17, '', 60, 70, 20, 20, 100, 1416967220, 1039, 1416967220, 1039),
+(18, '', 61, 71, 20, 20, 100, 1416967245, 1039, 1416967245, 1039),
+(19, '', 62, 72, 20, 20, 100, 1416967252, 1039, 1416967252, 1039),
+(20, '', 63, 73, 20, 20, 100, 1416967258, 1039, 1416967258, 1039);]]></item>
+				<item id="7"><![CDATA[INSERT INTO `pre_gfarm_goods` (`id`, `sort`, `name`, `big_type`, `small_type`, `money_typeb`, `money_types`, `buy_price`, `sale_price`, `use_level`, `use_benevolence`, `use_flag`, `sale_count`, `add_date`, `sale_time_begin`, `sale_time_end`, `transaction_flag`, `img`, `description`, `depot_pile`, `create_time`, `create_uid`, `update_time`, `update_uid`) VALUES
+(1, 'ZW001', '豌豆', 11, 12, 0, 0, 10, 1, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094815447.png', '豌豆', 999, 1414032195, 1039, 1417179330, 2),
+(2, 'ZW002', '玉米', 11, 12, 0, 0, 20, 2, 2, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094918266.png', '玉米', 999, 1414032297, 1039, 1417179341, 2),
+(3, 'ZW003', '石榴', 11, 12, 0, 0, 30, 3, 3, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094954450.png', '石榴', 999, 1414032324, 1039, 1417179349, 2),
+(4, 'ZW004', '苦瓜', 11, 12, 0, 0, 40, 4, 4, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095016117.png', '苦瓜', 999, 1414032355, 1039, 1417179357, 2),
+(5, 'ZW005', '土豆', 11, 12, 0, 0, 50, 5, 5, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095044231.png', '土豆', 999, 1414032397, 1039, 1417179363, 2),
+(6, 'ZW006', '南瓜', 11, 12, 0, 0, 120, 12, 6, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141128104619477.png', '南瓜', 999, 1414032419, 1039, 1417179375, 2),
+(7, 'ZW007', '番茄', 11, 12, 0, 0, 140, 14, 7, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095150667.png', '番茄', 999, 1414032445, 1039, 1417179385, 2),
+(8, 'ZW008', '蘋果', 11, 12, 0, 0, 160, 16, 8, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095224684.png', '蘋果', 999, 1414032469, 1039, 1417179420, 2),
+(9, 'ZW009', '香蕉', 11, 12, 0, 0, 180, 18, 9, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095254110.png', '香蕉', 999, 1414032493, 1039, 1417179404, 2),
+(10, 'ZW010', '鱷梨', 11, 12, 0, 0, 200, 20, 10, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141128092628381.png', '鱷梨', 999, 1414032515, 1039, 1417179413, 2),
+(11, '', '豌豆種子', 9, 0, 0, 0, 10, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126091414506.png', '豌豆種子', 999, 1414032740, 1039, 1417245666, 2),
+(12, '', '玉米種子', 9, 0, 0, 0, 20, 20, 2, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126091325462.png', '玉米種子', 999, 1414032873, 1039, 1417245670, 2),
+(13, '', '石榴種子', 9, 0, 0, 0, 30, 30, 3, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126091644489.png', '石榴種子', 999, 1414032932, 1039, 1417245675, 2),
+(14, '', '苦瓜種子', 9, 0, 0, 0, 40, 40, 4, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141128091648947.png', '苦瓜種子', 999, 1414032977, 1039, 1417245679, 2),
+(15, '', '土豆種子', 9, 0, 0, 0, 50, 50, 5, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092131470.png', '土豆種子
+', 999, 1414033018, 1039, 1417245683, 2),
+(16, '', '南瓜種子', 9, 0, 0, 0, 120, 120, 6, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092303497.png', '南瓜種子
+', 999, 1414033057, 1039, 1417245689, 2),
+(17, '', '番茄種子', 9, 0, 0, 0, 140, 140, 7, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092429979.png', '番茄種子
+', 999, 1414033093, 1039, 1417245647, 2),
+(18, '', '蘋果種子', 9, 0, 0, 0, 160, 160, 8, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092539255.png', '蘋果種子
+', 999, 1414033131, 1039, 1417245707, 2),
+(19, '', '香蕉種子', 9, 0, 0, 0, 180, 180, 9, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092650446.png', '香蕉種子
+', 999, 1414033173, 1039, 1417245716, 2),
+(20, '', '鱷梨種子', 9, 0, 0, 0, 200, 200, 10, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092802726.png', '鱷梨種子
+', 999, 1414033213, 1039, 1417245789, 2),
+(21, '', '10%增量化肥', 19, 0, 0, 0, 100, 10, 1, 0, 0, 1000, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175251434.png', '增加作物10%的產量。', 999, 1414033269, 1039, 1417182988, 2),
+(22, '', '20%增量化肥', 19, 0, 0, 0, 1000, 100, 5, 0, 0, 100, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175344675.png', '增加作物20%的產量。', 999, 1414033296, 1039, 1417183014, 2),
+(23, '', '30%增量化肥', 19, 0, 0, 0, 10000, 1000, 10, 0, 0, 10, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175331502.png', '增加作物30%的產量。', 999, 1414033331, 1039, 1417183036, 2),
+(24, '', '10%加速化肥', 19, 0, 0, 0, 100, 10, 1, 0, 0, 1000, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175406188.png', '減少10%作物生產時間。', 999, 1414033352, 1039, 1417183045, 2),
+(25, '', '20%加速化肥', 19, 0, 0, 0, 1000, 100, 5, 0, 0, 100, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175427732.png', '減少20%作物生產時間。', 999, 1414033372, 1039, 1417183053, 2),
+(26, '', '30%加速化肥', 19, 0, 0, 0, 10000, 1000, 10, 0, 0, 10, 24, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126175438795.png', '減少30%作物生產時間。', 999, 1414033392, 1039, 1417183065, 2),
+(27, '', '默認', 4, 5, 0, 0, 20, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141031093958294.png', '默認', 999, 1414719598, 1039, 1414719598, 1039),
+(28, '', '姐不種草', 4, 5, 0, 0, 30, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141031094053753.png', '姐不種草', 999, 1414719653, 1039, 1414719653, 1039),
+(29, '', '四季感動', 4, 5, 0, 0, 30, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141031094135288.png', '四季感動', 999, 1414719695, 1039, 1414719695, 1039),
+(30, '', '千里匯', 4, 5, 0, 0, 30, 10, 1, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141031094207575.png', '千里匯', 999, 1414719727, 1039, 1414719727, 1039),
+(41, '', '屋子01', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172421473.png', '屋子01', 999, 1416216261, 1039, 1416216320, 1039),
+(42, '', '屋子02', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172503248.png', '屋子02', 999, 1416216303, 1039, 1416216326, 1039),
+(43, '', '屋子03', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172546618.png', '屋子03', 999, 1416216346, 1039, 1416279925, 1039),
+(44, '', '屋子04', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172611157.png', '屋子04', 999, 1416216371, 1039, 1416279931, 1039),
+(45, '', '屋子05', 4, 7, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141117172637106.png', '屋子05', 999, 1416216397, 1039, 1416279939, 1039),
+(46, '', 'dog', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118115929597.png', 'dog', 999, 1416281222, 1039, 1416283169, 1039),
+(47, '', 'dog1', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118115939326.png', 'dog1', 999, 1416281244, 1039, 1416283179, 1039),
+(48, '', 'dog2', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118115947656.png', 'dog2', 999, 1416281261, 1039, 1416283187, 1039),
+(49, '', 'dog3', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118115956600.png', 'dog3', 999, 1416281290, 1039, 1416283196, 1039),
+(50, '', 'dog4', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118120004852.png', 'dog4', 999, 1416281311, 1039, 1416283204, 1039),
+(51, '', 'dog5', 4, 8, 0, 0, 50, 1, 1, 0, 0, 99, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118120014889.png', 'dog5', 999, 1416281333, 1039, 1416283214, 1039),
+(52, '', 'dog6', 4, 8, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118120039477.png', 'dog6', 999, 1416283239, 1039, 1416283239, 1039),
+(53, '', 'dog7', 4, 5, 0, 0, 50, 1, 1, 0, 0, 999, 0, 0, 0, 1, 'source/plugin/gfarm/upload/goods/20141118120055543.png', 'dog7', 999, 1416283255, 1039, 1416283255, 1039),
+(54, '', '橙子種子', 9, 0, 0, 0, 220, 220, 11, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126092940301.png', '橙子種子
+', 999, 1416965380, 1039, 1417245798, 2),
+(55, '', '荔枝種子', 9, 0, 0, 0, 360, 360, 12, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093314867.png', '荔枝種子
+', 999, 1416965594, 1039, 1417245811, 2),
+(56, '', '木瓜種子', 9, 0, 0, 0, 390, 390, 13, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093459820.png', '木瓜種子
+', 999, 1416965699, 1039, 1417245827, 2),
+(57, '', '菠蘿蜜種子', 9, 0, 0, 0, 420, 420, 14, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093715245.png', '菠蘿蜜種子
+', 999, 1416965835, 1039, 1417245843, 2),
+(58, '', '薄荷種子', 9, 0, 0, 0, 450, 450, 15, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093758344.png', '薄荷種子
+', 999, 1416965878, 1039, 1417245855, 2),
+(59, '', '蘆薈種子', 9, 0, 0, 0, 480, 480, 16, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093841685.png', '蘆薈種子
+', 999, 1416965921, 1039, 1417245867, 2),
+(60, '', '可可豆種子', 9, 0, 0, 0, 510, 510, 17, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126093927389.png', '可可豆種子
+', 999, 1416965967, 1039, 1417245874, 2),
+(61, '', '橄欖種子', 9, 0, 0, 0, 540, 540, 18, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094020500.png', '橄欖種子
+', 999, 1416966020, 1039, 1417245882, 2),
+(62, '', '燈籠果種子', 9, 0, 0, 0, 760, 760, 19, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094107408.png', '燈籠果種子
+', 999, 1416966067, 1039, 1417245888, 2),
+(63, '', '百香果種子', 9, 0, 0, 0, 800, 800, 20, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126094151899.png', '百香果種子
+', 999, 1416966111, 1039, 1417245895, 2),
+(64, '', '橙子', 11, 12, 0, 0, 220, 22, 11, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095419706.png', '橙子', 999, 1416966859, 1039, 1417179195, 2),
+(65, '', '荔枝', 11, 12, 0, 0, 360, 36, 12, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095443355.png', '荔枝
+', 999, 1416966883, 1039, 1417179207, 2),
+(66, '', '木瓜', 11, 12, 0, 0, 390, 39, 13, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095515682.png', '木瓜', 999, 1416966915, 1039, 1417179215, 2),
+(67, '', '菠蘿蜜', 11, 12, 0, 0, 420, 42, 14, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095535869.png', '菠蘿蜜
+', 999, 1416966935, 1039, 1417179222, 2),
+(68, '', '薄荷', 11, 12, 0, 0, 450, 45, 15, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095557967.png', '薄荷', 999, 1416966957, 1039, 1417179232, 2),
+(69, '', '蘆薈', 11, 12, 0, 0, 480, 48, 16, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095627905.png', '蘆薈', 999, 1416966987, 1039, 1417179239, 2),
+(70, '', '可可豆', 11, 12, 0, 0, 510, 51, 17, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095649873.png', '可可豆', 999, 1416967009, 1039, 1417179264, 2),
+(71, '', '橄欖', 11, 12, 0, 0, 540, 54, 18, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095712118.png', '橄欖', 999, 1416967032, 1039, 1417179298, 2),
+(72, '', '燈籠果', 11, 12, 0, 0, 760, 76, 19, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095733779.png', '燈籠果
+', 999, 1416967053, 1039, 1417179290, 2),
+(73, '', '百香果', 11, 12, 0, 0, 800, 80, 20, 0, 0, 999, 0, 0, 0, 0, 'source/plugin/gfarm/upload/goods/20141126095752740.png', '百香果', 999, 1416967072, 1039, 1417179283, 2);]]></item>
+				<item id="8"><![CDATA[INSERT INTO `pre_gfarm_goods_update` (`id`, `goods_id`, `still_num`, `update_time`) VALUES
+(1, 1, 999, 1414032195),
+(2, 2, 999, 1414032297),
+(3, 3, 999, 1414032324),
+(4, 4, 999, 1414032355),
+(5, 5, 999, 1414032397),
+(6, 6, 999, 1414032419),
+(7, 7, 999, 1414032445),
+(8, 8, 999, 1414032469),
+(9, 9, 999, 1414032493),
+(10, 10, 999, 1414032515),
+(11, 11, 999, 1414032740),
+(12, 12, 999, 1416964405),
+(13, 13, 999, 1414032932),
+(14, 14, 999, 1416964676),
+(15, 15, 999, 1414033018),
+(16, 16, 999, 1416964983),
+(17, 17, 999, 1414033093),
+(18, 18, 999, 1416965139),
+(19, 19, 999, 1414033173),
+(20, 20, 999, 1416965282),
+(21, 21, 1000, 1417402869),
+(22, 22, 100, 1417402896),
+(23, 23, 10, 1417402931),
+(24, 24, 1000, 1417402952),
+(25, 25, 100, 1417402972),
+(26, 26, 10, 1417402992),
+(27, 27, 999, 1414719598),
+(28, 28, 999, 1414719653),
+(29, 29, 999, 1414719695),
+(30, 30, 999, 1414719727),
+(31, 31, 999, 1415601424),
+(32, 32, 999, 1415601459),
+(33, 33, 999, 1415601507),
+(34, 34, 999, 1415601571),
+(35, 35, 999, 1415601612),
+(36, 36, 999, 1415601632),
+(37, 37, 999, 1415601656),
+(38, 38, 999, 1415601676),
+(39, 39, 999, 1415601697),
+(40, 40, 999, 1415601729),
+(41, 41, 999, 1416216261),
+(42, 42, 999, 1416216303),
+(43, 43, 999, 1416216346),
+(44, 44, 999, 1416216371),
+(45, 45, 999, 1416216398),
+(46, 46, 999, 1416281222),
+(47, 47, 999, 1416281244),
+(48, 48, 999, 1416281261),
+(49, 49, 999, 1416281290),
+(50, 50, 999, 1416281311),
+(51, 51, 99, 1416281333),
+(52, 52, 999, 1416283239),
+(53, 53, 999, 1416283255),
+(54, 54, 999, 1416965380),
+(55, 55, 999, 1416965594),
+(56, 56, 999, 1416965699),
+(57, 57, 999, 1416965835),
+(58, 58, 999, 1416965878),
+(59, 59, 999, 1416965921),
+(60, 60, 999, 1416965967),
+(61, 61, 999, 1416966020),
+(62, 62, 999, 1416966067),
+(63, 63, 999, 1416966111),
+(64, 64, 999, 1416966859),
+(65, 65, 999, 1416966883),
+(66, 66, 999, 1416966915),
+(67, 67, 999, 1416966935),
+(68, 68, 999, 1416966957),
+(69, 69, 999, 1416966987),
+(70, 70, 999, 1416967009),
+(71, 71, 999, 1416967032),
+(72, 72, 999, 1416967053),
+(73, 73, 999, 1416967072);]]></item>
+				<item id="9"><![CDATA[INSERT INTO `pre_gfarm_items` (`id`, `relation_id`, `add_gain_number`, `add_gain_time`, `add_benevolence`, `use_target`) VALUES
+(1, 21, 10, 0, 0, 0),
+(2, 22, 20, 0, 0, 0),
+(3, 23, 30, 0, 0, 0),
+(4, 24, 0, -10, 0, 0),
+(5, 25, 0, -20, 0, 0),
+(6, 26, 0, -30, 0, 0);]]></item>
+				<item id="10"><![CDATA[INSERT INTO `pre_gfarm_main_task` (`id`, `task_name`, `task_way`, `target_object`, `target_num`, `reward_money`, `reward_items`, `items_num`, `reward_exp`, `reward_bene`, `task_describe`, `create_time`, `update_time`, `visible`) VALUES
+(2, '購買豌豆1', 11, 11, 1, 0, 0, 0, 1, 0, '到商店購買1個豌豆種子
+', 1416963049, 1417071383, 0),
+(1, '解鎖農田1', 1, 0, 1, 0, 0, 0, 1, 0, '解鎖一個農田', 1417069125, 1417071505, 0),
+(5, '賣出豌豆', 13, 1, 10, 0, 0, 0, 1, 0, '到倉庫中賣出10豌豆', 1417071104, 1417071406, 0),
+(3, '種植豌豆1', 3, 11, 1, 0, 0, 0, 1, 0, '到背包中選擇豌豆種子，種植一次', 1417070319, 1417071387, 0),
+(4, '收獲豌豆', 4, 1, 1, 0, 0, 0, 1, 0, '收獲一次豌豆
+', 1417070365, 1417071371, 0),
+(6, '購買豌豆2', 11, 11, 2, 0, 0, 0, 1, 0, '種植不要停，再去商店購買1個豌豆種子。', 1417071277, 1417075798, 0),
+(7, '種植豌豆2', 3, 11, 2, 0, 0, 0, 1, 0, '種植不要停，再中一次豌豆種子', 1417071445, 1417075787, 0),
+(8, '鏟除農田', 2, 0, 1, 0, 0, 0, 2, 0, '鏟除一次農田', 1417071473, 1417075903, 0),
+(9, '解鎖農田2', 1, 0, 2, 0, 0, 0, 3, 0, '解鎖您的第二個農田', 1417071546, 1417072129, 0),
+(10, '購買玉米', 11, 12, 2, 0, 0, 0, 3, 0, '在商店買入2個玉米種子', 1417071658, 1417071667, 0),
+(11, '種植玉米', 3, 12, 2, 0, 0, 0, 3, 0, '種植2次玉米', 1417071772, 1417071843, 0),
+(12, '收獲玉米', 4, 2, 2, 0, 0, 0, 3, 0, '收獲2次玉米', 1417071837, 1417071850, 0),
+(13, '賣出玉米', 13, 2, 20, 0, 0, 0, 4, 0, '到倉庫中賣出20個玉米', 1417071886, 1417072173, 0),
+(14, '解鎖農田3', 1, 0, 3, 0, 0, 0, 4, 0, '解鎖第三個農田', 1417071923, 1417072135, 0),
+(15, '購買石榴', 11, 13, 3, 0, 0, 0, 4, 0, '到商店買入3個石榴種子', 1417072248, 1417072270, 0),
+(16, '種植石榴', 3, 13, 3, 0, 0, 0, 4, 0, '種植3個石榴種子', 1417072305, 1417072429, 0),
+(17, '收獲石榴', 4, 3, 3, 0, 0, 0, 4, 0, '收獲3次石榴', 1417072387, 1417072437, 0),
+(18, '賣出石榴', 13, 3, 30, 0, 0, 0, 5, 0, '到倉庫賣出30個石榴', 1417072421, 1417072444, 0),
+(19, '解鎖農田4', 1, 0, 4, 0, 0, 0, 5, 0, '解鎖第四個農田', 1417072482, 1417072482, 0),
+(20, '購買苦瓜', 11, 14, 4, 0, 0, 0, 5, 0, '到商店購買4個苦瓜種子', 1417072519, 1417072648, 0),
+(21, '種植苦瓜', 3, 14, 4, 0, 0, 0, 5, 0, '種植4個苦瓜', 1417072546, 1417072639, 0),
+(22, '收獲苦瓜', 4, 4, 4, 0, 0, 0, 5, 0, '收獲4次苦瓜', 1417072569, 1417072632, 0),
+(23, '賣出苦瓜', 13, 4, 40, 0, 0, 0, 5, 0, '到倉庫賣出40個苦瓜', 1417072594, 1417072625, 0),
+(24, '解鎖農田5', 1, 0, 5, 0, 0, 0, 5, 0, '解鎖第五個農田', 1417072974, 1417072974, 0),
+(25, '購買土豆', 11, 15, 5, 0, 0, 0, 5, 0, '到商店購買5個土豆種子', 1417073353, 1417073364, 0),
+(26, '種植土豆', 3, 15, 5, 0, 0, 0, 5, 0, '種植5次土豆', 1417073508, 1417073508, 0),
+(27, '收獲土豆', 4, 5, 5, 0, 0, 0, 5, 0, '收獲五次土豆', 1417073611, 1417073611, 0),
+(28, '賣出土豆', 13, 5, 50, 0, 0, 0, 5, 0, '到倉庫賣出50個土豆', 1417073641, 1417073641, 0),
+(29, '解鎖農田6', 1, 0, 6, 0, 0, 0, 6, 0, '解鎖第六個農田', 1417074120, 1417074120, 0),
+(30, '購買南瓜', 11, 16, 5, 0, 0, 0, 6, 0, '到商店購買5個南瓜種子', 1417074198, 1417074198, 0),
+(31, '種植南瓜', 3, 16, 5, 0, 0, 0, 6, 0, '種植5個南瓜種子', 1417074230, 1417074230, 0),
+(32, '收獲南瓜', 4, 6, 5, 0, 0, 0, 6, 0, '收獲5次南瓜', 1417074262, 1417074262, 0),
+(33, '賣出南瓜', 13, 6, 50, 0, 0, 0, 6, 0, '到倉庫賣出50個南瓜', 1417074305, 1417074305, 0),
+(34, '購買加速化肥', 12, 24, 1, 0, 0, 0, 6, 0, '到商店購買1個10%的加速化肥', 1417074349, 1417076837, 0),
+(35, '購買加量化肥', 12, 21, 1, 0, 0, 0, 6, 0, '購買一次10%加量化肥', 1417074539, 1417076848, 0),
+(36, '使用加速化肥', 8, 24, 1, 0, 0, 0, 6, 0, '使用一次10%的加速化肥', 1417074620, 1417076862, 0),
+(37, '使用加量化肥', 8, 21, 1, 0, 0, 0, 6, 0, '使用一次加量化肥', 1417074644, 1417076856, 0),
+(38, '解鎖農田7', 1, 0, 7, 0, 0, 0, 7, 0, '解鎖第七個農田', 1417075173, 1417075173, 0),
+(39, '購買番茄', 11, 17, 5, 0, 0, 0, 7, 0, '到商店購買5個番茄種子', 1417075283, 1417075283, 0),
+(40, '種植番茄', 3, 17, 5, 0, 0, 0, 7, 0, '種植5次番茄', 1417075316, 1417075316, 0),
+(41, '收獲番茄', 4, 7, 5, 0, 0, 0, 7, 0, '收獲5次番茄', 1417075354, 1417075354, 0),
+(42, '賣出番茄', 13, 7, 50, 0, 0, 0, 7, 0, '到倉庫賣出50個番茄', 1417075389, 1417075389, 0),
+(43, '解鎖農田8', 1, 0, 8, 0, 0, 0, 8, 0, '解鎖第八個農田', 1417079792, 1417079792, 0),
+(44, '購買蘋果', 11, 18, 5, 0, 0, 0, 8, 0, '購買5個蘋果種子', 1417079837, 1417079849, 0),
+(45, '種植蘋果', 3, 18, 5, 0, 0, 0, 8, 0, '種植5個蘋果種子', 1417079882, 1417079882, 0),
+(46, '收獲蘋果', 4, 8, 5, 0, 0, 0, 8, 0, '收獲5次蘋果', 1417079917, 1417079917, 0),
+(47, '賣出蘋果', 13, 8, 50, 0, 0, 0, 8, 0, '到倉庫賣出50個蘋果', 1417079976, 1417079976, 0),
+(48, '解鎖農田9', 1, 0, 9, 0, 0, 0, 9, 0, '解鎖第九個農田', 1417080300, 1417080300, 0),
+(49, '購買香蕉', 11, 19, 5, 0, 0, 0, 9, 0, '購買5個香蕉種子', 1417080335, 1417080335, 0),
+(50, '種植香蕉', 3, 19, 5, 0, 0, 0, 9, 0, '種植5次香蕉', 1417080366, 1417080366, 0),
+(51, '收獲香蕉', 4, 9, 5, 0, 0, 0, 9, 0, '收獲5次香蕉', 1417080414, 1417080414, 0),
+(52, '賣出香蕉', 13, 9, 50, 0, 0, 0, 9, 0, '賣出50個香蕉', 1417080438, 1417080438, 0),
+(53, '解鎖農田10', 1, 0, 10, 0, 0, 0, 10, 0, '解鎖第十個農田', 1417080798, 1417080798, 0),
+(54, '購買鱷梨', 11, 20, 5, 0, 0, 0, 10, 0, '到商店購買5個鱷梨', 1417080822, 1417080822, 0),
+(55, '種植鱷梨', 3, 20, 5, 0, 0, 0, 10, 0, '種植5個鱷梨', 1417080840, 1417080840, 0),
+(56, '收獲鱷梨', 4, 10, 5, 0, 0, 0, 10, 0, '收獲5個鱷梨', 1417080858, 1417080858, 0),
+(57, '賣出鱷梨', 13, 10, 50, 0, 0, 0, 10, 0, '賣出50個鱷梨', 1417080937, 1417080937, 0),
+(58, '解鎖農田11', 1, 0, 11, 0, 0, 0, 11, 0, '解鎖第十一個農田', 1417081385, 1417081385, 0),
+(59, '購買橙子', 11, 54, 5, 0, 0, 0, 11, 0, '購買5個橙子', 1417081545, 1417081545, 0),
+(60, '種植橙子', 3, 54, 5, 0, 0, 0, 11, 0, '種植5個橙子', 1417081576, 1417081576, 0),
+(61, '收獲橙子', 4, 64, 5, 0, 0, 0, 11, 0, '收獲5個橙子', 1417081596, 1417081596, 0),
+(62, '賣出橙子', 13, 64, 50, 0, 0, 0, 11, 0, '賣出50個橙子', 1417081616, 1417081622, 0),
+(63, '解鎖農田12', 1, 0, 12, 0, 0, 0, 12, 0, '解鎖第十二個農田', 1417081899, 1417081899, 0),
+(64, '購買荔枝', 11, 55, 5, 0, 0, 0, 12, 0, '到商店購買5個荔枝種子', 1417081932, 1417081932, 0),
+(65, '種植荔枝', 3, 55, 5, 0, 0, 0, 12, 0, '種植5個荔枝', 1417081968, 1417081968, 0),
+(66, '收獲荔枝', 4, 65, 5, 0, 0, 0, 12, 0, '收獲5次荔枝', 1417081991, 1417081991, 0),
+(67, '賣出荔枝', 13, 65, 50, 0, 0, 0, 12, 0, '賣出50個荔枝', 1417082009, 1417082009, 0),
+(68, '解鎖農田13', 1, 0, 13, 0, 0, 0, 13, 0, '解鎖13個農田', 1417082099, 1417082099, 0),
+(69, '購買木瓜', 11, 56, 5, 0, 0, 0, 13, 0, '購買5個木瓜', 1417082125, 1417082125, 0),
+(70, '種植木瓜', 3, 56, 5, 0, 0, 0, 13, 0, '種植5次木瓜', 1417082159, 1417082159, 0),
+(71, '收獲木瓜', 4, 66, 5, 0, 0, 0, 13, 0, '收獲5次木瓜', 1417082179, 1417082179, 0),
+(72, '賣出木瓜', 13, 66, 50, 0, 0, 0, 13, 0, '賣出50個木瓜', 1417082198, 1417082198, 0),
+(73, '解鎖農田14', 1, 0, 14, 0, 0, 0, 14, 0, '解鎖第十四個農田', 1417082379, 1417082379, 0),
+(74, '購買菠蘿蜜', 11, 57, 5, 0, 0, 0, 14, 0, '購買5個菠蘿蜜', 1417082408, 1417082408, 0),
+(75, '種植菠蘿蜜', 3, 57, 5, 0, 0, 0, 14, 0, '種植5個菠蘿蜜', 1417082435, 1417082435, 0),
+(76, '收獲菠蘿蜜', 4, 67, 5, 0, 0, 0, 14, 0, '收獲5次菠蘿蜜', 1417082460, 1417082460, 0),
+(77, '賣出菠蘿蜜', 13, 67, 50, 0, 0, 0, 14, 0, '賣出50個菠蘿蜜', 1417082482, 1417082482, 0),
+(78, '解鎖農田15', 1, 0, 15, 0, 0, 0, 15, 0, '解鎖第十五個農田', 1417142140, 1417142140, 0),
+(79, '購買薄荷', 11, 58, 5, 0, 0, 0, 15, 0, '購買5個薄荷種子', 1417142169, 1417142169, 0),
+(80, '種植薄荷', 3, 58, 5, 0, 0, 0, 15, 0, '種植5個薄荷種子', 1417142192, 1417142192, 0),
+(81, '收獲薄荷', 4, 68, 5, 0, 0, 0, 15, 0, '收獲5次薄荷', 1417142214, 1417142214, 0),
+(82, '賣出薄荷', 13, 68, 50, 0, 0, 0, 15, 0, '賣出50個薄荷', 1417142251, 1417142251, 0),
+(83, '解鎖農田16', 1, 0, 16, 0, 0, 0, 16, 0, '解鎖第十六農田', 1417142344, 1417142344, 0),
+(84, '購買蘆薈', 11, 59, 5, 0, 0, 0, 16, 0, '購買5個蘆薈種子', 1417142382, 1417142382, 0),
+(85, '種植蘆薈', 3, 59, 5, 0, 0, 0, 16, 0, '種植5個蘆薈', 1417142402, 1417142402, 0),
+(86, '收獲蘆薈', 4, 69, 5, 0, 0, 0, 16, 0, '收獲5次蘆薈', 1417142432, 1417142432, 0),
+(87, '賣出蘆薈', 13, 69, 50, 0, 0, 0, 16, 0, '賣出50個蘆薈', 1417142451, 1417142451, 0),
+(88, '解鎖農田17', 1, 0, 17, 0, 0, 0, 17, 0, '解鎖第十七個農田', 1417142490, 1417142490, 0),
+(89, '購買可可豆', 11, 60, 5, 0, 0, 0, 17, 0, '購買5個可可豆', 1417142510, 1417142510, 0),
+(90, '種植可可豆', 3, 60, 5, 0, 0, 0, 17, 0, '種植5次可可豆', 1417142535, 1417142535, 0),
+(91, '收獲可可豆', 4, 70, 5, 0, 0, 0, 17, 0, '收獲5次可可豆', 1417142556, 1417142556, 0),
+(92, '賣出可可豆', 13, 70, 50, 0, 0, 0, 17, 0, '賣出50個可可豆', 1417142577, 1417142577, 0),
+(93, '解鎖農田18', 1, 0, 18, 0, 0, 0, 18, 0, '解鎖第十八個農田', 1417142962, 1417142962, 0),
+(94, '購買橄欖', 11, 61, 5, 0, 0, 0, 18, 0, '購買5個橄欖', 1417142982, 1417142982, 0),
+(95, '種植橄欖', 3, 61, 5, 0, 0, 0, 18, 0, '種植5個橄欖', 1417143004, 1417143004, 0),
+(96, '收獲橄欖', 4, 71, 5, 0, 0, 0, 18, 0, '收獲5次橄欖', 1417143033, 1417143033, 0),
+(97, '賣出橄欖', 13, 71, 50, 0, 0, 0, 18, 0, '賣出50個橄欖', 1417143056, 1417143056, 0),
+(98, '解鎖農田19', 1, 0, 19, 0, 0, 0, 19, 0, '解鎖第十九個農田', 1417143077, 1417143077, 0),
+(99, '購買燈籠果', 11, 62, 5, 0, 0, 0, 19, 0, '購買5個燈籠果', 1417143136, 1417143136, 0),
+(100, '種植燈籠果', 3, 62, 5, 0, 0, 0, 19, 0, '種植5個燈籠果', 1417143158, 1417143158, 0),
+(101, '收獲燈籠果', 4, 72, 5, 0, 0, 0, 19, 0, '收獲5次燈籠果', 1417143180, 1417143180, 0),
+(102, '賣出燈籠果', 13, 72, 50, 0, 0, 0, 19, 0, '賣出50個燈籠果', 1417143203, 1417143203, 0),
+(103, '解鎖農田20', 1, 0, 20, 0, 0, 0, 20, 0, '解鎖第二十個農田', 1417143226, 1417143226, 0),
+(104, '購買百香果', 11, 63, 5, 0, 0, 0, 20, 0, '購買5個百香果', 1417143248, 1417143248, 0),
+(105, '種植百香果', 3, 63, 5, 0, 0, 0, 20, 0, '種植5個百香果', 1417143274, 1417143274, 0),
+(106, '收獲百香果', 4, 73, 5, 0, 0, 0, 20, 0, '收獲5次百香果', 1417143293, 1417143293, 0),
+(107, '賣出百香果', 13, 73, 50, 0, 0, 0, 20, 0, '賣出50個百香果', 1417143311, 1417143311, 0);]]></item>
+				<item id="11"><![CDATA[INSERT INTO `pre_gfarm_signin` (`id`, `sign_day`, `reward_money`, `reward_yuan`, `reward_items`, `items_num`, `reward_exp`, `reward_bene`, `create_time`, `update_time`) VALUES
+(1, 1, 100, 0, 0, 0, 0, 0, 1416301749, 1416301749),
+(2, 2, 200, 0, 0, 0, 0, 0, 1416301787, 1416301787),
+(3, 3, 300, 0, 0, 0, 0, 0, 1416301890, 1416301890),
+(4, 4, 400, 0, 0, 0, 10, 10, 1416302660, 1416302674),
+(5, 5, 500, 0, 0, 0, 20, 20, 1416302717, 1416302717),
+(6, 6, 600, 0, 0, 0, 30, 30, 1416302729, 1416302729);]]></item>
+				<item id="12"><![CDATA[INSERT INTO `pre_gfarm_signin_reward` (`id`, `uid`, `sign_id`, `reward_flag`, `create_time`, `update_time`) VALUES
+(2, 15, 1, 0, 1417079372, 1417395957),
+(3, 241, 1, 1, 1417091209, 1417091209),
+(4, 5, 1, 1, 1417093198, 1417093198),
+(5, 1, 1, 1, 1417095623, 1417095623),
+(6, 2159, 1, 1, 1417096307, 1417096307),
+(7, 2626, 1, 1, 1417098840, 1417098840),
+(8, 1786, 1, 1, 1417100372, 1417391202),
+(9, 1786, 2, 0, 1417104205, 1417391202),
+(10, 42, 1, 1, 1417124756, 1417384881),
+(11, 2159, 2, 1, 1417128488, 1417128488),
+(12, 2628, 1, 1, 1417135558, 1417135558),
+(13, 15, 2, 0, 1417135600, 1417395957),
+(19, 2, 1, 1, 1417190170, 1417190170),
+(15, 1536, 1, 1, 1417140880, 1417140880),
+(16, 2622, 1, 1, 1417158131, 1417158131),
+(17, 1996, 1, 1, 1417162716, 1417162716),
+(18, 590, 1, 1, 1417165432, 1417365196),
+(20, 2159, 3, 1, 1417190488, 1417190488),
+(21, 2, 2, 1, 1417190912, 1417190912),
+(22, 42, 2, 0, 1417210417, 1417384881),
+(23, 1786, 3, 0, 1417232719, 1417391202),
+(24, 590, 2, 0, 1417260203, 1417365196),
+(25, 42, 3, 0, 1417301714, 1417384881),
+(26, 590, 3, 0, 1417342961, 1417365196),
+(27, 2, 3, 1, 1417350186, 1417350186),
+(28, 1786, 4, 0, 1417351352, 1417391202),
+(29, 2663, 1, 1, 1417353379, 1417353379),
+(30, 1816, 1, 1, 1417355302, 1417355302),
+(31, 850, 1, 1, 1417393836, 1417393836),
+(32, 13, 1, 1, 1417395726, 1417395726),
+(33, 2536, 1, 1, 1417413025, 1417413025);]]></item>
+				<item id="13"><![CDATA[INSERT INTO `pre_gfarm_daily_task` (`id`, `task_name`, `min_level`, `max_level`, `task_way`, `target_object`, `target_num`, `reward_money`, `reward_items`, `items_num`, `reward_exp`, `reward_bene`, `task_describe`, `create_time`, `update_time`, `visible`, `task_preid`) VALUES
+(1, '天天種田I', 5, 20, 3, 0, 10, 10, 0, 0, 0, 0, '勤勞致富，每天種種田，金錢滾滾來。', 1417514198, 1417514198, 0, 0),
+(2, '天天種田II', 5, 20, 3, 0, 100, 100, 0, 0, 0, 0, '勤勞致富，每天種種田，金錢滾滾來。', 1417514223, 1417514223, 0, 1),
+(3, '天天種田III', 5, 20, 3, 0, 1000, 1000, 0, 0, 0, 0, '勤勞致富，每天種種田，金錢滾滾來。', 1417514247, 1417514247, 0, 2),
+(4, '天天偷菜I', 5, 20, 6, 0, 10, 0, 21, 1, 0, 0, '偷東西還有獎勵，沒天理了。', 1417514857, 1417514909, 0, 0),
+(5, '天天偷菜II', 5, 20, 6, 0, 100, 0, 21, 10, 0, 0, '偷東西還有獎勵，沒天理了。', 1417514902, 1417514902, 0, 4),
+(6, '天天偷菜III', 5, 20, 6, 0, 1000, 0, 21, 100, 0, 0, '偷東西還有獎勵，沒天理了。', 1417514935, 1417514935, 0, 5),
+(7, '敗家有禮I', 5, 20, 16, 0, 100, 0, 24, 1, 0, 0, '這是補償。', 1417516042, 1417518592, 0, 0),
+(8, '天天施肥I', 5, 20, 8, 0, 10, 0, 0, 0, 10, 0, '每天施肥，經驗到手。', 1417516242, 1417516242, 0, 0),
+(9, '天天施肥II', 5, 20, 8, 0, 100, 0, 0, 0, 100, 0, '每天施肥，經驗到手。', 1417516282, 1417516282, 0, 8),
+(10, '天天施肥III', 5, 20, 8, 0, 1000, 0, 0, 0, 1000, 0, '每天施肥，經驗到手。', 1417516316, 1417516316, 0, 9),
+(11, '敗家有禮II', 5, 20, 16, 0, 1000, 0, 24, 2, 0, 0, '這是補償', 1417518631, 1417518631, 0, 7),
+(12, '敗家有禮III', 5, 20, 16, 0, 10000, 0, 24, 5, 0, 0, '這是補償。', 1417518667, 1417518667, 0, 11);]]></item>
+			</item>
+			<item id="systemlang">
+				<item id="file">
+					<item id="english"><![CDATA[chinese]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

@@ -1,0 +1,141 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/pbg.png) no-repeat;}
+</style>
+<div style="padding:5px 50px;text-align: left;width: 565px;height: 510px;position: relative;" onmousedown="dragMenu($('fwin_gfarm'),event,1)">
+<div class='exitclose' style="top:-5px;right: -15px" onclick="hideWindow('gfarm');hideWindow('gfarm1');"></div>
+	<div class='promix'>
+	<div id='mix'></div>
+	</div>
+	<div id='showF'>{if $mylog}{lang gfarm:f109}{eval echo dgmdate($mylog['create_time'],'Y-m-d H:i:s')} {lang gfarm:f110}{$spstr[1]}{lang gfarm:f012}{$spstr[0]}{/if}</div>
+	<img src='source/plugin/gfarm/img/ui/produce.png' onclick="ajaxget('plugin.php?id=gfarm:front&mod=produce&act=react&formhash={FORMHASH}&formid='+jq('#formid').val(),'');" id='produce'/>
+	<div class='promixpage'>
+	<table id='protable'>
+	</table>
+	</div>
+	<input type="hidden" id='formid'/>
+	<div id='promaterial'></div>
+	<div class='probaseimg' style="left: 205px">
+		<img src="source/plugin/gfarm/img/ui/plus.png"/>
+	</div>
+	<div class='probaseimg' style="left: 327px">
+		<img src="source/plugin/gfarm/img/ui/plus.png"/>
+	</div>
+	<div class='probaseimg' style="right: 198px">
+		<img src="source/plugin/gfarm/img/ui/plus.png"/>
+	</div>
+	<div class=proform>
+	<div id='produceout'>
+	<div><img src='source/plugin/gfarm/img/ui/formicon.png' style="vertical-align: middle;"/>
+	{lang gfarm:f111}</div>
+	<div id='producein'>
+	<ul class='line' id='ulpro'>
+	<!--{loop $formulagoods $val}-->
+	<li>
+		<div id='$val[id]'>
+			<img src="{$val['img']}" title="{$val['name']}"/>
+			<span style="text-align: center;display: block;"></span>
+		</div>
+	</li>
+	<!--{/loop}-->
+	</ul>
+	<div id='producescrollBar'>
+	<div id='producehandle'></div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+<script type="text/javascript" reload=1>
+	(function(){
+		jq('#ulpro li').each(function(){
+			jq(this).click(function(){		
+				var thisid=jq(this).children('div:first-child').attr('id');
+				jq('#formid').val(thisid);
+				ajaxget('plugin.php?id=gfarm:front&mod=produce&act=ajax&formid='+thisid,'promaterial');			
+			});
+		});
+	})();
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<script reload=1>
+var ximen = {
+	$:function(o){ return document.getElementById(o); },
+	getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+	getOffset:function(o) {
+		var t = o.offsetTop,h = o.offsetHeight;
+		while(o = o.offsetParent) { t += o.offsetTop; }
+		return { top:t, height:h };
+	},
+	bind:function(o,eType,fn) {
+		if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+		else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	unbind:function(o,eType,fn) {
+		if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+		else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	stopPropagate:function(e) {
+		if(e && e.stopPropagation) { e.stopPropagation(); } 
+		else { window.event.cancelBubble = true; }
+		return false;
+	},
+	stopDefault:function(e) {
+		e = e || window.event;
+		e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+	}
+};
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relX,
+		out = ximen.$("produceout"),
+		content = ximen.$("producein"),
+		scrollBar = ximen.$("producescrollBar"),
+		scrollBarHandle = ximen.$("producehandle"),
+		contentScrollWidth = content.scrollWidth,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleWidth = parseInt(content.offsetWidth/content.scrollWidth * scrollBar.offsetWidth),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleWidth==scrollBar.offsetWidth){scrollBar.style.display='none';}
+		else { scrollBarHandleWidth = 30; scrollBarHandle.style.Width = "30px"; }
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollLeft = (e.clientX - relX)/(scrollBar.offsetWidth - scrollBarHandleWidth)*(content.scrollWidth - content.offsetWidth);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relX = event.clientX - et.offsetLeft;		
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollLeft -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollLeft += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.left = content.scrollLeft/(content.scrollWidth - content.offsetWidth) * (scrollBar.offsetWidth - scrollBarHandleWidth)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+</script>
+{template common/footer_ajax}

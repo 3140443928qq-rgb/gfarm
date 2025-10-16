@@ -1,0 +1,40 @@
+{template common/header_ajax}
+<h2 class="flb" style="cursor: move;border: 1px solid #666666;border-bottom: 0;"><em>{lang gfarm:c204}</em>
+	<span ><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span>	
+</h2>
+<div style="border: 1px solid #666666;padding:5px 10px">
+	<form name="psForm" action="plugin.php?id=gfarm:cp&mod=user&act=update&formhash={FORMHASH}" method="post" target="myframe">
+		<input type="hidden" name='uid' value="{$uid}"/>
+		<table class="table001" style="margin-top: 10px" cellpadding="8px">
+			<tr><td class="table002" align="right">{lang gfarm:c205}</td>
+ 				<td><input type="text" name="experience" value="0"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c206}{$config['moneyname']}</td>
+ 				<td><input type="text" name="money" value="0"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c207}</td>
+ 				<td><input type="text" name="now_strength" value="0"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c208}</td>
+ 				<td><input type="text" name="benevolence" value="0"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c209}</td>
+ 				<td><input type="radio" name="status" value="0" {if $user['status']=='0'}checked="checked"{/if} id='starad0'><label for="starad0">{lang gfarm:c177}</label>
+ 				<input type="radio" name="status" value="1" id='starad1' {if $user['status']!='0'}checked="checked"{/if}><label for="starad1">{lang gfarm:c210}</label></td>
+			</tr> 
+			<tr><td class="table002"></td>
+ 				<td><input type="submit" class="g47jh_content_submit" style='width: 50px;margin-top: -4px' value="{lang gfarm:c026}"/></td>
+			</tr> 
+		</table>
+	</form>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

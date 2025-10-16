@@ -1,0 +1,109 @@
+{template common/header_ajax}
+<h2 class="flb" style="cursor: move;border: 1px solid #666666;border-bottom: 0;"><em>{lang gfarm:c156}</em>
+	<span ><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span>	
+</h2>
+<div style="border: 1px solid #666666;padding:5px 10px">
+	<form id='psForm' name="psForm" action="plugin.php?id=gfarm:cp&mod=maintask&act=update&formhash={FORMHASH}" method="post" target="myframe">
+		<input type="hidden" name='tid' value="{$tid}"/>
+		<table class="table001" style="margin-top: 10px">
+			{if empty($tid)}
+			<tr><td class="table002" align="right">{lang gfarm:c163}</td>
+ 				<td><select name="aimed">
+ 				<option value='0'>{lang gfarm:c164}</option>
+				<!--{loop $mtasks $val}-->
+				<option value='{$val[id]}'>{$val['task_name']}{lang gfarm:c165}</option>
+				<!--{/loop}-->
+ 				</select>
+				<font style="color: red;">{lang gfarm:c166}</font></td>
+			</tr> 
+			{/if}
+			<tr><td class="table002" align="right">{lang gfarm:c136}</td>
+ 				<td><input type="text" name="task_name" maxlength="25" value="{$task['task_name']}"/><font style="color: red;">*</font></td>
+			</tr> 			
+			<tr><td class="table002" align="right">{lang gfarm:c140}</td>
+ 				<td><select id=task_way name="task_way">
+ 				{loop $taskways $val}
+ 				<option vf="{$val['way_type']}" {if $task['task_way']==$val['id']}selected{/if} value="{$val['id']}">{$val['way_name']}</option>
+ 				{/loop}
+ 				</select></td>
+			</tr>
+			<tr id=target_object {if !$way||$way['way_type']=='0'}style="display: none"{/if}>
+			<td class="table002" align="right">{lang gfarm:c141}</td>
+ 				<td><select name="target_object">
+ 				<option value="0">{lang gfarm:c144}</option>
+ 				{loop $object $val}
+ 				<option value="{$val['id']}" {if $task['target_object']==$val['id']}selected{/if}>{$val['name']}</option>
+ 				{/loop}
+ 				</select></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c142}</td>
+ 				<td><input type="text" name="target_num" value="{$task['target_num']}"/><font style="color: red;">*</font></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c125}{$config['moneyname']}</td>
+ 				<td><input type="text" name="reward_money" value="{$task['reward_money']}"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c119}</td>
+ 				<td><select id='reward_items' name="reward_items">
+ 				<option value="0">{lang gfarm:c120}</option>
+ 				{loop $items $key $val}
+ 				<option value="{$val['id']}" {if $task['reward_items']==$val['id']}selected{/if}>[{$sep[$key]['separate_name']}]{$val['name']}</option>
+ 				{/loop}
+ 				</select></td>
+			</tr> 
+			<tr id='items_num' {if !$task||$task['reward_items']=='0'}style="display: none"{/if}>
+				<td class="table002" align="right">{lang gfarm:c121}</td>
+ 				<td><input type="text" name="items_num" value="{$task['items_num']}"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c122}</td>
+ 				<td><input type="text" name="reward_bene" value="{$task['reward_bene']}"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c123}</td>
+ 				<td><input type="text" name="reward_exp" value="{$task['reward_exp']}"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c143}</td>
+ 				<td><input type="radio" name="visible" value="0" id='radio1' {if $task['visible']==0}checked="checked"{/if}><label for="radio1">{lang gfarm:c083}</label>
+ 				<input type="radio" name="visible" id='radio2' value="1" {if $task['visible']==1}checked="checked"{/if}><label for="radio2">{lang gfarm:c084}</label>
+					<font style="color: red;">{lang gfarm:c157}</font></td>
+			</tr> 		
+			<tr><td class="table002" align="right">{lang gfarm:c158}</td>
+ 				<td><textarea name="task_describe">{$task['task_describe']}</textarea><font style="color: red;">*</font></td>
+			</tr> 
+			<tr><td class="table002"></td>
+ 				<td><input type="submit" class="g47jh_content_submit" style='width: 50px;margin-top: -4px' value="{lang gfarm:c026}"/></td>
+			</tr> 
+		</table>
+	</form>
+</div>
+<script type="text/javascript" reload=1>
+(function(){		
+	jq('#task_way').change(function(){
+		if(jq('option:selected', this).attr('vf')=='0'){
+			jq('#target_object').hide();
+		}else if(jq('option:selected', this).attr('vf')=='1'){			
+			ajaxget('plugin.php?id=gfarm:cp&mod=maintask&act=targetajax&tar=1','target_object');
+			jq('#target_object').show();
+		}else if(jq('option:selected', this).attr('vf')=='2'){
+			ajaxget('plugin.php?id=gfarm:cp&mod=maintask&act=targetajax&tar=2','target_object');
+			jq('#target_object').show();
+		}else if(jq('option:selected', this).attr('vf')=='3'){
+			ajaxget('plugin.php?id=gfarm:cp&mod=maintask&act=targetajax&tar=3','target_object');
+			jq('#target_object').show();
+		}	
+	});
+	jq('#reward_items').change(function(){
+		if(jq(this).val()=='0'){
+			jq('#items_num').hide();
+		}else{
+			jq('#items_num').show();
+		}
+	});
+})();
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

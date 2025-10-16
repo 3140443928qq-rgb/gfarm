@@ -1,0 +1,138 @@
+{template common/header}
+<div id='ins'>
+	<ul class='line' id='ul2'>
+	<!--{loop $shopInfos $key=>$val}-->
+	<li>
+		<div style="width: 190px;position: relative;">
+			<span class='shopname'>{$val['name']}(lv.{$val['use_level']})</span>
+			<div style="padding-top: 7px">
+			<div style="float: left;width: 60px;">
+			<img class='showattr' src="{$val['img']}" height="40px"/>
+			<a id='{$val[depot_id]}' href="javascript:;" class='buybotton' onclick="openWS(this)"></a>
+			</div>
+			<div style="float: left;text-align: left;">售价：{$val['good_price']}金钱<br/>
+			数量：<span id='still_{$val[id]}'>{$val['number']}</span><br/>
+			玩家：{$users[$key]['username']}
+			</div>			
+			</div>
+			<div class='shopattr'>
+				<div>
+				<img style="float:left;" src="{$val['img']}" width="40px"/>
+				<div style="float: left;width: 85px;line-height: 15px;margin-left:5px">
+				<span style="text-align: center;">{$val['name']}</span><br/>
+				类型：{$separates[$key]}<br/>
+				等级：{$val['use_level']}级<br/>
+				</div>
+				</div>
+				<div>
+				{$val['description']}
+				</div>
+			</div>
+		</div>
+	</li>
+	<!--{/loop}-->
+	</ul>
+	</div>
+	<div id=scrollbartop></div>
+	<div id='scrollBars'>
+	<div id='handles'></div>
+	</div>
+	<div id='scrollbarbottom'></div>	
+	<script type="text/javascript" reload=1>
+	(function(){
+		jq('#ulmenu li').each(function(){
+			jq(this).click(function(){
+				jq(this).css('background','url(source/plugin/gfarm/img/ui/select.png) no-repeat');
+				jq(this).siblings().css('background','url(source/plugin/gfarm/img/ui/noselect.png) no-repeat');
+			});		
+		});
+		jq('#ul2 li').each(function(){
+			jq(this).find('.showattr').hover(function(){
+				jq(this).parent().parent().next().show();
+			},function(){
+				jq(this).parent().parent().next().hide();
+			});
+		});
+	})();
+</script>
+<script reload=1>
+var ximen = {
+	$:function(o){ return document.getElementById(o); },
+	getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+	getOffset:function(o) {
+		var t = o.offsetTop,h = o.offsetHeight;
+		while(o = o.offsetParent) { t += o.offsetTop; }
+		return { top:t, height:h };
+	},
+	bind:function(o,eType,fn) {
+		if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+		else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	unbind:function(o,eType,fn) {
+		if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+		else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	stopPropagate:function(e) {
+		if(e && e.stopPropagation) { e.stopPropagation(); } 
+		else { window.event.cancelBubble = true; }
+		return false;
+	},
+	stopDefault:function(e) {
+		e = e || window.event;
+		e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+	}
+};
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relY,
+		out = ximen.$("outs"),
+		content = ximen.$("ins"),
+		scrollBar = ximen.$("scrollBars"),
+		scrollBarHandle = ximen.$("handles"),
+		contentScrollHeight = content.scrollHeight,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleHeight = parseInt(content.offsetHeight/content.scrollHeight * scrollBar.offsetHeight),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleHeight==scrollBar.offsetHeight){scrollBar.style.display='none';jq('#scrollbartop').hide();jq('#scrollbarbottom').hide();}
+		else { scrollBarHandleHeight = 15; scrollBarHandle.style.height = "15px"; jq('#scrollbartop').show();jq('#scrollbarbottom').show();}
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollTop = (e.clientY - relY)/(scrollBar.offsetHeight - scrollBarHandleHeight)*(content.scrollHeight - content.offsetHeight);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relY = event.clientY - et.offsetTop;
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollTop -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollTop += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.top = content.scrollTop/(content.scrollHeight - content.offsetHeight) * (scrollBar.offsetHeight - scrollBarHandleHeight)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+	jq('#scrollbarbottom').click(function(){
+		content.scrollTop += contentScrollHeight;
+	});
+	jq('#scrollbartop').click(function(){
+		content.scrollTop -= contentScrollHeight;
+	});
+})();
+</script>
+{template common/footer}

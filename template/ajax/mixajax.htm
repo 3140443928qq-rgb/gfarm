@@ -1,0 +1,69 @@
+{template common/header}
+<!--{loop $depotInfos $val}-->
+	<li>
+		<div id='{$val[id]}' style="width: 100%;text-align: center;">
+			<img style="width: 44px;height: 44px;border:2px solid #8d5b2a;background: #ffffff" src="$val['img']" width="40px" title="{$val['name']}"/>
+			<div class='mixnumber'><span id='mix_{$val[id]}'>{$val['number']}</span></div>
+		</div>
+	</li>
+<!--{/loop}-->
+<script type="text/javascript" reload=1>
+(function(){
+	{if $mess}
+	jq('.mixhis').html('{$mess}');
+	{else}
+	{if $successflag=='1'}
+	var str='{lang gfarm:f112}1{lang gfarm:f012}{$good[name]}';	
+	jq('.mixhis').html(str);
+	jq('#mix').css('background','url(source/plugin/gfarm/img/ui/bg1.png)');
+	{if $jiesuoflag=='1'}
+	str+='{lang gfarm:f116}{$formula[name]}';
+	jq('#form_{$formula[id]}').remove();
+	jq('#mix').html("<img width='40px' height='40px' src='{$formula[img]}' title='{$good[name]}'/>");
+	window.showDialog(str, 'right', '', function() {}, 0);
+	{/if}
+	{elseif $successflag=='2'}
+	jq('.mixhis').html('{lang gfarm:f117}{lang gfarm:f118}1{lang gfarm:f012}{$good[name]}');
+	{elseif $successflag=='3'}
+	jq('.mixhis').html('{lang gfarm:f117}');
+	{/if}
+		{if !empty($levelflag)}
+		{if $countland<$mylevel1['land_number']}
+		jq('.jiesuoimg').each(function(){
+		jq(this).show();
+		});
+		{/if}
+		jq('#userlevel').html({$mylevel1['level']});	
+		jq('#userleveltip').show();
+		setTimeout( function(){jq('#userleveltip').fadeOut();}, ( 3 * 1000 ) ); 
+		{/if}
+	jq('#userpower').html($power);
+	jq('#form1').html({$depot1});
+	jq('#form2').html({$depot2});
+	jq('#form3').html({$depot3});
+	jq('#form4').html({$depot4});
+	{/if}
+	jq('#ul4 li').each(function(){
+		jq(this).click(function(){
+			var position;
+			var thisid=jq(this).children('div:first-child').attr('id');
+			if(jq('#mix1').children('img').length=='0'){
+				position=1;
+			}else if(jq('#mix2').children('img').length=='0'){
+				position=2;
+			}else if(jq('#mix3').children('img').length=='0'){
+				position=3;
+			}else if(jq('#mix4').children('img').length=='0'){
+				position=4;
+			}else{
+				position=5;
+			}
+			if(position!='5'){
+				ajaxget('plugin.php?id=gfarm:front&mod=mixture&act=ajax&depotid='+thisid+'&depotposit='+position,'mix'+position);
+			}				
+		});
+	});
+})();
+
+</script>
+{template common/footer}

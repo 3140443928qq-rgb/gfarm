@@ -1,0 +1,24 @@
+{template common/header}
+<ul>
+{loop $mylogs $key=>$val}
+{if $val[type]==1}
+	<li style='color:#2a00ff'>[{eval echo dgmdate($val['create_time'],'Y-m-d H:i:s')}]{lang gfarm:f063}</li>
+{elseif $val[type]==2}
+	<li style='color:#7f007f'>[{eval echo dgmdate($val['create_time'],'Y-m-d H:i:s')}]{lang gfarm:f064}{$val['good_name']}</li>
+{elseif $val[type]==3}
+	<li style='color:#123456'>[{eval echo dgmdate($val['create_time'],'Y-m-d H:i:s')}]{lang gfarm:f065}{$val['good_number']}{lang gfarm:f012}{$val['good_name']}</li>
+{elseif $val[type]==4}
+	<li style='color:#654321'>[{eval echo dgmdate($val['create_time'],'Y-m-d H:i:s')}]{lang gfarm:f066}</li>
+{elseif $val[type]==5}
+	<li style='color:#987654'>[{eval echo dgmdate($val['create_time'],'Y-m-d H:i:s')}]{lang gfarm:f067}{if $stealuser[$key]['uid']==$_G['uid']}{lang gfarm:c079}{else}{$stealuser[$key][username]}{/if}{lang gfarm:f068}{$val['good_name']}</li>
+{elseif $val[type]==6}
+	<li style='color:#b02ae4'>[{eval echo dgmdate($val['create_time'],'Y-m-d H:i:s')}]{lang gfarm:f069}{$stealuser[$key][username]}{lang gfarm:f070}{$val['good_number']}{lang gfarm:f012}{$val['good_name']}</li>
+{/if}
+{/loop}
+</ul>
+<div class='rankbottom'>
+<img class='turnl' src='source/plugin/gfarm/img/ui/turnl.png' {if $currpage-1>0}onclick="ajaxget('plugin.php?id=gfarm:front&mod=myself&act=ajax&page={eval echo $currpage-1}','myul')"{/if}/>
+<img class='turnr' src='source/plugin/gfarm/img/ui/turnr.png' {if $currpage+1<=$ispage}onclick="ajaxget('plugin.php?id=gfarm:front&mod=myself&act=ajax&page={eval echo $currpage+1}','myul')"{/if}/>
+{$currpage}/{$ispage}
+</div>
+{template common/footer}

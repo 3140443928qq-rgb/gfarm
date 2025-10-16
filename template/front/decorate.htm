@@ -1,0 +1,391 @@
+{template common/header_ajax}
+<style>
+#fwin_gfarm .m_c{background:url(source/plugin/gfarm/img/ui/bg-mid.png) no-repeat;}
+</style>
+<div class='depotclass' onmousedown="dragMenu($('fwin_gfarm'),event,1)">
+<div class='depotclose' onclick="hideWindow('gfarm1');hideWindow('gfarm');"></div>
+<img src='source/plugin/gfarm/img/ui/dresst.png' class='depottitle'/>
+<div style="width: 520px;height: 380px;margin-left: 10px;margin-top: 85px">
+<div class='decoline'>
+<div class='decodiv'>
+<div>
+<div id='gaoshi'>
+{if $gaoshi}
+<img src="{$gaoshi['img']}" title="$gaoshi['name']"/>
+{if $gaoshi1['valid_time']}
+<img class='ontime' src="source/plugin/gfarm/img/ui/time{if time()-$gaoshi['create_time']>24*60*60}1{else}2{/if}.png"/>
+<div class='timetip'>{lang gfarm:f132}{eval echo dgmdate($gaoshi['create_time']+$gaoshi1['valid_time']*24*60*60,'Y-m-d H:i:s')}</div>
+{/if}
+{else}{lang gfarm:f120}{/if}
+</div>
+<div>
+<img src='source/plugin/gfarm/img/ui/nowic.png' class='depotcu'/>
+<div>
+{if $gaoshi}
+<span>{lang gfarm:c038}{lang gfarm:c062}</span>{$gaoshi1['add_steal_odds']}%<br/>
+<span>{lang gfarm:c039}{lang gfarm:c062}</span>{$gaoshi1['add_steal_number']}%<br/>
+<span>{lang gfarm:c036}{lang gfarm:c062}</span>{if $gaoshi1['add_gain_number']>=0}+{/if}{$gaoshi1['add_gain_number']}%<br/>
+<span>{lang gfarm:c037}{lang gfarm:c062}</span>{if $gaoshi1['add_gain_time']>=0}+{/if}{$gaoshi1['add_gain_time']}%
+{/if}
+</div>
+</div>
+</div>
+<div id='eout' class='dout'>
+<div id='ein' class='din'>
+<ul class='tline decorateline'>
+	<!--{loop $decorates $val}-->
+	{if $val['small_type']=='5'}
+	<li id='ed_{$val[id]}'>
+		<div>
+			<img src="$val['img']" title="{$val['name']}" onclick="funcequip({$val[id]})"/>
+		</div>
+		<div class='decohide listti' ondblclick='funcdeco({$val[id]})' {if $val[id]==$gaoshi[id]}style="display:block"{/if}></div>
+	</li>
+	{/if}
+	<!--{/loop}-->
+</ul>
+<div class='dscrollBar' id='escrollBar'>
+<div class='dhandle' id='ehandle'></div>
+</div>
+</div>
+</div>
+</div>
+<div class='decodiv'>
+<div>
+<div id='dimao'>{if $dimao}<img src="{$dimao['img']}" title="$dimao['name']"/>
+{if $dimao1['valid_time']}
+<img class='ontime' src="source/plugin/gfarm/img/ui/time{if time()-$dimao['create_time']>24*60*60}1{else}2{/if}.png"/>
+<div class='timetip'>{lang gfarm:f132}{eval echo dgmdate($dimao['create_time']+$dimao1['valid_time']*24*60*60,'Y-m-d H:i:s')}</div>
+{/if}
+{else}{lang gfarm:f121}{/if}</div>
+<div>
+<img src='source/plugin/gfarm/img/ui/nowic.png' class='depotcu'/>
+{if $dimao}
+<span>{lang gfarm:c038}{lang gfarm:c062}</span>{$dimao1['add_steal_odds']}%<br/>
+<span>{lang gfarm:c039}{lang gfarm:c062}</span>{$dimao1['add_steal_number']}%<br/>
+<span>{lang gfarm:c036}{lang gfarm:c062}</span>{if $dimao1['add_gain_number']>=0}+{/if}{$dimao1['add_gain_number']}%<br/>
+<span>{lang gfarm:c037}{lang gfarm:c062}</span>{if $dimao1['add_gain_time']>=0}+{/if}{$dimao1['add_gain_time']}%
+{/if}
+</div>
+</div>
+<div id='eout1' class='dout'>
+<div id='ein1' class='din'>
+<ul class='tline decorateline'>
+	<!--{loop $decorates $val}-->
+	{if $val['small_type']=='6'}
+	<li id='ed_{$val[id]}'>
+		<div>
+			<img src="$val['img']" title="{$val['name']}" onclick="funcequip({$val[id]})"/>
+		</div>
+		<div class='decohide listti' ondblclick='funcdeco({$val[id]})' {if $val[id]==$dimao[id]}style="display:block"{/if}></div>
+	</li>
+	{/if}
+	<!--{/loop}-->
+</ul>
+<div class='dscrollBar' id='escrollBar1'>
+<div class='dhandle' id='ehandle1'></div>
+</div>
+</div>
+</div>
+</div>
+<div class='decodiv'>
+<div>
+<div id='wuzi'>{if $wuzi}<img src="{$wuzi['img']}" title="$wuzi['name']"/>
+{if $wuzi1['valid_time']}
+<img class='ontime' src="source/plugin/gfarm/img/ui/time{if time()-$wuzi['create_time']>24*60*60}1{else}2{/if}.png"/>
+<div class='timetip'>{lang gfarm:f132}{eval echo dgmdate($wuzi['create_time']+$wuzi1['valid_time']*24*60*60,'Y-m-d H:i:s')}</div>
+{/if}
+{else}{lang gfarm:f122}{/if}</div>
+<div>
+<img src='source/plugin/gfarm/img/ui/nowic.png' class='depotcu'/>
+{if $wuzi}
+<span>{lang gfarm:c038}{lang gfarm:c062}</span>{$wuzi1['add_steal_odds']}%<br/>
+<span>{lang gfarm:c039}{lang gfarm:c062}</span>{$wuzi1['add_steal_number']}%<br/>
+<span>{lang gfarm:c036}{lang gfarm:c062}</span>{if $wuzi1['add_gain_number']>=0}+{/if}{$wuzi1['add_gain_number']}%<br/>
+<span>{lang gfarm:c037}{lang gfarm:c062}</span>{if $wuzi1['add_gain_time']>=0}+{/if}{$wuzi1['add_gain_time']}%
+{/if}
+</div>
+</div>
+<div id='eout2' class='dout'>
+<div id='ein2' class='din'>
+<ul class='tline decorateline'>
+	<!--{loop $decorates $val}-->
+	{if $val['small_type']=='7'}
+	<li id='ed_{$val[id]}'>
+		<div>
+			<img src="$val['img']" title="{$val['name']}" onclick="funcequip({$val[id]})"/>
+		</div>
+		<div class='decohide listti' ondblclick='funcdeco({$val[id]})' {if $val[id]==$wuzi[id]}style="display:block"{/if}></div>
+	</li>
+	{/if}
+	<!--{/loop}-->
+</ul>
+<div class='dscrollBar' id='escrollBar2'>
+<div class='dhandle' id='ehandle2'></div>
+</div>
+</div>
+</div>
+</div>
+<div class='decodiv'>
+<div>
+<div id='dog'>{if $dog}<img src="{$dog['img']}" title="$dog['name']"/>
+{if $dog1['valid_time']}
+<img class='ontime' src="source/plugin/gfarm/img/ui/time{if time()-$dog['create_time']>24*60*60}1{else}2{/if}.png"/>
+<div class='timetip'>{lang gfarm:f132}{eval echo dgmdate($dog['create_time']+$dog1['valid_time']*24*60*60,'Y-m-d H:i:s')}</div>
+{/if}
+{else}{lang gfarm:f123}{/if}</div>
+<div>
+<img src='source/plugin/gfarm/img/ui/nowic.png' class='depotcu'/>
+{if $dog}
+<span>{lang gfarm:c038}{lang gfarm:c062}</span>{$dog1['add_steal_odds']}%<br/>
+<span>{lang gfarm:c039}{lang gfarm:c062}</span>{$dog1['add_steal_number']}%<br/>
+<span>{lang gfarm:c036}{lang gfarm:c062}</span>{if $dog1['add_gain_number']>=0}+{/if}{$dog1['add_gain_number']}%<br/>
+<span>{lang gfarm:c037}{lang gfarm:c062}</span>{if $dog1['add_gain_time']>=0}+{/if}{$dog1['add_gain_time']}%
+{/if}
+</div>
+</div>
+<div id='eout3' class='dout'>
+<div id='ein3' class='din'>
+<ul class='tline decorateline'>
+	<!--{loop $decorates $val}-->
+	{if $val['small_type']=='8'}
+	<li id='ed_{$val[id]}'>
+		<div>
+			<img src="$val['img']" title="{$val['name']}" onclick="funcequip({$val[id]})"/>
+		</div>
+		<div class='decohide listti' ondblclick='funcdeco({$val[id]})' {if $val[id]==$dog[id]}style="display:block"{/if}></div>
+	</li>
+	{/if}
+	<!--{/loop}-->
+</ul>
+<div class='dscrollBar' id='escrollBar3'>
+<div class='dhandle' id='ehandle3'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	function funcequip(obj){
+		ajaxget('plugin.php?id=gfarm:front&mod=decorate&act=learn&depotid='+obj+'&formhash={FORMHASH}','');
+	}
+	function funcdeco(obj){
+		ajaxget('plugin.php?id=gfarm:front&mod=decorate&act=forget&depotid='+obj+'&formhash={FORMHASH}','');
+	}
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+<script reload=1>
+var ximen = {
+	$:function(o){ return document.getElementById(o); },
+	getStyle:function(o) { return o.currentStyle||document.defaultView.getComputedStyle(o,null); },
+	getOffset:function(o) {
+		var t = o.offsetTop,h = o.offsetHeight;
+		while(o = o.offsetParent) { t += o.offsetTop; }
+		return { top:t, height:h };
+	},
+	bind:function(o,eType,fn) {
+		if(o.addEventListener) { o.addEventListener(eType,fn,false); }
+		else if(o.attachEvent) { o.attachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	unbind:function(o,eType,fn) {
+		if(o.removeEventListener) { o.removeEventListener(eType,fn,false); }
+		else if(o.detachEvent) { o.detachEvent("on" + eType,fn); }
+		else { o["on" + eType] = fn; }
+	},
+	stopPropagate:function(e) {
+		if(e && e.stopPropagation) { e.stopPropagation(); } 
+		else { window.event.cancelBubble = true; }
+		return false;
+	},
+	stopDefault:function(e) {
+		e = e || window.event;
+		e.stopPropagation && (e.preventDefault(),e.stopPropagation()) || (e.cancelBubble = true,e.returnValue = false);
+	}
+};
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relX,
+		out = ximen.$("eout"),
+		content = ximen.$("ein"),
+		scrollBar = ximen.$("escrollBar"),
+		scrollBarHandle = ximen.$("ehandle"),
+		contentScrollWidth = content.scrollWidth,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleWidth = parseInt(content.offsetWidth/content.scrollWidth * scrollBar.offsetWidth),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleWidth==scrollBar.offsetWidth){}
+		else { scrollBarHandleWidth = 30; scrollBarHandle.style.Width = "30px"; }
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollLeft = (e.clientX - relX)/(scrollBar.offsetWidth - scrollBarHandleWidth)*(content.scrollWidth - content.offsetWidth);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relX = event.clientX - et.offsetLeft;		
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollLeft -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollLeft += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.left = content.scrollLeft/(content.scrollWidth - content.offsetWidth) * (scrollBar.offsetWidth - scrollBarHandleWidth)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relX,
+		out = ximen.$("eout2"),
+		content = ximen.$("ein2"),
+		scrollBar = ximen.$("escrollBar2"),
+		scrollBarHandle = ximen.$("ehandle2"),
+		contentScrollWidth = content.scrollWidth,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleWidth = parseInt(content.offsetWidth/content.scrollWidth * scrollBar.offsetWidth),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleWidth==scrollBar.offsetWidth){}
+		else { scrollBarHandleWidth = 30; scrollBarHandle.style.Width = "30px"; }
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollLeft = (e.clientX - relX)/(scrollBar.offsetWidth - scrollBarHandleWidth)*(content.scrollWidth - content.offsetWidth);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relX = event.clientX - et.offsetLeft;		
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollLeft -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollLeft += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.left = content.scrollLeft/(content.scrollWidth - content.offsetWidth) * (scrollBar.offsetWidth - scrollBarHandleWidth)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relX,
+		out = ximen.$("eout1"),
+		content = ximen.$("ein1"),
+		scrollBar = ximen.$("escrollBar1"),
+		scrollBarHandle = ximen.$("ehandle1"),
+		contentScrollWidth = content.scrollWidth,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleWidth = parseInt(content.offsetWidth/content.scrollWidth * scrollBar.offsetWidth),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleWidth==scrollBar.offsetWidth){}
+		else { scrollBarHandleWidth = 30; scrollBarHandle.style.Width = "30px"; }
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollLeft = (e.clientX - relX)/(scrollBar.offsetWidth - scrollBarHandleWidth)*(content.scrollWidth - content.offsetWidth);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relX = event.clientX - et.offsetLeft;		
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollLeft -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollLeft += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.left = content.scrollLeft/(content.scrollWidth - content.offsetWidth) * (scrollBar.offsetWidth - scrollBarHandleWidth)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+(function(){
+	var myScrollDown,myScrollUp,scrollBarMouseDown,scrollBarMouseUp,relX,
+		out = ximen.$("eout3"),
+		content = ximen.$("ein3"),
+		scrollBar = ximen.$("escrollBar3"),
+		scrollBarHandle = ximen.$("ehandle3"),
+		contentScrollWidth = content.scrollWidth,//将content.scrollHeight赋一次值,解决IE6下scrollHeight需调用两次的bug
+		scrollBarHandleWidth = parseInt(content.offsetWidth/content.scrollWidth * scrollBar.offsetWidth),
+		setScrollBarHandle = function() {//当内容超多时设置拖拽条子的最小高度
+		if(scrollBarHandleWidth==scrollBar.offsetWidth){}
+		else { scrollBarHandleWidth = 30; scrollBarHandle.style.Width = "30px"; }
+		},
+		clearAllInterval = function() { clearInterval(myScrollDown); clearInterval(myScrollUp); clearInterval(scrollBarMouseDown); },
+		forMousemove = function(e) {
+			var e = e || window.event;
+			content.scrollLeft = (e.clientX - relX)/(scrollBar.offsetWidth - scrollBarHandleWidth)*(content.scrollWidth - content.offsetWidth);
+		},
+		forMouseDown = function(event){
+			var et = event.target || event.srcElement;//target火狐srcElementIE		
+			relX = event.clientX - et.offsetLeft;		
+			ximen.bind(document,"mousemove",forMousemove);
+		},
+		scrollDir = function(e) {
+			var e = e || window.event,eDir;					//设置滚轮事件,e.wheelDelta与e.detail分别兼容IE、W3C，根据返回值的正负来判断滚动方向
+			if(e.wheelDelta) { eDir = e.wheelDelta/120; }
+			else if(e.detail) { eDir = -e.detail/3; }
+			if(eDir > 0) { content.scrollLeft -= 80; }	//步长设80像素a比较接近window滚动条的滚动速度
+			else { content.scrollLeft += 80; }
+			ximen.stopDefault(e);
+		};
+	setScrollBarHandle();
+	ximen.bind(content,"scroll",function(){
+		scrollBarHandle.style.left = content.scrollLeft/(content.scrollWidth - content.offsetWidth) * (scrollBar.offsetWidth - scrollBarHandleWidth)+ "px";
+	});
+	ximen.bind(scrollBarHandle,"mousedown",forMouseDown);
+	ximen.bind(document,"mouseup",function(){
+		ximen.unbind(document,"mousemove",forMousemove);
+		ximen.unbind(scrollBarHandle,"mousemove",forMousemove);
+	});
+	ximen.bind(out,"selectstart",function(){ return false; });
+	ximen.bind(out,"select",function(){ document.selection.empty(); });
+	ximen.bind(out,"mousewheel",scrollDir);
+	ximen.bind(out,"DOMMouseScroll",scrollDir);
+})();
+</script>
+{template common/footer_ajax}

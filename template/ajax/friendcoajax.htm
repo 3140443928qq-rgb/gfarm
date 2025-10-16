@@ -1,0 +1,29 @@
+{template common/header}
+<div id='insul'>
+<table width="100%">
+<!--{loop $users $key $val}-->
+<tr onclick="ajaxget('plugin.php?id=gfarm:front&act=ajax&uid={$val[uid]}','ptable');">
+	<td width="10%" style="font-weight: bold;">{eval echo $start+$key+1}</td>
+	<td width="20%"><img src="{eval echo avatar($val['uid'],'origin',true);}" height="35px" width="35px"/></td>
+	<td><font style="font-weight: bold;color: #85b200">Lv{$levels[$key]['level']}</font>
+	<span style="margin-left: 35px"><a onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&act=decollect&cuid={$val[uid]}&page=1&name='+jq('#friendname').val(),'out');">{lang gfarm:f098}</a></span><br/>
+	<font class='listti' style="margin-left: 10px">{$val['username']}</font></td>
+</tr>
+<!--{/loop}-->
+</table>
+</div>
+<div id='insulbottom'>
+<a {if $currpage>1}onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&act=collect&page=1&name='+jq('#friendname').val(),'out');"{else}style="color: gray"{/if}>{lang gfarm:c232}</a>
+<img src='source/plugin/gfarm/img/ui/left.png' {if $currpage>1}onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&act=collect&page={eval echo $currpage-1}&name='+jq('#friendname').val(),'out');"{/if}/>
+<span>{$currpage}/{$cnum}</span>
+<img src='source/plugin/gfarm/img/ui/right.png' {if $currpage<$cnum}onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&act=collect&page={eval echo $currpage+1}&name='+jq('#friendname').val(),'out');"{/if}/>
+<a {if $currpage<$cnum}onclick="ajaxget('plugin.php?id=gfarm:front&mod=friend&act=collect&page={$cnum}&name='+jq('#friendname').val(),'out');"{else}style="color: gray"{/if}>{lang gfarm:f046}</a>
+</div>
+<script type="text/javascript" reload=1>
+(function(){
+	jq('#act').val('collect');
+	jq('#ordertype').val('');
+	jq('#mysort').html('{lang gfarm:c120}');
+})();
+</script>
+{template common/footer}

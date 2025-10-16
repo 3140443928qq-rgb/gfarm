@@ -1,0 +1,35 @@
+<script type="text/javascript" src="source/plugin/gfarm/js/jquery.js"></script>
+<script type="text/javascript">
+var jq=jQuery.noConflict();
+</script>
+<script type="text/javascript">
+/*function checkallcom(){
+	if(jq("#checkall").attr("checked")){
+	    jQuery("input[name='check[]']").each(function(){
+			jq(this).attr("checked",true);
+		});
+	}else{
+		jQuery("input[name='check[]']").each(function(){
+			jq(this).attr("checked",false);
+		});
+	}
+}*/
+</script>
+<table class="tb tb2 nobdb">
+<tbody>
+<tr class="header">
+<!--<td width="50"><input type="checkbox" id="checkall" name="checkall" onclick="checkallcom();">{lang gfarm:c1}</td>-->
+<td>{lang gfarm:c247}</td><td>{lang gfarm:c243}</td><td>{lang gfarm:c244}</td><td>{lang gfarm:c013}</td></tr>
+<!--{loop $page->data $key $val}-->
+<tr>
+<!--<td><input type="checkbox" id="check[]" value="{$val['id']}" name="check[]"></td>-->
+<td>$val['id']</td>
+<td>$val['pname']</td>
+<td>{eval echo date('Y-m-d',$val['createtime'])}</td>
+<td>
+<!--{if $val['flag']=='1'}--><A href="admin.php?action=plugins&operation=config&do={$_GET['do']}&identifier=gfarm&pmod=component&act=install&cid={$val['id']}&formhash={FORMHASH}&{&page={$_GET['page']}">{lang gfarm:c245}</a><!--{else}--><A href="admin.php?action=plugins&operation=config&do={$_GET['do']}&identifier=gfarm&pmod=component&act=uninstall&cid={$val['id']}&formhash={FORMHASH}&page={$_GET['page']}">{lang gfarm:c246}</a><!--{/if}-->
+</td></tr>
+<!--{/loop}-->
+<tr><td colspan="6" align="right">$paging</td></tr>
+</tbody>
+</table>

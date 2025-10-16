@@ -1,0 +1,41 @@
+{template common/header_ajax}
+<h2 class="flb" style="cursor: move;border: 1px solid #666666;border-bottom: 0;"><em>{lang gfarm:c107}</em>
+	<span ><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET['handlekey']');" title="{lang close}">{lang close}</a></span>	
+</h2>
+<div style="border: 1px solid #666666;padding:5px 10px">
+	<form name="psForm" action="plugin.php?id=gfarm:cp&mod=lock&act=update&formhash={FORMHASH}" method="post" target="myframe">
+		<input type="hidden" name='lid' value="{$lid}"/>
+		<table class="table001" style="margin-top: 10px" cellpadding="8px">
+			<tr><td class="table002" align="right">{lang gfarm:c189}</td>
+ 				<td><input type="text" name="land_num" value="{$lock['land_num']}"/></td>
+			</tr> 			
+			<tr><td class="table002" align="right">{lang gfarm:c248}</td>
+ 				<td>
+ 				<input type='radio' name="money_type" value="1" id='money_typeb1' <!--{if $lock['money_type']==1}-->checked="checked"<!--{/if}-->/><label for="money_typeb1">{$config['bullionsname']}</label>
+ 				<input type='radio' name="money_type" value="0" id='money_typeb2' <!--{if $lock['money_type']!=1}-->checked="checked"<!--{/if}-->/><label for="money_typeb2">{$config['moneyname']}</label>
+ 				</td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c249}</td>
+ 				<td><input type="text" name="money" value="{$lock['money']}"/></td>
+			</tr> 
+			<tr><td class="table002" align="right">{lang gfarm:c143}</td>
+ 				<td><input type="radio" name="visible" value="0" id='radio1' {if $task['visible']==0}checked="checked"{/if}><label for="radio1">{lang gfarm:c083}</label>
+ 				<input type="radio" name="visible" id='radio2' value="1" {if $task['visible']==1}checked="checked"{/if}><label for="radio2">{lang gfarm:c084}</label>
+					<font style="color: red;">{lang gfarm:c157}</font></td>
+			</tr> 	
+			<tr><td class="table002"></td>
+ 				<td><input type="submit" class="g47jh_content_submit" style='width: 50px;margin-top: -4px' value="{lang gfarm:c026}"/></td>
+			</tr> 
+		</table>
+	</form>
+</div>
+<script type="text/javascript">
+	function clo_window()
+	{
+		parent.window.hideWindow('gfarm');
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template common/footer_ajax}

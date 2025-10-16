@@ -1,0 +1,22 @@
+<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c045}</td>
+				<td><!--{if $germ['sprout_img']}--><img src="{$germ['sprout_img']}" style="max-width:50px;max-height:50px"/><!--{/if}--><span><input type="file" name="sprout_img" id="sprout_img" fwin="crazy_commun" onchange="jq('#img0').val(jq(this).val())">
+ 				<br/>{lang gfarm:c046}<input type="text" name="_sprout_img" id='_sprout_img' value="{$germ['sprout_img']}"/><font color="red">{lang gfarm:c047}122*142</font>
+ 				</span>
+ 				</td>
+			</tr> 
+			<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c048}</td>
+				<td><!--{if $germ['mature_img']}--><img src="{$germ['mature_img']}" style="max-width:50px;max-height:50px"/><!--{/if}--><span><input type="file" name="mature_img" id="mature_img" fwin="crazy_commun" onchange="jq('#img1').val(jq(this).val())">
+ 				<br/>{lang gfarm:c046}<input type="text" name="_mature_img" id='_mature_img' value="{$germ['mature_img']}"/><font color="red">{lang gfarm:c047}122*142</font>
+ 				</span>
+ 				</td>
+			</tr> 	
+	<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c049}</td>
+ 				<td><input type="text" name="mature_time" value="{$germ['mature_time']}"/>{lang gfarm:c050}</td>
+			</tr> 
+			
+<tr><td class="table002" align="right"><font color="red">*</font>{lang gfarm:c051}</td>
+ 				<td><input type="text" name="experience" value="{$germ['experience']}"/>				
+ 				<input type="hidden" name="img0" id="img0" value="{$germ['sprout_img']}"/>
+				<input type="hidden" name="img1" id="img1" value="{$germ['mature_img']}"/></td>
+			</tr> 
+		

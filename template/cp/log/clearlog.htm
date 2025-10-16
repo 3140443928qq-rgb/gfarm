@@ -1,0 +1,49 @@
+{template gfarm:cp/nav}
+<iframe id="myframe" name="myframe" style="display:none"></iframe>
+<div class="g47jh_cp_content">
+	<div class="g47jh_content_div">
+		<div class="g47jh_content_title">	
+		</div>		
+		<table class="dt valt" cellspacing="0" cellpadding="0" style="text-align: center;margin-top: 1px" >
+	<tr>
+    	<th class="xw1" style="text-align: center;" width="30%">{lang gfarm:c323}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c324}</th>
+    	<th class="xw1" style="text-align: center;">{lang gfarm:c013}</th>	
+	</tr>
+	<tr>
+		<td>{lang gfarm:f032}{lang gfarm:c230}</td> 
+		<td>{$nplanting}</td> 
+    	<td><a href='plugin.php?id=gfarm:cp&mod=clear&act=clear&logn=1' onclick="showWindow('gfarm',this.href)">{lang gfarm:c322}</a>
+	</tr>
+	<tr class="alt">
+		<td>{lang gfarm:f034}{lang gfarm:c230}</td> 
+		<td>{$ngot}</td> 
+    	<td><a href='plugin.php?id=gfarm:cp&mod=clear&act=clear&logn=2' onclick="showWindow('gfarm',this.href)">{lang gfarm:c322}</a>
+	</tr>
+	<tr>
+		<td>{lang gfarm:c316}{lang gfarm:c230}</td> 
+		<td>{$nsteal}</td> 
+    	<td><a href='plugin.php?id=gfarm:cp&mod=clear&act=clear&logn=3' onclick="showWindow('gfarm',this.href)">{lang gfarm:c322}</a>
+	</tr>
+	<tr class="alt">
+		<td>{lang gfarm:c184}{lang gfarm:c230}</td> 
+		<td>{$nbuy}</td> 
+    	<td><a href='plugin.php?id=gfarm:cp&mod=clear&act=clear&logn=4' onclick="showWindow('gfarm',this.href)">{lang gfarm:c322}</a>
+	</tr>
+	<tr>
+		<td>{lang gfarm:c185}{lang gfarm:c230}</td> 
+		<td>{$nsale}</td> 
+    	<td><a href='plugin.php?id=gfarm:cp&mod=clear&act=clear&logn=5' onclick="showWindow('gfarm',this.href)">{lang gfarm:c322}</a>
+	</tr>
+</table>
+	</div>
+</div>
+<script type="text/javascript">
+	function showmsg(msg) {
+		window.showDialog(msg, 'right', '', function() {location.href='plugin.php?id=gfarm:cp&mod=clear'}, 0);
+	}
+	function showerror(msg) {
+		window.showDialog(msg, 'error', '', function() {}, 0);
+	}
+</script>
+{template gfarm:cp/footer}
